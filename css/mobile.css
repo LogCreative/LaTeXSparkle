@@ -1,5 +1,5 @@
 .side-bar,
-.footer {
+footer {
     position: relative;
     width: 100%;
     float: none;
@@ -35,4 +35,14 @@
     right: -270px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.footer{
+    display: none;
+}
+
+footer{
+    display: block;
+    top: 20px;
+    left: 10px;
 }

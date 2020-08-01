@@ -11,7 +11,8 @@ body{
     background-color: #777;
 }
 
-.side-bar {
+.side-bar,
+footer {
     font-family: 
     "微软雅黑 Light", "新宋体",
     Courier, monospace;
@@ -21,12 +22,13 @@ body{
     position: fixed;
 }
 
-.side-bar > * {
+.side-bar > *{
     padding: 15px 20px;
 }
 
 .side-bar .nav a,
-.side-bar .footer a {
+.side-bar .footer a, 
+footer a{
     display: block;
     color: #999;
     -webkit-transition: color 200ms;
@@ -35,12 +37,14 @@ body{
 }
 
 .side-bar .nav a:hover,
-.side-bar .footer a:hover {
+.side-bar .footer a:hover,
+footer a:hover {
     color: #eee;
 }
 
 .side-bar a,
-.article-list .item .title {
+.article-list .item .title,
+footer a {
     text-decoration: none;
 }
 
@@ -99,5 +103,9 @@ body{
 }
 
 #menu-toggle {
+    display: none;
+}
+
+footer{
     display: none;
 }
