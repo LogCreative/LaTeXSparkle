@@ -32,7 +32,7 @@ footer {
 #menu-toggle{
     position: absolute;
     top: 10px;
-    right: -270px;
+    right: 10px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
 }
