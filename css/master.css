@@ -99,6 +99,10 @@ footer a {
     color:darkgray;
 }
 
+.article .status {
+    color:darkgray;
+}
+
 #menu-checkbox{
     display: none;
 }
