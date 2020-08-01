@@ -1,0 +1,57 @@
+body{
+    font-family: 
+    'Century Schoolbook','Times New Roman',
+    "微软雅黑 Light", "新宋体",
+    Courier, monospace;
+    line-height: 1.7;
+}
+
+.side-bar {
+    font-family: 
+    "微软雅黑 Light", "新宋体",
+    Courier, monospace;
+    float: left;
+    width: 20%;
+    background: #777;
+    color: #eee;
+}
+
+.side-bar > * {
+    padding: 15px 20px;
+}
+
+.side-bar .nav a,
+.side-bar .footer a {
+    display: block;
+    color: #999;
+    -webkit-transition: color 200ms;
+    -o-transition: color 200ms;
+    transition: color 200ms;
+}
+
+.side-bar .nav a:hover,
+.side-bar .footer a:hover {
+    color: #eee;
+}
+
+.side-bar a {
+    text-decoration: none;
+}
+
+.main {
+    float: right;
+    width: 80%;
+}
+
+.header .logo {
+    padding: 10px 20px;
+    font-size: larger;
+    display: inline-block;
+    border: 5px solid #eee;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.item_s {
+    font-size: smaller;
+}
