@@ -22,6 +22,12 @@ footer {
     position: fixed;
 }
 
+.article {
+    font-family: 
+    'Century Schoolbook','Times New Roman',
+    "新宋体","微软雅黑 Light";
+}
+
 .side-bar > *{
     padding: 15px 20px;
 }
