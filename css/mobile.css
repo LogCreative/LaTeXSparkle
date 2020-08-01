@@ -45,4 +45,10 @@ footer{
     display: block;
     top: 20px;
     left: 10px;
+    overflow: hidden;
 }
+
+.header{
+    padding: 15px 10px;
+}
+

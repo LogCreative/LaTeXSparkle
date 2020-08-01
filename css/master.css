@@ -30,16 +30,17 @@ footer {
 .side-bar .footer a, 
 footer a{
     display: block;
-    color: #999;
-    -webkit-transition: color 200ms;
-    -o-transition: color 200ms;
-    transition: color 200ms;
+    color: #eee;
+    opacity: 0.5;
+    -webkit-transition: opacity 200ms;
+    -o-transition: opacity 200ms;
+    transition: opacity 200ms;
 }
 
 .side-bar .nav a:hover,
 .side-bar .footer a:hover,
 footer a:hover {
-    color: #eee;
+    opacity: 1;
 }
 
 .side-bar a,
@@ -48,7 +49,7 @@ footer a {
     text-decoration: none;
 }
 
-.article-list .item .title:hover{
+.article-list .item a:hover{
     color: sandybrown;
 }
 
