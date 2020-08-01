@@ -4,6 +4,7 @@ body{
     "微软雅黑 Light", "新宋体",
     Courier, monospace;
     line-height: 1.7;
+    background-color: #777;
 }
 
 .side-bar {
@@ -12,8 +13,8 @@ body{
     Courier, monospace;
     float: left;
     width: 20%;
-    background: #777;
     color: #eee;
+    position: fixed;
 }
 
 .side-bar > * {
@@ -34,8 +35,13 @@ body{
     color: #eee;
 }
 
-.side-bar a {
+.side-bar a,
+.article-list .item .title {
     text-decoration: none;
+}
+
+.article-list .item .title:hover{
+    color: sandybrown;
 }
 
 .main {
@@ -50,8 +56,36 @@ body{
     border: 5px solid #eee;
     color: #eee;
     margin-bottom: 10px;
+    font-family: "微软雅黑";
 }
 
 .item_s {
     font-size: smaller;
+}
+
+.article-list,
+.article {
+    margin-right: 20%;
+    padding: 20px 30px;
+    background-color: #eee;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.article-list .item {
+    margin-bottom: 30px;
+}
+
+.article-list .item > * {
+    margin: 10px 0;
+}
+
+.article-list .item .title{
+    color: #454545;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.article-list .item .status {
+    font-size: small;
+    color:darkgray;
 }
