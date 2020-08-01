@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: 
     'Century Schoolbook','Times New Roman',
@@ -88,4 +92,12 @@ body{
 .article-list .item .status {
     font-size: small;
     color:darkgray;
+}
+
+#menu-checkbox{
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
 }
