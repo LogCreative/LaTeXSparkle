@@ -22,12 +22,6 @@ footer {
     position: fixed;
 }
 
-.article {
-    font-family: 
-    'Century Schoolbook','Times New Roman',
-    "新宋体","微软雅黑 Light";
-}
-
 .side-bar > *{
     padding: 15px 20px;
 }
@@ -84,6 +78,9 @@ footer a {
     padding: 20px 30px;
     background-color: #eee;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+    font-family: 
+    'Century Schoolbook','Times New Roman',
+    "新宋体","微软雅黑 Light";
 }
 
 .article-list .item {
