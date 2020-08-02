@@ -45,12 +45,18 @@ footer a:hover {
 
 .side-bar a,
 .article-list .item .title,
-footer a {
+footer a, 
+.article .content a {
     text-decoration: none;
 }
 
-.article-list .item a:hover{
+.article-list .item a:hover,
+.article .content a{
     color: sandybrown;
+}
+
+.article .content a:hover{
+    color: slateblue;
 }
 
 .main {
