@@ -47,10 +47,50 @@
         </div>
         <div class="main">
             <div class="article">
-                <h1 class="title">第二节 舒适的 \(\rm \LaTeX\) 编辑环境</h1>
-                <div class="status">状态：正在准备</div>
-                <div class="content">
-                    <p>如何通过 VS Code 以及 Markdown 文档预览 \(\rm \LaTeX\) 公式。</p>
+                <h1 class="title">第三节 PPT x \( \rm \LaTeX \)</h1>
+                <div class="status">状态：文稿准备中</div>
+                <div class="content" style="color: black;">
+                    <h3>3.1 引子</h3>
+                    <p><i>3Blue1Brown 视频、旧视频</i></p>
+                    <p><a href="https://space.bilibili.com/31271993/channel/detail?cid=60459" target="_blank">《费曼的奇妙观点》系列</a>完结了，或许你会好奇这种类似于 <a href="https://space.bilibili.com/88461692" target="_blank">3Blue1Brown</a> 风格的视频是怎么做出来的，那么本期视频就来告诉你如何使用 PowerPoint 制作 \(\rm \LaTeX\) 风格的演示视频。</p>
+
+                    <h3>3.2 各种方式</h3>
+
+                    <p><i>三屏展示三种方式，抽取式</i></p>
+
+                    <p>大约有三种方式在标准视频帧内原生地展示 \(\rm \LaTeX\) 公式，分别为 Beamer, PowerPoint, Manim。</p>
+
+                    <p><i>Beamer 语法页面与样式页面</i></p>
+
+                    <p>3.2.1 \(\rm \LaTeX\) 所推荐的原生方式是使用 <a href="https://mirrors.concertpass.com/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf" target="_blank">Beamer</a> 宏包所提供的预设模板，以<span>frame</span>环境分割每一个幻灯片，最终通过 PDF 格式保存。但是这种方式所能使用的模板很是有限，并且<a href="https://hartwork.org/beamer-theme-matrix/" target="_blank">默认模板</a>样式上有些过时了，这种正式版式更适合于正式场合的讲演，展示方式上可能不是那么的有趣。</p>
+
+                    <p><i>Manim Kindergarten 相关视频、代码页、转换样例视频</i></p>
+
+                    <p>3.2.3 <a href="https://github.com/manim-kindergarten/manim" target="_blank">Manim</a> (<i>Mathematical Animation Engine</i>) 是一个用于制作视频的动画引擎，它用 Python 编程的方式创建精确的动画。有兴趣学习的小伙伴可以前往国内 <a href="https://github.com/manim-kindergarten/manim_sandbox" target="_blank">Manim Kindergarten</a> 创作社区查看详情。用 Python 编程确实挺好玩的，就是配置和学习起来不是特别容易，里面确实有许多好玩的动态效果，比如<a href="https://manim.ml/getting_started/examples.html#squaretocircle" target="_blank">形状转换动画</a>、<a href="https://manim.ml/getting_started/examples.html#writestuff" target="_blank">文字的描边淡出效果</a>、三维数学动画，更加适合视频这种类别。</p>
+                    
+                    <p><i>老片段</i></p>
+
+                    <p>3.2.2 <a href="http://www.jonathanleroux.org/software/iguanatex/" target="_blank">IguanaTeX</a> 就是一款能在幻灯片随地插入 \(\rm \LaTeX \)公式的 PowerPoint 插件。配合 Office 365 的平滑切换就能够像模像样。</p>
+
+                    <h3>3.3 配置</h3>
+
+                    <p><i>网页录制</i></p>
+
+                    <p>3.3.1 前往<a href="http://www.jonathanleroux.org/software/iguanatex/download.html" target="_blank">网站下载</a> IguanaTeX 加载项，Mac 用户有一个<a href="https://github.com/ray851107/IguanaTexMac/releases" target="_blank">第三方版本</a>。安装Office 365 或 2019 以使用更新的功能。</p>
+
+                    <p><i>配置录屏</i></p>
+
+                    <p>3.3.2 让插件常驻 PowerPoint。打开 PowerPoint，进入<span>文件</span>选单，点选<span>选项</span>，在<span>加载项</span>选项卡中，<span>管理</span> PowerPoint 加载项并<span>转到</span>，<span>添加</span> IguanaTeX 加载项。完成后<span>确认</span>。这样每次打开 PowerPoint 的时候就能看到这个插件了。</p>
+
+                    <p>3.3.3 在开始之前，还是需要先安装 \(\rm \LaTeX \) 的！可以查看<a href="chapter02.html">上一个视频</a>以观详情。</p>
+
+                    <p><i>高级弹幕，跳转链接。</i></p>
+
+                    <h3>3.4 插件介绍</h3>
+
+                    <p><i>窗口录屏</i></p>
+
+                    <p>3.4.1 New LaTeX display 创建新的\(\rm \LaTeX \) 公式。</p>
                 </div>
             </div>
         </div>
