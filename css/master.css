@@ -48,15 +48,16 @@ footer a:hover {
 footer a, 
 .article .content a {
     text-decoration: none;
+    align-content: center;
 }
 
 .article-list .item a:hover,
 .article .content a{
-    color: sandybrown;
+    color: darkorange;
 }
 
 .article .content a:hover{
-    color: slateblue;
+    color: black;
 }
 
 .main {
@@ -122,4 +123,13 @@ footer a,
 
 footer{
     display: none;
+}
+
+span{
+    font-family: Consolas, 'Courier New', monospace;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: lightgrey;
+    margin: 0 0.5em;
+    padding: 0 0.15em;
 }
