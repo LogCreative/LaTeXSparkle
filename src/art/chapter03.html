@@ -48,7 +48,7 @@
         <div class="main">
             <div class="article">
                 <h1 class="title">第三节 舒适的 \(\rm \LaTeX\) 编辑环境</h1>
-                <div class="status">状态：文稿准备中</div>
+                <div class="status">状态：效果准备中</div>
                 <div class="content" style="color: black;">
 
                     <h3>3.1 VS Code x \(\rm \LaTeX\)</h3>
@@ -146,7 +146,7 @@ Hello,\LaTeX!
 
                     <p>3.2.3 然后点击右上角的 <span>View LaTeX PDF File</span>查看生成的 PDF 文件。上面会提示使用什么方式打开，可以使用<span>VS Code Tab</span>标签页方式打开，就可以看到你的第一个 \(\rm \LaTeX\) 生成的 PDF 文件了！</p>
 
-                    <p>3.2.4 你会发现编译器会调出错误，提示<pre>The font size command /normalsize is not defined.</pre></p>
+                    <p>3.2.4 你会发现编译器会弹出错误，提示<pre>The font size command /normalsize is not defined.</pre></p>
                     </p>
 
                     <p>这是因为我们还没有定义文档类型，在导言区添加</p>
@@ -162,6 +162,20 @@ latex-workshop.message.error.show</pre>
                     </p>
 
                     <h3>3.3 Markdown 预览 \(\rm \LaTeX\) 公式</h3>
+
+                    <p>可能每次都要编译一次 \(\rm \LaTeX\) 文档有时候还是太麻烦了，费时费力。我们不妨采用 Markdown 的 \(\rm \LaTeX\) 预览功能方便地做出大纲。</p>
+
+                    <div class="toutu">头秃时刻：定界符<span>$ $</span>用于生成行内公式。</div>
+
+                    <p>3.3.1 前往插件商店下载<span>Markdown All in One</span>。</p>
+
+                    <p>3.3.2 新建一个 .md 文件，输入<pre>$a=b+c$</pre></p>
+
+                    <p>3.3.3 点击右上角的<span>打开侧边预览</span>按钮，就可以看到对应的 \(\rm \LaTeX\) 公式了。\[a=b+c\]</p>
+
+                    <p>只要在 Markdown 中将大纲列好，之后在送入 \(\rm \LaTeX\) 处理，就能比较高效地完成 \(\rm \LaTeX\) 文档了！</p>
+
+                    <p><i>备注：<a href="https://www.typora.io/" target="_blank">Typora 软件</a>支持导出 .tex 文件功能。</i></p>
                 </div>
             </div>
         </div>
