@@ -16,7 +16,7 @@
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                     var repo = JSON.parse(xmlhttp.responseText);
                     document.getElementById("UpdateDate").innerHTML ='更新时间：'+
-                    repo.pushed_at.substring(0,10) + ' ' + repo.pushed_at.substring(11,19);
+                    repo.pushed_at.substring(0,10) + ' ' + repo.pushed_at.substring(11,19) + ' UTC';
                 } else {
                 }
             };
