@@ -134,19 +134,10 @@ span{
     padding: 0 0.15em;
 }
 
-.my-textarea {
-    width: 400px;
-    min-height: 26px;
-    line-height: 20px;
-    _height: 30px;
-    /* max-height: 150px;*/
-    padding: 3px;
-    outline: 0;
-    border: 1px solid #ccc;
-    font-size: 12px;
-    word-wrap: break-word;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-user-modify: read-write-plaintext-only;
-    border-radius: 4px;
+xmp {
+    font-family: Consolas,'Courier New', monospace;
+    font-size: small;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 20px;
 }
