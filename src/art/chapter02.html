@@ -86,25 +86,27 @@
 
                     <p>2.4.1 <span>New LaTeX display</span> 创建新的\(\rm \LaTeX \) 公式。在中间的空白区域输入一些文字，比如：<span>\LaTeX Sparkle</span>，如果一切顺利的话，单击<span>Generate</span>按钮就可以生成了。</p>
 
-                    <u>头秃时刻：<span>\LaTeX</span> 可以生成专有符号 \(\rm \LaTeX \) 。</u>
+                    <div class="toutu">头秃时刻：<span>\LaTeX</span> 可以生成专有符号 \(\rm \LaTeX \) 。</div>
 
                     <p><i>备注：如果不顺利，可以勾选<span>Debug</span>模式，根据 MikTeX 引导安装对应的包即可。</i></p>
 
                     <p>哦，好像少了个空格，\(\rm \LaTeX \) 是吞空格的，选中后单击<span>Edit LaTeX display</span>编辑 \(\rm \LaTeX \) 公式，在中间加入一个波浪线就可以了！</p>
 
-                    <u>头秃时刻：<span>~</span> 代表空格。</u>
+                    <div class="toutu">头秃时刻：<span>~</span> 代表空格。</div>
 
                     <p>2.4.2 而我们一般都需要使用公式环境，就在正文创建一个<span>equation</span>环境，在其中加入公式，例如：<span>a = b + c</span>，单击<span>ReGenerate</span>按钮。</p>
                     
-                    <u>头秃时刻：<span>equation</span> 环境专门用于生成公式，使用 \begin 和 \end 定界符包住公式区。
-                        <p><span>\begin{equation}</span></p>
-                        <p>公式区</p>
-                        <p><span>\end{equation}</span></p>
-                    </u>
+                    <div class="toutu">头秃时刻：<span>equation</span> 环境专门用于生成公式，使用 \begin 和 \end 定界符包住公式区。
+                        <pre>
+\begin{equation}
+公式区
+\end{equation}
+</pre>
+                    </div>
 
                     <p>2.4.3 然而却多出现了一个公式标号，不太爽，可以通过添加无编号标记去除，切走公式区，我们就可以就现状单击<span>Make Default</span>按钮存储为默认状态了。这样，下次再创建公式时，就可以使用当前的模板了。</p>
 
-                    <u>头秃时刻：<span>\nonumber</span> 为无编号标记。</u>
+                    <div class="toutu">头秃时刻：<span>\nonumber</span> 为无编号标记。</div>
 
                     <h3>2.5 公式矢量化</h3>
                     
@@ -120,19 +122,20 @@
 
                     <p>2.6.2 新建一个公式，在公式环境键入</p>
 
-                    <span>PV = \frac{2}{3} N \left \langle \frac{1}{2} mv^2 \right \rangle</span>
-
-                    <p>生成 \[ PV = \frac{2}{3} N \left \langle \frac{1}{2} mv^2 \right \rangle \] </p>
-
-                    <p><u>头秃时刻：<span>\frac{分子}{分母}</span> 用以生成分数。<span>\langle</span>,<span>\rangle</span>用以生成左右尖角括号，用以表示平均数。添加<span>\left</span>,<span>\right</span>定界符是为了限定括号区域，从而拉伸括号。</u></p>
+                    <div class="con">
+                        <div class="left"><pre>PV = \frac{2}{3} N \left \langle \frac{1}{2} mv^2 \right \rangle</pre></div>
+                        <div class="right">\[ PV = \frac{2}{3} N \left \langle \frac{1}{2} mv^2 \right \rangle \] </div>
+                    </div>
+                    <div class="toutu">头秃时刻：<span>\frac{分子}{分母}</span> 用以生成分数。<span>\langle</span>,<span>\rangle</span>用以生成左右尖角括号，用以表示平均数。添加<span>\left</span>,<span>\right</span>定界符是为了限定括号区域，从而拉伸括号。</div>
 
                     <p>生成完毕后，点击公式矢量化按钮，并取消组合。</p>
 
-                    <p>同样的方法通过键入</p>
+                    <p>同样的方法，</p>
 
-                    <span>\left \langle \frac{1}{2} mv^2 \right \rangle = \frac{3}{2}kT</span>
-
-                    <p>生成\[ \left \langle \frac{1}{2} mv^2 \right \rangle = \frac{3}{2}kT \]</p>
+                    <div class="con">
+                        <div class="left"><pre>\left \langle \frac{1}{2} mv^2 \right \rangle = \frac{3}{2}kT</pre></div>
+                        <div class="right">\[ \left \langle \frac{1}{2} mv^2 \right \rangle = \frac{3}{2}kT \]</div>
+                    </div>
 
                     <p>矢量化、取消组合。</p>
 

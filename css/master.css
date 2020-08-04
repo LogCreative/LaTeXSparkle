@@ -106,38 +106,69 @@ footer a,
 
 .article-list .item .status {
     font-size: small;
-    color:darkgray;
 }
 
+.article-list .item .status,
 .article .status {
     color:darkgray;
 }
 
-#menu-checkbox{
-    display: none;
-}
-
-#menu-toggle {
-    display: none;
-}
-
+#menu-checkbox,
+#menu-toggle,
 footer{
     display: none;
 }
 
 span{
     font-family: Consolas, 'Courier New', monospace;
-    border: 1px solid gray;
+    border: 0.5px solid gray;
     border-radius: 3px;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.4);
     margin: 0 0.5em;
     padding: 0 0.15em;
+    font-size: small;
 }
 
-xmp {
+pre {
     font-family: Consolas,'Courier New', monospace;
     font-size: small;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 5px 20px;
+    white-space: pre-wrap;
+    white-space: -pre-wrap;
+    word-wrap: break-word;
+}
+
+.toutu {
+    border: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 2px rgba(129, 129, 129, 0.4);
+    background: rgb(247, 243, 243);
+    padding: 5px 15px;
+}
+
+.toutu span {
+    background: transparent;
+}
+
+.toutu,
+.toutu span{
+    font-family: 'Consolas',
+    "微软雅黑 Light", "新宋体",
+    Courier, monospace;
+}
+
+.con {
+    display: grid;
+    grid-template-columns: 50% auto;
+    align-items: center;
+}
+
+.left {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2;
 }
