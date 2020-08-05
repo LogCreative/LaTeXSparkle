@@ -191,6 +191,12 @@ pre {
     top: -14px;
 }
 
+.item .status::before,
+.item .status::after {
+    height: 10px;
+    top: -10px;
+}
+
 .status::before {
     box-shadow: 0 0 6px rgba(75, 207, 250, 0.2);
 }

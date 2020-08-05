@@ -96,7 +96,13 @@
     }
 ],
 "latex-workshop.latex.recipes": [
-{
+    {
+        "name": "pdflatex",
+        "tools": [
+            "pdflatex"
+        ]
+    },
+    {
     "name": "pdf->bib->pdf->pdf",
     "tools": [
         "pdflatex",
@@ -110,12 +116,6 @@
         "tools": [
             "xelatex"
         ],
-    },
-    {
-        "name": "pdflatex",
-        "tools": [
-            "pdflatex"
-        ]
     },
     {
         "name": "xe->bib->xe->xe",
@@ -158,7 +158,9 @@ Hello,\LaTeX!
                     <p>3.2.5 最后，我们把提示框关掉。在设置选单里，搜索
                         <pre>latex-workshop.message.warning.show
 latex-workshop.message.error.show</pre>
-                        将复选框勾除即可。
+                        将复选框勾除。然后搜索
+                        <pre>Wrap</pre>
+                        在<span>Word Wrap</span>下拉选单选中<span>on</span>启动编辑器自动换行。
                     </p>
 
                     <h3>3.3 Markdown 预览 \(\rm \LaTeX\) 公式</h3>
@@ -179,7 +181,9 @@ latex-workshop.message.error.show</pre>
 
                     <h3>3.4 实例：用 \(\rm \LaTeX\) 写一次数学作业</h3>
 
-                    <p>有些时候，我们被要求使用 \(\rm \LaTeX\) 写一些数学作业。我们将会实践上述流程来试验一次。</p>
+                    <p>有些时候，我们被要求使用 \(\rm \LaTeX\) 写一些数学作业。我们将会按照上述流程来试验一次。</p>
+
+                    <p>3.4.1 </p>
                 </div>
             </div>
         </div>
