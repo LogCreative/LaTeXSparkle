@@ -172,3 +172,71 @@ pre {
 .right {
     grid-column: 2;
 }
+
+.status{
+    position: relative;
+    margin: 48px 0;
+}
+
+.status::before,
+.status::after {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 200px;
+    background-color: #b5c8cf;
+    bottom: -28px;
+    position: absolute;
+    border-radius: 6px;
+    top: -14px;
+}
+
+.status::before {
+    box-shadow: 0 0 6px rgba(75, 207, 250, 0.2);
+}
+
+.status::after {
+    background-image: linear-gradient(90deg, #afe8fd, #d7faf9);
+    box-shadow: 0 0 10px rgba(176, 239, 255, 0.2);
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#pgshidden {
+    margin: 0 0;
+}
+#pgshidden::before,
+#pgshidden::after {
+    display: none;
+}
+#roadmap::after {animation-name: roadmap;}
+#CH01::after {animation-name: CH01;}
+#CH02::after {animation-name: CH02;}
+#CH03::after {animation-name: CH03;}
+#CH04::after {animation-name: CH04;}
+
+@keyframes roadmap {
+    from {width: 0;}
+    to {width: 25px;}
+}
+
+@keyframes CH01 {
+    from {width: 0;}
+    to {width: 0;}
+}
+
+@keyframes CH02 {
+    from {width: 0;}
+    to {width: 70px;}
+}
+
+@keyframes CH03 {
+    from {width: 0;}
+    to {width: 50px;}
+}
+
+@keyframes CH04 {
+    from {width: 0;}
+    to {width: 0;}
+}
