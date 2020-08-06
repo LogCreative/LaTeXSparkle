@@ -142,10 +142,14 @@ pre {
 
 .toutu {
     border: whitesmoke;
-    border-radius: 5px;
     box-shadow: 0 0 3px 2px rgba(129, 129, 129, 0.4);
     background: rgb(247, 243, 243);
     padding: 5px 15px;
+}
+
+.toutu,
+details {
+    border-radius: 5px;
 }
 
 .toutu span {
@@ -153,7 +157,8 @@ pre {
 }
 
 .toutu,
-.toutu span{
+.toutu span,
+summary{
     font-family: 'Consolas',
     "微软雅黑 Light", "新宋体",
     Courier, monospace;
@@ -171,6 +176,16 @@ pre {
 
 .right {
     grid-column: 2;
+}
+
+details {
+    padding: .5em .5em;
+    box-shadow: 3px 2px 3px 2px rgba(129, 129, 129, 0.4);
+}
+
+details[open] {
+    border: none;
+    box-shadow: none;
 }
 
 .status{
@@ -239,7 +254,7 @@ pre {
 
 @keyframes CH03 {
     from {width: 0;}
-    to {width: 50px;}
+    to {width: 80px;}
 }
 
 @keyframes CH04 {

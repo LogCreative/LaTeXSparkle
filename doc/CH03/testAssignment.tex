@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{CJKutf8}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+% 边距
+\geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
+
+% 大题
+\newenvironment{firstlayer}{\begin{list}{}{\renewcommand{\makelabel}[1]{\textbf{##1}.\hfil}}}{\end{list}}
+
+% 小题
+\newenvironment{secondlayer}{\begin{list}{}{\renewcommand{\makelabel}[1]{(##1)\hfil}}}{\end{list}}
+
+% 证明
+\renewcommand{\proofname}{\textbf{证明}}
+
+% 解
+\providecommand{\sol}{\textbf{解}.~}
+
+% 标题
+\title{示例作业}
+\author{LogCreative}
+\date{2020 年 8 月}
+
+\begin{document}
+\begin{CJK}{UTF8}{song}
+\maketitle
+
+\begin{firstlayer}
+
+\item[2] 简单图 $G$ 中，如果 $m>\frac{1}{2}(n-1)(n-2)$，证明 $G$ 不存在孤立节点。
+
+\begin{proof}
+    % 证明环境
+    若不然，则有一孤立点 $v$，子图 $G'=G-v$ 的边数
+
+    \begin{equation}\label{ls}
+        \left\lvert E(G')\right\rvert = \left\lvert E(G)\right\rvert = m>\frac{1}{2}(n-1)(n-2) 
+    \end{equation}
+
+    然而，$G'$ 边数最多的情况是完全图 $K_{n-1}$，也就是
+    \begin{equation}\label{lss}
+        \left\lvert E(G')\right\rvert \leq \frac{1}{2}(n-1)(n-2)
+    \end{equation}
+
+    这与式子 \eqref{ls} 矛盾。
+
+    由于当孤立节点数不止一个时，式子 \eqref{lss} 依然成立。所以不存在孤立节点。
+
+\end{proof}
+
+\begin{secondlayer}
+
+    \item[2] \sol 这是一个解。
+
+\end{secondlayer}
+
+\end{firstlayer}
+
+\end{CJK}
+\end{document}
