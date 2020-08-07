@@ -401,6 +401,32 @@ $$
 由于当孤立节点数不止一个时，第二个式子依然成立。所以不存在孤立节点。
 </pre>
                 </details>
+
+                <h3>3.5 使用 Overleaf 在线与本地化编辑 \(\rm \LaTeX\) 文档</h3>
+                
+                <i>账号信息需要打码。</i>
+
+                <p>3.5.1 <a href="https://cn.overleaf.com" target="_blank">Overleaf</a> 是一款易用、在线、协同合作的 \( \rm \LaTeX \) 编辑器。使用邮箱注册账号，然后登录。将之前的文件使用 zip 文件打包（<span>右键</span>→<span>发送到</span>→<span>压缩(zipped)文件夹</span>）。之后回到网页，<span>Create First Project</span>创建一个新的项目，上传之前的 .zip 文件。</p>
+
+                <p>你会发现编译错误，提示缺失字体。这是因为 Overleaf 上的字体系统是不同的，我们只需要把<span>CJK</span>环境参数<span>song</span>改为<span>gbsn</span>，点击<span>重新编译</span>即可编译成功。（字体也变得更细了一点呢）<pre>
+\begin{CJK}{utf}{gbsn}</pre></p>
+                
+                <p>3.5.2 为了能够本地双向同步，这一步就要花一些时间了，毕竟希望免费获得这项功能嘛。</p>
+
+                <p>按下左上角的<span>↑</span>返回主菜单，在右上角的<span>账户</span>菜单里，找到<span>用户设置</span>，你会发现使用<span>Dropbox</span>整合需要升级至会员，点进去再看需要每个月支付 15 美金，这有点小贵。</p>
+
+                <p>但是这没关系，Overleaf 推出了一项<s>传销</s>（划掉）营销计划，在上方的<span>Upgrade</span>按钮，拉至最下方，点击<span>Unlock premium features</span>进入 Overleaf Bonus Reward Programme Overleaf 额外奖励计划（或者是直接点击<a href="www.overleaf.com/user/bonus" target="_blank">这个链接</a>）。这项计划拉到下面，发现会有邀请码，你会发现，只要有 6 个邮箱通过上方的邀请链接（必须是这个邀请链接）注册自己的账号，就可以永久免费获得对应的功能！</p>
+
+                <p>所以，你可以自己注册 6 个邮箱，然后进入这个链接注册就好了嘛，够 6 个就 OK，毕竟这么好的机会怎么能不用呢。最后解锁完毕后刷新这个页面会有提示。回到账户页面与 Dropbox 账户绑定就 OK。（Dropbox 需要翻墙才可以访问）</p>
+
+                <p>3.5.3 回到原项目，在菜单中再次在<span>同步</span>点击<span>Dropbox</span>，会提示你绑定账号，按照流程进行，完成后会提示你已经同步到对应的云文件夹。</p>
+
+                <p>3.5.4 前往<a href="www.dropbox.com" target="_blank">官网</a>下载 Dropbox 并安装，使用对应的账号登录，可以设置自己需要存储文件的位置。之后就可以看到本地云端的文件了。更改本地文件，Overleaf 端自动同步，是不是方便多了；更改 Overleaf 文件，返回菜单再进入会强制刷新 Dropbox 文件，本地也会随之改变，还是很方便的。</p>
+
+                <i>当然由于字体的不同，会出现一些问题，写英文的话就不会出现字体无法并存的问题。当然真正的大佬们还是可以使用 git 存储库同步与更新文档。</i>
+
+                <p>3.5.5 Overleaf 平台更加适合一些大众审阅者共享使用，方法就是点击右上角<span>共享</span>按钮，<span>启用通过链接分享功能</span>，或者是通过 Overleaf 账号实时共享项目。</p>
+
                 </div>
             </div>
         </div>

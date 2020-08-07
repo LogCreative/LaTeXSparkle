@@ -239,7 +239,7 @@ details[open] {
 
 @keyframes roadmap {
     from {width: 0;}
-    to {width: 25px;}
+    to {width: 35px;}
 }
 
 @keyframes CH01 {
@@ -254,10 +254,10 @@ details[open] {
 
 @keyframes CH03 {
     from {width: 0;}
-    to {width: 80px;}
+    to {width: 100px;}
 }
 
 @keyframes CH04 {
     from {width: 0;}
-    to {width: 0;}
+    to {width: 30px;}
 }
