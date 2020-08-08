@@ -50,6 +50,8 @@
                 <h1 class="title">第四节 使用 TikZEdt 绘制 Ti<i>k</i>Z 矢量图形</h1>
                 <div class="status" id="CH04">状态：文稿准备中</div>
                 <div class="content" style="color: black;">
+                    <p>正式出版物中，所有的图形都应当原则上矢量或者高清，甚至其设计语言也应当是统一的（字体、字号、图形样式）。\(\rm \LaTeX\) 也拥有一套自己的图形设计系统，使用嵌入的原生代码，就可以生成一些简洁精巧的图形。</p>
+
                     <h3>4.1 第一次使用 TikZEdt</h3>
                     <p>都 0202 年了，不能再完全依赖纯代码形式脑补写出个图形了。本节将会使用 TikZEdt 绘制能够嵌入 \(\rm \LaTeX\) 的 Ti<i>k</i>Z 矢量图形。</p>
 
@@ -61,7 +63,7 @@
 
                     <p>4.1.3 如果错过了也没关系，前者可以在<span>? → Show Tips & Tricks</span>找到，后者可以在<span>Compilation → Compile snippet thumbnails...</span>找到。编译结束后如果显示仍然为空，重启软件即可。</p>
 
-                    <h3>4.2 上手 TikZEdt</h3>
+                    <h3>4.2 实例：使用 TikZEdt 制作流程框图</h3>
 
                     <p>我们将通过一个实例来熟悉这款软件的功能。</p>
 
@@ -71,7 +73,7 @@
 \usetikzlibrary{patterns}
 \begin{tikzpicture}[line width=1pt,scale=0.65, every node/.style={scale=0.65}] %缩放
 
-\tikzstyle{bordered} = [circle,outer sep=0,inner sep=10,minimum size=10,fill=green!90!black];
+\tikzstyle{bordered} = [circle,outer sep=0,inner sep=10,fill=green!90!black];
 \tikzstyle{boldarrow}=[<->,line width=1pt];
 
 \makeatletter
@@ -142,7 +144,38 @@
 \end{tikzpicture} 
                         </pre>
                     </details>
+                    <p>4.2.1 这幅流程图恰恰阐述了<a href="chapter03.html" target="_blank">上一节</a>的 Overleaf 连接框架：在 Overleaf 平台上同步 \(\rm \LaTeX\) 项目，并通过 Overleaf 平台让用户（Member）提交与接收，有特权（Privilege）的用户可以将项目同步到 Dropbox 上，而 Dropbox 通过客户端（Client）与本地电脑连接。本地电脑可以通过手动上传的方式创建 \(\rm \LaTeX\) 项目，也可以手动下载 \(\rm \LaTeX\) 项目，在局域网（LAN）内可以将项目与第二台电脑同步。</p>
+                    
+                    <p>这幅流程图大部分由矩形与圆形组成，实线与虚线箭头并存，下方还有一个小型图例，都是一些基本图形。</p>
 
+                    <p>4.2.2 <b>node 工具。</b>单击工具栏的<span>Node tool</span>节点工具，在右侧的预览区点击一个点将会自动生成 node 。在 node 花括号所在的辖域内输入这个节点需要输入的文字。在<span>\node</span>命令后使用中括号添加参数，这里我们输入<span>[draw]</span>表示这个节点需要一个轮廓。将这行代码复制三次，每次复制完成后使用工具栏中的<span>Select and move tool</span>移动该节点的位置，让三个节点等距并排放置。
+                    
+                    <pre>
+\node[draw] at (-0.5,0.5) {Member};
+\node[draw] at (-0.5,-1) {Member};
+\node[draw] at (-0.5,-2.5) {Member};</pre>
+
+                    <div class="toutu"><span>\node</span>命令代表节点，[]中括号为该节点的样式参数，<span>draw</span>将会设置这个节点的轮廓。<span>at (<i>x</i>,<i>y</i>)</span>表示该节点的位置，{}大括号内为该命令的辖域，指示内容。</div>
+                    </p>
+
+                    <p>绘制特殊的 Dropbox 蓝底方格。使用节点工具创建节点，辖域内填写<span>Dropbox</span>。<pre>
+\node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></p>
+
+                    <div class="toutu"><span>minimum size</span>将会指定该节点的长或宽的最小值，这个值超过字长的时候就可以创建一个正方形边框。<span>fill</span>将会指定该节点的背景填充，对其赋值将会填充对应的颜色，<span>draw</span>轮廓指令亦是如此。<span>text</span>将会指定字体颜色。
+                    
+                    <p>颜色可以使用标准颜色以及其衍生颜色来指定，其中<span>!</span>后接该颜色向目标颜色的混合权重。目标颜色应当再接一个<span>!</span>指定，这里也就是<pre>
+blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!black</pre>就意味着向黑色靠近。</div>
+
+                    <p>绘制圆形的 Overleaf。<pre>
+\node[circle,fill=green!90!black,inner sep=10] at(4,-1) {\textbf{Overleaf}};</pre>
+<div class="toutu"><span>circle</span>参数将指定其节点为圆形，inner sep 将会定义圆形内边，可以按照 HTML 中的 padding 去理解。</div>
+</p>
+                    <p>定义节点样式。复制<span>[]</span>中的内容，并在开始的部分定义<span>greencirc</span>样式。</p><pre>
+\tikzstyle{greencirc} = [circle,fill=green!90!black,inner sep=10];</pre></p>
+<div class="toutu"><span>\tikzstyle</span>命令将用于生成 tikz 样式，<span>=</span>为赋值符号，为此样式在<span>[]</span>内赋值。</div>
+                    <p></p>这样，我们在<span>Node style</span>下拉选单中就可以看到这个样式，点选后，再次使用节点工具创建新的节点时，就会自动套用这个样式。我们现在就可以替换原来的节点参数为这个样式。样式是一种模板，目的是为了生成可复用代码。如果需要清除样式，直接清空<span>Node style</span>文本框即可。
+                    <pre>
+\node[greencirc] at (4,-1) {\textbf{Overleaf}};</pre>
                 </div>
             </div>
         </div>
