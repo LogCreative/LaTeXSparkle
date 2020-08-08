@@ -148,27 +148,75 @@
                     
                     <p>这幅流程图大部分由矩形与圆形组成，实线与虚线箭头并存，下方还有一个小型图例，都是一些基本图形。</p>
 
-                    <p>4.2.2 <b>node 工具。</b>单击工具栏的<span>Node tool</span>节点工具，在右侧的预览区点击一个点将会自动生成 node 。在 node 花括号所在的辖域内输入这个节点需要输入的文字。在<span>\node</span>命令后使用中括号添加参数，这里我们输入<span>[draw]</span>表示这个节点需要一个轮廓。将这行代码复制三次，每次复制完成后使用工具栏中的<span>Select and move tool</span>移动该节点的位置，让三个节点等距并排放置。
-                    
-                    <pre>
+                    <p>4.2.2 <b>node。</b>单击工具栏的<span>Node tool</span>节点工具，在右侧的预览区点击一个点将会自动生成 node 。在 node 花括号所在的辖域内输入这个节点需要输入的文字。在<span>\node</span>命令后使用中括号添加参数，这里我们输入<span>[draw]</span>表示这个节点需要一个轮廓。将这行代码复制三次，每次复制完成后使用工具栏中的<span>Select and move tool</span>移动该节点的位置，让三个节点等距并排放置。
+                    <div class="con">
+                        <div class="left">
+<pre>
 \node[draw] at (-0.5,0.5) {Member};
 \node[draw] at (-0.5,-1) {Member};
 \node[draw] at (-0.5,-2.5) {Member};</pre>
+                        </div>
+                        <div class="right" style="text-align: center;">
+<svg width="53px" height="90px" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+<rect width="52px" height="20px"
+style="fill:transparent;stroke-width:1;
+stroke:rgb(0,0,0)"/>
+<text x="0" y="15px" style="font-size: small;">Member</text>
+<rect y="35px" width="52px" height="20px"
+style="fill:transparent;stroke-width:1;
+stroke:rgb(0,0,0)"/>
+<text x="0" y="50px" style="font-size: small;">Member</text>
+<rect y="70px" width="52px" height="20px"
+style="fill:transparent;stroke-width:1;
+stroke:rgb(0,0,0)"/>
+<text x="0" y="85px" style="font-size: small;">Member</text>
+</svg>
+                        </div>
+                    </div>
+                    
 
                     <div class="toutu"><span>\node</span>命令代表节点，[]中括号为该节点的样式参数，<span>draw</span>将会设置这个节点的轮廓。<span>at (<i>x</i>,<i>y</i>)</span>表示该节点的位置，{}大括号内为该命令的辖域，指示内容。</div>
                     </p>
 
-                    <p>绘制特殊的 Dropbox 蓝底方格。使用节点工具创建节点，辖域内填写<span>Dropbox</span>。<pre>
-\node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></p>
+                    <p>绘制特殊的 Dropbox 蓝底方格。使用节点工具创建节点，辖域内填写<span>Dropbox</span>。
+                        
+<div class="con">
+    <div class="left"><pre>
+\node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></div>
+    <div class="right" style="text-align: center;">
+        <svg width="53px" height="53px" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect width="52px" height="52px"
+        style="fill:rgba(102, 102, 255);stroke-width:1"/>
+        <text x="0" y="30px" style="font-size: small;fill:white;">Dropbox</text>
+        </svg>
+    </div>
+</div>                        
+</p>
 
                     <div class="toutu"><span>minimum size</span>将会指定该节点的长或宽的最小值，这个值超过字长的时候就可以创建一个正方形边框。<span>fill</span>将会指定该节点的背景填充，对其赋值将会填充对应的颜色，<span>draw</span>轮廓指令亦是如此。<span>text</span>将会指定字体颜色。
                     
                     <p>颜色可以使用标准颜色以及其衍生颜色来指定，其中<span>!</span>后接该颜色向目标颜色的混合权重。目标颜色应当再接一个<span>!</span>指定，这里也就是<pre>
 blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!black</pre>就意味着向黑色靠近。</div>
 
-                    <p>绘制圆形的 Overleaf。<pre>
+                    <p>绘制圆形的 Overleaf。
+<div class="con">
+    <div class="left">
+<pre>
 \node[circle,fill=green!90!black,inner sep=10] at(4,-1) {\textbf{Overleaf}};</pre>
-<div class="toutu"><span>circle</span>参数将指定其节点为圆形，inner sep 将会定义圆形内边，可以按照 HTML 中的 padding 去理解。</div>
+    </div>
+    <div class="right" style="text-align: center;">
+        <svg width="81px" height="81px" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="40px" cy="40px" rx="40px" ry="40px"
+        style="fill:rgba(1, 229, 1);stroke-width:1"/>
+        <text x="10px" y="45px" style="font-size: small;font-weight:bold">Overleaf</text>
+        </svg>
+    </div>
+</div>
+
+<div class="toutu"><span>circle</span>参数将指定其节点为圆形，<span>inner sep</span>将会定义圆形内边，可以按照 HTML 中的 padding 去理解。</div>
 </p>
                     <p>定义节点样式。复制<span>[]</span>中的内容，并在开始的部分定义<span>greencirc</span>样式。</p><pre>
 \tikzstyle{greencirc} = [circle,fill=green!90!black,inner sep=10];</pre></p>
@@ -176,6 +224,24 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                     <p></p>这样，我们在<span>Node style</span>下拉选单中就可以看到这个样式，点选后，再次使用节点工具创建新的节点时，就会自动套用这个样式。我们现在就可以替换原来的节点参数为这个样式。样式是一种模板，目的是为了生成可复用代码。如果需要清除样式，直接清空<span>Node style</span>文本框即可。
                     <pre>
 \node[greencirc] at (4,-1) {\textbf{Overleaf}};</pre>
+
+                    <p>文件样式的 \(\rm \LaTeX\) Project。在左边的样式库中，寻找<span>Style Nodes</span>的子库，双击，将样式嵌入到当前文档中。之后就可以在<span>Node style</span>中找到该样式，使用这个样式创建节点即可。</p>
+                    <div class="con">
+<div class="left"><pre>
+\node[message] at (7.5,-1) {\LaTeX~Project};</pre></div>
+<div class="right" style="text-align: center;">
+    <svg width="100px" height="51px" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 10 L80 10 L90 20 L90 40 L0 40 Z"
+        style="fill:white;stroke-width:1;stroke: black;"/>
+    <path d="M80 20 L80 10 L90 20 Z" style="fill: white;stroke:black;stroke-width:1px;"/>
+    <text x="2px" y="30px" style="font-size: small;">LaTeX Project</text>
+    </svg>
+    
+</div>
+                    </div>
+
+<p><i>备注：可以使用<span>$ $</span>的方式插入行内公式。</i></p>
                 </div>
             </div>
         </div>
