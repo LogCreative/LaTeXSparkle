@@ -50,6 +50,9 @@
                 <h1 class="title">第四节 使用 TikZEdt 绘制 Ti<i>k</i>Z 矢量图形</h1>
                 <div class="status" id="CH04">状态：文稿准备中</div>
                 <div class="content" style="color: black;">
+                    
+                    
+
                     <p>正式出版物中，所有的图形都应当原则上矢量或者高清，甚至其设计语言也应当是统一的（字体、字号、图形样式）。\(\rm \LaTeX\) 也拥有一套自己的图形设计系统，使用嵌入的原生代码，就可以生成一些简洁精巧的图形。</p>
 
                     <h3>4.1 第一次使用 TikZEdt</h3>
@@ -176,7 +179,8 @@ stroke:rgb(0,0,0)"/>
                     </div>
                     
 
-                    <div class="toutu"><span>\node</span>命令代表节点，[]中括号为该节点的样式参数，<span>draw</span>将会设置这个节点的轮廓。<span>at (<i>x</i>,<i>y</i>)</span>表示该节点的位置，{}大括号内为该命令的辖域，指示内容。</div>
+                    <div class="toutu"><span>\node</span>命令代表节点，[]中括号为该节点的样式参数，<span>draw</span>将会设置这个节点的描边，如果向其赋值，比如下面的<pre>
+fill=blue!60</pre>就可以指定描边颜色，默认为黑色。<span>at (<i>x</i>,<i>y</i>)</span>表示该节点的位置，{}大括号内为该命令的辖域，指示内容。</div>
                     </p>
 
                     <p>绘制特殊的 Dropbox 蓝底方格。使用节点工具创建节点，辖域内填写<span>Dropbox</span>。
@@ -185,9 +189,9 @@ stroke:rgb(0,0,0)"/>
     <div class="left"><pre>
 \node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></div>
     <div class="right" style="text-align: center;">
-        <svg width="53px" height="53px" version="1.1"
+        <svg width="55px" height="55px" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
-        <rect width="52px" height="52px"
+        <rect width="54px" height="54px"
         style="fill:rgba(102, 102, 255);stroke-width:1"/>
         <text x="0" y="30px" style="font-size: small;fill:white;">Dropbox</text>
         </svg>
@@ -195,7 +199,7 @@ stroke:rgb(0,0,0)"/>
 </div>                        
 </p>
 
-                    <div class="toutu"><span>minimum size</span>将会指定该节点的长或宽的最小值，这个值超过字长的时候就可以创建一个正方形边框。<span>fill</span>将会指定该节点的背景填充，对其赋值将会填充对应的颜色，<span>draw</span>轮廓指令亦是如此。<span>text</span>将会指定字体颜色。
+                    <div class="toutu"><span>minimum size</span>将会指定该节点的长或宽的最小值，这个值超过字长的时候就可以创建一个正方形边框。<span>fill</span>将会指定该节点的背景填充，<span>text</span>将会指定字体颜色。
                     
                     <p>颜色可以使用标准颜色以及其衍生颜色来指定，其中<span>!</span>后接该颜色向目标颜色的混合权重。目标颜色应当再接一个<span>!</span>指定，这里也就是<pre>
 blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!black</pre>就意味着向黑色靠近。</div>
@@ -216,7 +220,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
     </div>
 </div>
 
-<div class="toutu"><span>circle</span>参数将指定其节点为圆形，<span>inner sep</span>将会定义圆形内边，可以按照 HTML 中的 padding 去理解。</div>
+<div class="toutu"><span>circle</span>参数将指定其节点为圆形，<span>inner sep</span>将会定义圆形内边距，（<span>outer sep</span>将会定义圆形外边距）。可以分别按照 HTML 中的 padding 和 margin 去理解。</div>
 </p>
                     <p>定义节点样式。复制<span>[]</span>中的内容，并在开始的部分定义<span>greencirc</span>样式。</p><pre>
 \tikzstyle{greencirc} = [circle,fill=green!90!black,inner sep=10];</pre></p>
@@ -225,7 +229,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                     <pre>
 \node[greencirc] at (4,-1) {\textbf{Overleaf}};</pre>
 
-                    <p>文件样式的 \(\rm \LaTeX\) Project。在左边的样式库中，寻找<span>Style Nodes</span>的子库，双击，将样式嵌入到当前文档中。之后就可以在<span>Node style</span>中找到该样式，使用这个样式创建节点即可。</p>
+                    <p>文件样式的 \(\rm \LaTeX\) Project。在左边的样式库中，寻找<span>Style Nodes</span>的子库，双击，将<span>message</span>样式嵌入到当前文档中。之后就可以在<span>Node style</span>中找到该样式，使用这个样式创建节点即可。</p>
                     <div class="con">
 <div class="left"><pre>
 \node[message] at (7.5,-1) {\LaTeX~Project};</pre></div>
@@ -237,11 +241,107 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
     <path d="M80 20 L80 10 L90 20 Z" style="fill: white;stroke:black;stroke-width:1px;"/>
     <text x="2px" y="30px" style="font-size: small;">LaTeX Project</text>
     </svg>
-    
+</div>
+                    </div>
+                    <details>
+                        <summary>message 样式代码</summary>
+                        <pre>\makeatletter
+\pgfdeclareshape{document}{
+    \inheritsavedanchors[from=rectangle] % this is nearly a rectangle
+    \inheritanchorborder[from=rectangle]
+    \inheritanchor[from=rectangle]{center}
+    \inheritanchor[from=rectangle]{north}
+    \inheritanchor[from=rectangle]{south}
+    \inheritanchor[from=rectangle]{west}
+    \inheritanchor[from=rectangle]{east}
+    %...and possibly more
+    \backgroundpath{% this is new
+        %store lower right in xa/ya and uppper right in xb/yb
+        \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+        \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+        % computer corner of ''flipped page''
+        \pgf@xc=\pgf@xb \advance \pgf@xc by-5pt
+        % this should be a parameter
+        \pgf@yc=\pgf@yb \advance \pgf@yc by-5pt
+        % construct main path
+        \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+        \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yc}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+        \pgfpathclose
+        % add little corner
+        \pgfpathmoveto{\pgfpoint{\pgf@xc}{\pgf@yb}}
+        \pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yc}}
+        \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yc}}
+        \pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yc}}
+    }
+}
+\tikzstyle{message} = [shape=document, thick, draw=black, minimum width=2cm]</pre>
+                        <div class="toutu">
+<span>message</span>的样式首先继承了<span>rectangle</span>的一些属性，用于定义内容的位置。接着定义了一些变量，根据内容长度的不同，边角的<span>\pgf@xc</span>和<span>\pgf@yc</span>通过计算得到。接着画路径的时候，和数铣类似地，首先将“钻头”使用<span>\pgfpathmoveto</span>移动到第一个位置，使用<span>\pgfpathlineto</span>将“钻头”线性地移动到下一个位置，最终使用<span>\pgfpathclose</span>闭合路径。右上角的小三角形也是类似的道理。
+<div style="text-align: center;"><svg width="110px" height="51px" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 10 L63 10 L73 20 L73 40 L13 40 Z"
+        style="fill:white;stroke-width:1;stroke: black;"/>
+    <path d="M63 20 L63 10 L73 20 Z" style="fill: white;stroke:black;stroke-width:1px;"/>
+    <text x="18px" y="30px" style="font-size: small;font-style: italic;">Content</text>
+    <text x="15px" y="50px" style="font-size: x-small;">xa</text>
+    <text x="65px" y="50px" style="font-size: x-small;">xb</text>
+    <text x="55px" y="7px" style="font-size: x-small;">xc</text>
+    <text x="0px" y="40px" style="font-size: x-small;">ya</text>
+    <text x="0px" y="15px" style="font-size: x-small;">yb</text>
+    <text x="75px" y="23px" style="font-size: x-small;">yc</text>
+    </svg></div>
+                        </div>
+                    </details>
+                    
+                    <p>还有两个多行文字框。</p>
+                    <div class="con">
+<div class="left"><pre>\node[text width=2cm,text badly ragged, text centered, draw, minimum size=1cm] at (-7.5,0.5) {Local Computer};
+\node[text width=2cm,text badly ragged, text centered, draw, minimum size=1cm] at (-7.5,-2) {Second Computer};
+</pre></div>
+<div class="right" style="text-align: center;">
+    <svg width="65px" height="100px" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect width="63px" height="35px"
+    style="fill:transparent;stroke-width:1;
+    stroke:rgb(0,0,0)"/>
+    <text x="0" y="15px" style="font-size: small;"><tspan x="15" y="15">Local</tspan><tspan x="1" y="30">Computer</tspan></text>
+    <rect width="63px" height="35px" y="60"
+    style="fill:transparent;stroke-width:1;
+    stroke:rgb(0,0,0)"/>
+    <text x="0" style="font-size: small;"><tspan x="10" y="75">Second</tspan><tspan x="1" y="90">Computer</tspan></text>
+    </svg>
 </div>
                     </div>
 
-<p><i>备注：可以使用<span>$ $</span>的方式插入行内公式。</i></p>
+                    <div class="toutu">
+                        <table border="1px" cellspacing="0" cellpadding="4px">
+                            <caption>与文本有关的节点属性</caption>
+                            <th>属性</th>
+                            <th>描述</th>
+                            <tr>
+                                <td>text width</td>
+                                <td>文本框宽度</td>
+                            </tr>
+                            <tr>
+                                <td>text badly ragged</td>
+                                <td>不使用连字符号</td>
+                            </tr>
+                            <tr>
+                                <td>text centered</td>
+                                <td>文本居中</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>在右方预览框内可以使用框选的方式选取节点，批量地移动。其余的文本节点按照基本的语法就可以完成了。<pre>
+\node at (-7.5,-4) {LAN};
+\node at (-3.5,-4) {Overseas Server};
+\node at (0,-4) {Web Editor};
+\node at (4,-4) {Domestic Server};
+\node at (8.5,-4) {Cloud};</pre></p>
                 </div>
             </div>
         </div>
