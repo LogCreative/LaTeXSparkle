@@ -43,8 +43,7 @@ footer {
 
 footer{
     display: block;
-    top: 20px;
-    left: 10px;
+    padding: 20px 10px;
     overflow: hidden;
 }
 
@@ -52,3 +51,34 @@ footer{
     padding: 15px 10px;
 }
 
+progress {
+    display: block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    /* Reset the apperance */
+    
+    max-width: 85%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: #78a1bb;
+}
+progress::-webkit-progress-bar {
+    background-color: #333;
+    opacity: 0.75;
+    height: 12px;
+}
+progress::-webkit-progress-value {
+    background-color: #78a1bb;
+    height: 12px;
+}
+progress::-moz-progress-bar {
+    background-color: coral;
+}

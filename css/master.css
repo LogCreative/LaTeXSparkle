@@ -188,6 +188,10 @@ details[open] {
     box-shadow: none;
 }
 
+progress {
+    display: none;
+}
+
 .status{
     position: relative;
     margin: 48px 0;
