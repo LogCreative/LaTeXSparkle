@@ -192,6 +192,32 @@ progress {
     display: none;
 }
 
+.rightcol {
+    display: flexbox;
+    width: 14%;
+    height: auto;
+    position: fixed;
+    right: 1%;
+    top: 10px;
+}
+
+#loadbar
+{
+    width:12px;
+    background-color: #333;
+    position:relative; 
+}
+#bar
+{
+    width:100%;
+    display:block;        
+    font-family:arial;
+    font-size:12px; 
+    background-color:#78a1bb;
+    position:absolute;
+    top:0;        
+}
+
 .status{
     position: relative;
     margin: 48px 0;

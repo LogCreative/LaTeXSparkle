@@ -51,6 +51,10 @@ footer{
     padding: 15px 10px;
 }
 
+.rightcol {
+    display: none;
+}
+
 progress {
     display: block;
     margin: 0 auto;
@@ -62,7 +66,8 @@ progress {
     z-index: 12;
     /* Reset the apperance */
     
-    max-width: 85%;
+    max-width: 95%;
+
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
