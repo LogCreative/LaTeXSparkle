@@ -20,7 +20,11 @@ $(document).ready(function() {
                     var count = 1;
                     
                     $("#bottom-link").text('');
-                
+                    
+                    var first = true;
+                    // var liprev = $('<div/>');
+                    var aprev = $('<a/>');
+                    var leftprev = 0;
                     $('#content').find('h3').each(function() {
                 
                         var $section = $(this);
@@ -29,12 +33,22 @@ $(document).ready(function() {
                         /*---------------------
                         * Create menu item
                         *--------------------*/
-                        var li = $('<div/>');
-                        var a = $('<a/>', {
-                            text: count,
+
+                        var aout = $('<a/>',{
                             href: '#' + id + count
                         });
-                        a.appendTo(li);
+                        var but = $('<button/>',{
+                           // text: count
+                           text: $section.text()
+                        });
+                        but.appendTo(aout);
+
+                        // var li = $('<li/>');
+                        // var a = $('<a/>', {
+                        //     text: count,
+                        //     href: '#' + id + count
+                        // });
+                        // li.appendTo(a);
                 
                         /*---------------------
                         * Add anchor
@@ -42,14 +56,36 @@ $(document).ready(function() {
                         $section.attr('id', id + count);
                         count++;
                 
-                        var labelleft = $(this).offset().top / getMax() * 100 +'%';
+                        var labelleftnum = $(this).offset().top / getMax() * windowWidth;
+                        
+                        if(!first){
+                            var labelprevwidth = labelleftnum - leftprev;
+                            aprev.children().css({
+                                width: labelprevwidth
+                            });
+                            $('#bottom-link').append(aprev);
+                        } else{
+                            first = false;
+                        }
         
-                        $('#bottom-link').append(li);
-        
-                        li.css({
-                            left: labelleft
+                        aout.css({
+                            left: labelleftnum
                         });
+                        leftprev = labelleftnum;
+
+                        // liprev=li;
+                        aprev = aout;
                     });
+
+                    aprev.children().css({
+                        width: windowWidth - leftprev
+                    });
+
+                    // liprev.css({
+                    //     width: 100 - leftprev + '%'
+                    // });
+
+                    $('#bottom-link').append(aprev);
                 })();
             }
 
@@ -134,7 +170,6 @@ $(document).ready(function() {
                     
                     $("#side-menu").text('');
                     
-                    // var first = true;
                     $('#content').find('h3').each(function() {
                 
                         var $section = $(this);
@@ -160,11 +195,6 @@ $(document).ready(function() {
 
                         $('#side-menu').append(li);
 
-                        // if(!first){
-                            
-                        //     li = linext;
-                        // } else first = false;
-        
                         li.css({
                             top: labeltop
                         });
