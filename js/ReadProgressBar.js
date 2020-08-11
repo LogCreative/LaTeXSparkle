@@ -191,7 +191,7 @@ $(document).ready(function() {
                         $section.attr('id', id + count);
                         count++;
                 
-                        var labeltop = $(this).offset().top / 10;
+                        var labeltop = $(this).offset().top / 10 - 20;
 
                         $('#side-menu').append(li);
 
