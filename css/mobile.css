@@ -57,16 +57,14 @@ footer{
 
 progress {
     display: block;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 20px;
+    margin: 0 0;
+    bottom: 0;
     position: fixed;
     width: 100%;
     z-index: 12;
     /* Reset the apperance */
-    
-    max-width: 95%;
+    height: 12px;
+    max-width: 100%;
 
     -webkit-appearance: none;
     -moz-appearance: none;
