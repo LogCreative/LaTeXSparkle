@@ -12,7 +12,7 @@ body{
 }
 
 .side-bar,
-footer {
+footer,#side-menu,#bottom-link{
     font-family: 
     "微软雅黑 Light", "新宋体",
     Courier, monospace;
@@ -28,7 +28,8 @@ footer {
 
 .side-bar .nav a,
 .side-bar .footer a, 
-footer a{
+footer a,
+#side-menu a{
     display: block;
     color: #eee;
     opacity: 0.5;
@@ -39,14 +40,16 @@ footer a{
 
 .side-bar .nav a:hover,
 .side-bar .footer a:hover,
-footer a:hover {
+footer a:hover,
+#side-menu a:hover{
     opacity: 1;
 }
 
 .side-bar a,
 .article-list .item .title,
 footer a, 
-.article .content a {
+.article .content a,
+#side-menu a{
     text-decoration: none;
     align-content: center;
 }
@@ -203,9 +206,11 @@ progress {
 
 #loadbar
 {
-    width:12px;
+    width:5%;
     background-color: #333;
     position:relative; 
+    float: left;
+    border-radius: 5px;
 }
 #bar
 {
@@ -215,7 +220,25 @@ progress {
     font-size:12px; 
     background-color:#78a1bb;
     position:absolute;
-    top:0;        
+    top:0;  
+    border-radius: 5px;      
+}
+#side-menu{
+    width: 95%;
+    float: right;
+    position: relative;
+    padding: 0 3px;
+    margin: 0 0;
+}
+#side-menu div {
+    list-style: none;
+    padding-left: -10;
+    line-height: 1.4;
+    position: absolute;
+}
+
+#bottom-link {
+    display: none;
 }
 
 .status{
