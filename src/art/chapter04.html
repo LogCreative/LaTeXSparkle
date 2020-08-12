@@ -161,7 +161,7 @@
                     
                     <p>这幅流程图大部分由矩形与圆形组成，实线与虚线箭头并存，下方还有一个小型图例，都是一些基本图形。</p>
 
-                    <p>4.2.2 <b>node。</b>单击工具栏的<span>Node tool</span>节点工具，在右侧的预览区点击一个点将会自动生成 node 。在 node 花括号所在的辖域内输入这个节点需要输入的文字。在<span>\node</span>命令后使用中括号添加参数，这里我们输入<span>[draw]</span>表示这个节点需要一个轮廓。将这行代码复制三次，每次复制完成后使用工具栏中的<span>Select and move tool</span>移动该节点的位置，让三个节点等距并排放置。
+                    <p>4.2.2 <b>node。</b>单击工具栏的<span>Node tool</span>节点工具，在右侧的预览区点击一个点将会自动生成 node 。在 node 花括号所在的辖域内输入这个节点需要输入的文字。在<span>\node</span>命令后使用中括号添加参数，这里我们输入<span>[draw]</span>表示这个节点需要一个轮廓。将这行代码复制三次，每次复制完成后使用工具栏中的<span>Select and move tool</span>移动该节点的位置，让三个节点等距并排放置。</p>
                     <div class="con">
                         <div class="left">
 <pre>
@@ -191,10 +191,12 @@ stroke:rgb(0,0,0)"/>
 
                     <div class="toutu"><span>\node</span>命令代表节点，[]中括号为该节点的样式参数，<span>draw</span>将会设置这个节点的描边，如果向其赋值，比如下面的<pre>
 fill=blue!60</pre>就可以指定描边颜色，默认为黑色。<span>at (<i>x</i>,<i>y</i>)</span>表示该节点的位置，{}大括号内为该命令的辖域，指示内容。</div>
-                    </p>
+                    
 
                     <p>绘制特殊的 Dropbox 蓝底方格。使用节点工具创建节点，辖域内填写<span>Dropbox</span>。
                         
+                        
+</p>
 <div class="con">
     <div class="left"><pre>
 \node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></div>
@@ -206,8 +208,7 @@ fill=blue!60</pre>就可以指定描边颜色，默认为黑色。<span>at (<i>x
         <text x="0" y="30px" style="font-size: small;fill:white;">Dropbox</text>
         </svg>
     </div>
-</div>                        
-</p>
+</div>
 
                     <div class="toutu"><span>minimum size</span>将会指定该节点的长或宽的最小值，这个值超过字长的时候就可以创建一个正方形边框。<span>fill</span>将会指定该节点的背景填充，<span>text</span>将会指定字体颜色。
                     
