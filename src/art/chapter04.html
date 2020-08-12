@@ -352,6 +352,68 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 \node at (0,-4) {Web Editor};
 \node at (4,-4) {Domestic Server};
 \node at (8.5,-4) {Cloud};</pre></p>
+
+                    <p>4.2.3 <b>edge</b>。节点创建结束后，使用线段来连接节点。</p>
+
+                    <p>使用双向箭头连接 Member 和 Overleaf。使用工具栏的<span>Edge tool</span>线段工具，依次点击两个节点，就会出现线条连接，此时上面的节点由于需要引用，被自动赋予了名称<span>v1</span>,<span>v2</span>。给线段赋予一些参数，使得其成为双向箭头。</p>
+
+                    <div class="con">
+                        <div class="left">
+                            <pre>\draw[<->,line width=1pt] (v1) edge (v2);</pre>
+                        </div>
+                        <div class="right" style="text-align: center;">
+                            <svg width="180" height="80">
+                                <defs>
+                                    <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                        <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </marker>
+                                    
+                                    <marker id="arrow-s" viewBox="-11 -1 15 10" refX="-6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                        <path d="M0 0 C0 0, -2 4,-10 5 L -10 5 C-10 5,-6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </marker>
+                                </defs>
+                                <rect width="52px" height="20px" y="30" style="fill:transparent;stroke-width:1;
+                                stroke:rgb(0,0,0)"/>
+                                <text x="0" y="45px" style="font-size: small;">Member</text>
+                                <line x1="55" y1="40" x2="97" y2="40" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+                                <ellipse cx="140px" cy="40px" rx="40px" ry="40px" style="fill:rgba(1, 229, 1);stroke-width:1"/>
+        <text x="110px" y="45px" style="font-size: small;font-weight:bold">Overleaf</text>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="toutu"><span>\draw</span>命令代表线条连接，<span>edge</span>用于指示左右两者之间的连接是线段关系。参数<span><-></span>用于指示该连接为双向箭头，<span>line width</span>用于指示线段粗细。</div>
+
+                    <p>就像之前提到过的一样，也可以将这些参数存储为样式。<pre>\tikzstyle{boldarrow}=[<->,line width=1pt];
+\draw[boldarrow] (v1) edge (v2);</pre>之后就可以在<span>Edge style</span>中选择<span>boldarrow</span>样式完成剩余几个双向箭头的绘制了。</p>
+
+                    <p>对箭头标注。在 Overleaf 节点和 \(\rm \LaTeX\) Project 节点之间的双向箭头上标注<span>Sync^1</span>，需要在<span>edge</span>命令后附加<span>node</span>节点。
+                    <div class="con">
+                        <div class="left"><pre>\draw[boldarrow] (v2) edge node[above] {Sync$^1$} (v5)</pre></div>
+                        <div class="right" style="text-align: center;"><svg width="210" height="80">
+                            <defs>
+                                <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                    <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </marker>
+                                
+                                <marker id="arrow-s" viewBox="-11 -1 15 10" refX="-6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                    <path d="M0 0 C0 0, -2 4,-10 5 L -10 5 C-10 5,-6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </marker>
+                            </defs>
+                            <line x1="82" y1="40" x2="118" y2="40" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+                            <ellipse cx="40px" cy="40px" rx="40px" ry="40px" style="fill:rgba(1, 229, 1);stroke-width:1"/>
+    <text x="10px" y="45px" style="font-size: small;font-weight:bold">Overleaf</text>
+    <g transform="translate(120,15)"><path d="M0 10 L80 10 L90 20 L90 40 L0 40 Z"
+        style="fill:white;stroke-width:1;stroke: black;"/>
+    <path d="M80 20 L80 10 L90 20 Z" style="fill: white;stroke:black;stroke-width:1px;"/>
+    <text x="2px" y="30px" style="font-size: small;">LaTeX Project</text></g>
+    <text x="85px" y="35px" style="font-size: small;">Sync</text>
+    <text x="113px" y="30px" style="font-size: x-small;">1</text>
+    
+                        </svg></div>
+                    </div>
+                    <div class="toutu">在<span>edge</span>命令插入<span>node</span>命令将用于对线段居中标注，<span>[above]</span>命令将会将标注放在线段之上，<span>[below]</span>将会放在线段之下。在<span>node</span>的辖域内输入<span>$ $</span>将用于插入行内公式，<span>^{上标}</span>将会插入上标，当上标仅为一个字符时，大括号可以省略；类似地，<span>_{下标}</span>用于插入下标。</div>
+                    </p>
                 </div>
             </div>
         </div>
