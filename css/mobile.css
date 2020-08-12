@@ -117,14 +117,14 @@ progress::-moz-progress-bar {
 }
 
 .con {
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
 }
 
 .left {
-    grid-row: 1;
+    grid-row: 2;
 }
 
 .right {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 1;
 }

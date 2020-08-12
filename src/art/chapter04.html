@@ -82,14 +82,9 @@
 
                     <details>
                         <summary><a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH04/sync.tex" target="_blank">sync.tex</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH04/sync.pdf" target="_blank">[预览]</a></summary>
-                        <pre>
-\usetikzlibrary{patterns}
-\begin{tikzpicture}[line width=1pt,scale=0.65, every node/.style={scale=0.65}] %缩放
+                        <pre>\begin{tikzpicture}
 
-\tikzstyle{bordered} = [circle,outer sep=0,inner sep=10,fill=green!90!black];
-\tikzstyle{boldarrow}=[<->,line width=1pt];
-
-\makeatletter
+      \makeatletter
       \pgfdeclareshape{document}{
       \inheritsavedanchors[from=rectangle] % this is nearly a rectangle
       \inheritanchorborder[from=rectangle]
@@ -121,41 +116,37 @@
       }
       }
       \tikzstyle{message} = [shape=document, thick, draw=black, minimum width=2cm]
+    
+\tikzstyle{greencirc} = [circle,fill=green!90!black,inner sep=10];
+\tikzstyle{boldarrow} = [<->,line width=1pt];
 
-\node[bordered] (v2) at (0.5,0.5) {\textbf{Overleaf}};
-\node[draw,inner sep=5] (v1) at (-4,2) {Member};
-\node[draw,inner sep=5] (v3) at (-4,0.5) {Member};
-\node[draw,inner sep=5] (v4) at (-4,-1) {Member};
-\draw[boldarrow]  (v1) edge node[sloped,above] {Request$^\mathbf{2}$} node[sloped,below] {Receive} (v2);
-\draw[boldarrow]  (v3) edge (v2);
-\draw[boldarrow]  (v4) edge (v2);
-\node[minimum size=1.8cm,fill=blue!60,text=white] (v5) at (-8,2) {\textbf{Dropbox}};
+\node[draw] (v4) at (0,0.5) {Member};
+\node[draw] (v1) at (0,-1) {Member};
+\node[draw] (v3) at (0,-2.5) {Member};
+\node[minimum size=1.8cm,fill=blue!60,text=white] (v6) at (-3.5,0.5) {Dropbox};
+\node[greencirc] (v2) at (4,-1) {\textbf{Overleaf}};
+\node [message] (v5) at (8.5,-1) {\LaTeX~Project};
+\node[text width=2cm,text badly ragged,text centered,draw,minimum size=1cm] (v7) at (-7.5,0.5) {Local Computer};
+\node[text width=2cm,text badly ragged,text centered,draw,minimum size=1cm] (v8) at (-7.5,-2) {Second Computer};
 
+\node at (-7.5,-4) {LAN};
+\node at (-3.5,-4) {Overseas Server};
+\node at (0,-4) {Web Editor};
+\node at (4,-4) {Domestic Server};
+\node at (8.5,-4) {Cloud};
 
-\draw[boldarrow]  (v5) edge node[auto] {Privilege$^\mathbf{3}$} (v1);
+\draw[boldarrow]  (v1) edge (v2);
+\draw [boldarrow] (v3) edge (v2);
+\draw [boldarrow] (v4) edge node[above,sloped]{Request$^2$} node[below,sloped]{Receive}(v2);
+\draw [boldarrow] (v2) edge node[above] {Sync$^1$}(v5);
+\draw [boldarrow]  (v4) edge node[above]{Privilege$^3$}(v6);
+\draw [boldarrow] (v6) edge node[above]{Client$^4$}(v7);
+\draw [boldarrow] (v7) edge node[left]{LAN$^5$}(v8);
 
-\node[text width=2cm,text badly ragged,text centered,draw,minimum size=1cm] (v6) at (-12,2) {Local Computer};
-\draw[boldarrow]  (v6) edge node[auto] {Client$^\mathbf{4}$} (v5);
-\node[message] (v7) at (4.5,0.5) {\LaTeX~Project};
-
-\draw[boldarrow]  (v2) edge node[auto] {Sync$^\mathbf{1}$} (v7);
-
-\draw[boldarrow,densely dashed] (v7) -- (4.5,4) -- (-12,4) -- (v6);
-\node at (5.4,1.5) {Upload$^\mathbf{6}$};
-\node at (-13.2,3) {Download};
-\node[text width=2cm,text badly ragged,text centered,draw,minimum size=1cm] (v8) at (-12,-1) {Second Computer};
-\draw[boldarrow]  (v8) edge node[auto] {LAN$^\mathbf{5}$} (v6);
-
-\node at (4.5,-2.5) {Cloud};
-\node at (0.5,-2.5) {Domestic Server};
-\node at (-4,-2.5) {Web Editor};
-\node at (-8,-2.5) {Overseas Server};
-\node at (-12,-2.5) {LAN};
-\draw[boldarrow] (-8,-3.5) -- (-6.5,-3.5) node[right] {Auto update};
-\draw[boldarrow,densely dashed] (-3,-3.5) -- (-1.5,-3.5) node[right] {Manual update};
-\draw[line width=0.5pt]  (-8.25,-3) rectangle (1.75,-4);
-\end{tikzpicture} 
-                        </pre>
+\draw [boldarrow, densely dashed] (v7) -- (-7.5,2.5) -- (8.5,2.5) -- (v5);
+\node at (9.5,0) {Upload$^6$};
+\node at (-8.5,1.5) {Download};
+\end{tikzpicture}</pre>
                     </details>
                     <p>4.2.1 这幅流程图恰恰阐述了<a href="chapter03.html" target="_blank">上一节</a>的 Overleaf 连接框架：在 Overleaf 平台上同步 \(\rm \LaTeX\) 项目，并通过 Overleaf 平台让用户（Member）提交与接收，有特权（Privilege）的用户可以将项目同步到 Dropbox 上，而 Dropbox 通过客户端（Client）与本地电脑连接。本地电脑可以通过手动上传的方式创建 \(\rm \LaTeX\) 项目，也可以手动下载 \(\rm \LaTeX\) 项目，在局域网（LAN）内可以将项目与第二台电脑同步。</p>
                     
@@ -169,7 +160,7 @@
 \node[draw] at (-0.5,-1) {Member};
 \node[draw] at (-0.5,-2.5) {Member};</pre>
                         </div>
-                        <div class="right" style="text-align: center;">
+                        <div class="right" >
 <svg width="53px" height="90px" version="1.1"
 xmlns="http://www.w3.org/2000/svg">
 <rect width="52px" height="20px"
@@ -200,7 +191,7 @@ fill=blue!60</pre>就可以指定描边颜色，默认为黑色。<span>at (<i>x
 <div class="con">
     <div class="left"><pre>
 \node[minimum size=1.8cm,fill=blue!60,text=white] at (-3.5,0.5) {Dropbox};</pre></div>
-    <div class="right" style="text-align: center;">
+    <div class="right" >
         <svg width="55px" height="55px" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <rect width="54px" height="54px"
@@ -215,13 +206,13 @@ fill=blue!60</pre>就可以指定描边颜色，默认为黑色。<span>at (<i>x
                     <p>颜色可以使用标准颜色以及其衍生颜色来指定，其中<span>!</span>后接该颜色向目标颜色的混合权重。目标颜色应当再接一个<span>!</span>指定，这里也就是<pre>
 blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!black</pre>就意味着向黑色靠近。</div>
 
-                    <p>绘制圆形的 Overleaf。
+                    <p>绘制圆形的 Overleaf。</p>
 <div class="con">
     <div class="left">
 <pre>
 \node[circle,fill=green!90!black,inner sep=10] at(4,-1) {\textbf{Overleaf}};</pre>
     </div>
-    <div class="right" style="text-align: center;">
+    <div class="right" >
         <svg width="81px" height="81px" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="40px" cy="40px" rx="40px" ry="40px"
@@ -232,7 +223,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 </div>
 
 <div class="toutu"><span>circle</span>参数将指定其节点为圆形，<span>inner sep</span>将会定义圆形内边距，（<span>outer sep</span>将会定义圆形外边距）。可以分别按照 HTML 中的 padding 和 margin 去理解。</div>
-</p>
+
                     <p>定义节点样式。复制<span>[]</span>中的内容，并在开始的部分定义<span>greencirc</span>样式。</p><pre>
 \tikzstyle{greencirc} = [circle,fill=green!90!black,inner sep=10];</pre></p>
 <div class="toutu"><span>\tikzstyle</span>命令将用于生成 tikz 样式，<span>=</span>为赋值符号，为此样式在<span>[]</span>内赋值。</div>
@@ -244,7 +235,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                     <div class="con">
 <div class="left"><pre>
 \node[message] at (7.5,-1) {\LaTeX~Project};</pre></div>
-<div class="right" style="text-align: center;">
+<div class="right" >
     <svg width="100px" height="51px" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <path d="M0 10 L80 10 L90 20 L90 40 L0 40 Z"
@@ -292,7 +283,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 \tikzstyle{message} = [shape=document, thick, draw=black, minimum width=2cm]</pre>
                         <div class="toutu">
 <span>message</span>的样式首先继承了<span>rectangle</span>的一些属性，用于定义内容的位置。接着定义了一些变量，根据内容长度的不同，边角的<span>\pgf@xc</span>和<span>\pgf@yc</span>通过计算得到。接着画路径的时候，和数铣类似地，首先将“钻头”使用<span>\pgfpathmoveto</span>移动到第一个位置，使用<span>\pgfpathlineto</span>将“钻头”线性地移动到下一个位置，最终使用<span>\pgfpathclose</span>闭合路径。右上角的小三角形也是类似的道理。
-<div style="text-align: center;"><svg width="110px" height="51px" version="1.1"
+<div ><svg width="110px" height="51px" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <path d="M13 10 L63 10 L73 20 L73 40 L13 40 Z"
         style="fill:white;stroke-width:1;stroke: black;"/>
@@ -313,7 +304,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 <div class="left"><pre>\node[text width=2cm,text badly ragged, text centered, draw, minimum size=1cm] at (-7.5,0.5) {Local Computer};
 \node[text width=2cm,text badly ragged, text centered, draw, minimum size=1cm] at (-7.5,-2) {Second Computer};
 </pre></div>
-<div class="right" style="text-align: center;">
+<div class="right">
     <svg width="65px" height="100px" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <rect width="63px" height="35px"
@@ -362,7 +353,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                         <div class="left">
                             <pre>\draw[<->,line width=1pt] (v1) edge (v2);</pre>
                         </div>
-                        <div class="right" style="text-align: center;">
+                        <div class="right">
                             <svg width="180" height="80">
                                 <defs>
                                     <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
@@ -391,7 +382,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                     <p>对箭头标注。在 Overleaf 节点和 \(\rm \LaTeX\) Project 节点之间的双向箭头上标注<span>Sync^1</span>，需要在<span>edge</span>命令后附加<span>node</span>节点。
                     <div class="con">
                         <div class="left"><pre>\draw[boldarrow] (v2) edge node[above] {Sync$^1$} (v5)</pre></div>
-                        <div class="right" style="text-align: center;"><svg width="210" height="80">
+                        <div class="right" ><svg width="211" height="80">
                             <defs>
                                 <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
                                     <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -415,6 +406,126 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
                     </div>
                     <div class="toutu">在<span>edge</span>命令插入<span>node</span>命令将用于对线段居中标注，<span>[above]</span>命令将会将标注放在线段之上，<span>[below]</span>将会放在线段之下。在<span>node</span>的辖域内输入<span>$ $</span>将用于插入行内公式，<span>^{上标}</span>将会插入上标，当上标仅为一个字符时，大括号可以省略；类似地，<span>_{下标}</span>用于插入下标。</div>
                     </p>
+
+                    <p>类似地，对最上面的箭头放置倾斜的标签。</p>
+
+                    <div class="con">
+                        <div class="left"><pre>\draw[boldarrow] (v4) edge node[above,sloped] {Request$^2$} node[below,sloped] {Receive} (v2);</pre></div>
+                        <div class="right"><svg width="180" height="85">
+                            <defs>
+                                <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                    <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </marker>
+                                
+                                <marker id="arrow-s" viewBox="-11 -1 15 10" refX="-6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                    <path d="M0 0 C0 0, -2 4,-10 5 L -10 5 C-10 5,-6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </marker>
+                            </defs>
+                            <g transform="translate(0,5)">
+                            <rect width="52px" height="20px" style="fill:transparent;stroke-width:1;
+                            stroke:rgb(0,0,0)"/>
+                            <text x="0" y="15px" style="font-size: small;">Member</text>
+                            <line x1="55" y1="10" x2="100" y2="28" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+                            <ellipse cx="140px" cy="40px" rx="40px" ry="40px" style="fill:rgba(1, 229, 1);stroke-width:1"/>
+    <text x="110px" y="45px" style="font-size: small;font-weight:bold">Overleaf</text>
+                            <text x="53" y="-15" transform="rotate(20)" style="font-size: smaller;">Request</text>
+                            <text x="102" y="-18" transform="rotate(20)" style="font-size: x-small;">2</text>
+                            <text x="56" y="5" transform="rotate(20)" style="font-size: smaller;">Receive</text>
+                        </g>
+                        </svg></div>
+                    </div>
+
+                    <div class="toutu">当需要放置多个节点时，直接并列添加即可。<span>sloped</span>表示跟随线段的倾斜程度倾斜，该参数也可以在<span>Edge Labels</span>样式库里找到。</div>
+                    <p>连接其余的线段，并标注。</p>
+                    <div class="con">
+                        <div class="left"><pre>\draw [boldarrow] (v4) edge node[above] {Privilege$^3$} (v6);
+\draw [boldarrow] (v6) edge node[above] {Client$^4$} (v7);
+\draw [boldarrow] (v7) edge node[left] {LAN$^5$} (v8);</pre></div>
+                        <div class="right"><svg width="320px" height="120px" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </marker>
+        
+        <marker id="arrow-s" viewBox="-11 -1 15 10" refX="-6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0 0 C0 0, -2 4,-10 5 L -10 5 C-10 5,-6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </marker>
+    </defs>
+    <g transform="translate(0,10)"><rect width="63px" height="35px"
+        style="fill:transparent;stroke-width:1;
+        stroke:rgb(0,0,0)"/>
+        <text x="0" y="15px" style="font-size: small;"><tspan x="15" y="15">Local</tspan><tspan x="1" y="30">Computer</tspan></text>
+        <rect width="63px" height="35px" y="60"
+        style="fill:transparent;stroke-width:1;
+        stroke:rgb(0,0,0)"/>
+        <text x="0" style="font-size: small;"><tspan x="10" y="75">Second</tspan><tspan x="1" y="90">Computer</tspan></text>
+        <line x1="35" y1="37" x2="35" y2="56" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+        <text x="-1" y="52px" style="font-size: smaller;">LAN</text>
+        <text x="27" y="45px" style="font-size: x-small;">5</text></g>
+    <g transform="translate(120,0)"><rect width="54px" height="54px"
+        style="fill:rgba(102, 102, 255);stroke-width:1"/>
+        <text x="0" y="30px" style="font-size: small;fill:white;">Dropbox</text>
+        <line x1="-55" y1="28" x2="-2" y2="28" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+        <text x="-50" y="22px" style="font-size: smaller;">Client</text>
+        <text x="-15" y="15px" style="font-size: x-small;">4</text>
+    </g>    
+    <g transform="translate(250,15)">
+        <rect width="52px" height="20px" style="fill:transparent;stroke-width:1;stroke:rgb(0,0,0)"/>
+        <text x="0" y="15px" style="font-size: small;">Member</text>
+        <line x1="-75" y1="12" x2="-2" y2="12" stroke="black" stroke-width="1.5"  marker-start="url(#arrow-s)" marker-end="url(#arrow-e)" />
+        <text x="-70" y="5px" style="font-size: smaller;">Privilege</text>
+        <text x="-15" y="0px" style="font-size: x-small;">3</text>
+    </g>
+    </svg></div>
+                    </div>
+                    
+                    <div class="toutu">当箭头是纵向的时候，应当使用<span>[left]</span>或<span>[right]</span>方位。</div>
+                    
+                    <p>最后一步，绘制折线。使用工具栏中的<span>Path tool</span>路径工具，构造折线路径，依次点击路径上的节点。然后使用 node 工具创建标注。</p>
+
+    <div class="con">
+        <div class="left"><pre>\draw [boldarrow, densely dashed] (v7) -- (-7.5,2.5) -- (8.5,2.5) -- (v5);
+\node at (9.5,0) {Upload$^6$};
+\node at (-8.5,1.5) {Download};</pre></div>
+        <div class="right"><svg width="290px" height="110px" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrow-e" viewBox="-1 -1 15 15" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0 0 C0 0, 2 4,10 5 L 10 5 C10 5,6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                </marker>
+                
+                <marker id="arrow-s" viewBox="-11 -1 15 10" refX="-6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0 0 C0 0, -2 4,-10 5 L -10 5 C-10 5,-6 5,0 10 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                </marker>
+            </defs>
+            <g transform="translate(35,0)"><g transform="translate(0,60)">
+                <rect width="63px" height="35px"
+                style="fill:transparent;stroke-width:1;
+                stroke:rgb(0,0,0)"/>
+                <text x="0" y="15px" style="font-size: small;"><tspan x="15" y="15">Local</tspan><tspan x="1" y="30">Computer</tspan></text>
+                </g>
+                <g transform="translate(150,60)">
+                    <path d="M0 10 L80 10 L90 20 L90 40 L0 40 Z"
+    style="fill:white;stroke-width:1;stroke: black;"/>
+    <path d="M80 20 L80 10 L90 20 Z" style="fill: white;stroke:black;stroke-width:1px;"/>
+    <text x="2px" y="30px" style="font-size: small;">LaTeX Project</text>
+                </g>
+                
+                <path d="M30 58 L30 5 L195 5 L195 68" style="fill:transparent;stroke-width:1;stroke: black;" marker-start="url(#arrow-s)" stroke-dasharray="5,2" marker-end="url(#arrow-e)"></path></g>
+            
+            <text x="0" y="45px" style="font-size: smaller;">Download</text>
+
+            <text x="233" y="45px" style="font-size: smaller;">Upload</text>
+
+            <text x="278" y="40px" style="font-size: x-small;">6</text>
+
+            </svg></div>
+    </div>
+
+                    <div class="toutu"><span>--</span>用于折线依次连接节点，<span>densely dashed</span>是线条的一种样式，密集虚线，更多的样式可以在<span>Line Styles</span>样式库中找到。</div>
+
+                    <p>至此，这个流程图就画完了。</p>
                 </div>
             </div>
         </div>

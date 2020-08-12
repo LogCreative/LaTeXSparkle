@@ -177,6 +177,7 @@ summary{
 
 .left {
     grid-column: 1;
+    grid-row: 1;
 }
 
 .right {
@@ -241,6 +242,10 @@ progress {
 
 #bottom-link {
     display: none;
+}
+
+.right {
+    text-align: center;
 }
 
 .status{
@@ -314,5 +319,5 @@ progress {
 
 @keyframes CH04 {
     from {width: 0;}
-    to {width: 55px;}
+    to {width: 70px;}
 }
