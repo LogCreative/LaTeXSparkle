@@ -115,3 +115,16 @@ progress::-moz-progress-bar {
     white-space: nowrap;
     overflow: hidden;
 }
+
+.con {
+    grid-template-columns: auto;
+}
+
+.left {
+    grid-row: 1;
+}
+
+.right {
+    grid-row: 2;
+    grid-column: 1;
+}
