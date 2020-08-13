@@ -525,7 +525,21 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 
                     <div class="toutu"><span>--</span>用于折线依次连接节点，<span>densely dashed</span>是线条的一种样式，密集虚线，更多的样式可以在<span>Line Styles</span>样式库中找到。</div>
 
-                    <p>至此，这个流程图就画完了。</p>
+                    <p>4.2.4 至此，这个流程图就画完了，可能希望插入到文档中，第一种方式就是内嵌代码，这种方式的优点是可以跟随文件编译，以期获得同样的文档环境参数设置（字体、字号）。</p>
+
+                    <p>打开<span>File</span>文件选单，选择<span>Save As...</span>另存为，将其存入之前文档的同路径下某处，例如：<span>pic/sync.tex</span>。这时候就可以在文档中使用<pre>\input{pic/sync.tex}</pre>命令编译器在编译时直接将代码片段拼接于此处。</p>
+
+                    <div class="toutu"><span>\input</span>命令用于插入代码。</div>
+
+                    <p>可是，整个图形是过大的，需要进入这个文件，对整个<span>tikzpicture</span>域使用全局修饰命令<pre>\begin{tikzpicture}[scale=0.65]</pre>但是有些字体却没有被缩小，这时候需要再增加一个命令<pre>\begin{tikzpicture}[scale=0.65,every node/.style={scale=0.65}]</pre></p>
+
+                    <div class="toutu"><span>scale</span>将会指定缩放，<span>every node/.style</span>顾名思义，将会首先对每个节点赋予样式，这里赋予了缩放。</div>
+
+                    <p>当然还有第二种方式，直接导出为 PDF 后再插入到文档中。使用<span>File</span>选单下的<span>Save Pdf As...</span>另存 PDF 命令将其存入类似的路径下，输入<pre>\includegraphics[scale=0.65]{pic/sync.pdf}</pre></p>
+
+                    <div class="toutu"><span>\includegraphics</span>用于插入各种类型的图片（不仅仅是 PDF），这里使用了缩放参数<span>scale</span>。</div>
+
+                    <p>就可以达到类似的效果。</p>
                 </div>
             </div>
         </div>

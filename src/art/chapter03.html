@@ -105,6 +105,16 @@
         "args": [
             "%DOCFILE%"
         ]
+    },
+    {
+        "name": "lualatex",
+        "command": "lualatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOCFILE%"
+        ]
     }
 ],
 "latex-workshop.latex.recipes": [
@@ -112,6 +122,12 @@
         "name": "pdflatex",
         "tools": [
             "pdflatex"
+        ]
+    },
+    {
+        "name": "lualatex",
+        "tools": [
+            "lualatex"
         ]
     },
     {
