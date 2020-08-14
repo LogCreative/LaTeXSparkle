@@ -11,7 +11,7 @@ $(document).ready(function() {
     var tranfunc = function() {
         var windowWidth = document.documentElement.clientWidth;
 
-        if (windowWidth<=768) {
+        if (windowWidth<=1000) {
             // Mobile
 
             var createmobtoc = function(){
