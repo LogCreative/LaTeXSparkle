@@ -283,7 +283,7 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 \tikzstyle{message} = [shape=document, thick, draw=black, minimum width=2cm]</pre>
                         <div class="toutu">
 <span>message</span>的样式首先继承了<span>rectangle</span>的一些属性，用于定义内容的位置。接着定义了一些变量，根据内容长度的不同，边角的<span>\pgf@xc</span>和<span>\pgf@yc</span>通过计算得到。接着画路径的时候，和数铣类似地，首先将“钻头”使用<span>\pgfpathmoveto</span>移动到第一个位置，使用<span>\pgfpathlineto</span>将“钻头”线性地移动到下一个位置，最终使用<span>\pgfpathclose</span>闭合路径。右上角的小三角形也是类似的道理。
-<div ><svg width="110px" height="51px" version="1.1"
+<div style="text-align: center;"><svg width="110px" height="51px" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <path d="M13 10 L63 10 L73 20 L73 40 L13 40 Z"
         style="fill:white;stroke-width:1;stroke: black;"/>
@@ -527,9 +527,11 @@ blue!60!white</pre></p>white 在此处被省略了。下面的<pre>green!90!blac
 
                     <p>4.2.4 至此，这个流程图就画完了，可能希望插入到文档中，第一种方式就是内嵌代码，这种方式的优点是可以跟随文件编译，以期获得同样的文档环境参数设置（字体、字号）。</p>
 
-                    <p>打开<span>File</span>文件选单，选择<span>Save As...</span>另存为，将其存入之前文档的同路径下某处，例如：<span>pic/sync.tex</span>。这时候就可以在文档中使用<pre>\input{pic/sync.tex}</pre>命令编译器在编译时直接将代码片段拼接于此处。</p>
+                    <p>打开<span>File</span>文件选单，选择<span>Save As...</span>另存为，将其存入之前文档的同路径下某处，例如：<span>pic/sync.tex</span>。这时候就可以在文档中使用<pre>\input{pic/sync.tex}</pre></p>
 
                     <div class="toutu"><span>\input</span>命令用于插入代码。</div>
+                    
+                    <p>命令编译器在编译时直接将代码片段拼接于此处。不要忘了在导言区引用宏包<span>tikz</span>。<pre>\usepackage{tikz}</pre></p>
 
                     <p>可是，整个图形是过大的，需要进入这个文件，对整个<span>tikzpicture</span>域使用全局修饰命令<pre>\begin{tikzpicture}[scale=0.65]</pre>但是有些字体却没有被缩小，这时候需要再增加一个命令<pre>\begin{tikzpicture}[scale=0.65,every node/.style={scale=0.65}]</pre></p>
 

@@ -296,6 +296,7 @@ progress {
 #CH02::after {animation-name: CH02;}
 #CH03::after {animation-name: CH03;}
 #CH04::after {animation-name: CH04;}
+#CH05::after {animation-name: CH05;}
 
 @keyframes roadmap {
     from {width: 0;}
@@ -320,4 +321,9 @@ progress {
 @keyframes CH04 {
     from {width: 0;}
     to {width: 70px;}
+}
+
+@keyframes CH05 {
+    from {width: 0;}
+    to {width: 0px;}
 }
