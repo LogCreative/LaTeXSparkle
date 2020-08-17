@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<CompletionDS xmlns="http://tempuri.org/CompletionDS.xsd">
+  <Environments>
+    <!-- Environment for options (todo: should we have the \, ? )-->
+    <StartTag>\,|\[</StartTag>
+    <EndTag>\]</EndTag>
+    <ID>1</ID>
+    <Snippets>
+      <Text>minimum size</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>minimum width</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>minimum height</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>draw</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>fill</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>font</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>anchor</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>circle</Text>
+      <environment>1</environment>
+    </Snippets>
+     <Snippets>
+      <Text>line width</Text>
+      <environment>1</environment>
+    </Snippets>
+    <Snippets>
+      <Text>outer sep</Text>
+      <environment>1</environment>
+      <Description>The spacing around the element.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>inner sep</Text>
+      <environment>1</environment>
+      <Description>The spacing around the text inside the element.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>shape</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets>
+    <Snippets>
+      <Text>rectangle split parts</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets>
+    <Snippets>
+      <Text>regular polygon sides</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets>
+    <Snippets>
+      <Text>align</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets><Snippets>
+      <Text>text</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets>
+	<Snippets>
+      <Text>text width</Text>
+      <environment>1</environment>
+      <Description></Description>
+    </Snippets>
+    <Snippets>
+      <Text>xscale</Text>
+      <environment>1</environment>
+      <Description>Scaling of coordinates in x direction.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>yscale</Text>
+      <environment>1</environment>
+      <Description>Scaling of coordinates in y direction.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>scale</Text>
+      <environment>1</environment>
+      <Description>Scaling of coordinates in x and y direction.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>shift</Text>
+      <environment>1</environment>
+      <Description>A translation in x and y direction by some amount. Example: shift={(1,1)}.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>xshift</Text>
+      <environment>1</environment>
+      <Description>Translation in x direction.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>yshift</Text>
+      <environment>1</environment>
+      <Description>Translation in y direction.</Description>
+    </Snippets>
+  </Environments>
+  
+  <!-- Environment for \begin{ ***** } commands -->
+  <Environments>
+    <StartTag>\\begin\s*\{</StartTag>
+    <EndTag>\}</EndTag>
+    <ID>0</ID>
+    <Snippets>
+      <Text>tikzpicture</Text>
+      <environment>0</environment>
+      <Description>A Tikz picture environment. The document should contain exactly one.</Description>
+    </Snippets>
+    <Snippets>
+      <Text>scope</Text>
+      <environment>0</environment>
+    </Snippets>
+    <Snippets>
+      <Text>document</Text>
+      <environment>0</environment>
+    </Snippets>
+  </Environments>
+
+  <Environments>
+    <StartTag>(fill|draw|text)\s*=</StartTag>
+    <EndTag>(,|\])</EndTag>
+    <ID>2</ID>
+    <Snippets>
+      <Text>red</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>green</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>blue</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>yellow</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>white</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>gray</Text>
+      <environment>2</environment>
+    </Snippets>
+    <Snippets>
+      <Text>black</Text>
+      <environment>2</environment>
+    </Snippets>
+  </Environments>
+  
+  <Environments>
+    <StartTag>\\</StartTag>
+    <EndTag>\{</EndTag>
+    <ID>3</ID>
+		<Snippets>
+      <Text>node</Text>
+      <environment>3</environment>
+    </Snippets>
+    <Snippets>
+      <Text>nodepart{lower}</Text>
+      <environment>3</environment>
+    </Snippets>
+    <Snippets>
+      <Text>draw</Text>
+      <environment>3</environment>
+    </Snippets>
+    
+    <Snippets>
+      <Text>begin</Text>
+      <environment>3</environment>
+    </Snippets>
+    <Snippets>
+      <Text>tikzstyle</Text>
+      <environment>3</environment>
+      <Description>Defines a style: \tikzstyle{mystyle}=[draw, fill]</Description>
+    </Snippets>
+    <Snippets>
+      <Text>usetikzlibrary</Text>
+      <environment>3</environment>
+    </Snippets>   
+    <Snippets>
+      <Text>input</Text>
+      <environment>3</environment>
+    </Snippets>
+    
+    <Snippets>
+      <Text>useasboundingbox</Text>
+      <environment>3</environment>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzInit</Text>
+      <environment>3</environment>
+      <Description>构建坐标架：\tkzInit[xmin|ymin|xmax|ymax]</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzAxeXY</Text>
+      <environment>3</environment>
+      <Description>绘制XY轴：\tkzAxeXY 需要在 \tkzInit 后执行</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzGrid</Text>
+      <environment>3</environment>
+      <Description>绘制网格：\tkzGrid[sub]</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefPoint</Text>
+      <environment>3</environment>
+      <Description>定义点：\tkzDefPoint(坐标){标记}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPoints</Text>
+      <environment>3</environment>
+      <Description>定义多个点：\tkzDefPoints{X/Y/点1,X/Y/点2,...}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefShiftPoint</Text>
+      <environment>3</environment>
+      <Description>相对定义点：\tkzDefShiftPoint[相对点](坐标){定义点}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPointBy</Text>
+      <environment>3</environment>
+      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 中心对称点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPointWith</Text>
+      <environment>3</environment>
+      <Description>向量定义点：\tkzDefPointWith[orthogonal|orthogonal normed|linear|linear normed|colinear=at 起始点|colinear normed=at 起始点|K=缩放比](点1,点2)，结果由 \tkzGetPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawPoints</Text>
+      <environment>3</environment>
+      <Description>绘制点：\tkzDrawPoints[颜色](点,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelPoints</Text>
+      <environment>3</environment>
+      <Description>标注点：\tkzLabelPoints[above|below|left|right](点,点,...)，参数用于定义标签位置。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzAutoLabelPoints</Text>
+      <environment>3</environment>
+      <Description>环绕标记点：\tkzAutoLabelPoints[center=中心点](点1,点2,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzGetPoint</Text>
+      <environment>3</environment>
+      <Description>得到定义点：\tkzGetPoint{点}，在其他命令之后使用。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefMidPoint</Text>
+      <environment>3</environment>
+      <Description>定义中点：\tkzDefMidPoint(点1,点2)，结果由\tkzGetPoint{点}获得。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefBarycentricPoint</Text>
+      <environment>3</environment>
+      <Description>质点定义点：\tkzDefBarycentricPoint(点1=权重,点2=权重,...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDrawSegment</Text>
+      <environment>3</environment>
+      <Description>连接线段：\tkzDrawSegment[颜色](点,点)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelSegment</Text>
+      <environment>3</environment>
+      <Description>标注线段：\tkzLabelSegment(点1,点2){标记}</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzMarkAngle</Text>
+      <environment>3</environment>
+      <Description>绘制角：\tkzMarkAngle(点1,顶点,点3)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelAngle</Text>
+      <environment>3</environment>
+      <Description>标注角：\tkzLabelAngle(点1,顶点,点3){标记}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzMarkRightAngle</Text>
+      <environment>3</environment>
+      <Description>标注直角：\tkzMarkRightAngle(点1,顶点,点3)</Description>
+    </Snippets>
+    
+    <Snippets>
+      <Text>tkzDrawPolygon</Text>
+      <environment>3</environment>
+      <Description>绘制多边形：\tkzDrawPolygon(点,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzClipPolygon</Text>
+      <environment>3</environment>
+      <Description>多边形裁切：\tkzClipPolygon(点1,点2,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzFillPolygon</Text>
+      <environment>3</environment>
+      <Description>填充多边形：\tkzFillPolygon[颜色](点1,点2,...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDrawLine</Text>
+      <environment>3</environment>
+      <Description>作线：\tkzDrawLine[add= 权1 and 权2](点1,点2) 或 \tkzDrawLine[median|altitude|bisector](点1,点2,点3)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawLines</Text>
+      <environment>3</environment>
+      <Description>作多条线：\tkzDrawLines(点1,点2 点3,点4 ...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefCircle</Text>
+      <environment>3</environment>
+      <Description>定义圆：\tkzDefCircle[through](圆心,圆上点) 或者 \tkzDefCircle[diameter](圆心,半径) 或者 \tkzDefCircle[in|ex](点1,点2,点3) 内切圆/外切圆</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefIntSimilitudeCenter</Text>
+      <environment>3</environment>
+      <Description>内公切线交点：\tkzDefIntSimilitudeCenter(点1,半径)(点2,半径)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzExtSimilitudeCenter</Text>
+      <environment>3</environment>
+      <Description>外公切线交点：\tkzExtSimilitudeCenter(点1,半径)(点2,半径)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefTangent</Text>
+      <environment>3</environment>
+      <Description>定义切线：\tkzDefTangent[at=切点|from=圆外点|from with R](圆心,圆上点)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzCompass</Text>
+      <environment>3</environment>
+      <Description>圆规痕迹：\tkzCompass[delta=增加角度数](圆心，弧上点)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzCompasss</Text>
+      <environment>3</environment>
+      <Description>多圆规痕迹：\tkzCompasss[delta=增加角度数](圆心1,弧上点1 圆心2,弧上点2 ...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzSetUpCompass</Text>
+      <environment>3</environment>
+      <Description>设定圆规样式：\tkzSetUpCompass[line width|color|style]</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzInterLL</Text>
+      <environment>3</environment>
+      <Description>两线交点：\tkzInterLL(点1,点2)(点3,点4)，结果 \tkzGetPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzInterLC</Text>
+      <environment>3</environment>
+      <Description>线圆交点：\tkzInterLC(点1，点2)(圆心,圆上点)，结果由 \tkzGetPoint{点}{点} 或 \tkzGetSecondPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzInterCC</Text>
+      <environment>3</environment>
+      <Description>圆圆交点：\tkzInterLC(圆心1,圆上点1)(圆心2,圆上点2)，结果由 \tkzGetPoint{点}{点} 或 \tkzGetSecondPoint{点} 得到。</Description>
+    </Snippets>
+
+  </Environments>
+
+ 	<Environments>
+    <StartTag>shape=</StartTag>
+    <EndTag>(,|\])</EndTag>
+    <ID>4</ID>
+    <Snippets>
+      <Text>arrow box</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>cloud</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>cloud callout</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>chamfered rectangle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>circle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>circle split</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>circle solidus</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>circular sector</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>cross out</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>cylinder</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>dart</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>diamond</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>double arrow</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>ellipse</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>ellipse callout</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>ellipse split</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>forbidden sign</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>isosceles triangle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>kite</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>magnifying glass</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>rectangle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>rectangle callout</Text>
+      <environment>4</environment>
+    </Snippets>
+     <Snippets>
+      <Text>rectangle split</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>regular polygon</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>rounded rectangle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>semicircle</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>signal</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>single arrow</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>star</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>starbust</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>strike out</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>tape</Text>
+      <environment>4</environment>
+    </Snippets>
+    <Snippets>
+      <Text>trapezium</Text>
+      <environment>4</environment>
+    </Snippets>
+  </Environments>
+  
+  <Environments>
+    <StartTag>font=</StartTag>
+    <EndTag>(,|\])</EndTag>
+    <ID>5</ID>
+    <Snippets>
+      <Text>\itshape</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\bfseries</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\footnotesize</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\large</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\Large</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\LARGE</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\huge</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\Huge</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\HUGE</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\small</Text>
+      <environment>5</environment>
+    </Snippets>
+    <Snippets>
+      <Text>\tiny</Text>
+      <environment>5</environment>
+    </Snippets>
+  </Environments>
+  
+  <Environments>
+    <StartTag>anchor=</StartTag>
+    <EndTag>(,|\])</EndTag>
+    <ID>6</ID>
+	<Snippets>
+      <Text>north</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>north east</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>north west</Text>
+      <environment>6</environment>
+    </Snippets><Snippets>
+      <Text>south</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>south east</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>south west</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>west</Text>
+      <environment>6</environment>
+    </Snippets>
+	<Snippets>
+      <Text>east</Text>
+      <environment>6</environment>
+    </Snippets>
+  </Environments>
+  
+  <Environments>
+    <StartTag>align=</StartTag>
+    <EndTag>(,|\])</EndTag>
+    <ID>7</ID>
+	<Snippets>
+      <Text>center</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>left</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>right</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>justify</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>flush center</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>flush left</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>flush right</Text>
+      <environment>7</environment>
+    </Snippets>
+	<Snippets>
+      <Text>none</Text>
+      <environment>7</environment>
+    </Snippets>
+	
+  </Environments>
+    
+  <Triggers>
+    <Trigger>.</Trigger>
+  </Triggers>
+  <Triggers>
+    <Trigger>{</Trigger>
+  </Triggers>
+  <Triggers>
+    <Trigger>[</Trigger>
+  </Triggers>
+  <Triggers>
+    <Trigger>\</Trigger>
+  </Triggers>
+</CompletionDS>

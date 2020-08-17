@@ -68,9 +68,202 @@
         <div class="main">
             <div class="article" id="content">
                 <h1 class="title">第五节 \(\rm \LaTeX\) 中的几何画板 tkz-euclide</h1>
-                <div class="status" id="CH05">状态：正在准备</div>
+                <div class="status" id="CH05">状态：文稿准备中</div>
                 <div class="content" style="color: black;">
-                    <p>平面几何插图。</p>
+                    <h3>5.1 安装宏包与获取说明</h3>
+                    <p>正如<a href="chapter04.html">上一节</a>所指出的那样，我们可以使用<span>\usepackage</span>命令通知 Mik\(\rm \TeX\) 安装宏包</p>
+                    <pre>\usepackage{tkz-euclide}</pre>
+                    <p>然后登入 <a href="www.ctan.org" target="_blank">CTAN 网站</a>，搜索<span>tkz-euclide</span>，找到宏包后，可以进入详情页点入<span>Package Documentation</span>查看宏包文档。一般的宏包文档都是英文的。The universal language.</p>
+                    <p>修改 TikZEdt 安装目录 Editor 文件夹下的代码自动补全数据库 CodeCompletions.xml，添加下面的代码或者是使用现有的文件替换，以更好地适应 tkz-euclide 宏包命令。</p>
+                    <details>
+                        <summary><a href=""https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH05/CodeCompletions.xml" target="_blank">CodeCompletions.xml</a> 插入部分</summary>
+                        <xmp>
+    <Snippets>
+      <Text>tkzInit</Text>
+      <environment>3</environment>
+      <Description>构建坐标架：\tkzInit[xmin|ymin|xmax|ymax]</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzAxeXY</Text>
+      <environment>3</environment>
+      <Description>绘制XY轴：\tkzAxeXY 需要在 \tkzInit 后执行</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzGrid</Text>
+      <environment>3</environment>
+      <Description>绘制网格：\tkzGrid[sub]</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefPoint</Text>
+      <environment>3</environment>
+      <Description>定义点：\tkzDefPoint(坐标){标记}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPoints</Text>
+      <environment>3</environment>
+      <Description>定义多个点：\tkzDefPoints{X/Y/点1,X/Y/点2,...}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefShiftPoint</Text>
+      <environment>3</environment>
+      <Description>相对定义点：\tkzDefShiftPoint[相对点](坐标){定义点}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPointBy</Text>
+      <environment>3</environment>
+      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 中心对称点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefPointWith</Text>
+      <environment>3</environment>
+      <Description>向量定义点：\tkzDefPointWith[orthogonal|orthogonal normed|linear|linear normed|colinear=at 起始点|colinear normed=at 起始点|K=缩放比](点1,点2)，结果由 \tkzGetPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawPoints</Text>
+      <environment>3</environment>
+      <Description>绘制点：\tkzDrawPoints[颜色](点,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelPoints</Text>
+      <environment>3</environment>
+      <Description>标注点：\tkzLabelPoints[above|below|left|right](点,点,...)，参数用于定义标签位置。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzAutoLabelPoints</Text>
+      <environment>3</environment>
+      <Description>环绕标记点：\tkzAutoLabelPoints[center=中心点](点1,点2,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzGetPoint</Text>
+      <environment>3</environment>
+      <Description>得到定义点：\tkzGetPoint{点}，在其他命令之后使用。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefMidPoint</Text>
+      <environment>3</environment>
+      <Description>定义中点：\tkzDefMidPoint(点1,点2)，结果由\tkzGetPoint{点}获得。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefBarycentricPoint</Text>
+      <environment>3</environment>
+      <Description>质点定义点：\tkzDefBarycentricPoint(点1=权重,点2=权重,...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDrawSegment</Text>
+      <environment>3</environment>
+      <Description>连接线段：\tkzDrawSegment[颜色](点,点)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelSegment</Text>
+      <environment>3</environment>
+      <Description>标注线段：\tkzLabelSegment(点1,点2){标记}</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzMarkAngle</Text>
+      <environment>3</environment>
+      <Description>绘制角：\tkzMarkAngle(点1,顶点,点3)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzLabelAngle</Text>
+      <environment>3</environment>
+      <Description>标注角：\tkzLabelAngle(点1,顶点,点3){标记}</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzMarkRightAngle</Text>
+      <environment>3</environment>
+      <Description>标注直角：\tkzMarkRightAngle(点1,顶点,点3)</Description>
+    </Snippets>
+    
+    <Snippets>
+      <Text>tkzDrawPolygon</Text>
+      <environment>3</environment>
+      <Description>绘制多边形：\tkzDrawPolygon(点,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzClipPolygon</Text>
+      <environment>3</environment>
+      <Description>多边形裁切：\tkzClipPolygon(点1,点2,...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzFillPolygon</Text>
+      <environment>3</environment>
+      <Description>填充多边形：\tkzFillPolygon[颜色](点1,点2,...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDrawLine</Text>
+      <environment>3</environment>
+      <Description>作线：\tkzDrawLine[add= 权1 and 权2](点1,点2) 或 \tkzDrawLine[median|altitude|bisector](点1,点2,点3)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawLines</Text>
+      <environment>3</environment>
+      <Description>作多条线：\tkzDrawLines(点1,点2 点3,点4 ...)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefCircle</Text>
+      <environment>3</environment>
+      <Description>定义圆：\tkzDefCircle[through](圆心,圆上点) 或者 \tkzDefCircle[diameter](圆心,半径) 或者 \tkzDefCircle[in|ex](点1,点2,点3) 内切圆/外切圆</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefIntSimilitudeCenter</Text>
+      <environment>3</environment>
+      <Description>内公切线交点：\tkzDefIntSimilitudeCenter(点1,半径)(点2,半径)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzExtSimilitudeCenter</Text>
+      <environment>3</environment>
+      <Description>外公切线交点：\tkzExtSimilitudeCenter(点1,半径)(点2,半径)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefTangent</Text>
+      <environment>3</environment>
+      <Description>定义切线：\tkzDefTangent[at=切点|from=圆外点|from with R](圆心,圆上点)</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzCompass</Text>
+      <environment>3</environment>
+      <Description>圆规痕迹：\tkzCompass[delta=增加角度数](圆心，弧上点)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzCompasss</Text>
+      <environment>3</environment>
+      <Description>多圆规痕迹：\tkzCompasss[delta=增加角度数](圆心1,弧上点1 圆心2,弧上点2 ...)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzSetUpCompass</Text>
+      <environment>3</environment>
+      <Description>设定圆规样式：\tkzSetUpCompass[line width|color|style]</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzInterLL</Text>
+      <environment>3</environment>
+      <Description>两线交点：\tkzInterLL(点1,点2)(点3,点4)，结果 \tkzGetPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzInterLC</Text>
+      <environment>3</environment>
+      <Description>线圆交点：\tkzInterLC(点1，点2)(圆心,圆上点)，结果由 \tkzGetPoint{点}{点} 或 \tkzGetSecondPoint{点} 得到。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzInterCC</Text>
+      <environment>3</environment>
+      <Description>圆圆交点：\tkzInterLC(圆心1,圆上点1)(圆心2,圆上点2)，结果由 \tkzGetPoint{点}{点} 或 \tkzGetSecondPoint{点} 得到。</Description>
+    </Snippets>
+</xmp>
+                    </details>
+
+                    <p>但是，TikZEdt 如要使用新的数据库，程序需要使用<span>-p</span>参数（Portable 便携式）。右键快捷方式，打开文件位置，在快捷方式的属性<span>目标</span>中，增加<span>-p</span>参数即可。之后可能需要重新生成缩略图，一些设置可能需要重新来过。</p>
+
+                    <p>还需要在 TikZEdt 的引用中添加该包，在菜单选栏中选择<span>Settings</span>设置 x2，在<span>Compiler</span>编译器选项卡中，添加<pre>\usepackage{tkz-euclide}</pre>来引用该包。</p>
+                    <h3>5.2 tkz-euclide 宏包</h3>
                 </div>
             </div>
         </div>

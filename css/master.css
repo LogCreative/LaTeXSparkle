@@ -134,7 +134,7 @@ span{
     font-size: small;
 }
 
-pre {
+pre,xmp {
     font-family: Consolas,'Courier New', monospace;
     font-size: small;
     border: 1px solid gray;
@@ -325,5 +325,5 @@ progress {
 
 @keyframes CH05 {
     from {width: 0;}
-    to {width: 0px;}
+    to {width: 20px;}
 }
