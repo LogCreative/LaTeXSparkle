@@ -240,7 +240,7 @@
     <Snippets>
       <Text>tkzDefPointBy</Text>
       <environment>3</environment>
-      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 中心对称点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
+      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 对称中心点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
     </Snippets>
     <Snippets>
       <Text>tkzDefPointWith</Text>

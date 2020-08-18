@@ -73,7 +73,7 @@
                     <h3>5.1 安装宏包与获取说明</h3>
                     <p>正如<a href="chapter04.html">上一节</a>所指出的那样，我们可以使用<span>\usepackage</span>命令通知 Mik\(\rm \TeX\) 安装宏包</p>
                     <pre>\usepackage{tkz-euclide}</pre>
-                    <p>然后登入 <a href="www.ctan.org" target="_blank">CTAN 网站</a>，搜索<span>tkz-euclide</span>，找到宏包后，可以进入详情页点入<span>Package Documentation</span>查看宏包文档。一般的宏包文档都是英文的。The universal language.</p>
+                    <p>然后登入 <a href="https://www.ctan.org" target="_blank">CTAN 网站</a>，搜索<span>tkz-euclide</span>，找到宏包后，可以进入详情页点入<span>Package Documentation</span>查看宏包文档。一般的宏包文档都是英文的。The universal language.</p>
                     <p>修改 TikZEdt 安装目录 Editor 文件夹下的代码自动补全数据库 CodeCompletions.xml，添加下面的代码或者是使用现有的文件替换，以更好地适应 tkz-euclide 宏包命令。</p>
                     <details>
                         <summary><a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH05/CodeCompletions.xml" target="_blank">CodeCompletions.xml</a> 插入部分</summary>
@@ -112,7 +112,7 @@
     <Snippets>
       <Text>tkzDefPointBy</Text>
       <environment>3</environment>
-      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 中心对称点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
+      <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 对称中心点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
     </Snippets>
     <Snippets>
       <Text>tkzDefPointWith</Text>
@@ -263,7 +263,16 @@
                     <p>但是，TikZEdt 如要使用新的数据库，程序需要使用<span>-p</span>参数（Portable 便携式）。右键快捷方式，打开文件位置，在快捷方式的属性<span>目标</span>中，增加<span>-p</span>参数即可。之后可能需要重新生成缩略图，一些设置可能需要重新来过。</p>
 
                     <p>还需要在 TikZEdt 的引用中添加该包，在菜单选栏中选择<span>Settings</span>设置 x2，在<span>Compiler</span>编译器选项卡中，添加<pre>\usepackage{tkz-euclide}</pre>来引用该包。</p>
-                    <h3>5.2 tkz-euclide 宏包</h3>
+                    <h3>5.2 实例：绘制一道几何题目</h3>
+                    <p>语义化的 tkz-euclide 宏包将更符合叙述化的文本习惯。
+                    </p>
+                    <h3>5.3 tkz-euclide 宏包部分命令样式展示</h3>
+                    <details>
+                      <summary>
+                        <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH05/tkz-euclideexp.pdf" target="_blank">tkz-euclideexp.pdf</a>
+                      </summary>
+                      <p>本段也将使用 HTML 瀑布流展示。</p>
+                    </details>
                 </div>
             </div>
         </div>

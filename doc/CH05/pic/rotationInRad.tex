@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(1.5,0){A}
+    \tkzDefPointBy[rotation in rad=center O angle 2](A)
+    \tkzGetPoint{B}
+    \tkzDrawPoints(O,A,B)
+    \tkzLabelPoints(O,A)
+    \tkzLabelPoints[above,red](B)
+    \tkzDrawSegments(O,A O,B)
+    \tkzMarkAngle[mark=none](A,O,B)
+    \tkzLabelAngle[right](A,O,B){2 rad}
+\end{tikzpicture}

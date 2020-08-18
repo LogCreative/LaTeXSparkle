@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(1.5,0){A}
+    \tkzDefPoint(0.8,0.3){B}
+    \tkzDefPointBy[inversion=center O through A](B)
+    \tkzGetPoint{B'}
+    \tkzDrawCircle(O,A)
+    \tkzDrawPoints(O,B,B')
+    \tkzLabelPoints(O,B,B')
+    \tkzDrawSegment(B,B')
+\end{tikzpicture}

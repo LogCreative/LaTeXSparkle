@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){A} \tkzDefPoint(3,1){B}
+    \tkzDefPoint(3,2){C}
+    \tkzDefPointBy[translation= from B to A](C)
+    \tkzGetPoint{D}
+    \tkzDrawPoints[black](A,B,C,D)
+    \tkzLabelPoints[color=black](A,B,C)
+    \tkzLabelPoints[color=red](D)
+    \tkzDrawSegments[orange,<-](A,B D,C)
+\end{tikzpicture}
