@@ -10,19 +10,18 @@
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{listings}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
 \tcbuselibrary{skins,listings,fitting,raster}
 
 \geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
 
-\title{\texttt{tkz-euclide} 宏包命令样式展示}
-\author{LogCreative}
+\title{\texttt{tkz-euclide} 宏包命令参数展示}
+\author{\href{https://logcreative.github.io/LaTeXSparkle/index.html}{\LaTeX\ Sparkle} $\cdot$ \href{https://space.bilibili.com/31271993}{LogCreative}}
 \date{}
 
 \begin{document}
-\begin{CJK}{UTF8}{gkai} %需要安装cjk-fonts宏包
-\begin{CJK}{UTF8}{gbsn}
-    \maketitle
-\end{CJK}
+\begin{CJK}{UTF8}{gbsn} %需要安装cjk-fonts宏包
+\maketitle
 %%%%%%%%%%%%%%%%%%%%%%
 % tcolorbox 定义
 \colorlet{numbar}{red!20!blue!20!white}
@@ -30,11 +29,13 @@
     rightrule=3mm,
     bicolor,
     colback=red!5!white,
-    colbacklower=red!10!white, 
+    colbacklower=red!10!white,
     colframe=red!75!black,
     sidebyside,
     righthand width=6em,
     halign lower=right,
+    before upper=\begin{CJK}{UTF8}{gkai},
+    after upper=\end{CJK},
     before lower=\begin{CJK}{UTF8}{gbsn},
     after lower=\end{CJK}
 }
@@ -81,7 +82,9 @@
 %%%%%%%%%%%%%%%%%%%%%%
 
 \begin{commandbox}
-\verb"\tkzDefPointBy"\color{blue}{[参数]}\color{red}{(参照点)}
+\verb"\tkzDefPointBy"\textcolor{blue}{[参数]}\textcolor{red}{(参照点)}
+
+\verb"\tkzDefPointsBy"\textcolor{blue}{[参数]}\textcolor{red}{(参照点列表)}\textcolor{teal}{\{定义点列表\}}
 \tcblower
 变换定义点
 \end{commandbox}
@@ -92,13 +95,13 @@
         \textcolor{blue}{
         \texttt{[translation=from (起始点) to (终止点)]}
         }
-    
+
         从\textcolor{red}{(参照点)}为始点按照\textcolor{blue}{平移向量}平移得到终点作为定义点。
-    
+
         \begin{center}
         \input{pic/translation.tex}
         \end{center}
-    
+
     }
     \argbox{homothety 位似}{
         \textcolor{blue}{
@@ -107,44 +110,44 @@
 
         从\textcolor{blue}{(位似中心点)}到\textcolor{red}{(参照点)}形成线段（或所在直线上）以\textcolor{blue}{(位似比)}为定比的定比分点。
 
-    
+
         \begin{center}
         \input{pic/homothety.tex}
         \end{center}
-    }  
+    }
     \argbox{relection 反射}{
         \textcolor{blue}{
         \texttt{[reflection=over (对称轴点1)--(对称轴点2)]}
         }
 
         对于\textcolor{red}{(参照点)}通过\textcolor{blue}{对称轴}的反射点。
-    
+
         \begin{center}
         \input{pic/reflection.tex}
         \end{center}
-    }  
+    }
     \argbox{symmetry 中心对称}{
         \textcolor{blue}{
         \texttt{[symmetry=center (对称中心点)]}
         }
 
         \textcolor{red}{(参照点)}关于\textcolor{blue}{(对称中心点)}的中心对称点。
-    
+
         \begin{center}
         \input{pic/symmetry.tex}
         \end{center}
-    }    
+    }
     \argbox{projection 投影}{
         \textcolor{blue}{
         \texttt{[projection=onto 投影轴点1--投影轴点2]}
         }
 
         \textcolor{red}{(参照点)}在\textcolor{blue}{(投影轴)}上的投影点。
-    
+
         \begin{center}
         \input{pic/projection.tex}
         \end{center}
-    }    
+    }
     \argbox{rotation 旋转}{
         \textcolor{blue}{
             \texttt{[rotation=center (旋转中心点) angle (角度)]}
@@ -162,7 +165,7 @@
         }
 
         \textcolor{red}{(参照点)}绕\textcolor{blue}{(旋转中心点)}旋转\textcolor{blue}{(弧度)}得到的点。
-        
+
         \begin{center}
         \input{pic/rotationInRad.tex}
         \end{center}
@@ -173,18 +176,111 @@
         }
 
         \textcolor{red}{(参照点)}关于\textcolor{blue}{反演圆}的反演点，满足共线且$\textrm{OB}\times\textrm{OB'}=r^2$。
-        
+
         \begin{center}
         \input{pic/inversion.tex}
         \end{center}
     }
-    \auxcombox{$\backslash$tkzGetPoint 得到点}{
-        ~~~在这条命令后紧跟 \texttt{$\backslash$ tkzGetPoint(结果点)} 以得到结果。
+    \auxcombox{$\backslash$tkzGetPoint 得定义点}{
+        ~~~\texttt{$\backslash$tkzDefPointBy}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到结果。
+
+        ~~~如果使用\texttt{$\backslash$tkzDefPointsBy} 命令，得到的点将直接用\textcolor{teal}{\{定义点列表\}}中的点表示，留空将会使用\textcolor{red}{(参照点)}加撇表示，比如\textcolor{red}{$B$}$\rightarrow$\textcolor{teal}{$B'$}。
     }
 
 \end{tcbraster}
 
+\begin{commandbox}
+    \verb"\tkzDefTriangleCenter"\textcolor{blue}{[参数]}\textcolor{red}{(点1,点2,点3)}
+    \tcblower
+    三角定义点
+\end{commandbox}
 
+\begin{tcbraster}[raster columns=3]
+    \argbox{ortho 垂心}{
+        三角形高的交点。
+
+        \begin{center}
+            \input{pic/ortho.tex}
+        \end{center}
+    }
+    \argbox{centroid 重心}{
+        三角形中线的交点。
+
+        \begin{center}
+            \input{pic/centriod.tex}
+        \end{center}
+    }
+    \argbox{circum 外心}{
+        三角形外接圆圆心，又是三边中垂线交点。
+
+        \begin{center}
+            \input{pic/circum.tex}
+        \end{center}
+    }
+    \argbox{in 内心}{
+        三角形内切圆圆心，又是三角角分线交点。
+        
+        \begin{center}
+            \input{pic/in.tex}
+        \end{center}
+    }
+    \argbox{ex 旁心}{
+        三角形旁切圆圆心，与\textcolor{red}{点2}的对边相切。
+
+        \begin{center}
+            \input{pic/ex.tex}
+        \end{center}
+    }
+    \argbox{euler 欧拉圆圆心}{
+        三角形垂足三角形外接圆圆心，三角形的三边中点、三个垂心到顶点连线中点也在这个圆上，故该外接圆又称九点圆。
+
+        \begin{center}
+            \input{pic/euler.tex}
+        \end{center}
+    }
+    \argbox{symmedian 类似重心}{
+        三角形重心的等角共轭点，也就是中线等角线的交点。
+
+        \begin{center}
+            \input{pic/symmedian.tex}
+        \end{center}
+    }
+    \argbox{spieker}{
+        三角形中点三角形内切圆圆心。
+
+        \begin{center}
+            \input{pic/spieker.tex}
+        \end{center}
+    }
+    \argbox{nagel}{
+        三角形旁切圆切点与对顶点连线交点。
+
+        \begin{center}
+            \input{pic/nagel.tex}
+        \end{center}
+    }
+    \argbox{mittenpunkt}{
+        三角形旁切圆圆心与中点连线交点。
+
+        \begin{center}
+            \input{pic/mittenpunkt.tex}
+        \end{center}
+    }
+    \argbox{feuerbach}{
+        欧拉圆又称费尔巴哈圆。
+
+        \begin{center}
+            \input{pic/feuerbach.tex}
+        \end{center}
+    }
+    \auxcombox{$\backslash$tkzGetPoint 得定义点}{
+        ~~~\texttt{$\backslash$tkzDefTriangleCenter}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到结果。
+
+        \begin{center}
+            \input{pic/tricenter.tex}
+        \end{center}
+    }
+\end{tcbraster}
 
 \end{CJK}
-\end{document}
+\end{document} 

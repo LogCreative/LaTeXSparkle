@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefTriangleCenter[ortho](A,B,C)\tkzGetPoint{H}
+    \tkzDrawPoints(A,B,C) \tkzDrawPoints[blue!10](H)
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDefPointBy[projection=onto A--B](C) \tkzGetPoint{H_1}
+    \tkzDefPointBy[projection=onto B--C](A) \tkzGetPoint{H_2}
+    \tkzDefPointBy[projection=onto C--A](B) \tkzGetPoint{H_3}
+    \tkzDrawSegments[dashed,blue](C,H_1 A,H_2 B,H_3)
+    \tkzMarkRightAngles(C,H_1,B A,H_2,C B,H_3,A)
+    \tkzLabelPoints(H)
+    \tkzAutoLabelPoints[center=H](A,B,C)
+\end{tikzpicture}
