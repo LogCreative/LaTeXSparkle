@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.8]
+    \tkzDefPoints{0/0/A,2/0/B}
+    \tkzDefCircle[apollonius,K=2](A,B)
+    \tkzGetPoint{O} \tkzGetLength{ar}
+    \tkzDrawCircle[R,red](O,\ar pt)
+    \tkzDefRandPointOn[circle=center O radius \ar pt]
+    \tkzGetPoint{P}
+    \tkzDrawPoints(A,B,O,P)
+    \tkzDrawSegments(A,B P,A P,B)
+    \tkzLabelPoints(O,A,B,P)
+\end{tikzpicture}

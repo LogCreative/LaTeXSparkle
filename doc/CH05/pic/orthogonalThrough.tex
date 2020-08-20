@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=0.5]
+    \tkzDefPoints{0/0/O,1.5/0/A,2/1/C,1/2/D}
+    \tkzDefCircle[orthogonal through=C and D](O,A) 
+    \tkzGetPoint{O'}
+    \tkzDrawCircle[red](O',C)
+    \tkzDrawCircle(O,A)
+    \tkzDrawPoints(O,A,C,D,O')
+    \tkzLabelPoints(O,A,C,D,O')
+    \tkzInterCC(O,A)(O',C)
+    \tkzGetPoints{E}{F}
+    % \tkzDrawPoints(E,F)
+    % \tkzDrawSegments[dashed,blue](O,E E,O' O,F F,O')
+    % \tkzMarkRightAngles(O,E,O' O,F,O')
+    % \tkzDefTangent[at=O](E)
+    % \tkzGetPoint{h}
+    % \tkzDefTangent[at=O'](E)
+    % \tkzGetPoint{h'}
+    % \tkzDrawSegments[blue,dashed](E,h E,h')
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \tkzDefPoints{-1.5/0/B,1.5/0/A}
+    \tkzDefCircle[diameter](B,A)
+    \tkzGetPoint{O}
+    \tkzDrawCircle[red,diameter](B,A)
+    \tkzDrawPoints(O,B,A)
+    \tkzLabelPoints(O,B,A)
+    \tkzDrawSegments(B,A)
+\end{tikzpicture}
