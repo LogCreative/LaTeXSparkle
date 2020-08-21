@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112.62077pt" height="78.94022pt" viewBox="-13.91951 -9.4298 112.62077 78.94022 "> 
+<g transform="translate(0,69.51042 ) scale(1,-1) translate(0,9.4298 )"> 
+<g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 85.35823 0.0  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 85.35823 0.0 M 85.35823 0.0 L 56.90549 56.90549  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 56.90549 56.90549 M 56.90549 56.90549 L 0.0 0.0  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-dasharray="3.0,3.0" stroke-dashoffset="0.0">
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 42.67911 0.0 M 42.67911 0.0 L 71.13185 28.45274  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-dasharray="3.0,3.0" stroke-dashoffset="0.0">
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 71.13185 28.45274 M 71.13185 28.45274 L 28.45274 28.45274  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-dasharray="3.0,3.0" stroke-dashoffset="0.0">
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 28.45274 28.45274 M 28.45274 28.45274 L 42.67911 0.0  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 45.57796 17.86806 M 56.1616 17.86806 C 56.1616 23.71332 51.42322 28.4517 45.57796 28.4517 C 39.7327 28.4517 34.99431 23.71332 34.99431 17.86806 C 34.99431 12.0228 39.7327 7.28441 45.57796 7.28441 C 51.42322 7.28441 56.1616 12.0228 56.1616 17.86806 Z M 45.57796 17.86806  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(-10.58653,-6.09682)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.75,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">A</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(87.2815,-6.09682)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.0434,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">B</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(54.67317,59.34413)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.93124,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">C</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(37.9657,-6.09682)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.27847,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">D</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(70.98549,26.62366)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.97916,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">E</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(21.97421,26.62366)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.90973,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">F</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(49.1118,7.5022)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.66533,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">S</tspan><tspan baseline-shift="sub"><tspan font-family="cmmi" font-size="7">p</tspan> </tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 1.5 0.0 C 1.5 0.82843 0.82843 1.5 0.0 1.5 C -0.82843 1.5 -1.5 0.82843 -1.5 0.0 C -1.5 -0.82843 -0.82843 -1.5 0.0 -1.5 C 0.82843 -1.5 1.5 -0.82843 1.5 0.0 Z M 0.0 0.0  " />
+ </g>
+ </g>
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 86.85823 0.0 C 86.85823 0.82843 86.18666 1.5 85.35823 1.5 C 84.5298 1.5 83.85823 0.82843 83.85823 0.0 C 83.85823 -0.82843 84.5298 -1.5 85.35823 -1.5 C 86.18666 -1.5 86.85823 -0.82843 86.85823 0.0 Z M 85.35823 0.0  " />
+ </g>
+ </g>
+ <g transform="translate(85.35823,0.0)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 58.40549 56.90549 C 58.40549 57.73392 57.73392 58.40549 56.90549 58.40549 C 56.07706 58.40549 55.40549 57.73392 55.40549 56.90549 C 55.40549 56.07706 56.07706 55.40549 56.90549 55.40549 C 57.73392 55.40549 58.40549 56.07706 58.40549 56.90549 Z M 56.90549 56.90549  " />
+ </g>
+ </g>
+ <g transform="translate(56.90549,56.90549)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 44.17911 0.0 C 44.17911 0.82843 43.50754 1.5 42.67911 1.5 C 41.85068 1.5 41.17911 0.82843 41.17911 0.0 C 41.17911 -0.82843 41.85068 -1.5 42.67911 -1.5 C 43.50754 -1.5 44.17911 -0.82843 44.17911 0.0 Z M 42.67911 0.0  " />
+ </g>
+ </g>
+ <g transform="translate(42.67911,0.0)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 72.63185 28.45274 C 72.63185 29.28117 71.96028 29.95274 71.13185 29.95274 C 70.30342 29.95274 69.63185 29.28117 69.63185 28.45274 C 69.63185 27.62431 70.30342 26.95274 71.13185 26.95274 C 71.96028 26.95274 72.63185 27.62431 72.63185 28.45274 Z M 71.13185 28.45274  " />
+ </g>
+ </g>
+ <g transform="translate(71.13185,28.45274)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 29.95274 28.45274 C 29.95274 29.28117 29.28117 29.95274 28.45274 29.95274 C 27.62431 29.95274 26.95274 29.28117 26.95274 28.45274 C 26.95274 27.62431 27.62431 26.95274 28.45274 26.95274 C 29.28117 26.95274 29.95274 27.62431 29.95274 28.45274 Z M 28.45274 28.45274  " />
+ </g>
+ </g>
+ <g transform="translate(28.45274,28.45274)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#33f" fill="#33f">
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#33f" fill="#33f">
+ <path d=" M 47.07883 17.86848 C 47.07883 18.69691 46.40726 19.36848 45.57883 19.36848 C 44.7504 19.36848 44.07883 18.69691 44.07883 17.86848 C 44.07883 17.04005 44.7504 16.36848 45.57883 16.36848 C 46.40726 16.36848 47.07883 17.04005 47.07883 17.86848 Z M 45.57883 17.86848  " />
+ </g>
+ </g>
+ </g>
+ <g transform="translate(45.57883,17.86848)">
+ <g fill="#33f">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#33f">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ 
+                     </g> 
+</svg> 

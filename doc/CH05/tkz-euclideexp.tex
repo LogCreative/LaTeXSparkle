@@ -297,10 +297,26 @@
         \end{center}
     }
     \argbox{perpendicular/orthogonal 垂直}{
+        \textcolor{blue}{
+            \texttt{[perpendicular=through (经过点)]}
+        }
 
+        % \textcolor{blue}{
+        %     \texttt{[orthogonal=through (经过点)]}
+        % }
+
+        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的垂直线。该条命令只有一个结果，通过\textbackslash \texttt{tkzGetPoint}得到。
+
+        \begin{center}
+            \input{pic/perpendicular.tex}
+        \end{center}
     }
     \argbox{parallel 平行}{
-
+        \textcolor{blue}{
+            \texttt{[parallel=through (经过点)]}
+        }
+        
+        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的平行线。该条命令只有一个结果，通过\textbackslash \texttt{tkzGetPoint}得到。
     }
     \argbox{bisector 角分线}{
 
