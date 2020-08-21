@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/master.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/masonry.css"/>
         <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../../css/mobile.css"/>
         <script src="../../js/jquery-3.5.1.min.js"></script>
         <script src="../../js/jquery.ba-resize.min.js"></script>
@@ -271,8 +272,124 @@
                       <summary>
                         <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH05/tkz-euclideexp.pdf" target="_blank">tkz-euclideexp.pdf</a>
                       </summary>
-                      <p>本段也将使用 HTML 瀑布流展示。</p>
                     </details>
+<div class="masonry">
+  <div class="mitem">
+    <div class="mitemTitle">
+    <span>\tkzDefPointBy</span><br><span>\tkzDefPointsBy</span><br>变换定义点
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      translation 平移
+    </div>
+    <div class="mcontent">
+      <div class="mscript">
+        [translation = from (起始点) to (终止点)]
+      </div>
+      从(参照点)为始点按照平移向量平移得到终点作为定义点。
+      <div class="svgimg"><embed src="../../doc/CH05/pic/svg/translation.svg" type="image/svg+xml"/><br>
+      \tkzDefPointBy[translation= from B to A](C)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      homothety 位似
+    </div>
+    <div class="mcontent">
+      <div class="mscript">[homothety=center (位似中心点) ratio (位似比)]
+      </div>
+      从(位似中心点)到(参照点)形成线段（或所在直线上）以(位似比)为定比的定比分点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/homothety.svg" type="text/svg+xml"/><br>\tkzDefPointBy[homothety=center B ratio 0.5](A)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      reflection 反射
+    </div>
+    <div class="mcontent">
+      <div class="mscript">
+      [reflection=over (对称轴点1)--(对称轴点2)]
+      </div>
+      对于(参照点)通过对称轴的反射点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/reflection.svg" type="text/svg+xml"/><br>\tkzDefPointBy[reflection=over A--B](C)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      symmetry 中心对称
+    </div>
+    <div class="mcontent">
+      <div class="mscript">[symmetry=center (对称中心点)]</div>(参照点)关于(对称中心点)的中心对称点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/symmetry.svg" type="text/svg+xml"/><br>\tkzDefPointBy[symmetry=center O](A)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      projection 投影
+    </div>
+    <div class="mcontent">
+      <div class="mscript">
+      [projection=onto投影轴点1--投影轴点2]</div>
+      (参照点)在(投影轴)上的投影点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/projection.svg" type="text/svg+xml"/><br>\tkzDefPointBy[projection=onto A--B](C)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      rotation 旋转
+    </div>
+    <div class="mcontent">
+      <div class="mscript">[rotation=center (旋转中心点)angle (角度)]
+      </div>
+      (参照点)绕(旋转中心点)旋转(角度)得到的点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/rotation.svg" type="text/svg+xml"/><br>\tkzDefPointBy[rotation=center O angle 30](A)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      rotation in rad 弧度旋转
+    </div>
+    <div class="mcontent">
+      <div class="mscript">[rotation in rad=center (旋转中心点) angle (弧度)]</div>(参照点)绕(旋转中心点)旋转(弧度)得到的点。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/rotationInRad.svg" type="text/svg+xml"/><br>\tkzDefPointBy[rotation in rad=center O angle 2](A)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitle">
+      inversion 反演
+    </div>
+    <div class="mcontent">
+      <div class="mscript">[inversion=center (反演中心点)through (反演圆上点)]</div>
+      (参照点)关于反演圆的反演点，满足共线且\(OB \times OB' =r^2\)。
+      <div class="svgimg">
+        <embed src="../../doc/CH05/pic/svg/inversion.svg" type="text/svg+xml"/><br>\tkzDefPointBy[inversion=center O through A](B)
+      </div>
+    </div>
+  </div>
+  <div class="mitem">
+    <div class="mtitleaux">
+      \tkzGetPoint 得定义点
+    </div>
+    <div class="mcontent">
+      <span>\tkzDefPointBy</span>命令后紧跟<span>\tkzGetPoint(结果点)</span>以得到结果。
+      <br>如果使用<span>\tkzDefPointsBy</span>命令，得到的点将直接用{定义点列表}中的点表示，留空将会使用(参照点)加撇表示，比如\(B \rightarrow B'\)。
+    </div>
+  </div>
+</div>
                 </div>
             </div>
         </div>

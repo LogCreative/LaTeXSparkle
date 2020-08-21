@@ -5,7 +5,9 @@
     \tkzDefPointBy[inversion=center O through A](B)
     \tkzGetPoint{B'}
     \tkzDrawCircle(O,A)
-    \tkzDrawPoints(O,B,B')
-    \tkzLabelPoints(O,B,B')
+    \tkzDrawPoints(O,B)
+    \tkzDrawPoints[red](B')
+    \tkzLabelPoints(O,B)
+    \tkzLabelPoints[red](B')
     \tkzDrawSegment(B,B')
 \end{tikzpicture}

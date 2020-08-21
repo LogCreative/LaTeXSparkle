@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82.18115pt" height="66.2041pt" viewBox="-25.1361 -13.69926 82.18115 66.2041 "> 
+<g transform="translate(0, 52.50484 ) scale(1,-1) translate(0,13.69926 )"> 
+        <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 1.5 0.0 C 1.5 0.82843 0.82843 1.5 0.0 1.5 C -0.82843 1.5 -1.5 0.82843 -1.5 0.0 C -1.5 -0.82843 -0.82843 -1.5 0.0 -1.5 C 0.82843 -1.5 1.5 -0.82843 1.5 0.0 Z M 0.0 0.0  " />
+ </g>
+ </g>
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#000">
+ <g fill="#000">
+ <path d=" M 44.17911 0.0 C 44.17911 0.82843 43.50754 1.5 42.67911 1.5 C 41.85068 1.5 41.17911 0.82843 41.17911 0.0 C 41.17911 -0.82843 41.85068 -1.5 42.67911 -1.5 C 43.50754 -1.5 44.17911 -0.82843 44.17911 0.0 Z M 42.67911 0.0  " />
+ </g>
+ </g>
+ <g transform="translate(42.67911,0.0)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <path d=" M -16.25972 38.80557 C -16.25972 39.634 -16.93129 40.30557 -17.75972 40.30557 C -18.58815 40.30557 -19.25972 39.634 -19.25972 38.80557 C -19.25972 37.97714 -18.58815 37.30557 -17.75972 37.30557 C -16.93129 37.30557 -16.25972 37.97714 -16.25972 38.80557 Z M -17.75972 38.80557  " />
+ </g>
+ </g>
+ </g>
+ <g transform="translate(-17.75972,38.80557)">
+ <g fill="#f00">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#f00">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(3.53297,-10.36629)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.95277,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">O</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(46.21208,-10.36629)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.75,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">A</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <g stroke="#000" fill="#000">
+ <g stroke="#f00" fill="#f00">
+ </g>
+ </g>
+ <g transform="translate(-21.80312,42.33855)">
+ <g fill="#f00">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.0434,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#f00">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">B</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 42.67911 0.0  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L -17.75972 38.80557  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <path d=" M 28.45274 0.0 C 28.45274 10.16399 23.02866 19.55887 14.22636 24.64085 C 6.25125 29.24527 -3.46663 29.70282 -11.83981 25.87082  " fill="none"/>
+ <g transform="translate(18.9055,20.4688)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.4028,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2rad</g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                         </g> 
+</svg> 

@@ -1,0 +1,111 @@
+.mcontent{
+    font-size: smaller;
+}
+
+.mcontent .svgimg{
+    font-size: xx-small;
+    color:gray;
+}
+
+.mitemTitle, .mscript,.mtitle,.mtitleaux,.mcontent .svgimg{
+    font-family: 'Consolas',
+    "微软雅黑 Light", "新宋体",
+    Courier, monospace;
+}
+
+.masonry {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    height: 900px;
+}
+
+.mitem {
+    background: white;
+    position: relative;
+    width: 33%;
+    margin: 4px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: 0 0 1.5px 1.5px rgba(128, 128, 128, 0.274);
+    background: rgb(255, 255, 255);
+    border: 1px solid transparent;
+}
+
+.mitemTitle {
+    background: rgb(255, 101, 101);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.mtitle,.mtitleaux {
+    background:rgb(122, 122, 255);
+    color: white;
+    padding:2px;
+    border-radius: 2px;
+}
+
+.mtitleaux{
+    background:teal;
+}
+
+.mitemTitle span {
+    border: none;
+    background: none;
+    font-size: large;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mitem .mcontent {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding:2px;
+}
+
+.mcontent .svgimg {
+    text-align: center;
+    padding-top: 10px;
+    background: whitesmoke;
+}
+
+.mscript{
+    color:blue;
+}
+
+.mitem:nth-child(3n+1){
+    order: 1;
+}
+
+.mitem:nth-child(3n+2){
+    order: 2;
+}
+
+.mitem:nth-child(3n){
+    order: 3;
+}
+
+@media (max-width:1000px){
+
+    .mitem {
+        width: 50%;
+    }
+    
+    .masonry {
+        height: 1200px;
+    }
+    
+    .mitem:nth-child(2n+1){
+        order: 1;
+    }
+    
+    .mitem:nth-child(2n){
+        order: 2;
+    }
+
+}
+

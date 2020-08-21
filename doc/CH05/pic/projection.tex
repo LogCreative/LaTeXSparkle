@@ -4,8 +4,10 @@
     \tkzDefPoint(1,1){C}
     \tkzDefPointBy[projection=onto A--B](C)
     \tkzGetPoint{H}
-    \tkzDrawPoints(A,B,C,H)
-    \tkzLabelPoints(A,B,C,H)
+    \tkzDrawPoints(A,B,C)
+    \tkzDrawPoints[red](H)
+    \tkzLabelPoints(A,B,C)
+    \tkzLabelPoints[red](H)
     \tkzDrawSegment(A,B)
     \tkzDrawSegment[dashed](C,H)
 \end{tikzpicture}

@@ -3,7 +3,8 @@
     \tkzDefPoint(1.5,0){A}
     \tkzDefPointBy[rotation in rad=center O angle 2](A)
     \tkzGetPoint{B}
-    \tkzDrawPoints(O,A,B)
+    \tkzDrawPoints(O,A)
+    \tkzDrawPoints[red](B)
     \tkzLabelPoints(O,A)
     \tkzLabelPoints[above,red](B)
     \tkzDrawSegments(O,A O,B)
