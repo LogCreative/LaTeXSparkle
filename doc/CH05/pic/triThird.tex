@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A,2/0/B}
+	\tkzDrawPoints(A,B)
+	\tkzDrawSegment(A,B)
+	\tkzLabelPoints(A,B)
+	\tkzDefTriangle[equilateral](A,B)
+	\tkzGetPoint{E}
+	\tkzDrawPoints[red!30](E)
+	\tkzDrawSegments[red!30](A,E B,E)
+	\tkzLabelPoints[red!30,above](E)
+	\tkzDefTriangle[pythagore](A,B)
+	\tkzGetPoint{P}
+	\tkzDrawPoints[red!40](P)
+	\tkzDrawSegments[red!40](A,P B,P)
+	\tkzLabelPoints[red!40,right](P)
+	\tkzDefTriangle[school](A,B)
+	\tkzGetPoint{S}
+	\tkzDrawPoints[red!50](S)
+	\tkzDrawSegments[red!50](A,S B,S)
+	\tkzLabelPoints[red!50,right](S)
+	\tkzDefTriangle[euclide](A,B)
+	\tkzGetPoint{E_u}
+	\tkzDrawPoints[red!60](E_u)
+	\tkzDrawSegments[red!60](A,E_u B,E_u)
+	\tkzLabelPoints[red!60,above](E_u)
+	\tkzDefTriangle[golden](A,B)
+	\tkzGetPoint{G}
+	\tkzDrawPoints[red!70](G)
+	\tkzDrawSegments[red!70](A,G B,G)
+	\tkzLabelPoints[red!70,right](G)
+		\tkzDefTriangle[cheops](A,B)
+	\tkzGetPoint{C}
+	\tkzDrawPoints[red!80](C)
+	\tkzDrawSegments[red!80](A,C B,C)
+	\tkzLabelPoints[red!80,right](C)
+\end{tikzpicture}

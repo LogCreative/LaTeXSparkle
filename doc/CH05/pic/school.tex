@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A,2/0/B}
+	\tkzDefTriangle[school](A,B)
+	\tkzGetPoint{S}
+	\tkzDrawPoints(A,B)
+	\tkzDrawPoints[red!50](S)
+	\tkzDrawSegments(A,B B,S S,A)
+	\tkzLabelPoints(A,B)
+	\tkzLabelPoints[above](S)
+	\tkzMarkRightAngle[blue](S,B,A)
+	\tkzMarkAngles[size=0.5cm,mark=none,blue](B,A,S A,S,B)
+	\tkzLabelAngle(B,A,S){$30^\circ$}
+\end{tikzpicture}

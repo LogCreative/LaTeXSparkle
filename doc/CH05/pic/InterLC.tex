@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.75]
+    \tkzInit[xmax=5,ymax=4]
+    \tkzDefPoint(1,1){O}
+    \tkzDefPoint(0,3){A}
+    \tkzDefPoint(3,0){B}
+    \tkzDefPoint(2,0){C}
+    \tkzInterLC(A,B)(O,C) \tkzGetPoints{D}{E}
+    \tkzDrawCircle(O,C)
+    \tkzDrawPoints[color=blue](O,A,B,C)
+    \tkzDrawPoints[color=red](D,E)
+    \tkzDrawLine(A,B)
+    \tkzLabelPoints[above right](O,A,B,C,D,E)
+\end{tikzpicture}

@@ -182,7 +182,7 @@
         \end{center}
     }
     \auxcombox{$\backslash$tkzGetPoint 得定义点}{
-        ~~~\texttt{$\backslash$tkzDefPointBy}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到结果。
+        ~~~\texttt{$\backslash$tkzDefPointBy}命令后紧跟 \texttt{$\backslash$tkzGetPoint\{结果点\}} 以得到结果。
 
         ~~~如果使用\texttt{$\backslash$tkzDefPointsBy} 命令，得到的点将直接用\textcolor{teal}{\{定义点列表\}}中的点表示，留空将会使用\textcolor{red}{(参照点)}加撇表示，比如\textcolor{red}{$B$}$\rightarrow$\textcolor{teal}{$B'$}。
     }
@@ -274,7 +274,7 @@
         \end{center}
     }
     \auxcombox{$\backslash$tkzGetPoint 得定义点}{
-        ~~~\texttt{$\backslash$tkzDefTriangleCenter}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到结果。
+        ~~~\texttt{$\backslash$tkzDefTriangleCenter}命令后紧跟 \texttt{$\backslash$tkzGetPoint\{结果点\}} 以得到结果。
 
         \begin{center}
             \input{pic/tricenter.tex}
@@ -305,7 +305,7 @@
         %     \texttt{[orthogonal=through (经过点)]}
         % }
 
-        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的垂直线。该条命令只有一个结果，通过\textbackslash \texttt{tkzGetPoint}得到。
+        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的垂直线。
 
         \begin{center}
             \input{pic/perpendicular.tex}
@@ -316,16 +316,30 @@
             \texttt{[parallel=through (经过点)]}
         }
         
-        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的平行线。该条命令只有一个结果，通过\textbackslash \texttt{tkzGetPoint}得到。
+        过\textcolor{blue}{(经过点)}关于\textcolor{red}{(参照线段)}的平行线。
+
+        \begin{center}
+            \input{pic/parrallel.tex}
+        \end{center}
     }
     \argbox{bisector 角分线}{
+        作以\textcolor{red}{(点2)}为角点的内角平分线。注意角度要以逆时针方向标记。
 
+        \begin{center}
+            \input{pic/bisector.tex}
+        \end{center}
     }
-    \argbox{bisector out 外角分线}{
+    \argbox{bisector out 补角分线}{
+        作以\textcolor{red}{(点2)}为角点的补角平分线。
 
+        \begin{center}
+            \input{pic/bisectorOut.tex}
+        \end{center}
     }
     \auxcombox{$\backslash$tkzGetPoints 得端点}{
-
+        第一个命令有两个结果，通过\textbackslash\texttt{tkzGetPoints}\{线点1\}\{线点2\} 得到。
+        
+        后面四个命令只有一个结果，通过\textbackslash\texttt{tkzGetPoint}(线点) 得到。
     }
 \end{tcbraster}
 
@@ -337,13 +351,46 @@
 
 \begin{tcbraster}[raster columns=3,height=10cm]
     \auxcombox{$\backslash$tkzInterLL 直线交点}{
+        两条相交直线的交点。
+
+        \begin{center}
+            \input{pic/InterLL.tex}
+        \end{center}
+
+        交点通过 \textbackslash\texttt{tkzGetPoint} (交点) 得到。
 
     }
     \auxcombox{$\backslash$tkzInterLC 线圆交点}{
+        直线与圆的交点。
 
+        \texttt{
+            \textbackslash tkzInterLC\textcolor{red}{(直线点1,直线点2)(圆心,圆上点)}
+        }
+
+        \begin{center}
+            \input{pic/InterLC.tex}
+        \end{center}
+
+        \texttt{
+            \textbackslash tkzInterLC\textcolor{blue}{[R]}\textcolor{red}{(直线点1,直线点2)(圆心,半径)}
+        }
+
+        % \begin{center}
+        %     \input{pic/InterLCR.tex}
+        % \end{center}
+
+        两个交点通过 \textbackslash\texttt{tkzGetPoints} \{交点1\}\{交点2\} 得到。
     }
     \auxcombox{$\backslash$tkzInterCC 圆圆交点}{
+        两相交圆交点。
 
+        \texttt{$\backslash$tkzInterCC\textcolor{red}{(圆心1,圆上点1)(圆心2,圆上点2)}}
+
+        \begin{center}
+            \input{pic/InterCC.tex}
+        \end{center}
+
+        两个交点通过 \textbackslash\texttt{tkzGetPoints} \{交点1\}\{交点2\} 得到。
     }
 \end{tcbraster}
 
@@ -355,31 +402,69 @@
 
 \begin{tcbraster}[raster columns=3]
     \argbox{two angles 两角}{
+        \textcolor{blue}{
+            \texttt{[two angles=(底角1) and (底角2)]}
+        }
 
+        指定\textcolor{blue}{两个底角}确定第三点位置。
+
+        \begin{center}
+            \input{pic/twoAngles.tex}
+        \end{center}
     }
-    \argbox{equilateral }{
+    \argbox{equilateral 等边}{
+        以\textcolor{red}{指定边}作等边三角形。
 
+        \begin{center}
+            \input{pic/equilateral.tex}
+        \end{center}
     }
-    \argbox{pythagore}{
+    \argbox{pythagore 毕达哥拉斯}{
+        等比例于 3-4-5 三角形。
 
+        \begin{center}
+            \input{pic/pythagore.tex}
+        \end{center}
     }
-    \argbox{school }{
+    \argbox{school 三角板}{
+        有一内角为 $30^\circ$ 的直角三角形。
 
+        \begin{center}
+            \input{pic/school.tex}
+        \end{center}
     }
-    \argbox{gold}{
+    \argbox{gold/euclide 欧几里得}{
+        顶角为 $36^\circ$ 的等腰三角形。
 
+        区别在于\textcolor{blue}{\texttt{gold}}以\textcolor{red}{(点1)}为顶点，\textcolor{blue}{\texttt{euclide}}以\textcolor{red}{指定边}为底边。
+
+        \begin{center}
+            \input{pic/gold.tex}
+        \end{center}
     }
-    \argbox{euclide}{
+    \argbox{golden 黄金三角形}{
+        长直角边与短直角边的边长比为$\Phi=1.618$的直角三角形，由黄金矩形的概念衍生而来。
 
+        \begin{center}
+            \input{pic/golden.tex}
+        \end{center}
     }
-    \argbox{cheops}{
+    \argbox{cheops 齐奥普斯}{
+        以\textcolor{red}{指定边}为底边、腰长与底边长比例为$\frac{\Phi}{2}$的等腰三角形。
 
+        \begin{center}
+            \input{pic/cheops.tex}
+        \end{center}
     }
     \auxcombox{$\backslash$tkzGetPoint 第三点}{
-        {$\backslash$tkzDefTriangle}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到三角形的第三点。
+        \texttt{$\backslash$tkzDefTriangle}命令后紧跟 \texttt{$\backslash$tkzGetPoint\{结果点\}} 以得到三角形的第三点。
+
+        \begin{center}
+            \input{pic/triThird.tex}
+        \end{center}
     }
     \auxcombox{tkzPointResult 得变量}{
-
+        如果第三点只用一次，可以使用\texttt{\textbackslash tkzPointResult}临时变量。
     }
 \end{tcbraster}
 
@@ -498,7 +583,7 @@
     \auxcombox{$\backslash$tkzGetPoint 得圆心}{
         在命令后紧跟
         
-        $\backslash$\texttt{tkzGetPoint}\{(圆心)\} 一般可以得到圆心点。
+        $\backslash$\texttt{tkzGetPoint}\{\{圆心\}\} 一般可以得到圆心点。
     }
     \auxcombox{$\backslash$tkzGetLength 得半径}{
         在命令后紧跟

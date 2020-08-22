@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A,2/0/B}
+	\tkzDefTriangle[golden](A,B)
+	\tkzGetPoint{G}
+	\tkzDrawPoints(A,B)
+	\tkzDrawPoints[red!70](G)
+	\tkzDrawSegments(A,B B,G G,A)
+	\tkzLabelPoints(A,B)
+	\tkzLabelPoints[above](G)
+	\tkzDrawLine[bisector,dashed](B,G,A)
+\end{tikzpicture}
