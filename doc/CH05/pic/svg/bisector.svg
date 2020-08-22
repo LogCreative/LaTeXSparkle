@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.93185pt" height="56.67838pt" viewBox="-0.3 -13.69926 57.93185 56.67838 "> 
+<g transform="translate(0, 42.97911 ) scale(1,-1) translate(0,13.69926 )"> 
+<g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 34.62273 24.95518  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <g stroke="#000">
+ <g fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 24.58182 16.6368 C 24.58182 17.46523 23.91025 18.1368 23.08182 18.1368 C 22.25339 18.1368 21.58182 17.46523 21.58182 16.6368 C 21.58182 15.80836 22.25339 15.1368 23.08182 15.1368 C 23.91025 15.1368 24.58182 15.80836 24.58182 16.6368 Z M 23.08182 16.6368  " />
+ </g>
+ </g>
+ </g>
+ <g transform="translate(23.08182,16.6368)">
+ <g fill="#f00">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#f00">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(3.53297,-10.36629)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.75,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">A</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(46.21208,-10.36629)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.0434,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">B</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(17.75934,32.31282)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.93124,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">C</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke="#000" fill="#000">
+ </g>
+ <g transform="translate(26.61479,6.27051)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.27847,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">D</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 42.67911 0.0  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.6">
+ <g stroke="#000" fill="#000">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 14.22636 42.67911  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 14.22636 0.0 C 14.22636 2.98546 13.28601 5.89615 11.54047 8.31795  " fill="none"/>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 11.54047 8.31795 C 9.79492 10.73975 7.33058 12.55167 4.49847 13.49568  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ 
+               </g> 
+</svg> 

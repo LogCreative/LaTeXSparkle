@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/O,1/0/A}
+	\tkzDrawCircle(O,A)
+	\tkzDrawPoints(O,A)
+	\tkzDefTangent[at=A](O)
+	\tkzGetPoint{B}
+	\tkzDrawLine[add=1 and 0.5,red](A,B)
+	\tkzDrawPoints[red](B)
+    \tkzLabelPoints(O,A,B)
+    \tkzDrawSegments[red,dashed](O,A)
+    \tkzMarkRightAngles[red](O,A,B)
+\end{tikzpicture}

@@ -7,11 +7,11 @@ $(document).ready(function() {
         });
         if(document.documentElement.clientWidth<=1000){ 
             //Mobile
-            SingleHeight = SingleHeight / 2 + 200; 
+            SingleHeight = SingleHeight /1.75; 
         } 
         else {
             //Desktop
-            SingleHeight = SingleHeight / 3 + 150;
+            SingleHeight = SingleHeight / 3 + 300;
         }
         $('.masonry').css('height', SingleHeight);
     };

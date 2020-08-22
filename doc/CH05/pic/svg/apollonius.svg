@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
 <?xml-stylesheet href="SVGOut.css" type="text/css"?> 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93.07613pt" height="61.94078pt" viewBox="-1.7 -30.65788 93.07613 61.94078 "> 
-<g transform="translate(0, 31.2829 ) scale(1,-1) translate(0,30.65788 )"> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93.07613pt" height="61.31577pt" viewBox="-1.7 -30.65788 93.07613 61.31577 "> 
+<g transform="translate(0, 30.65788 ) scale(1,-1) translate(0,30.65788 )"> 
  <g stroke="#000" fill="#000">
  <g stroke-width="0.4">
  <g stroke-width="0.6">
@@ -66,10 +66,10 @@
  <g fill="#000">
  <g stroke="#000">
  <g fill="#000">
- <path d=" M 69.0512 29.5829 C 69.0512 30.41133 68.37962 31.0829 67.5512 31.0829 C 66.72276 31.0829 66.0512 30.41133 66.0512 29.5829 C 66.0512 28.75447 66.72276 28.0829 67.5512 28.0829 C 68.37962 28.0829 69.0512 28.75447 69.0512 29.5829 Z M 67.5512 29.5829  " />
+ <path d=" M 35.41418 -14.25362 C 35.41418 -13.42519 34.74261 -12.75362 33.91418 -12.75362 C 33.08575 -12.75362 32.41418 -13.42519 32.41418 -14.25362 C 32.41418 -15.08205 33.08575 -15.75362 33.91418 -15.75362 C 34.74261 -15.75362 35.41418 -15.08205 35.41418 -14.25362 Z M 33.91418 -14.25362  " />
  </g>
  </g>
- <g transform="translate(67.5512,29.5829)">
+ <g transform="translate(33.91418,-14.25362)">
  <g fill="#000">
  <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
 <g fill="#000">
@@ -89,14 +89,14 @@
  <g stroke-width="0.6">
  <g stroke="#000" fill="#000">
  <g stroke-dasharray="none" stroke-dashoffset="0.0">
- <path d=" M 67.5512 29.5829 M 67.5512 29.5829 L 0.0 0.0  " fill="none"/>
+ <path d=" M 33.91418 -14.25362 M 33.91418 -14.25362 L 0.0 0.0  " fill="none"/>
  </g>
  </g>
  </g>
  <g stroke-width="0.6">
  <g stroke="#000" fill="#000">
  <g stroke-dasharray="none" stroke-dashoffset="0.0">
- <path d=" M 67.5512 29.5829 M 67.5512 29.5829 L 45.52931 0.0  " fill="none"/>
+ <path d=" M 33.91418 -14.25362 M 33.91418 -14.25362 L 45.52931 0.0  " fill="none"/>
  </g>
  </g>
  </g>
@@ -139,7 +139,7 @@
  <g stroke="#000" fill="#000">
  <g stroke="#000" fill="#000">
  </g>
- <g transform="translate(71.08417,19.21661)">
+ <g transform="translate(37.44716,-24.6199)">
  <g fill="#000">
  <text style="stroke:none" transform="scale(1,-1) translate(3.90451,0)" text-anchor="middle"  font-size="10"> 
 <g fill="#000">

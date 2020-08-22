@@ -225,7 +225,7 @@
         \end{center}
     }
     \argbox{ex 旁心}{
-        三角形旁切圆圆心，与\textcolor{red}{点2}的对边相切。
+        三角形旁切圆圆心，与\textcolor{red}{(点2)}的对边相切。
 
         \begin{center}
             \input{pic/ex.tex}
@@ -469,20 +469,38 @@
 \end{tcbraster}
 
 \begin{commandbox}
-    \verb"\tkzDefTangent"\textcolor{blue}{[参数]}\textcolor{red}{(点1,点2)}
+    \verb"\tkzDefTangent"\textcolor{blue}{[参数]}\textcolor{red}{(点1\underline{,点2})}
     \tcblower
     定义切线
 \end{commandbox}
 
 \begin{tcbraster}[raster columns=3,height=4.5cm]
-    \argbox{at}{
+    \argbox{at 圆上点切线}{
+        \textcolor{blue}{
+            \texttt{[at=(圆上点)]}
+        }\textcolor{red}{\texttt{(圆心)}}
 
+        过\textcolor{blue}{(圆上点)}做关于\textcolor{red}{\texttt{(圆心)}}的切线。
+
+        \begin{center}
+            \input{pic/at.tex}
+        \end{center}
     }
-    \argbox{from}{
+    \argbox{from 过圆外点切线}{
+        \textcolor{blue}{
+            \texttt{[from=(经过点)]}
+        }\textcolor{red}{\texttt{(圆心,圆上点)}}
 
+        \begin{center}
+            \input{pic/from.tex}
+        \end{center}
     }
-    \argbox{from with R}{
+    \argbox{from with R 由半径定义的圆}{
+        \textcolor{blue}{
+            \texttt{[from with R=(经过点)]}
+        }\textcolor{red}{\texttt{(圆心,半径)}}
 
+        \texttt{from} 有两个结果，需要使用 \textbackslash\texttt{tkzGetPoints}\{切点1\}\{切点2\} 命令。
     }
 \end{tcbraster}
 
@@ -583,7 +601,7 @@
     \auxcombox{$\backslash$tkzGetPoint 得圆心}{
         在命令后紧跟
         
-        $\backslash$\texttt{tkzGetPoint}\{\{圆心\}\} 一般可以得到圆心点。
+        $\backslash$\texttt{tkzGetPoint}\{(圆心)\} 一般可以得到圆心点。
     }
     \auxcombox{$\backslash$tkzGetLength 得半径}{
         在命令后紧跟
