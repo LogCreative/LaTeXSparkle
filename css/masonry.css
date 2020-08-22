@@ -74,6 +74,10 @@
     background: whitesmoke;
 }
 
+.svgimg embed {
+    max-width: 95%;
+}
+
 .mscript{
     color:blue;
 }
