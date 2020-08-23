@@ -42,7 +42,7 @@
     display: none;
 }
 
-@media screen {   
+@media (min-width: 1000px) {   
     .svgcode embed {
         width: 100%;
     }
@@ -150,7 +150,7 @@
     }
 
     .mitemTitle, .mitemTitle span {
-        font-size: normal;
+        font-size: medium;
     }
 
 }
