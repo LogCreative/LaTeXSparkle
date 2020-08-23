@@ -31,7 +31,7 @@
     box-shadow: 0 0 1.5px 1.5px rgba(128, 128, 128, 0.274);
     background: rgb(255, 255, 255);
     border: 1px solid transparent;
-    min-height: 150px;
+    min-height: 100px;
 }
 
 .mitemTitle {
@@ -40,7 +40,11 @@
     padding: 5px;
     font-weight: bold;
     border-radius: 2px;
-    min-height: 150px;
+    min-height: 200px;
+}
+
+.mitemTitle, .mitemTitle span {
+    font-size:large;
 }
 
 .mtitle,.mtitleaux {
@@ -98,6 +102,7 @@
 
     .mitem {
         width: 50%;
+        min-height: 150px;
     }
     
     .masonry {
@@ -111,6 +116,14 @@
     
     .mitem:nth-child(2n){
         order: 2;
+    }
+
+    .mitemTitle{
+        min-height: 150px;
+    }
+
+    .mitemTitle, .mitemTitle span {
+        font-size: normal;
     }
 
 }
