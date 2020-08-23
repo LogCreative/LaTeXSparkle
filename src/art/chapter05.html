@@ -291,6 +291,9 @@
       从(参照点)为始点按照平移向量平移得到终点作为定义点。
       <div class="svgimg"><embed src="../../doc/CH05/pic/svg/translation.svg" type="image/svg+xml"/><br>
       \tkzDefPointBy[translation = from B to A](C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/translation.tex">
+      </div>
       </div>
     </div>
   </div>
@@ -304,6 +307,9 @@
       从(位似中心点)到(参照点)形成线段（或所在直线上）以(位似比)为定比的定比分点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/homothety.svg" type="text/svg+xml"/><br>\tkzDefPointBy[homothety = center B ratio 0.5](A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/homothety.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -318,6 +324,9 @@
       对于(参照点)通过对称轴的反射点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/reflection.svg" type="text/svg+xml"/><br>\tkzDefPointBy[reflection = over A--B](C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/reflection.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -329,6 +338,9 @@
       <div class="mscript">[symmetry = center (对称中心点)]</div>(参照点)关于(对称中心点)的中心对称点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/symmetry.svg" type="text/svg+xml"/><br>\tkzDefPointBy[symmetry = center O](A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/symmetry.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -342,6 +354,9 @@
       (参照点)在(投影轴)上的投影点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/projection.svg" type="text/svg+xml"/><br>\tkzDefPointBy[projection = onto A--B](C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/projection.tex"/>
+        </div>
       </div>
     </div>
   </div>
@@ -355,6 +370,9 @@
       (参照点)绕(旋转中心点)旋转(角度)得到的点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/rotation.svg" type="text/svg+xml"/><br>\tkzDefPointBy[rotation = center O angle 30](A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/rotation.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -366,6 +384,9 @@
       <div class="mscript">[rotation in rad=center (旋转中心点) angle (弧度)]</div>(参照点)绕(旋转中心点)旋转(弧度)得到的点。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/rotationInRad.svg" type="text/svg+xml"/><br>\tkzDefPointBy[rotation in rad = center O angle 2](A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/rotationInRad.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -378,6 +399,9 @@
       (参照点)关于反演圆的反演点，满足共线且\(OB \times OB' =r^2\)。
       <div class="svgimg">
         <embed src="../../doc/CH05/pic/svg/inversion.svg" type="text/svg+xml"/><br>\tkzDefPointBy[inversion = center O through A](B)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/inversion.tex">
+        </div>
       </div>
     </div>
   </div>
@@ -403,7 +427,11 @@
     <div class="mcontent">
       三角形高的交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/ortho.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [ortho] (A,B,C)</div>
+        <embed src="../../doc/CH05/pic/svg/ortho.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [ortho] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/ortho.tex">
+        </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -413,7 +441,11 @@
     <div class="mcontent">
       三角形中线的交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/centriod.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [centroid] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/centriod.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [centroid] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/centriod.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -423,7 +455,11 @@
     <div class="mcontent">
       三角形外接圆圆心，又是三边中垂线交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/circum.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [Ccircum] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/circum.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [Ccircum] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/circum.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -433,7 +469,11 @@
     <div class="mcontent">
       三角形内切圆圆心，又是三角角分线交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/in.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [in] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/in.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [in] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/in.tex">
+      </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -443,7 +483,11 @@
     <div class="mcontent">
       三角形旁切圆圆心，与(点2)的对边相切。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/ex.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [ex] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/ex.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [ex] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/ex.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -453,7 +497,11 @@
     <div class="mcontent">
       三角形垂足三角形外接圆圆心，三角形的三边中点、三个垂心到顶点连线中点也在这个圆上，故该外接圆又称九点圆。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/euler.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [euler] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/euler.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [euler] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/euler.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -463,7 +511,11 @@
     <div class="mcontent">
       三角形重心的等角共轭点，也就是中线等角线的交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/symmedian.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [symmedian] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/symmedian.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [symmedian] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/symmedian.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -473,7 +525,11 @@
     <div class="mcontent">
       三角形中点三角形内切圆圆心。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/spieker.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [spieker] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/spieker.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [spieker] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/spieker.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -483,7 +539,11 @@
     <div class="mcontent">
       三角形旁切圆切点与对顶点连线交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/nagel.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [nagel] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/nagel.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [nagel] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/nagel.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -493,7 +553,11 @@
     <div class="mcontent">
       三角形旁切圆圆心与中点连线交点。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/mittenpunkt.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [mittenpunkt] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/mittenpunkt.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [mittenpunkt] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/mittenpunkt.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -503,7 +567,11 @@
     <div class="mcontent">
       欧拉圆又称费尔巴哈圆。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/feuerbach.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [feuerbach] (A,B,C)</div>
+      <embed src="../../doc/CH05/pic/svg/feuerbach.svg" type="text/svg+xml"/><br>\tkzDefTriangleCenter [feuerbach] (A,B,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/feuerbach.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -513,7 +581,11 @@
     <div class="mcontent">
       <span>\tkzDefTriangleCenter</span>命令后紧跟<span>\tkzGetPoint{结果点}</span>以得到结果。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/tricenter.svg" type="text/svg+xml"/></div>
+        <embed src="../../doc/CH05/pic/svg/tricenter.svg" type="text/svg+xml"/>
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/tricenter.tex">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -529,7 +601,11 @@
     <div class="mcontent">
       (参照线段)的垂直平分线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/mediator.svg" type="text/svg+xml"/><br>\tkzDefLine [mediator] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/mediator.svg" type="text/svg+xml"/><br>\tkzDefLine [mediator] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/mediator.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -542,7 +618,11 @@
       </div>
       过(经过点)关于(参照线段)的垂直线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/perpendicular.svg" type="text/svg+xml"/><br>\tkzDefLine [perpendicular = through A] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/perpendicular.svg" type="text/svg+xml"/><br>\tkzDefLine [perpendicular = through A] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/perpendicular.tex">
+      </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -555,7 +635,11 @@
       </div>
       过(经过点)关于(参照线段)的平行线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/parrallel.svg" type="text/svg+xml"/><br>\tkzDefLine [parallel = through C] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/parrallel.svg" type="text/svg+xml"/><br>\tkzDefLine [parallel = through C] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/parrallel.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -565,7 +649,11 @@
     <div class="mcontent">
       作以(点2)为角点的内角平分线。注意角度要以逆时针方向标记。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/bisector.svg" type="text/svg+xml"/><br>\tkzDefLine [bisector , normed] (B,A,C)</div>
+      <embed src="../../doc/CH05/pic/svg/bisector.svg" type="text/svg+xml"/><br>\tkzDefLine [bisector , normed] (B,A,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/bisector.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -575,7 +663,11 @@
     <div class="mcontent">
       作以(点2)为角点的补角平分线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/bisectorOut.svg" type="text/svg+xml"/><br>\tkzDefLine [bisector out , normed] (B,A,C)</div>
+      <embed src="../../doc/CH05/pic/svg/bisectorOut.svg" type="text/svg+xml"/><br>\tkzDefLine [bisector out , normed] (B,A,C)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/bisectorOut.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -599,7 +691,11 @@
     <div class="mcontent">
       两条相交直线的交点。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/InterLL.svg" type="text/svg+xml"/><br>\tkzInterLL (A,B) (C,D)</div>
+        <embed src="../../doc/CH05/pic/svg/InterLL.svg" type="text/svg+xml"/><br>\tkzInterLL (A,B) (C,D)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/InterLL.tex">
+        </div>
+      </div>
       交点通过<span>\tkzGetPoint(交点)</span>得到。
     </div>
   </div>
@@ -613,7 +709,11 @@
         \tkzInterLC(直线点1,直线点2)(圆心,圆上点)
       </div>
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/InterLC.svg" type="text/svg+xml"/><br>\tkzInterLC (A,B) (O,C)</div>
+        <embed src="../../doc/CH05/pic/svg/InterLC.svg" type="text/svg+xml"/><br>\tkzInterLC (A,B) (O,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/InterLC.tex">
+        </div>
+      </div>
       两个交点通过<span>\tkzGetPoints{交点1}{交点2}</span>得到。
     </div>
   </div>
@@ -627,7 +727,11 @@
         \tkzInterLC[R](直线点1,直线点2)(圆心,半径)
       </div>
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/InterLCR.svg" type="text/svg+xml"/><br>\tkzInterLC[R](A,B)(O,1 cm)</div>
+        <embed src="../../doc/CH05/pic/svg/InterLCR.svg" type="text/svg+xml"/><br>\tkzInterLC[R](A,B)(O,1 cm)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/InterLCR.tex">
+        </div>
+      </div>
       两个交点通过<span>\tkzGetPoints{交点1}{交点2}</span>得到。
     </div>
   </div>
@@ -641,7 +745,11 @@
         \tkzInterCC(圆心1,圆上点1)(圆心2,圆上点2)
       </div>
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/InterCC.svg" type="text/svg+xml"/><br>\tkzInterCC(B,A)(A,B)</div>
+        <embed src="../../doc/CH05/pic/svg/InterCC.svg" type="text/svg+xml"/><br>\tkzInterCC(B,A)(A,B)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/InterCC.tex">
+        </div>
+      </div>
       两个交点通过<span>\tkzGetPoints{交点1}{交点2}</span>得到。
     </div>
   </div>
@@ -661,7 +769,11 @@
       </div>
       指定两个底角确定第三点位置。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/twoAngles.svg" type="text/svg+xml"/><br>\tkzDefTriangle [two angles = 45 and 60] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/twoAngles.svg" type="text/svg+xml"/><br>\tkzDefTriangle [two angles = 45 and 60] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/twoAngles.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -671,7 +783,11 @@
     <div class="mcontent">
       以指定边作等边三角形。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/equilateral.svg" type="text/svg+xml"/><br>\tkzDefTriangle [equilateral] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/equilateral.svg" type="text/svg+xml"/><br>\tkzDefTriangle [equilateral] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/equilateral.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -681,7 +797,11 @@
     <div class="mcontent">
       等比例于 3-4-5 三角形。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/pythagore.svg" type="text/svg+xml"/><br>\tkzDefTriangle [pythagore] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/pythagore.svg" type="text/svg+xml"/><br>\tkzDefTriangle [pythagore] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/pythagore.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -691,7 +811,11 @@
     <div class="mcontent">
       有一内角为 \( 30^\circ \)的直角三角形。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/school.svg" type="text/svg+xml"/><br>\tkzDefTriangle [school] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/school.svg" type="text/svg+xml"/><br>\tkzDefTriangle [school] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/school.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -701,7 +825,11 @@
     <div class="mcontent">
       顶角为\(36^\circ\)的等腰三角形。<br>区别在于<span>gold</span>以(点1)为顶点，<span>euclide</span>以指定边为底边。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/gold.svg" type="text/svg+xml"/><br>\tkzDefTriangle [gold] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/gold.svg" type="text/svg+xml"/><br>\tkzDefTriangle [gold] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/gold.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -711,7 +839,11 @@
     <div class="mcontent">
       长直角边与短直角边的边长比为\(\Phi = 1.618\)的直角三角形，由黄金矩形的概念衍生而来。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/golden.svg" type="text/svg+xml"/><br>\tkzDefTriangle [golden] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/golden.svg" type="text/svg+xml"/><br>\tkzDefTriangle [golden] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/golden.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -721,7 +853,11 @@
     <div class="mcontent">
       以指定边为底边、腰长与底边长比例为\(\frac{\Phi}{2}\)的等腰三角形。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/cheops.svg" type="text/svg+xml"/><br>\tkzDefTriangle [cheops] (A,B)</div>
+      <embed src="../../doc/CH05/pic/svg/cheops.svg" type="text/svg+xml"/><br>\tkzDefTriangle [cheops] (A,B)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/cheops.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -731,7 +867,11 @@
     <div class="mcontent">
       <span>\tkzDefTriangle</span>命令后紧跟<span>\tkzGetPoint{结果点}</span>以得到三角形的第三点。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/triThird.svg" type="text/svg+xml"/></div>
+        <embed src="../../doc/CH05/pic/svg/triThird.svg" type="text/svg+xml"/>
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/triThird.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -758,7 +898,11 @@
       </div>
       过(圆上点)做关于(圆心)的切线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/at.svg" type="text/svg+xml"/><br>\tkzDefTangent[at=A](O)</div>
+      <embed src="../../doc/CH05/pic/svg/at.svg" type="text/svg+xml"/><br>\tkzDefTangent[at=A](O)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/at.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -771,7 +915,11 @@
       </div>
       过(圆上点)做关于(圆心)的切线。
       <div class="svgimg">
-      <embed src="../../doc/CH05/pic/svg/from.svg" type="text/svg+xml"/><br>\tkzDefTangent[from=C](O,A)</div>
+      <embed src="../../doc/CH05/pic/svg/from.svg" type="text/svg+xml"/><br>\tkzDefTangent[from=C](O,A)
+      <div class="svgcode">
+        <embed src="../../doc/CH05/pic/from.tex">
+      </div>
+    </div>
     </div>
   </div>
   <div class="mitem">
@@ -797,7 +945,11 @@
     <div class="mcontent">
       以(点1)为圆心，(点2)为圆上点定义圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/through.svg" type="text/svg+xml"/><br>\tkzDrawCircle [red] (O,A)</div>
+        <embed src="../../doc/CH05/pic/svg/through.svg" type="text/svg+xml"/><br>\tkzDrawCircle [red] (O,A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/through.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -807,7 +959,11 @@
     <div class="mcontent">
       以(参照点)定义的直径定义圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/diameter.svg" type="text/svg+xml"/><br>\tkzDefCircle [diameter] (B,A)</div>
+        <embed src="../../doc/CH05/pic/svg/diameter.svg" type="text/svg+xml"/><br>\tkzDefCircle [diameter] (B,A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/diameter.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -817,7 +973,11 @@
     <div class="mcontent">
       (参照点)所定义的(三角形)的外接圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/Ccircum.svg" type="text/svg+xml"/><br>\tkzDefCircle [circum] (A,B,C)</div>
+        <embed src="../../doc/CH05/pic/svg/Ccircum.svg" type="text/svg+xml"/><br>\tkzDefCircle [circum] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/Ccircum.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -827,7 +987,11 @@
     <div class="mcontent">
       (参照点)所定义的(三角形)的内切圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/Cin.svg" type="text/svg+xml"/><br>\tkzDefCircle [in] (A,B,C)</div>
+        <embed src="../../doc/CH05/pic/svg/Cin.svg" type="text/svg+xml"/><br>\tkzDefCircle [in] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/Cin.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -837,7 +1001,11 @@
     <div class="mcontent">
       (参照点)所定义的(三角形)的内切圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/Cex.svg" type="text/svg+xml"/><br>\tkzDefCircle [ex] (A,B,C)</div>
+        <embed src="../../doc/CH05/pic/svg/Cex.svg" type="text/svg+xml"/><br>\tkzDefCircle [ex] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/Cex.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -847,7 +1015,11 @@
     <div class="mcontent">
       (参照点)所定义的(三角形)的欧拉圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/Ceuler.svg" type="text/svg+xml"/><br>\tkzDefCircle [euler] (A,B,C)</div>
+        <embed src="../../doc/CH05/pic/svg/Ceuler.svg" type="text/svg+xml"/><br>\tkzDefCircle [euler] (A,B,C)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/Ceuler.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -857,7 +1029,11 @@
     <div class="mcontent">
       到(点1)的距离与到(点2)的距离比例为K的动点轨迹。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/apollonius.svg" type="text/svg+xml"/><br>\tkzDefCircle [apollonius,K=2] (A,B)</div>
+        <embed src="../../doc/CH05/pic/svg/apollonius.svg" type="text/svg+xml"/><br>\tkzDefCircle [apollonius,K=2] (A,B)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/apollonius.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -882,7 +1058,11 @@
     <div class="mcontent">
       以指定的(圆心)作以(点1)为圆心、(点2)为圆上点的正交圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/orthogonalFrom.svg" type="text/svg+xml"/><br>\tkzDefCircle [orthogonal from=B] (O,A)</div>
+        <embed src="../../doc/CH05/pic/svg/orthogonalFrom.svg" type="text/svg+xml"/><br>\tkzDefCircle [orthogonal from=B] (O,A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/orthogonalFrom.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -892,7 +1072,11 @@
     <div class="mcontent">
       以指定的(圆上点1)、(圆上点2)作以(点1)为圆心、(点2)为圆上点的正交圆。
       <div class="svgimg">
-        <embed src="../../doc/CH05/pic/svg/orthogonalThrough.svg" type="text/svg+xml"/><br>\tkzDefCircle[orthogonal through = C and D](O,A)</div>
+        <embed src="../../doc/CH05/pic/svg/orthogonalThrough.svg" type="text/svg+xml"/><br>\tkzDefCircle[orthogonal through = C and D](O,A)
+        <div class="svgcode">
+          <embed src="../../doc/CH05/pic/orthogonalThrough.tex">
+        </div>
+      </div>
     </div>
   </div>
   <div class="mitem">
@@ -911,7 +1095,6 @@
       在命令后紧跟<span>\tkzGetLength{(长度变量)}</span>可以得到半径，而后使用<span>\tkzDrawCircle((圆心),\(长度变量) pt)</span>画出该圆。
     </div>
   </div>
-
 </div>
                 </div>
             </div>

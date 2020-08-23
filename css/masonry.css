@@ -34,6 +34,22 @@
     min-height: 100px;
 }
 
+.svgcode {
+    display: none;
+}
+
+.svgcode embed {
+    width: 100%;
+}
+
+.svgimg:hover{
+    box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.274) inset;
+}
+
+.svgimg:hover .svgcode {
+    display:block;
+}
+
 .mitemTitle {
     background: rgb(255, 101, 101);
     color: white;
