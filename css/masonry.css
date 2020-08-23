@@ -38,16 +38,27 @@
     display: none;
 }
 
-.svgcode embed {
-    width: 100%;
+#ExpPdf{
+    display: none;
 }
 
-.svgimg:hover{
-    box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.274) inset;
-}
+@media screen {   
+    .svgcode embed {
+        width: 100%;
+    }
+    
+    .svgimg:hover{
+        box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.274) inset;
+    }
+    
+    .svgimg:hover .svgcode {
+        display:block;
+    }
 
-.svgimg:hover .svgcode {
-    display:block;
+    #ExpPdf{
+        display: block;
+    }
+    
 }
 
 .mitemTitle {
