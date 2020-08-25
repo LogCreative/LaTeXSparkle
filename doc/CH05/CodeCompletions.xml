@@ -243,6 +243,11 @@
       <Description>变换定义点：\tkzDefPointBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 对称中心点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点)，结果由 \tkzGetPoint{点} 获得。</Description>
     </Snippets>
     <Snippets>
+      <Text>tkzDefPointsBy</Text>
+      <environment>3</environment>
+      <Description>变换定义点列：\tkzDefPointsBy[translation=from 平移参照点1 to 平移参照点2|homothety=center 位似中心点 ratio 位似比|reflection=over 对称轴点1--对称轴点2|symmetry=center 对称中心点|projection=onto 投影轴点1--投影轴点2|rotation=center 旋转中心点 angle 角度|rotation in rad=center 旋转中心点 angle 弧度|inversion=center 反演中心点 through 反演圆上点](参照点1,参照点2,...){定义点1,定义点2,...}</Description>
+    </Snippets>
+    <Snippets>
       <Text>tkzDefPointWith</Text>
       <environment>3</environment>
       <Description>向量定义点：\tkzDefPointWith[orthogonal|orthogonal normed|linear|linear normed|colinear=at 起始点|colinear normed=at 起始点|K=缩放比](点1,点2)，结果由 \tkzGetPoint{点} 得到。</Description>
@@ -277,11 +282,37 @@
       <environment>3</environment>
       <Description>质点定义点：\tkzDefBarycentricPoint(点1=权重,点2=权重,...)</Description>
     </Snippets>
+    <Snippets>
+      <Text>tkzDefRandPointOn</Text>
+      <environment>3</environment>
+      <Description>定义随机点：\tkzDefRandPointOn[rectangle=矩形对角点1 and 矩形对角点2|segment=线段端点1--线段端点2|line=直线点1--直线点2|circle=center 圆心 radius 半径|circle through=center 圆心 through 圆上点|disk through=center 圆心 through 圆上点]，结果由 \tkzGetPoint{点} 获得。</Description>
+    </Snippets>
+
+    <Snippets>
+      <Text>tkzDefTriangle</Text>
+      <environment>3</environment>
+      <Description>定义三角形：\tkzDefTriangle[two angles=角度1 and 角度2|equilateral|pythagore|school|good|euclide|golden|cheops](点1,点2)，第三个点由 \tkzGetPoint{点3} 获得。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefTriangleCenter</Text>
+      <environment>3</environment>
+      <Description>三角中心点：\tkzDefTriangleCenter[otho|centriod|circum|in|ex|euler|symmedian|spieker|nagel|mittenpunkt|feuerbach](点1,点2,点3)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDefSpcTriangle</Text>
+      <environment>3</environment>
+      <Description>特殊三角形：\tkzDefSpcTriangle[in|ex|extouch|intouch|centriod|orthic|feuerbach|euler|tangential|name](点1,点2,点3){新点1,新点2,新点3}</Description>
+    </Snippets>
 
     <Snippets>
       <Text>tkzDrawSegment</Text>
       <environment>3</environment>
       <Description>连接线段：\tkzDrawSegment[颜色](点,点)</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawSegments</Text>
+      <environment>3</environment>
+      <Description>连接多条线段：\tkzDrawSegments[颜色](点,点 点,点 ...)</Description>
     </Snippets>
     <Snippets>
       <Text>tkzLabelSegment</Text>
@@ -322,6 +353,11 @@
     </Snippets>
 
     <Snippets>
+      <Text>tkzDefLine</Text>
+      <environment>3</environment>
+      <Description>定义线：\tkzDefLine[mediator|perpendicular|parrallel|bisector|bisector out|normed](点1,点2)，结果由 \tkzGetPoints{点3}{点4} 获得。</Description>
+    </Snippets>
+    <Snippets>
       <Text>tkzDrawLine</Text>
       <environment>3</environment>
       <Description>作线：\tkzDrawLine[add= 权1 and 权2](点1,点2) 或 \tkzDrawLine[median|altitude|bisector](点1,点2,点3)</Description>
@@ -331,11 +367,21 @@
       <environment>3</environment>
       <Description>作多条线：\tkzDrawLines(点1,点2 点3,点4 ...)</Description>
     </Snippets>
+    <Snippets>
+      <Text>tkzDefTangent</Text>
+      <environment>3</environment>
+      <Description>作切线：\tkzDefTangent[at=圆上点](圆心)，通过 \tkzGetPoint{点} 得到切线上的另一个点。\tkzDefTangent[from=经过点](圆心，圆上点) 或 \tkzDefTangent[from with R=经过点](圆心，半径)，通过 \tkzGetPoints{切点1}{切点2} 得到两个切点。</Description>
+    </Snippets>
 
     <Snippets>
       <Text>tkzDefCircle</Text>
       <environment>3</environment>
-      <Description>定义圆：\tkzDefCircle[through](圆心,圆上点) 或者 \tkzDefCircle[diameter](圆心,半径) 或者 \tkzDefCircle[in|ex](点1,点2,点3) 内切圆/外切圆</Description>
+      <Description>定义圆：\tkzDefCircle[through](圆心,圆上点) 或者 \tkzDefCircle[diameter](直径点1,直径点2) 或者 \tkzDefCircle[in|ex|euler|nine|appollonius,K|orthogonal from=新圆圆心|orthogonal through=新圆圆上点1 and 新圆圆上点2](点1,点2,点3)，圆心由 \tkzGetPoint{点} 得到，半径由 \tkzGetLength{半径} 得到，后者在调用时应当为 \半径 pt 。</Description>
+    </Snippets>
+    <Snippets>
+      <Text>tkzDrawCircle</Text>
+      <environment>3</environment>
+      <Description>绘制圆：\tkzDrawCircle(圆心,圆上点) \tkzDrawCircle[diameter](直径端点1,直径端点2) 或者 \tkzDrawCircle[R](圆心,半径)</Description>
     </Snippets>
     <Snippets>
       <Text>tkzDefIntSimilitudeCenter</Text>
@@ -351,7 +397,7 @@
     <Snippets>
       <Text>tkzDefTangent</Text>
       <environment>3</environment>
-      <Description>定义切线：\tkzDefTangent[at=切点|from=圆外点|from with R](圆心,圆上点)</Description>
+      <Description>定义切线：\tkzDefTangent[at=切点|fro\m=圆外点|from with R](圆心,圆上点)</Description>
     </Snippets>
 
     <Snippets>
