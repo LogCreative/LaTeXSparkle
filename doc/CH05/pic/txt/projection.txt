@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(2,0){B}
+    \tkzDefPoint(1,1){C}
+    \tkzDefPointBy[projection=onto A--B](C)
+    \tkzGetPoint{H}
+    \tkzDrawPoints(A,B,C)
+    \tkzDrawPoints[red](H)
+    \tkzLabelPoints(A,B,C)
+    \tkzLabelPoints[red](H)
+    \tkzDrawSegment(A,B)
+    \tkzDrawSegment[dashed](C,H)
+\end{tikzpicture}

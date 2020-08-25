@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefCircle[euler](A,B,C)
+    \tkzGetPoint{E} \tkzGetLength{els}
+    \tkzDrawCircle[R,red](E,\els pt)
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDrawPoints(A,B,C,E)
+    \tkzLabelPoints(E)
+    \tkzAutoLabelPoints[center=E](A,B,C)
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.6]
+    \tkzDefPoints{0/0/O,1.5/0/A,2/2/B}
+    \tkzDefCircle[orthogonal from=B](O,A) 
+    \tkzGetPoints{z1}{z2}
+    \tkzDrawCircle[red](B,z1)
+    \tkzDrawCircle(O,A)
+    \tkzDrawPoints(O,A,B)
+    \tkzLabelPoints(O,A,B)
+    \tkzInterCC(O,A)(B,z1)
+    % \tkzGetPoints{C}{D}
+    % \tkzDrawSegments[dashed,blue](O,C O,D B,C B,D)
+    % \tkzDrawPoints(C,D)
+    % \tkzMarkRightAngles(B,C,O B,D,O)
+\end{tikzpicture}

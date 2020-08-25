@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefTriangleCenter[spieker](A,B,C) \tkzGetPoint{S_p}
+    \tkzDefMidPoint(A,B) \tkzGetPoint{D}
+    \tkzDefMidPoint(B,C) \tkzGetPoint{E}
+    \tkzDefMidPoint(C,A) \tkzGetPoint{F}
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDrawSegments[dashed,blue](D,E E,F F,D)
+    \tkzDrawCircle[in,blue](D,E,F)
+    \tkzAutoLabelPoints[center=S_p](A,B,C,D,E,F)
+    \tkzLabelPoints(S_p)
+    \tkzDrawPoints(A,B,C,D,E,F) \tkzDrawPoints[blue!80](S_p)
+\end{tikzpicture}

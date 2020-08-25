@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefTriangleCenter[in](A,B,C) \tkzGetPoint{I}
+    \tkzDrawPoints(A,B,C) \tkzDrawPoints[blue!40](I)
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzLabelPoints(I)
+    \tkzAutoLabelPoints[center=I](A,B,C)
+    \tkzDrawCircle[in,blue](A,B,C)
+\end{tikzpicture}

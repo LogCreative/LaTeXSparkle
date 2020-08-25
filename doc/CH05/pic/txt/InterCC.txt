@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.5]
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(2,2){B}
+    \tkzDrawCircle(B,A)
+    \tkzDrawCircle(A,B)
+    \tkzInterCC(B,A)(A,B)\tkzGetPoints{M}{N}
+    \tkzDrawPoints(A,B)
+    \tkzDrawPoints[red](M,N)
+    \tkzLabelPoints(A,B,M,N)
+\end{tikzpicture}

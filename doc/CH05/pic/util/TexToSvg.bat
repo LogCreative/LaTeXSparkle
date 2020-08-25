@@ -1,18 +1,19 @@
-::该批处理文件将会批量由 tex 转换生成 svg
-::所有文字部分都将被忽略
+:: 该批处理文件将会批量由 tex 转换生成 svg
+:: 所有文字部分都将被忽略
+:: LogCreative 2020 · LaTeX Sparkle CC-BY-SA
 
 @echo off
-setlocal enablaedelayedexpansion
+setlocal enabledelayedexpansion
 
 ::切换到上级目录
 cd ../
 
 for /F %%i in ('DIR /B *.tex') do (
     ::复制文件要加 "" 防止参数歧义
-    COPY %%i "svgutil/%%i" /Y
+    COPY %%i "util/%%i" /Y
 )
 
-cd svgutil
+cd util
 
 ::对于每一个.tex文件
 for /F %%i in ('DIR /B *.tex') do (

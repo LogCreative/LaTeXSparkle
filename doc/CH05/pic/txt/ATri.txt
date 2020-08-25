@@ -1,0 +1,45 @@
+\begin{tikzpicture}[scale=0.6,every node/.style={scale=0.6}]
+    \tkzInit[xmin=-3,ymin=-3,xmax=4.5,ymax=5]
+    \tkzClip
+        \tkzDefPoints{0/0/A,3/0/B,2.5/2/C} 
+        
+        \tkzDefTriangleCenter[ortho](A,B,C) \tkzGetPoint{H}
+        \tkzDefTriangleCenter[centroid](A,B,C) \tkzGetPoint{G}
+        \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
+        \tkzDefTriangleCenter[in](A,B,C) \tkzGetPoint{I}
+        \tkzDefTriangleCenter[ex](B,A,C) \tkzGetPoint{J_A}
+        \tkzDefTriangleCenter[ex](C,B,A) \tkzGetPoint{J_B}
+        \tkzDefTriangleCenter[ex](A,C,B) \tkzGetPoint{J_C}
+        \tkzDefTriangleCenter[euler](A,B,C) \tkzGetPoint{E}
+        
+        \tkzDrawCircle[euler,blue!60](A,B,C)
+        \tkzDrawCircle[ex,blue!50](A,B,C)
+        \tkzDrawCircle[ex,blue!50](A,C,B)
+        \tkzDrawCircle[ex,blue!50](C,A,B)
+        \tkzDrawCircle[in,blue!40](C,A,B)
+        \tkzDrawCircle[circum,blue!30](C,A,B)
+        
+        \tkzDrawPoints(A,B,C)
+        \tkzDrawSegments(A,B B,C C,A)
+        
+        \tkzDrawPoints[blue!10](H) 
+        \tkzLabelPoints[blue!10](H)
+        \tkzDrawPoints[blue!20](G)
+        \tkzLabelPoints[blue!20](G)
+        \tkzDrawPoints[blue!30](O) \tkzLabelPoints[blue!30,above](O)
+        \tkzDrawPoints[blue!40](I) \tkzLabelPoints[blue!40](I)
+        \tkzDrawPoints[blue!50](J_A) \tkzLabelPoints[blue!50,left](J_A)
+        \tkzDrawPoints[blue!50](J_B) \tkzLabelPoints[blue!50](J_B)
+        \tkzDrawPoints[blue!50](J_C) \tkzLabelPoints[blue!50,above](J_C)
+        \tkzDrawPoints[blue!60](E) \tkzLabelPoints[blue!60,above](E)
+        \tkzAutoLabelPoints[center=O](A,B,C)
+       
+        \tkzLabelSegment[below](A,B){$c$}
+        \tkzLabelSegment(A,C){$b$}
+        \tkzLabelSegment[right](B,C){$a$}
+        \tkzLabelPoint[above left](A){$(x_A,y_A)$}
+        \tkzLabelPoint[above right](B){$(x_B,y_B)$}
+        \tkzLabelPoint[below right](C){$(x_C,y_C)$}
+        
+        
+    \end{tikzpicture}

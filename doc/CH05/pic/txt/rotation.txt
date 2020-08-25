@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){O}
+    \tkzDefPoint(3,0){A}
+    \tkzDefPointBy[rotation=center O angle 30](A)
+    \tkzGetPoint{B}
+    \tkzDrawPoints(O,A)
+    \tkzDrawPoints[red](B)
+    \tkzLabelPoints(O,A)
+    \tkzLabelPoints[above,red](B)
+    \tkzDrawSegments(O,A O,B)
+    \tkzMarkAngle[mark=none](A,O,B)
+    \tkzLabelAngle[right](A,O,B){$30^{\circ}$}
+\end{tikzpicture}

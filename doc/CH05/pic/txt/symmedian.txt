@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefTriangleCenter[symmedian](A,B,C) \tkzGetPoint{K}
+    \tkzDefTriangleCenter[centroid](A,B,C) \tkzGetPoint{G}
+    \tkzDrawPoints(A,B,C) \tkzDrawPoints[blue!20](G) \tkzDrawPoints[blue!70](K)
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzLabelPoints(G,K)
+    \tkzAutoLabelPoints[center=G](A,B,C)
+    \tkzDefMidPoint(A,B) \tkzGetPoint{D}
+    \tkzDefMidPoint(B,C) \tkzGetPoint{E}
+    \tkzDefMidPoint(C,A) \tkzGetPoint{F}
+    \tkzDrawSegments[dashed,blue](C,G A,G B,G C,K A,K B,K)
+\end{tikzpicture}

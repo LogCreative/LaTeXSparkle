@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A,2/0/B}
+	\tkzDefTriangle[pythagore](A,B)
+	\tkzGetPoint{P}
+	\tkzDrawPoints(A,B)
+	\tkzDrawPoints[red!40](P)
+	\tkzDrawSegments(A,B B,P P,A)
+	\tkzLabelPoints(A,B)
+	\tkzLabelPoints[above](P)
+	\tkzMarkRightAngle[blue](P,B,A)
+	\tkzLabelSegment[below](A,B){4}
+	\tkzLabelSegment[right](B,P){3}
+	\tkzLabelSegment[above](P,A){5}
+\end{tikzpicture}

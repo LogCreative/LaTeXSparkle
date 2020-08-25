@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    \tkzInit[xmin=-1,ymin=-1,xmax=4,ymax=3]
+    \tkzClip
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    \tkzDefTriangleCenter[mittenpunkt](A,B,C) \tkzGetPoint{M_i}
+    \tkzDrawCircle[ex,blue](A,B,C)
+    \tkzDrawCircle[ex,blue](B,A,C)
+    \tkzDrawCircle[ex,blue](A,C,B)
+    \tkzDrawSegments[dashed,add=0.5 and 0.5](A,B B,C C,A) 
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDrawPoints(A,B,C) \tkzDrawPoints[blue](M_i)
+    \tkzDefSpcTriangle[centroid](A,B,C){M_a,M_b,M_c}
+    % \tkzDrawSegments[dashed,blue](A,T_a B,T_b C,T_c)
+    \tkzLabelPoints(M_i)
+    \tkzDrawPoints[blue](M_a,M_b,M_c)
+    \tkzAutoLabelPoints[center=M_i](A,B,C,M_a,M_b,M_c)
+    \tkzDefSpcTriangle[ex](A,B,C){J_a,J_b,J_c}
+    %\tkzDrawPoints[red](J_a,J_b,J_c)
+    \tkzDrawSegments[red,add=0 and 0.6](J_a,M_a J_b,M_b J_c,M_c)
+\end{tikzpicture}

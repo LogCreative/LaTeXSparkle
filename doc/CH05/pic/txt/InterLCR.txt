@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/O,1.2/0.5/A,-1.25/0.75/B}
+    \tkzInterLC[R](A,B)(O,1 cm)
+    \tkzGetPoints{C}{D}
+    \tkzDrawCircle[R](O,1 cm)
+    \tkzDrawSegments[add=0.25 and 0.25](A,B)
+    \tkzDrawPoints(O,A,B)
+    \tkzDrawPoints[red](C,D)
+    \tkzLabelPoints(O,A,B)
+    \tkzLabelPoints[above](C,D)  
+\end{tikzpicture}

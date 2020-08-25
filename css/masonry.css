@@ -38,27 +38,20 @@
     display: none;
 }
 
-#ExpPdf{
-    display: none;
+.svgcode embed {
+    width: 100%;
 }
 
-@media (min-width: 1000px) {   
-    .svgcode embed {
-        width: 100%;
-    }
-    
-    .svgimg:hover{
-        box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.274) inset;
-    }
-    
-    .svgimg:hover .svgcode {
-        display:block;
-    }
+.svgimg:hover{
+    box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.274) inset;
+}
 
-    #ExpPdf{
-        display: block;
-    }
-    
+.svgimg:hover .svgcode {
+    display:block;
+}
+
+#ExpPdf{
+    display: block;
 }
 
 .mitemTitle {
@@ -153,5 +146,8 @@
         font-size: medium;
     }
 
+    #ExpPdf{
+        display: none;
+    }
 }
 

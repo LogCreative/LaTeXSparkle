@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A,2/0.5/B}
+	\tkzDefTriangle[two angles=45 and 60](A,B)
+	\tkzGetPoint{C}
+	\tkzDrawPoints(A,B)
+	\tkzDrawPoints[red!20](C)
+	\tkzDrawSegments(A,B B,C C,A)
+	\tkzLabelPoints(A,B)
+	\tkzLabelPoints[above](C)
+	\tkzMarkAngles[blue,size=0.5cm,mark=none](B,A,C C,B,A)
+\end{tikzpicture}

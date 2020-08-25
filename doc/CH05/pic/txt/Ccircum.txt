@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2/2/C}
+    % \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
+    % \tkzDrawPoints(A,B,C) \tkzDrawPoints[blue!30](O)
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDefCircle[circum](A,B,C)
+    \tkzGetPoint{O}
+    \tkzLabelPoints(O)
+    \tkzAutoLabelPoints[center=O](A,B,C)
+    \tkzDrawCircle[red](O,A)
+    \tkzDrawPoints(O,A,B,C)
+\end{tikzpicture}

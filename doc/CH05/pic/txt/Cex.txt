@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=0.6]
+    \tkzDefPoints{0/0/B,3/0/A,2/2/C}
+    \tkzDefCircle[ex](A,B,C) \tkzGetPoint{J} \tkzGetLength{ls}
+    \tkzDrawPoints(A,B,C) \tkzDrawPoints(J)
+    \tkzDrawSegments(A,C B,C A,B)
+    \tkzDefPointBy[homothety=center B ratio 1.7](C) \tkzGetPoint{D}
+    \tkzDefPointBy[homothety=center B ratio 1.7](A) \tkzGetPoint{E}
+    \tkzDrawSegments[dashed,blue](C,D A,E)
+    \tkzLabelPoints(J)
+    \tkzAutoLabelPoints[center=J](A,B,C)
+    \tkzDrawCircle[R,red](J, \ls pt)
+\end{tikzpicture}
