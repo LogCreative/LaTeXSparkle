@@ -1,172 +1,29 @@
-{-1/0/A,1/0/B,0.5/0.5/C,-0.5/-0.5/D} \tkzInterLL (A,B)(C,D) \tkzGetPoint {E} \tkzDrawSegments (A,B C,D) \tkzDrawPoints (A,B,C,D) \tkzDrawPoints [red](E) \tkzLabelPoints (A,B,C,D,E) \end {tcblisting} \tcb@insert@after@upper \end {tcb@savebox}\tcb@reset@color \advance \count@ 1\relax \tcbdimto \tcb@fit@@h {\ht \tcb@upperbox +\dp \tcb@upperbox }\tcbdimto \tcb@fit@@target {\kvtcb@height@fixed -(\kvtcb@top@rule@stand )-(\kvtcb@bottom@rule@stand )-(\kvtcb@top )-(\kvtcb@bottom )-(\kvtcb@boxsep )*2-\tcb@h@titletotal }\ifdim \kvtcb@height@fixed@plus >0pt\relax \let \tcb@fit@@minheight =\kvtcb@height@fixed \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \ifdim \dimexpr \tcb@fit@@h >\dimexpr \tcb@fit@@target +\kvtcb@height@fixed@plus \relax \tcbdimto \kvtcb@height@fixed {\kvtcb@height@fixed +\kvtcb@height@fixed@plus }\tcbdimto \tcb@fit@@target {\tcb@fit@@target +\kvtcb@height@fixed@plus }\else \tcbdimto \kvtcb@height@fixed {\kvtcb@height@fixed +\tcb@fit@@h -\tcb@fit@@target }\let \tcb@fit@@target =\tcb@fit@@h \fi \fi \fi \ifdim \kvtcb@fit@plus@width >0pt\relax \ifnum \count@ <\kvtcb@fit@maxstep \relax \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \tcb@lowerfitdim \dimexpr \kvtcb@width \relax \tcb@upperfitdim \dimexpr \kvtcb@width +\kvtcb@fit@plus@width \relax \tcbdimto \kvtcb@width {\tcb@upperfitdim }\tcb@fit@@box \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \else \ifnum \count@ <\kvtcb@fit@maxstep \relax \tcbdimto \tcb@fit@@gap {\tcb@fit@@target -\tcb@fit@@h }\tcbdimto \kvtcb@width {(\tcb@lowerfitdim +\tcb@upperfitdim )/2}\loop \tcb@fit@@box \tcb@continuetrue \ifnum \count@ <\kvtcb@fit@maxstep \relax \ifdim \dimexpr \tcb@upperfitdim -\tcb@lowerfitdim <\kvtcb@fit@maxwidthdiff \relax \tcb@continuefalse \else \ifdim \dimexpr \tcb@upperfitdim -\tcb@lowerfitdim <\kvtcb@fit@maxwidthdiffgap \relax \ifdim \dimexpr \tcb@fit@@gap <\tcb@fit@@line \relax \tcb@continuefalse \fi \fi \fi \else \tcb@continuefalse \fi \iftcb@continue \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \tcb@lowerfitdim \dimexpr \kvtcb@width \relax \tcbdimto \kvtcb@width {(\tcb@lowerfitdim +\tcb@upperfitdim )/2}\else \tcb@upperfitdim \dimexpr \kvtcb@width \relax \tcbdimto \tcb@fit@@gap {\tcb@fit@@target -\tcb@fit@@h }\tcbdimto \kvtcb@width {(\tcb@lowerfitdim +\tcb@upperfitdim )/2}\fi \else \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \tcbdimto \kvtcb@width {\tcb@upperfitdim }\tcb@fit@@box \fi \fi \iftcb@continue \repeat \fi \fi \fi \fi \fi \ifnum \count@ <\kvtcb@fit@maxstep \relax \ifdim \dimexpr \tcb@fit@@h >\tcb@fit@@target \relax \tcbox@fitalgorithm \fi \fi \tcb@fit@warn@end \ifdim \kvtcb@height@fixed@plus >0pt\relax \ifdim \dimexpr \tcb@fit@@h <\tcb@fit@@target \relax \tcbdimto \tcb@temp {\kvtcb@height@fixed +\tcb@fit@@h -\tcb@fit@@target }\ifdim \dimexpr \tcb@temp <\tcb@fit@@minheight \relax \else \let \kvtcb@height@fixed =\tcb@temp \fi \fi \fi \edef \tcbfitsteps {\the \count@ }\tcb@set@@dimensions \tcb@draw@color@box \tcb@layer@dec \endgroup 
-    \auxcombox{$\backslash$tkzInterLC 线圆交点}{
-
-    }
-    \auxcombox{$\backslash$tkzInterCC 圆圆交点}{
-
-    }
-\end{tcbraster}
-
-\begin{commandbox}
-    \verb"\tkzDefTriangle"\textcolor{blue}{[参数]}\textcolor{red}{(点1,点2)}
-    \tcblower
-    定义三角形
-\end{commandbox}
-
-\begin{tcbraster}[raster columns=3]
-    \argbox{two angles 两角}{
-
-    }
-    \argbox{equilateral }{
-
-    }
-    \argbox{pythagore}{
-
-    }
-    \argbox{school }{
-
-    }
-    \argbox{gold}{
-
-    }
-    \argbox{euclide}{
-
-    }
-    \argbox{cheops}{
-
-    }
-    \auxcombox{$\backslash$tkzGetPoint 第三点}{
-        \texttt{$\backslash$tkzDefTriangle}命令后紧跟 \texttt{$\backslash$tkzGetPoint(结果点)} 以得到三角形的第三点。
-    }
-    \auxcombox{tkzPointResult 得变量}{
-
-    }
-\end{tcbraster}
-
-\begin{commandbox}
-    \verb"\tkzDefTangent"\textcolor{blue}{[参数]}\textcolor{red}{(点1,点2)}
-    \tcblower
-    定义切线
-\end{commandbox}
-
-\begin{tcbraster}[raster columns=3,height=4.5cm]
-    \argbox{at}{
-
-    }
-    \argbox{from}{
-
-    }
-    \argbox{from with R}{
-
-    }
-\end{tcbraster}
-
-\begin{commandbox}
-    \verb"\tkzDefCircle"\textcolor{blue}{[参数]}\textcolor{red}{(点1,点2\underline{,点3})}
-    \tcblower
-    定义圆
-\end{commandbox}
-
-\begin{tcbraster}[raster columns=3]
-    \argbox{through 半径}{
-        以\textcolor{red}{(点1)}为圆心，\textcolor{red}{(点2)}为圆上点定义圆。
-
-        \begin{center}
-            \input{pic/through.tex}
-        \end{center}
-    }
-    \argbox{diameter 直径}{
-        以\textcolor{red}{(参照点)}定义的\textcolor{red}{直径}定义圆。
-
-        \begin{center}
-            \input{pic/diameter.tex}
-        \end{center}
-    }
-    \argbox{circum 外接圆}{
-        \textcolor{red}{(参照点)}所定义的\textcolor{red}{(三角形)}的外接圆。
-
-        \begin{center}
-            \input{pic/Ccircum.tex}
-        \end{center}
-    }
-    \argbox{in 内切圆}{
-        \textcolor{red}{(参照点)}所定义的\textcolor{red}{(三角形)}的内切圆。
-
-        \begin{center}
-            \input{pic/Cin.tex}
-        \end{center}
-    }
-    \argbox{ex 旁切圆}{
-        \textcolor{red}{(参照点)}所定义的\textcolor{red}{(三角形)}与\textcolor{red}{(点2)}相对的旁切圆。
-
-        \begin{center}
-            \input{pic/Cex.tex}
-        \end{center}
-    }
-    \argbox{euler 欧拉圆}{
-        \textcolor{red}{(参照点)}所定义\textcolor{red}{(三角形)}的欧拉圆。
-
-        \begin{center}
-            \input{pic/Ceuler.tex}
-        \end{center}
-    }
-    \argbox{apollonius 阿波罗尼斯圆,K=比例}{
-        到\textcolor{red}{(点1)}的距离与到\textcolor{red}{(点2)}的距离比例为$K$的动点轨迹。
-
-        \begin{center}
-            \input{pic/apollonius.tex}
-        \end{center}
-    }
-    % \argbox{spieker}{
-    %     三角形中点三角形内切圆。
-    % % 该命令有 bug。
-    %     \begin{center}
-    %         \input{pic/Cspieker.tex}
-    %     \end{center}
-    % }
-    \argbox{orthogonal 正交圆}{
-        正交两圆在交点处切线相互垂直。
-
-        \textcolor{blue}{
-            \texttt{[orthogonal from=(圆心)]}
-        }
-
-        其后需要紧跟
-
-        $\backslash$\texttt{tkzGetPoints}\{(圆上点)\} \{(圆上点)\} 得到结果。 %tcolorbox 中的内容不允许使用\verb
-
-        \textcolor{blue}{
-            \texttt{[orthogonal through=(圆上点1) and (圆上点2)]}
-        }
-
-    }
-    \argbox{orthogonal from}{
-        以指定的 \textcolor{blue}{(圆心)} 作以 \textcolor{red}{(点1)} 为圆心、 \textcolor{red}{(点2)} 为圆上点的正交圆。
-
-        \begin{center}
-            \input{pic/orthogonalFrom.tex}
-        \end{center}
-    }
-    \argbox{orthogonal through}{
-        以指定的 \textcolor{blue}{(圆上点1)} 、 \textcolor{blue}{(圆上点2)} 作以 \textcolor{red}{(点1)} 为圆心、 \textcolor{red}{(点2)} 为圆上点的正交圆。
-
-        \begin{center}
-            \input{pic/orthogonalThrough.tex}
-        \end{center}
-
-    }
-    \auxcombox{$\backslash$tkzGetPoint 得圆心}{
-        在命令后紧跟
-
-        $\backslash$\texttt{tkzGetPoint}\{\{圆心\}\} 一般可以得到圆心点。
-    }
-    \auxcombox{$\backslash$tkzGetLength 得半径}{
-        在命令后紧跟
-
-        $\backslash$\texttt{tkzGetLength}\{(长度变量)\} 可以得到半径，而后使用 $\backslash$\texttt{tkzDrawCircle((圆心),$\backslash$(长度变量) pt)} 画出该圆。
-    }
-
-\end{tcbraster}
-
-\end{CJK}
-\end{document}
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,3/0/B,2.5/2/C}
+    \tkzDrawPoints(A,B,C)
+    \tkzDefTriangleCenter[ortho](A,B,C)
+    \tkzGetPoint{H}
+    \tkzDefTriangleCenter[centroid](A,B,C)
+    \tkzGetPoint{G}
+    \tkzDefTriangleCenter[circum](A,B,C)
+    \tkzGetPoint{O}
+    \tkzDefTriangleCenter[in](A,B,C)
+    \tkzGetPoint{I}
+    \tkzDefTriangleCenter[ex](B,A,C)
+    \tkzGetPoint{J}
+    \tkzDefTriangleCenter[euler](A,B,C)
+    \tkzGetPoint{E}
+    \tkzDrawSegments(A,B B,C C,A)
+    \tkzDrawPoints[blue!10](H)
+    \tkzDrawPoints[blue!20](G)
+    \tkzDrawPoints[blue!30](O)
+    \tkzDrawPoints[blue!40](I)
+    \tkzDrawPoints[blue!50](J)
+    \tkzDrawPoints[blue!60](E)
+    \tkzAutoLabelPoints[center=O](A,B,C)\tkzAutoLabelPoints[center=O,blue!10](H)
+    \tkzAutoLabelPoints[center=E,blue!20](G)
+    \tkzAutoLabelPoints[center=H,blue!30](O)
+    \tkzAutoLabelPoints[center=E,blue!40](I)
+    \tkzAutoLabelPoints[center=O,blue!50](J)
+    \tkzAutoLabelPoints[center=O,blue!60](E)
+\end{tikzpicture}

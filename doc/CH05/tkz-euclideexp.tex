@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{listings}
+% \usepackage{appendix,bookmark}
 \usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
 \tcbuselibrary{skins,listings,fitting,raster}
 
@@ -24,7 +25,8 @@
 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%
 % tcolorbox 定义
-\colorlet{numbar}{red!20!blue!20!white}
+
+% 命令框
 \newtcolorbox{commandbox}{
     rightrule=3mm,
     bicolor,
@@ -40,21 +42,26 @@
     after lower=\end{CJK}
 }
 
+\colorlet{numbar}{red!20!blue!20!white}
+
+% 附带 tikz 的框（弃用）
 \newtcblisting{tikzbox}[4]{
     tikz lower,listing side text,
     coltitle=blue,
     bicolor,colback=blue!5,colbacklower=white,colframe=white,
     righthand width=5cm,
     title={\bfseries \sffamily{#1}\\\rm \color{blue}[\texttt{#2}]\\\color{black}{#3}},
+    title=#1,
     listing options={
-    numbers=left,numberstyle={\ifnum\value{lstnumber}=#4\sffamily\bfseries\scriptsize\color{blue}\else\tiny\color{numbar}\fi},
-    %linebackgroundcolor={\ifnum\value{lstnumber}=3\color{green}\fi},
+    numbers=left,numberstyle={\ifnum\value{lstnumber}=#2\sffamily\bfseries\scriptsize\color{blue}\else\tiny\color{numbar}\fi},
+    linebackgroundcolor={\ifnum\value{lstnumber}=3\color{green}\fi},
     morekeywords={translation,from,to},columns=fullflexible,basicstyle=\ttfamily\small,keywordstyle=\color{blue}},
     overlay={\begin{tcbclipinterior}\fill[numbar] (frame.south west) rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
     % before title=\begin{CJK}{UTF8}{kai},
     % after title=\end{CJK},
 }
 
+% 参数框
 \newtcboxfit{\argbox}[1]{
     colback=white,
     colframe=blue!50,
@@ -67,6 +74,7 @@
     top=1mm,bottom=1mm,left=1mm,right=1mm,
 }
 
+% 附加框
 \newtcboxfit{\auxcombox}[1]{
     colback=white,
     colframe=teal,
@@ -77,6 +85,21 @@
     after title=\end{CJK},
     %boxsep=0pt,
     top=1mm,bottom=1mm,left=1mm,right=1mm,
+}
+
+% 前置框（弃用）
+\newtcblisting{prebox}[2]{
+    tikz lower,listing side text,
+    % coltitle=white,
+    bicolor,colback=blue!5,colbacklower=white,colframe=blue!75!black,
+    righthand width=6cm,
+    % title={\bfseries \sffamily{#1}\\\rm \color{blue}[\texttt{#2}]\\\color{black}{#3}},
+    title=#1,
+    listing options={
+    numbers=left,numberstyle={\ifnum\value{lstnumber}=#2\sffamily\bfseries\scriptsize\color{blue}\else\tiny\color{numbar}\fi},
+    %linebackgroundcolor={\ifnum\value{lstnumber}=3\color{green}\fi},
+    morekeywords={},columns=fullflexible,basicstyle=\ttfamily\small,keywordstyle=\color{blue}},
+    overlay={\begin{tcbclipinterior}\fill[numbar] (frame.south west) rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
 }
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -610,6 +633,91 @@
     }
 
 \end{tcbraster}
+
+% \begin{appendix} %宏包冲突
+\begin{commandbox}
+    一些特殊点的坐标表示
+    \tcblower
+    附录 A
+\end{commandbox}
+% \begin{prebox}{三角形}{3}
+% \begin{tikzpicture}
+%     \tkzDefPoints{0/0/A,3/0/B,2.5/2/C}
+%     \tkzDrawPoints(A,B,C)
+%     \tkzDefTriangleCenter[ortho](A,B,C) 
+%     \tkzGetPoint{H}
+%     \tkzDefTriangleCenter[centroid](A,B,C) 
+%     \tkzGetPoint{G}
+%     \tkzDefTriangleCenter[circum](A,B,C) 
+%     \tkzGetPoint{O}
+%     \tkzDefTriangleCenter[in](A,B,C) 
+%     \tkzGetPoint{I}
+%     \tkzDefTriangleCenter[ex](B,A,C)
+%     \tkzGetPoint{J}
+%     \tkzDefTriangleCenter[euler](A,B,C) 
+%     \tkzGetPoint{E}
+%     \tkzDrawSegments(A,B B,C C,A)
+%     \tkzDrawPoints[blue!10](H)
+%     \tkzDrawPoints[blue!20](G) 
+%     \tkzDrawPoints[blue!30](O) 
+%     \tkzDrawPoints[blue!40](I) 
+%     \tkzDrawPoints[blue!50](J) 
+%     \tkzDrawPoints[blue!60](E) 
+%     \tkzAutoLabelPoints[center=O](A,B,C)
+%     \tkzAutoLabelPoints[center=O,blue!10](H)
+%     \tkzAutoLabelPoints[center=E,blue!20](G)
+%     \tkzAutoLabelPoints[center=H,blue!30](O)
+%     \tkzAutoLabelPoints[center=E,blue!40](I)
+%     \tkzAutoLabelPoints[center=O,blue!50](J)
+%     \tkzAutoLabelPoints[center=O,blue!60](E)
+% \end{tikzpicture}
+% \end{prebox}
+
+\newtcolorbox{appbox}[1]{
+    title={#1},
+    before title=\begin{CJK}{UTF8}{hei},after title=\end{CJK},
+    colback=red!5!white,
+    colframe=red!75!black,
+    colbacktitle=yellow!50!red,
+    coltitle=red!25!black,
+    fonttitle=\bfseries,
+    subtitle style={boxrule=0.4pt,
+    colback=yellow!50!red!25!white}
+}
+
+\begin{appbox}{三角形的心}
+    \begin{center}
+        \input{pic/ATri.tex}
+    \end{center}
+    \tcbsubtitle{垂心 $H$}
+        \begin{equation}
+            H=\left( \frac{\frac{ax_A}{\cos A}+\frac{bx_B}{\cos B}+\frac{cx_C}{\cos C}}{\frac{a}{\cos A}+\frac{b}{\cos B}+\frac{c}{\cos C}},\frac{\frac{ay_A}{\cos A}+\frac{by_B}{\cos B}+\frac{cy_C}{\cos C}}{\frac{a}{\cos A}+\frac{b}{\cos B}+\frac{c}{\cos C}} \right)
+        \end{equation}
+    \tcbsubtitle{重心 $G$}
+        \begin{equation}
+            G=\left( \frac{1}{3}\sum x_A, \frac{1}{3}\sum y_A \right)
+        \end{equation}
+    \tcbsubtitle{外心 $O$}
+        \begin{equation}
+            O=\left( \frac{\sum x_A \sin 2A}{\sum \sin 2A}, \frac{\sum y_A \sin 2A}{\sum \sin 2A} \right)
+        \end{equation}
+    \tcbsubtitle{内心 $I$}
+        \begin{equation}
+            I=\left( \frac{ax_A+bx_B+cx_C}{a+b+c}, \frac{ay_A+by_B+cy_C}{a+b+c} \right)
+        \end{equation}
+    \tcbsubtitle{旁心 $J$}
+        \begin{align}
+            J_A &= \left( \frac{-ax_A+bx_B+cx_C}{-a+b+c},\frac{-ay_A+by_B+cy_C}{-a+b+c} \right) \\
+            J_B &= \left( \frac{ax_A-bx_B+cx_C}{a-b+c},\frac{ay_A-by_B+cy_C}{a-b+c} \right) \\
+            J_C &= \left( \frac{ax_A+bx_B-cx_C}{a+b-c},\frac{ay_A+by_B-cy_C}{a+b-c} \right) 
+        \end{align}
+    \tcbsubtitle{欧拉圆圆心 $E$}
+        \begin{equation}
+            E=\left( \frac{1}{2}\sum x_A, \frac{1}{2}\sum y_A \right)
+        \end{equation}
+\end{appbox}
+
+
 
 \end{CJK}
 \end{document} 
