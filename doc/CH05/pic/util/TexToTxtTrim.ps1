@@ -26,9 +26,12 @@ Get-ChildItem . '*.tex' -Force | ForEach-Object -Process {
     # 复制文件
     Copy-Item -Path $_ -Destination txt/$newPath -Force
 
+    # TODO: 增加回车行
     (Get-Content txt/$newPath)| 
-        ForEach-Object { $_ -replace '\s{2,}',' ' } |   # 合并空格
-        Where-Object {$_.trim() -ne ""} |               # 去除空行
-        Out-File txt/$newPath -Force                    # 输出文件
+        ForEach-Object { $_ -replace '\s{2,}',' '} |        # 合并空格
+        ForEach-Object { $_ -replace '`t',' '} |            # 合并tab
+        Where-Object {$_.trim() -ne ""} |                   # 去除空行
+        Where-Object {$_.trim().IndexOf('%') -ne 0} |       # 去除注释行
+        Out-File txt/$newPath -Force                        # 输出文件
 
 }
