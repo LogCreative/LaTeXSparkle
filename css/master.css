@@ -124,7 +124,7 @@ footer{
     display: none;
 }
 
-span{
+.article .content span{
     font-family: Consolas, 'Courier New', monospace;
     border: 0.5px solid gray;
     border-radius: 3px;
