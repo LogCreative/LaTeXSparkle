@@ -79,9 +79,13 @@ footer a,
 }
 
 .item_s,
-#bottom-link a button,
-#side-menu a{
+#bottom-link a button{
     font-size: smaller;
+}
+
+#side-menu a{
+    font-size: x-small;
+    line-height: 10px;
 }
 
 .article-list,
@@ -157,8 +161,8 @@ details {
     border-radius: 5px;
 }
 
-.toutu span {
-    background: transparent;
+.article .content .toutu span {
+    background-color: transparent;
 }
 
 .toutu,
@@ -220,7 +224,6 @@ progress {
     width:100%;
     display:block;        
     font-family:arial;
-    font-size:12px; 
     background-color:#78a1bb;
     position:absolute;
     top:0;  
@@ -300,7 +303,7 @@ progress {
 
 @keyframes roadmap {
     from {width: 0;}
-    to {width: 70px;}
+    to {width: 80px;}
 }
 
 @keyframes CH01 {
@@ -325,5 +328,5 @@ progress {
 
 @keyframes CH05 {
     from {width: 0;}
-    to {width: 20px;}
+    to {width: 60px;}
 }

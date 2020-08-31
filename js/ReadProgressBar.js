@@ -154,9 +154,11 @@ $(document).ready(function() {
             var loadbar = $('#loadbar');
             var bar = $('#bar');
 
+            var MINIMIZED_FACTOR = 20;
+
             var setHeight = function(){
                 // minimized by the factor of 10
-                value = getValue() / 10.0;
+                value = getValue() / MINIMIZED_FACTOR;
 
                 bar.css({
                     height: value + 'px'
@@ -191,7 +193,7 @@ $(document).ready(function() {
                         $section.attr('id', id + count);
                         count++;
                 
-                        var labeltop = $(this).offset().top / 10 - 15;
+                        var labeltop = $(this).offset().top / MINIMIZED_FACTOR - 15;
 
                         $('#side-menu').append(li);
 
@@ -203,7 +205,7 @@ $(document).ready(function() {
             }
 
             var refreshHeight = function(){
-                total = getMax() / 10.0;
+                total = getMax() / MINIMIZED_FACTOR;
 
                 loadbar.css({
                     height: total + 'px'

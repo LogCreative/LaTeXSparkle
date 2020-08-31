@@ -78,7 +78,7 @@
     background:teal;
 }
 
-.mitemTitle span {
+.article .content .mitemTitle span {
     border: none;
     background: none;
     padding: 0px;
