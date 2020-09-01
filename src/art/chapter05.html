@@ -86,8 +86,55 @@
 
                     <p>还需要在 TikZEdt 的引用中添加该包，在菜单选栏中选择<span>Settings</span>设置 x2，在<span>Compiler</span>编译器选项卡中，添加<pre>\usepackage{tkz-euclide}</pre>来引用该包。</p>
                     <h3>5.2 实例：绘制一道几何题目</h3>
-                    <p>语义化的 tkz-euclide 宏包将更符合叙述化的文本习惯。
-                    </p>
+                    <p>语义化的 tkz-euclide 宏包将更符合叙述化的文本习惯，下面通过绘制一道几何题目来展示其命令的大致规则。</p>
+                    <div class="toutu">
+                      \(\triangle ABC \)的内切圆分别与\(BC\)、\(CA\)、\(AB\)相切于\(D\)、\(E\)、\(F\)，\(DP \bot EF\)于\(P\)，证明：\(PD\)平分\(\angle BPC\)。<br>
+                      <div style="text-align:center;margin-top: 5px;">
+                        <embed src="../../doc/CH05/pic/svg/GeoExample.svg" type="image/svg+xml"/>
+                      </div> 
+                    </div>
+                    <ol>
+                      <li>\(\triangle ABC \)：需要绘制出一个三角形（Triangle），那么可以使用<span>\tkzDef<b>Triangle</b></span>定义（Define=>Def）特殊的三角形。当然此处的三角形不是特殊的，可以直接定义三点（Point），使用<span>\tkzDef<b>Points</b></span>定义三点。
+                      <pre>\tkzDefPoints{2.5/2/A,0/0/B,3/0/C}</pre>
+                      但是现在的三点只是被定义好了，却没有显示出来，需要使用<span>\tkz<b>Draw</b>Points</span>将三点画（Draw）出来。
+                      <pre>\tkzDrawPoints(A,B,C)</pre>
+                      然后，可以使用<span>\tkz<b>Label</b>Points</span>标注（Label）三点。
+                      <pre>\tkzLabelPoints(A,B,C)</pre>
+                      最后可以使用<span>\tkzDraw<b>Polygon</b></span>根据三个顶点绘制出一个多边形（Polygon，三角形也是多边形的一种）。
+                      <pre>\tkzDrawPolygon(A,B,C)</pre>
+                      </li>
+                      <li><b>内切圆</b>：需要定义一个圆（Circle），使用<span>\tkzDef<b>Circle</b></span>定义出一个圆，但是需要添加参数<span>[in]</span>来指示其是内切圆（Inscribed circle），后接三点指示其是哪个三角形的内切圆。
+                      <pre>\tkzDefCircle[in](A,B,C)</pre>
+                      后面紧接<span>\tkz<b>Get</b>Point</span>得到（Get）圆心，接<span>\tkzGet<b>Length</b></span>得到半径长度（Length）。
+                      <pre>\tkzGetPoint{I} \tkzGetLength{ls}</pre>
+                      最后使用<span>\tkzDrawCircle</span>指令，使用<span>[R]</span>参数通过圆心半径绘制出内切圆。
+                      <pre>\tkzDrawCircle[R,red](I, \ls pt)</pre>
+                      </li>
+                      <li><b>分别与\(BC\)、\(CA\)、\(AB\)相切于\(D\)、\(E\)、\(F\)</b>：需要找到切点。这里可以使用<span>\tkzDef<b>Spc</b>Triangle</span>得到特殊（Special=>Spc）三角形，通过<span>[intouch]</span>参数得到内切圆切点，参数处需要说明对哪一个三角形的内切三角形。
+                      <pre>\tkzDefSpcTriangle[intouch](A,B,C){D,E,F}</pre>
+                      同样的方法画出来这几个点，这一次可以添加颜色参数。
+                      <pre>\tkzDrawPoints[blue](D,E,F)</pre>
+                      然后可以使用<span>\tkz<b>Auto</b>LabelPoints</span>自动（Auto）地围绕某一个点标注，添加围绕的中心<span>[center]</span>参数。
+                      <pre>\tkzAutoLabelPoints[blue,center = I](D,E,F)</pre>
+                      </li>
+                      <li><b>\(DP \bot EF\)于\(P\)</b>：需要作垂直线（或者说\(D\)在\(EF\)上的投影点\(P\)）。可以使用<span>\tkzDefPointBy</span>命令添加<span>[projection]</span>参数定义投影点：向（onto）\(E\)--\(F\)轴投影（projection）。
+                      <pre>\tkzDefPointBy[projection = onto E--F](D)</pre>
+                      得到该定义点。
+                      <pre>\tkzGetPoint{P}</pre>
+                      绘制出该点，并标记该点，使用<span>[above]</span>参数可以让标记放在上方（above）。
+                      <pre>\tkzDrawPoint[blue](P)
+\tkzLabelPoints[above,blue](P)</pre>
+                      使用<span>\tkzDraw<b>Segments</b></span>连接多条线段（Segment）\(DP\)、\(EF\)。
+                      <pre>\tkzDrawSegments[blue](D,P E,F)</pre>
+                      使用<span>\tkzMark<b>RightAngle</b></span>标记（Mark）关于\( \angle DPF \)直角（Right Angle）符号。
+                      <pre>\tkzMarkRightAngle[blue](D,P,F)</pre>
+                      </li>
+                      <li><b>\(PD\)平分\(\angle BPC\)</b>：需要展示角相等关系。连接\(BP\)、\(PC\)。
+                      <pre>\tkzDrawSegments[orange](B,P P,C)</pre>
+                      使用<span>\tkzMark<b>Angles</b></span>标记（Mark）两个角度（Angles）\(\angle BPD\)、\(\angle DPC\)。
+                      <pre>\tkzMarkAngles[orange,mark=none,size=0.5cm](B,P,D D,P,C)</pre>
+                      </li>
+                    </ol>
                     <h3>5.3 tkz-euclide 宏包部分命令样式展示</h3>
                     <details>
                       <summary>

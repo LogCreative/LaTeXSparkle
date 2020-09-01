@@ -1,0 +1,26 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{graphicx}
+\begin{document}
+\begin{tikzpicture}
+\tkzDefPoints{2.5/2/A,0/0/B,3/0/C}
+\tkzDrawPoints(A,B,C)
+\tkzLabelPoints(A,B,C)
+\tkzDrawPolygon(A,B,C)
+\tkzDefCircle[in](A,B,C)
+\tkzGetPoint{I} \tkzGetLength{ls}
+\tkzDrawCircle[R,red](I, \ls pt)
+\tkzDefSpcTriangle[intouch](A,B,C){D,E,F}
+\tkzDrawPoints[blue](D,E,F)
+\tkzAutoLabelPoints[blue,center = I](D,E,F)
+\tkzDefPointBy[projection = onto E--F](D)
+\tkzGetPoint{P}
+\tkzDrawPoint[blue](P)
+\tkzLabelPoints[above,blue](P)
+\tkzDrawSegments[blue](D,P E,F)
+\tkzMarkRightAngle[blue](D,P,F)
+\tkzDrawSegments[orange](B,P P,C)
+\tkzMarkAngles[orange,mark=none,size=0.5cm](B,P,D D,P,C)
+\end{tikzpicture} 
+\end{document}
