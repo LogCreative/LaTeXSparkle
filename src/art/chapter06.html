@@ -2,17 +2,25 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/master.css"/>
-        <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../css/mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/master.css"/>
+        <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../../css/mobile.css"/>
+        <script src="../../js/jquery-3.5.1.min.js"></script>
+        <script src="../../js/jquery.ba-resize.min.js"></script>
     </head>
     <title>
         像模像样 LaTeX
     </title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <script src="../../js/ReadProgressBar.js"></script>
     <body>
+        <div class="rightcol">
+            <div id="loadbar">
+                <strong id="bar"></strong>
+            </div>
+            <div id="side-menu"></div>
+        </div>
         <div class="side-bar">
             <label id="menu-toggle" for="menu-checkbox">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30">
@@ -25,7 +33,7 @@
             </label>
             <input id="menu-checkbox" type="checkbox"/>
             <div class="header">
-                <a href="../index.html" class="logo"><svg style="fill: white; font-family: Times,'宋体'" width="144" height="35">
+                <a href="../../index.html" class="logo"><svg style="fill: white; font-family: Times,'宋体'" width="144" height="35">
                     <text x="0" y="28" style="font-size: x-large">像</text>
                     <text x="21" y="23" style="font-size:large">模</text>
                     <text x="36" y="33" style="font-size: x-large">像</text>
@@ -38,10 +46,10 @@
                     </svg></a>
             </div>
             <div class="nav">
-                <a href="../index.html" class="item">首页</a>
-                <a href="roadmap.html" class="item">路线图</a>
-                <a href="article-list.html" class="item">讲稿</a>
-                <a href="about.html" class="item">关于</a> 
+                <a href="../../index.html" class="item">首页</a>
+                <a href="../roadmap.html" class="item">路线图</a>
+                <a href="../article-list.html" class="item">讲稿</a>
+                <a href="../about.html" class="item">关于</a>
             </div>
             <div class="footer">
                 <div class="item_s">\(\rm \LaTeX\) <b>Sparkle Project</b></div>
@@ -49,66 +57,23 @@
             <a href="https://github.com/LogCreative/LaTeXSparkle" class="item" target="_blank">
                 <svg class="octicon octicon-mark-github v-align-middle" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                 GitHub</a>
-            <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../img/bilibili.ico" height="16px"> Bilibili</a>
+            <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../../img/bilibili.ico" height="16px"> Bilibili</a>
             <br>
             <a href="https://www.mathjax.org/#gettingstarted" class="item" style="font-size: smaller;" target="_blank">POWERED BY MathJax</a>
-            <embed src="../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
+            <embed src="../../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
             </div>
         </div>
+        <progress value="0"></progress>
+        <div id="bottom-link"></div>
         <div class="main">
-            <div class="article-list">
-                
-                <div class="item">
-                    <a href="art/chapter01.html" class="title">第一节 总览</a>
-                    <div class="status" id="CH01">状态：正在准备</div>
-                    <div class="content">
-                        <p>总览将会总结所有部分的精华，做一个凝结性的总结。</p>
-                    </div>
+            <div class="article" id="content" style="color: black;">
+                <h1 class="title">第六节 简约统计图</h1>
+                <div class="status" id="CH01">状态：正在准备</div>
+                <div class="content">
+                    <p>正在组建 PGFPlots 相关的小工具。</p>
                 </div>
-
-                <div class="item">
-                    <a href="art/chapter02.html" class="title">第二节 PPT x \(\rm \LaTeX\)</a>
-                    <div class="status" id="CH02">状态：资料搜寻中</div>
-                    <div class="content">
-                        <p>之前的视频是怎么制作的？没有用到 3Blue1Brown 自研的 maniam 引擎，曾经尝试过使用 Beamer，但是后来很快放弃了。最终采用了 PowerPoint 插件就可以完成对 \( \rm \LaTeX \) 区块的动效制作，配合 Office 365 套件效果更佳。</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a href="art/chapter03.html" class="title">第三节 舒适的 \(\rm \LaTeX\) 编辑环境</a>
-                    <div class="status" id="CH03">状态：效果准备中</div>
-                    <div class="content">
-                        <p>如何通过 VS Code 以及 Markdown 文档预览 \(\rm \LaTeX\) 公式。并尝试使用这样的流程写一次数学作业，最后将演示如何使用 Overleaf 与本地双向同步。</p>
-                    </div>
-                </div>
-                
-                <div class="item">
-                    <a href="art/chapter04.html" class="title">第四节 使用 TikZEdt 绘制 Ti<i>k</i>Z 矢量图形</a>
-                    <div class="status" id="CH04">状态：文稿准备中</div>
-                    <div class="content">
-                        <p>手动编写 \(\rm \LaTeX\) Ti<i>k</i>Z 矢量图形代码太费劲，可以使用 TikZEdt 软件即时地看到图形结果。精致的 Ti<i>k</i>Z 图形使得文档设计语言统一。</p>
-                    </div>
-                </div>
-                
-                <div class="item">
-                    <a href="art/chapter05.html" class="title">第五节 \(\rm \LaTeX\) 中的几何画板 tkz-euclide</a>
-                    <div class="status" id="CH05">状态：文稿准备中</div>
-                    <div class="content">
-                        <p>平面几何图形的绘制，在很多情况下都是比较麻烦的，一般需要借助几何画板这类的工具精确绘制。幸运的是，\(\rm \LaTeX\) 提供了 tkz-euclide 宏包用于绘制欧氏几何图形。</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a href="art/chapter06.html" class="title">第六节 简约统计图</a>
-                    <div class="status" id="CH06">状态：文稿准备中</div>
-                    <div class="content">
-                        <p>现在各种各样的数据科学工具可以产生非常精确的统计图表，但是大多数都有一定的个性化局限性。而 \(\rm \LaTeX\) 中的 PGFPlots 宏包可以产生精确又精致的自定义简约统计图，适用于印刷又赏心悦目。</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-        
         <footer>
             <div>
                 <div class="item_s">\(\rm \LaTeX\) <b>Sparkle Project</b></div>
@@ -116,14 +81,13 @@
                 <a href="https://github.com/LogCreative/LaTeXSparkle" class="item" target="_blank">
                     <svg class="octicon octicon-mark-github v-align-middle" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                     GitHub</a>
-                <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../img/bilibili.ico" height="16px"> Bilibili</a>
+                <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../../img/bilibili.ico" height="16px"> Bilibili</a>
                 <br>
                 <a href="https://www.mathjax.org/#gettingstarted" class="item" style="font-size: smaller;" target="_blank">POWERED BY MathJax</a>
-                <embed src="../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
+                <embed src="../../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
             </div>
             
         </footer>
-        
         
     </body>
 </html>
