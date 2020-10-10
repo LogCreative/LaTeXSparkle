@@ -60,6 +60,7 @@
             <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../../img/bilibili.ico" height="16px"> Bilibili</a>
             <br>
             <a href="https://www.mathjax.org/#gettingstarted" class="item" style="font-size: smaller;" target="_blank">POWERED BY MathJax</a>
+            <a href="https://github.com/aslushnikov/latex-online" target="_blank" class="item" style="font-size: smaller;">POWERED BY LatexOnline</a>
             <embed src="../../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
             </div>
         </div>
@@ -70,8 +71,38 @@
                 <h1 class="title">第六节 简约统计图</h1>
                 <div class="status" id="CH01">状态：正在准备</div>
                 <div class="content">
+                    <!-- PGFPlots 代码生成器 -->
                     <iframe src="https://logcreative.github.io/PGFPlotsEdt/" frameborder="0" width="100%" scrolling="No" height="600" leftmargin="0" topmargin="0"> 
                     </iframe>
+
+                    <h3>6.1 PGFPlots 统计图框架</h3>
+                    老样子，需要在导言区引入宏包，并且指定使用的宏包版本。
+                    <pre>\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}</pre>
+                    <p>该宏包是基于 Ti<i>k</i>Z 的，所以最外部需要添加<span>tikzpicture</span>环境，而构成一个PGFPlots 统计图环境的最基本单位就是一个<span>axis</span>环境；后面紧跟该统计图的整体参数；坐标系内添加数据序列。</p>
+                    
+                    <ol>
+                        <li><span>\addplot</span>添加二维点集；</li>
+                        <li><span>\addplot3</span>添加三维点集。</li>
+                    </ol>
+                    
+                    <p>每个数据后面可以使用<span>[参数]</span>接上该数据系列的参数，再接
+                        
+                        <ul>
+                            <li><span>table {数据文件}</span>引入数据；</li>
+                            <li><span>coordinates {(x1,y1,z1) (x2,y2,z2)}</span>直接表明坐标点；</li>
+                            <li><span>{函数表达式}</span>直接绘制函数图像。</li>
+                        </ul>
+                    </p>
+                    <p>最后，可以使用<span>\legend</span>添加图例系列名称。</p>
+
+                    <pre>\begin{tikzpicture}
+    \begin{axis}[]
+        \addplot[] table {data.dat};
+        \legend{data};
+    \end{axis}
+\end{tikzpicture}</pre>
+
                 </div>
             </div>
         </div>
