@@ -69,7 +69,7 @@
         <div class="main">
             <div class="article" id="content" style="color: black;">
                 <h1 class="title">第六节 简约统计图</h1>
-                <div class="status" id="CH01">状态：正在准备</div>
+                <div class="status" id="CH01">状态：文稿准备中</div>
                 <div class="content">
                     <!-- PGFPlots 代码生成器 -->
                     <div class="deskOnly">
@@ -106,8 +106,15 @@
     \end{axis}
 \end{tikzpicture}</pre>
 
-                    <p>编译时，可以单独编译出一个 PDF 文件，使用<span>\includegraphics{graph.pdf}</span>引入静态文件。使用 \(\rm Lua\LaTeX\) 可以加速编译进度。当然，制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。</p>
+                    <p>编译时，可以单独编译出一个 PDF 文件，使用<span>\includegraphics{graph.pdf}</span>引入静态文件。使用 \(\rm Lua\LaTeX\) 可以加速编译进度。</p>
 
+                    <h3>6.2 从外部软件生成代码</h3>
+                    
+                    <p>6.2.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。（本项建设中）</p>
+                    
+                    <p>6.2.2 Matlab 可以使用 <a href="https://github.com/matlab2tikz/matlab2tikz" target="_blank">Matlab2TikZ</a> 生成 PGFPlots 的代码。</p>
+
+                    <p>6.2.3 Python 可以安装 <a href="https://github.com/nschloe/tikzplotlib" target="_blank">tikzplotlib</a>，转换 matplotlib 图像为 PGFPlots 代码。</p>
                 </div>
             </div>
         </div>

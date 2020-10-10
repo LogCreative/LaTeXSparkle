@@ -308,7 +308,7 @@ progress {
 
 @keyframes roadmap {
     from {width: 0;}
-    to {width: 85px;}
+    to {width: 90px;}
 }
 
 @keyframes CH01 {
@@ -338,5 +338,5 @@ progress {
 
 @keyframes CH06 {
     from {width: 0;}
-    to {width: 0px;}
+    to {width: 20px;}
 }
