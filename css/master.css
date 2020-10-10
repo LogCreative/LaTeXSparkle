@@ -287,6 +287,10 @@ progress {
     animation-timing-function: ease-in-out;
 }
 
+.deskOnly {
+    display: block;
+}
+
 #pgshidden {
     margin: 0 0;
 }

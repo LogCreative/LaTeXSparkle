@@ -128,3 +128,7 @@ progress::-moz-progress-bar {
     grid-row: 1;
     grid-column: 1;
 }
+
+.deskOnly{
+    display: none;
+}
