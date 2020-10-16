@@ -119,12 +119,17 @@
                         <li><b>柱形图</b> 添加参数<span>ybar</span>（或者是<span>xbar</span>横向柱形图）。如果需要产生堆积柱形图，请使用<span>ybar stacked</span>（或<span>xbar stacked</span>）参数🌐。</li>
                         <li><b>面积图</b> 在系列的分号前添加<span>\closedcycle</span>就可以闭合路径以产生面积图。如果需要产生堆积面积图，请使用<span>stack plots=y</span>参数🌐。</li>
                         <li><b>曲面图</b> 三维坐标使用<span>mesh</span>参数产生曲面线框，使用<span>surf</span>参数产生曲面填充层。</li>
-                        <li><b>等高图</b> 三维坐标使用<span>contour filled</span>参数产生等高填充图，使用<span>contour gnuplot</span>等高线图。
+                        <li><b>等高图</b> 三维坐标使用<span>contour filled</span>参数产生等高填充图，使用<span>contour gnuplot</span>产生等高线图。
                         <div class="toutu">
                             等高填充图在某些 PDF 查看器中会渲染模糊。等高线图需要产生临时文件。
                         </div>
                         </li>
-                        <li><b>箱式图</b> <b>直方图</b> 内容比较复杂，请查看例子。</li>
+                        <li><b>直方图</b> 坐标图使用参数<span>ybar interval</span>绘制直方图，添加<span>xticklabel interval boundaries</span>增加横轴数据标签🌐。
+                        <div class="toutu">推荐添加参数<span>x tick label style = {rotate = 90,anchor = east,}</span>调整坐标方向避免重叠。</div></li>
+                        <li><b>箱式图</b> 对于文件项目添加参数<span>boxplot</span>产生箱式图🌐。
+                        <div class="toutu">需要引入统计库
+                            <pre>\usepgfplotslibrary{statistics}</pre>
+                            注意文件要有两列，以第二列做统计计算。</div></li>
                     </ul>
 
                     <h3>6.3 从外部软件生成代码</h3>
