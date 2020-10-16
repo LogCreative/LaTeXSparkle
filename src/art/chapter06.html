@@ -110,12 +110,21 @@
 
                     <h3>6.2 不同类型的统计图</h3>
 
-                    在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。以下参数没有特殊声明，既可以适用于局部，也可以适用于全局。
+                    在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。推荐全局使用的参数用🌐标记。
 
                     <ul>
                         <li><b>折线图</b> 在不加任何参数的情况下，图形呈现的就是单纯的折线图。</li>
                         <li><b>折点图</b> 添加参数<span>mark=*</span>可以添加散点标记，当然可以更换为其他的标记，比如<span>x</span><span>+</span>等（启用<span>plotmarks</span>标记库以使用更多类型的标记）。</li>
                         <li><b>散点图</b> 添加参数<span>only marks</span>可以只显示散点标记，不显示折线。添加<span>scatter</span>参数可以让散点跟随其因变量取值(\(y\) 或 \(z\))变为七彩的。</li>
+                        <li><b>柱形图</b> 添加参数<span>ybar</span>（或者是<span>xbar</span>横向柱形图）。如果需要产生堆积柱形图，请使用<span>ybar stacked</span>（或<span>xbar stacked</span>）参数🌐。</li>
+                        <li><b>面积图</b> 在系列的分号前添加<span>\closedcycle</span>就可以闭合路径以产生面积图。如果需要产生堆积面积图，请使用<span>stack plots=y</span>参数🌐。</li>
+                        <li><b>曲面图</b> 三维坐标使用<span>mesh</span>参数产生曲面线框，使用<span>surf</span>参数产生曲面填充层。</li>
+                        <li><b>等高图</b> 三维坐标使用<span>contour filled</span>参数产生等高填充图，使用<span>contour gnuplot</span>等高线图。
+                        <div class="toutu">
+                            等高填充图在某些 PDF 查看器中会渲染模糊。等高线图需要产生临时文件。
+                        </div>
+                        </li>
+                        <li><b>箱式图</b> <b>直方图</b> 内容比较复杂，请查看例子。</li>
                     </ul>
 
                     <h3>6.3 从外部软件生成代码</h3>
