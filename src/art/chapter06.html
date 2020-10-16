@@ -69,7 +69,7 @@
         <div class="main">
             <div class="article" id="content" style="color: black;">
                 <h1 class="title">第六节 简约统计图</h1>
-                <div class="status" id="CH01">状态：文稿准备中</div>
+                <div class="status" id="CH06">状态：文稿准备中</div>
                 <div class="content">
                     <!-- PGFPlots 代码生成器 -->
                     <div class="deskOnly">
@@ -92,9 +92,9 @@
                     <p>每个数据后面可以使用<span>[参数]</span>接上该数据系列的参数，再接
                         
                         <ul>
-                            <li><span>table {数据文件}</span>引入数据；</li>
-                            <li><span>coordinates {(x1,y1,z1) (x2,y2,z2)}</span>直接表明坐标点；</li>
-                            <li><span>{函数表达式}</span>直接绘制函数图像。</li>
+                            <li><span>table {数据文件}</span>引入数据，数据文件的每一行为一个坐标；</li>
+                            <li><span>coordinates {(\(x_1\),\(y_1\),\(z_1\)) (\(x_2\),\(y_2\),\(z_2\))}</span>直接表明坐标点；</li>
+                            <li><span>{函数表达式}</span>直接绘制二维函数图像。如果是三维函数，需要写出三个维度上的参数化方程，用<span>({\(x(t)\)},{\(y(t)\)},{\(z(t)\)})</span>表示。</li>
                         </ul>
                     </p>
                     <p>最后，可以使用<span>\legend</span>添加图例系列名称。</p>
@@ -108,13 +108,23 @@
 
                     <p>编译时，可以单独编译出一个 PDF 文件，使用<span>\includegraphics{graph.pdf}</span>引入静态文件。使用 \(\rm Lua\LaTeX\) 可以加速编译进度。</p>
 
-                    <h3>6.2 从外部软件生成代码</h3>
-                    
-                    <p>6.2.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。（本项建设中）</p>
-                    
-                    <p>6.2.2 Matlab 可以使用 <a href="https://github.com/matlab2tikz/matlab2tikz" target="_blank">Matlab2TikZ</a> 生成 PGFPlots 的代码。</p>
+                    <h3>6.2 不同类型的统计图</h3>
 
-                    <p>6.2.3 Python 可以安装 <a href="https://github.com/nschloe/tikzplotlib" target="_blank">tikzplotlib</a>，转换 matplotlib 图像为 PGFPlots 代码。</p>
+                    在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。以下参数没有特殊声明，既可以适用于局部，也可以适用于全局。
+
+                    <ul>
+                        <li><b>折线图</b> 在不加任何参数的情况下，图形呈现的就是单纯的折线图。</li>
+                        <li><b>折点图</b> 添加参数<span>mark=*</span>可以添加散点标记，当然可以更换为其他的标记，比如<span>x</span><span>+</span>等（启用<span>plotmarks</span>标记库以使用更多类型的标记）。</li>
+                        <li><b>散点图</b> 添加参数<span>only marks</span>可以只显示散点标记，不显示折线。添加<span>scatter</span>参数可以让散点跟随其因变量取值(\(y\) 或 \(z\))变为七彩的。</li>
+                    </ul>
+
+                    <h3>6.3 从外部软件生成代码</h3>
+                    
+                    <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。</p>
+                    
+                    <p>6.3.2 Matlab 可以使用 <a href="https://github.com/matlab2tikz/matlab2tikz" target="_blank">Matlab2TikZ</a> 生成 PGFPlots 的代码。</p>
+
+                    <p>6.3.3 Python 可以安装 <a href="https://github.com/nschloe/tikzplotlib" target="_blank">tikzplotlib</a>，转换 matplotlib 图像为 PGFPlots 代码。</p>
                 </div>
             </div>
         </div>
