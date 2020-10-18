@@ -4,8 +4,8 @@
         axis y line={left},
         xlabel={$x$},
         ylabel={$f(x)$},
-        title={$f(x)=x^2$},
+        title={$f(x)=\exp(-x^2)$},
     ]
-     \addplot+ [mark=*] {x^2};
+     \addplot+ [mark=*,domain=-2:2] {exp(-x^2)};
     \end{axis}
 \end{tikzpicture}

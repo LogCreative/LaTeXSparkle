@@ -145,9 +145,5 @@
     .mitemTitle, .mitemTitle span {
         font-size: medium;
     }
-
-    #ExpPdf{
-        display: none;
-    }
 }
 

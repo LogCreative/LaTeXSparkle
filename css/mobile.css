@@ -132,3 +132,7 @@ progress::-moz-progress-bar {
 .deskOnly{
     display: none;
 }
+
+#ExpPdf{
+    display: none;
+}

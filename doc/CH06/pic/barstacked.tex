@@ -1,0 +1,19 @@
+\pgfplotstableread [
+    col sep=comma] {./data/quantity.csv} {\quantity}
+\begin{tikzpicture}
+    \begin{axis}[
+    font={\normalsize},
+    ybar stacked,
+    xlabel={Week},
+    ylabel={Homework Quantity},
+    legend style={
+        at={(0.5,-0.3)},
+        anchor=north,
+        legend columns=3
+    },
+    ]
+    \foreach \y in {1,...,6}
+        \addplot+ table[x index=0,y index=\y] {\quantity};
+    \legend{Chinese, Math, English, Physics, Chemistry, Biology};
+    \end{axis}
+\end{tikzpicture}

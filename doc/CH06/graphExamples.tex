@@ -2,42 +2,87 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{geometry}
-\usepackage{pgfplots}
+\usepackage{pgfplots,pgfplotstable}
 \pgfplotsset{compat=1.17,width=6.5cm}
 \usepackage{CJKutf8}
 \usepackage{tcolorbox}
 \usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+\usepackage{listings}
+
 \usetikzlibrary{plotmarks}
 \usepgfplotslibrary{colorbrewer}
 \usepgfplotslibrary{statistics}
 \tcbuselibrary{skins,listings,fitting,raster}
+
 \geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
 \title{\texttt{PGFPlots} 不同类型的统计图}
 \author{\href{https://logcreative.github.io/LaTeXSparkle/index.html}{\LaTeX\ Sparkle} $\cdot$ \href{https://space.bilibili.com/31271993}{LogCreative}}
 \date{}
-\colorlet{numbar}{red!20!blue!20!white}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    emph=[1]{addplot,addplot3},
+    emphstyle=\color{red},
+    numbers=left,
+    numberstyle={\ttfamily\scriptsize\color{red!60!black!60!white}},
+    numbersep=5pt,
+}
 
 % 定义图像盒子，注意文件中不能含有括号内还有命令的情形（例如：[title={\textbf{what}}]），parser将不能分析而溢栈
-\newtcbinputlisting{graphbox}[2]{
+% 参数1：标题
+% 参数2：文件位置
+% 参数3：主色
+% 参数4：偏移id
+\newtcbinputlisting{graphbox}[4]{
+    enhanced,
+    bicolor,
     sidebyside,
     title={\textbf{#1}},
     listing file=#2,
     sharp corners,
     rounded corners=southeast,
-    arc=10pt
+    arc=10pt,
+    colback=#3!15,
+    colbacklower=#3!5,
+    colframe=#3!80!black,
+    coltitle=#3!65!black,
+    before title=\begin{CJK}{UTF8}{hei},
+    after title=\end{CJK},
+    attach boxed title to top left=
+    {xshift=#4cm,yshift=-0.5mm},
+    boxed title style={skin=enhancedfirst jigsaw,
+        size=small,arc=1mm,bottom=0mm,
+        interior style={
+            fill=none,
+            top color=#3!30,
+            bottom color=#3!20,
+        }
+    },
+    overlay={
+        \begin{tcbclipinterior}\fill[#3!40] 
+            (frame.south west) rectangle ([xshift=5mm]frame.north west);
+        \end{tcbclipinterior}
+    },
 }
 
 \begin{document}
 \begin{CJK}{UTF8}{song} %需要安装cjk-fonts宏包
     \maketitle
 
-    \begin{graphbox}{折线图}{pic/line.tex}
+    \begin{graphbox}{折线图}{pic/line.tex}{yellow}{0}
     \end{graphbox}
     
-    \begin{graphbox}{折点图}{pic/mark.tex}
+    \begin{graphbox}{折点图}{pic/mark.tex}{yellow}{1}
     \end{graphbox}
 
-    \begin{graphbox}{散点图}{pic/scatter.tex}
+    \begin{graphbox}{散点图}{pic/scatter.tex}{yellow}{2}
+    \end{graphbox}
+
+    \begin{graphbox}{柱状图}{pic/bar.tex}{green}{0}
+    \end{graphbox}
+
+    \begin{graphbox}{堆积柱形图}{pic/barstacked.tex}{green}{1}
     \end{graphbox}
 
 \end{CJK}
