@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17,width=6.5cm}
+\usepackage{CJKutf8}
+\usepackage{tcolorbox}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+\usetikzlibrary{plotmarks}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{statistics}
+\tcbuselibrary{skins,listings,fitting,raster}
+\geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
+\title{\texttt{PGFPlots} 不同类型的统计图}
+\author{\href{https://logcreative.github.io/LaTeXSparkle/index.html}{\LaTeX\ Sparkle} $\cdot$ \href{https://space.bilibili.com/31271993}{LogCreative}}
+\date{}
+\colorlet{numbar}{red!20!blue!20!white}
+
+% 定义图像盒子，注意文件中不能含有括号内还有命令的情形（例如：[title={\textbf{what}}]），parser将不能分析而溢栈
+\newtcbinputlisting{graphbox}[2]{
+    sidebyside,
+    title={\textbf{#1}},
+    listing file=#2,
+    sharp corners,
+    rounded corners=southeast,
+    arc=10pt
+}
+
+\begin{document}
+\begin{CJK}{UTF8}{song} %需要安装cjk-fonts宏包
+    \maketitle
+
+    \begin{graphbox}{折线图}{pic/line.tex}
+    \end{graphbox}
+    
+    \begin{graphbox}{折点图}{pic/mark.tex}
+    \end{graphbox}
+
+    \begin{graphbox}{散点图}{pic/scatter.tex}
+    \end{graphbox}
+
+\end{CJK}
+\end{document}

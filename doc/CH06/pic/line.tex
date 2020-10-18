@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis y line={left},
+        axis x line={bottom},
+        title={GDP of the US},
+        ymin={40000},
+        ymajorgrids,
+        scaled y ticks=false,
+    ]
+    \addplot [red,very thick] table[col sep=comma] {./data/gdppc.csv};
+    \end{axis}
+\end{tikzpicture}
