@@ -308,35 +308,35 @@ progress {
 
 @keyframes roadmap {
     from {width: 0;}
-    to {width: 90px;}
+    to {width: 100px;}
 }
 
 @keyframes CH01 {
     from {width: 0;}
-    to {width: 0;}
+    to {width: 200px;}
 }
 
 @keyframes CH02 {
     from {width: 0;}
-    to {width: 70px;}
+    to {width: 200px;}
 }
 
 @keyframes CH03 {
     from {width: 0;}
-    to {width: 100px;}
+    to {width: 200px;}
 }
 
 @keyframes CH04 {
     from {width: 0;}
-    to {width: 70px;}
+    to {width: 200px;}
 }
 
 @keyframes CH05 {
     from {width: 0;}
-    to {width: 80px;}
+    to {width: 200px;}
 }
 
 @keyframes CH06 {
     from {width: 0;}
-    to {width: 20px;}
+    to {width: 150px;}
 }
