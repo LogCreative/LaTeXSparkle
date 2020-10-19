@@ -12,6 +12,7 @@
 \usetikzlibrary{plotmarks}
 \usepgfplotslibrary{colorbrewer}
 \usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
 \tcbuselibrary{skins,listings,fitting,raster}
 
 \geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
@@ -22,7 +23,7 @@
 \lstset{
     basicstyle=\ttfamily\small,
     keywordstyle=\color{blue},
-    emph=[1]{addplot,addplot3},
+    emph=[1]{addplot,addplot3,legend},
     emphstyle=\color{red},
     numbers=left,
     numberstyle={\ttfamily\scriptsize\color{red!60!black!60!white}},
@@ -85,5 +86,13 @@
     \begin{graphbox}{堆积柱形图}{pic/barstacked.tex}{green}{1}
     \end{graphbox}
 
+    \begin{graphbox}{面积图}{pic/area.tex}{green}{2}
+    \end{graphbox}
+
+    \begin{graphbox}{间隙面积图}{pic/areafillbetween.tex}{green}{3}
+    \end{graphbox}
+
+    \begin{graphbox}{曲面图}{pic/surf.tex}{red}{0}
+    \end{graphbox}
 \end{CJK}
 \end{document}

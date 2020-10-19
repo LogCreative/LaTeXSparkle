@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \begin{axis}[
+    title={$f(x) = \frac{x}{1+x^2}$},
+    axis x line={bottom},
+    axis y line={left},
+    xlabel={$x$},
+    ylabel={$f(x)$},
+    ymax=0.6,
+    ]
+     \addplot [samples=200,domain=0:4,blue,very thick,fill=GnBu-H,fill opacity=0.2] {x/(1+x^2)} \closedcycle;
+    \end{axis}
+\end{tikzpicture}    
