@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \begin{axis}[
+    boxplot/draw direction=y,
+    ]
+    \addplot+ [boxplot prepared={
+    lower whisker=2.5, lower quartile=4,
+    median=8.5, upper quartile=12,
+    upper whisker=15},
+    ] coordinates {};
+    \addplot+ [boxplot prepared={
+    lower whisker=2.5, lower quartile=4,
+    median=8.5, upper quartile=12,
+    upper whisker=15},
+    ] coordinates {};
+    \end{axis}
+\end{tikzpicture}
