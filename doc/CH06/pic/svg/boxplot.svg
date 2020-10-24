@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="161.34613pt" height="128.02339pt" viewBox="-28.5284 -22.8536 161.34613 128.02339 "> 
+<g transform="translate(0,105.16978 ) scale(1,-1) translate(0,22.8536 )"> 
+<g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -6.47873 -9.54323 L -6.47873 -5.27531 M 25.91492 -9.54323 L 25.91492 -5.27531 M 58.30856 -9.54323 L 58.30856 -5.27531 M 90.70221 -9.54323 L 90.70221 -5.27531 M 123.09586 -9.54323 L 123.09586 -5.27531 M -6.47873 104.96979 L -6.47873 100.70187 M 25.91492 104.96979 L 25.91492 100.70187 M 58.30856 104.96979 L 58.30856 100.70187 M 90.70221 104.96979 L 90.70221 100.70187 M 123.09586 104.96979 L 123.09586 100.70187  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -11.66241 19.08531 L -7.39438 19.08531 M -11.66241 57.25594 L -7.39438 57.25594 M -11.66241 95.42656 L -7.39438 95.42656 M 128.27954 19.08531 L 124.0115 19.08531 M 128.27954 57.25594 L 124.0115 57.25594 M 128.27954 95.42656 L 124.0115 95.42656  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M -11.66241 -9.54323 L -11.66241 104.96979 L 128.27954 104.96979 L 128.27954 -9.54323 L -11.66241 -9.54323 Z  " fill="none"/>
+ <g transform="translate(-12.86763,-19.52063)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(6.3889,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 0<tspan font-family="cmmi" font-size="10">.</tspan>5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(23.41492,-19.52063)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 1</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(51.91966,-19.52063)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(6.3889,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 1<tspan font-family="cmmi" font-size="10">.</tspan>5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(88.20221,-19.52063)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(116.70695,-19.52063)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(6.3889,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2<tspan font-family="cmmi" font-size="10">.</tspan>5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-20.19539,15.8631)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-25.19542,54.03372)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 10</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-25.19542,92.20435)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 15</g> </g>
+ </text> 
+</g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M -11.66241 -9.54323 L 128.27954 -9.54323 L 128.27954 104.96979 L -11.66241 104.96979 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 25.91492 11.45119 L 25.91492 0.0 M 5.18298 0.0 L 46.64685 0.0  " fill="none"/>
+ <path d=" M 25.91492 72.52419 L 25.91492 95.42656 M 5.18298 95.42656 L 46.64685 95.42656  " fill="none"/>
+ <path d=" M 0.0 11.45119 M 0.0 11.45119 L 0.0 72.52419 L 51.82983 72.52419 L 51.82983 11.45119 Z M 51.82983 72.52419  " fill="none"/>
+ <path d=" M 0.0 45.80475 L 51.82983 45.80475  " fill="none"/>
+ <path d="  " fill="none"/>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 90.70221 11.45119 L 90.70221 0.0 M 69.97028 0.0 L 111.43414 0.0  " fill="none"/>
+ <path d=" M 90.70221 72.52419 L 90.70221 95.42656 M 69.97028 95.42656 L 111.43414 95.42656  " fill="none"/>
+ <path d=" M 64.7873 11.45119 M 64.7873 11.45119 L 64.7873 72.52419 L 116.61713 72.52419 L 116.61713 11.45119 Z M 116.61713 72.52419  " fill="none"/>
+ <path d=" M 64.7873 45.80475 L 116.61713 45.80475  " fill="none"/>
+ <path d="  " fill="none"/>
+ </g>
+ </g>
+ <g stroke="#00f" fill="#00f">
+ <g stroke="#00f" fill="#00f">
+ <g fill="#00c">
+ <path d="  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <g stroke="#f00" fill="#f00">
+ <g fill="#c00">
+ <path d="  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ 
+                               </g> 
+</svg> 

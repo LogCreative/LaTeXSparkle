@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184.59264pt" height="157.10818pt" viewBox="-43.07167 -24.73743 184.59264 157.10818 "> 
+<g transform="translate(0,132.37076 ) scale(1,-1) translate(0,24.73743 )"> 
+        <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 0.0 0.0 L 0.0 4.2676 M 32.11823 0.0 L 32.11823 4.2676 M 64.23645 0.0 L 64.23645 4.2676 M 96.35468 0.0 L 96.35468 4.2676 M 128.4729 0.0 L 128.4729 4.2676 M 0.0 126.78223 L 0.0 122.51462 M 32.11823 126.78223 L 32.11823 122.51462 M 64.23645 126.78223 L 64.23645 122.51462 M 96.35468 126.78223 L 96.35468 122.51462 M 128.4729 126.78223 L 128.4729 122.51462  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -12.84807 0.0 L -8.5803 0.0 M -12.84807 31.69556 L -8.5803 31.69556 M -12.84807 63.39111 L -8.5803 63.39111 M -12.84807 95.08667 L -8.5803 95.08667 M -12.84807 126.78223 L -8.5803 126.78223 M 141.32097 0.0 L 137.0532 0.0 M 141.32097 31.69556 L 137.0532 31.69556 M 141.32097 63.39111 L 137.0532 63.39111 M 141.32097 95.08667 L 137.0532 95.08667 M 141.32097 126.78223 L 137.0532 126.78223  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M -12.84807 0.0 L -12.84807 126.78223 L 141.32097 126.78223 L 141.32097 0.0 L -12.84807 0.0 Z  " fill="none"/>
+ <g transform="translate(-8.75699,-8.3163)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(8.75699,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">SVM</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(26.74321,-8.3163)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.37502,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">LR</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(55.27458,-8.3163)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(8.96187,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">KNN</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(87.44144,-8.3163)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(8.91324,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">DNN</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(120.82356,-8.3163)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(7.64934,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">Tree</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-26.7283,-2.25555)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.17363,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">0</tspan><tspan font-family="cmmi" font-size="7">.</tspan><tspan font-family="cmr" font-size="7">6</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-26.7283,29.44)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.17363,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">0</tspan><tspan font-family="cmmi" font-size="7">.</tspan><tspan font-family="cmr" font-size="7">7</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-26.7283,61.13556)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.17363,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">0</tspan><tspan font-family="cmmi" font-size="7">.</tspan><tspan font-family="cmr" font-size="7">8</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-26.7283,92.83112)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.17363,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">0</tspan><tspan font-family="cmmi" font-size="7">.</tspan><tspan font-family="cmr" font-size="7">9</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-20.36716,124.52667)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(1.99306,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">1</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M -12.84807 0.0 L 141.32097 0.0 L 141.32097 126.78223 L -12.84807 126.78223 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#0f0" fill="#0f0">
+ <g fill="#0f0">
+ <path d=" M -5.0 0.0 h 10.0 v 82.40845 h -10.0 Z M 27.11823 0.0 h 10.0 v 79.23889 h -10.0 Z M 59.23645 0.0 h 10.0 v 77.65411 h -10.0 Z M 91.35468 0.0 h 10.0 v 76.06934 h -10.0 Z M 123.4729 0.0 h 10.0 v 72.89978 h -10.0 Z  " />
+ </g>
+ </g>
+ </g>
+ <g transform="translate(46.41692,-20.04335)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(17.81953,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">Algorithm</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="matrix(0.0,1.0,-1.0,0.0,-34.95535,47.24173)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.14938,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="7">Accuracy</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                                   </g> 
+</svg> 

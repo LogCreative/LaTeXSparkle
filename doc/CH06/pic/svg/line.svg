@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191.44147pt" height="151.71344pt" viewBox="-36.77782 -17.38867 191.44147 151.71344 "> 
+<g transform="translate(0,134.32477 ) scale(1,-1) translate(0,17.38867 )"> 
+       <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.4">
+ <g stroke="#c0c0c0" fill="#c0c0c0">
+ <path d=" M 0.0 0.0 L 139.94038 0.0 M 0.0 44.80133 L 139.94038 44.80133 M 0.0 89.60266 L 139.94038 89.60266  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 4.51558 -2.13383 L 4.51558 2.13383 M 49.65764 -2.13383 L 49.65764 2.13383 M 94.7997 -2.13383 L 94.7997 2.13383 M 139.94176 -2.13383 L 139.94176 2.13383  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -2.134 0.0 L 2.134 0.0 M -2.134 44.80133 L 2.134 44.80133 M -2.134 89.60266 L 2.134 89.60266  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M 0.0 0.0 L 137.94041 0.0  " fill="none"/>
+ <g transform="translate(137.94041,0.0)">
+ <path d=" M 1.99997 0.0 L -1.19998 1.59998 L 0.0 0.0 L -1.19998 -1.59998  " stroke="none"/>
+  </g>
+ <path d=" M 0.0 0.0 L 0.0 112.51442  " fill="none"/>
+ <g transform="matrix(0.0,1.0,-1.0,0.0,0.0,112.51442)">
+ <path d=" M 1.99997 0.0 L -1.19998 1.59998 L 0.0 0.0 L -1.19998 -1.59998  " stroke="none"/>
+  </g>
+ <g transform="translate(-6.87334,-12.11125)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.38892,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 1<tspan font-family="cmmi" font-size="10">,</tspan>990</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(38.26872,-12.11125)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.38892,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2<tspan font-family="cmmi" font-size="10">,</tspan> 000</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(83.41078,-12.11125)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.38892,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2<tspan font-family="cmmi" font-size="10">,</tspan> 010</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(128.55284,-12.11125)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.38892,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 2<tspan font-family="cmmi" font-size="10">,</tspan> 020</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-33.44484,-2.25)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(13.88893,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 40<tspan font-family="cmmi" font-size="10">,</tspan> 000</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-33.44484,42.55133)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(13.88893,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 50<tspan font-family="cmmi" font-size="10">,</tspan> 000</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-33.44484,87.35266)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(13.88893,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 60<tspan font-family="cmmi" font-size="10">,</tspan> 000</g> </g>
+ </text> 
+</g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M 0.0 0.0 L 139.94038 0.0 L 139.94038 114.51439 L 0.0 114.51439 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#f00" fill="#f00">
+ <g stroke-width="1.2">
+ <path d=" M 0.0 8.59587 L 4.5142 10.00603 L 9.02841 7.29942 L 13.54262 11.31636 L 18.05682 14.03685 L 22.57103 19.39949 L 27.08524 22.33606 L 31.59944 27.51042 L 36.11365 34.13791 L 40.62785 41.11795 L 45.14206 48.96858 L 49.65627 55.8071 L 54.17047 55.80583 L 58.68468 57.63045 L 63.19888 62.16165 L 67.71309 69.08102 L 72.2273 75.43558 L 76.7415 80.23087 L 81.2557 82.57608 L 85.76991 79.78482 L 90.28412 70.98903 L 94.79832 75.3029 L 99.31253 77.40045 L 103.82674 81.33525 L 108.34094 84.33372 L 112.85515 89.05826 L 117.36935 95.34332 L 121.88356 98.08151 L 126.39777 102.77444 L 130.91197 109.68752 L 135.42618 114.51439 L 139.94038 99.13406  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(36.3243,124.04736)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(33.64589,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> GDP of the US</g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                                    </g> 
+</svg> 

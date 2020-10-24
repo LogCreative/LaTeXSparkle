@@ -1,0 +1,63 @@
+.graphTab ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.tab_nav{
+    display: flex;
+    margin-bottom: 0;
+}
+
+.tab_nav li {
+    padding: 0px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    font-family: '黑体';
+    margin-right: 2px;
+}
+
+.tab_nav li:hover{
+    background-color: blanchedalmond;
+}
+
+.tab_box{
+    position: relative;
+    min-height: 200px;
+    padding: 2em;
+    background-color: bisque;
+    border-bottom-right-radius: 10px;
+    margin: 0;
+}
+
+.tab_box li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    /* display: flex !important; */
+    padding: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tabBox_active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.tab_info {
+    background-color: cornsilk;
+    display: block;
+}
+
+#tab_code {
+    float: left;
+}

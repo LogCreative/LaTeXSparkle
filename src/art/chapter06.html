@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/master.css"/>
         <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../../css/mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/tab.css"/>
         <script src="../../js/jquery-3.5.1.min.js"></script>
         <script src="../../js/jquery.ba-resize.min.js"></script>
     </head>
@@ -117,9 +118,22 @@
                         <embed id="ExpPdf" src="../../doc/CH06/graphExamples.pdf" type="application/pdf" width="100%" height="1000px">
                     </details>
                     在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。推荐全局使用的参数用🌐标记。
-
-                    <ul>
-                        <li><b>折线图</b> 在不加任何参数的情况下，图形呈现的就是单纯的折线图。</li>
+                <div class="graphTab">
+                    <!-- 导航条 -->
+                    <ul class="tab_nav">
+                        <li class="tabNav_active">折线图</li>
+                        <li>折点图</li>
+                        <li>散点图</li>
+                        <li>柱形图</li>
+                        <li>面积图</li>
+                        <li>曲面图</li>
+                        <li>等高图</li>
+                        <li>直方图</li>
+                        <li>箱式图</li>
+                    </ul>
+                    <!-- 导航栏 -->
+                    <ul class="tab_box">
+                        <li class="tabBox_active"><b>折线图</b> 在不加任何参数的情况下，图形呈现的就是单纯的折线图。</li>
                         <li><b>折点图</b> 添加参数<span>mark=*</span>可以添加散点标记，当然可以更换为其他的标记，比如<span>x</span><span>+</span>等（启用<span>plotmarks</span>标记库以使用更多类型的标记）。</li>
                         <li><b>散点图</b> 添加参数<span>only marks</span>可以只显示散点标记，不显示折线。添加<span>scatter</span>参数可以让散点跟随其因变量取值(\(y\) 或 \(z\))变为七彩的。</li>
                         <li><b>柱形图</b> 添加参数<span>ybar</span>（或者是<span>xbar</span>横向柱形图）。如果需要产生堆积柱形图，请使用<span>ybar stacked</span>（或<span>xbar stacked</span>）参数🌐。</li>
@@ -137,7 +151,14 @@
                             <pre>\usepgfplotslibrary{statistics}</pre>
                             注意文件要有两列，以第二列做统计计算。</div></li>
                     </ul>
-
+                    <!-- 信息加载栏 -->
+                    <div class="tab_info">
+                        <div id="tab_code"></div>
+                        <div id="tab_graph"></div>
+                    </div>
+                </div>
+                <script src="../../js/tab.js"></script>
+                    <br>
                     <h3>6.3 从外部软件生成代码</h3>
                     
                     <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。</p>

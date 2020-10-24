@@ -6,9 +6,9 @@
 },
 title={International Investiment},
 ]
- \addplot [name path=F] table[col sep=comma,x=year,y=Liab] {./data/iip.csv};
- \addplot [name path=G] table[col sep=comma,x=year,y=Assets] {./data/iip.csv};
- \addplot[color=cyan!25!white] fill between[of=F and G];
+ \addplot [name path=F,red] table[col sep=comma,x=year,y=Liab] {./data/iip.csv};
+ \addplot [name path=G,blue] table[col sep=comma,x=year,y=Assets] {./data/iip.csv};
+ \addplot[color=green] fill between[of=F and G];
  \legend{Liabilities, Assets, Net IIP};
 \end{axis}
 \end{tikzpicture}

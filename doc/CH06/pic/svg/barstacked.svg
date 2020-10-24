@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="SVGOut.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="177.50467pt" height="178.36258pt" viewBox="-44.28351 -73.18816 177.50467 178.36258 "> 
+<g transform="translate(0,105.17442 ) scale(1,-1) translate(0,73.18816 )"> 
+        <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 51.83105 -9.54366 L 51.83105 -5.2759 M 116.61987 -9.54366 L 116.61987 -5.2759 M 51.83105 104.97443 L 51.83105 100.70667 M 116.61987 104.97443 L 116.61987 100.70667  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -11.66269 -5.09494 L -7.39497 -5.09494 M -11.66269 36.46388 L -7.39497 36.46388 M -11.66269 78.02272 L -7.39497 78.02272 M 128.28256 -5.09494 L 124.01485 -5.09494 M 128.28256 36.46388 L 124.01485 36.46388 M 128.28256 78.02272 L 124.01485 78.02272  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M -11.66269 -9.54366 L -11.66269 104.97443 L 128.28256 104.97443 L 128.28256 -9.54366 L -11.66269 -9.54366 Z  " fill="none"/>
+ <g transform="translate(49.33105,-19.52106)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(111.61986,-19.52106)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 10</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-20.19566,-8.31715)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 0 </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-25.1957,33.24167)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 20</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-25.1957,74.8005)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 40</g> </g>
+ </text> 
+</g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M -11.66269 -9.54366 L 128.28256 -9.54366 L 128.28256 104.97443 L -11.66269 104.97443 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#0f0" fill="#0f0">
+ <g fill="#0c0">
+ <path d=" M -5.0 62.74512 h 10.0 v 3.6364 h -10.0 Z M 7.95776 73.07721 h 10.0 v 5.8598 h -10.0 Z M 20.91553 84.17525 h 10.0 v 11.25552 h -10.0 Z M 33.87329 69.53778 h 10.0 v 9.0477 h -10.0 Z M 46.83105 62.40564 h 10.0 v 3.64793 h -10.0 Z M 59.78882 73.07721 h 10.0 v 5.8598 h -10.0 Z M 72.74658 84.09369 h 10.0 v 11.15303 h -10.0 Z M 85.70435 69.66939 h 10.0 v 9.14294 h -10.0 Z M 98.66211 64.86241 h 10.0 v 4.97076 h -10.0 Z M 111.61987 74.74596 h 10.0 v 8.5715 h -10.0 Z  " />
+ </g>
+ </g>
+ <g stroke="#606" fill="#606">
+ <g fill="#800080">
+ <path d=" M -5.0 55.66122 h 10.0 v 7.0839 h -10.0 Z M 7.95776 63.60179 h 10.0 v 9.47542 h -10.0 Z M 20.91553 71.53444 h 10.0 v 12.64081 h -10.0 Z M 33.87329 55.70648 h 10.0 v 13.8313 h -10.0 Z M 46.83105 55.38681 h 10.0 v 7.01883 h -10.0 Z M 59.78882 63.60179 h 10.0 v 9.47542 h -10.0 Z M 72.74658 71.45642 h 10.0 v 12.63727 h -10.0 Z M 85.70435 55.68483 h 10.0 v 13.98456 h -10.0 Z M 98.66211 54.37083 h 10.0 v 10.49158 h -10.0 Z M 111.61987 58.42212 h 10.0 v 16.32384 h -10.0 Z  " />
+ </g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g fill="#808080">
+ <path d=" M -5.0 37.80981 h 10.0 v 17.85141 h -10.0 Z M 7.95776 44.85876 h 10.0 v 18.74303 h -10.0 Z M 20.91553 54.48683 h 10.0 v 17.0476 h -10.0 Z M 33.87329 41.89682 h 10.0 v 13.80966 h -10.0 Z M 46.83105 37.56268 h 10.0 v 17.82413 h -10.0 Z M 59.78882 44.85876 h 10.0 v 18.74303 h -10.0 Z M 72.74658 54.50041 h 10.0 v 16.95601 h -10.0 Z M 85.70435 41.76262 h 10.0 v 13.92221 h -10.0 Z M 98.66211 37.38062 h 10.0 v 16.99022 h -10.0 Z M 111.61987 38.22214 h 10.0 v 20.19998 h -10.0 Z  " />
+ </g>
+ </g>
+ <g stroke="#734c26" fill="#734c26">
+ <g fill="#ecd9c6">
+ <path d=" M -5.0 29.45082 h 10.0 v 8.359 h -10.0 Z M 7.95776 33.43008 h 10.0 v 11.42868 h -10.0 Z M 20.91553 43.43982 h 10.0 v 11.04701 h -10.0 Z M 33.87329 30.18675 h 10.0 v 11.71007 h -10.0 Z M 46.83105 29.29709 h 10.0 v 8.2656 h -10.0 Z M 59.78882 33.43008 h 10.0 v 11.42868 h -10.0 Z M 72.74658 43.46654 h 10.0 v 11.03387 h -10.0 Z M 85.70435 29.89758 h 10.0 v 11.86504 h -10.0 Z M 98.66211 25.40189 h 10.0 v 11.97873 h -10.0 Z M 111.61987 23.97624 h 10.0 v 14.2459 h -10.0 Z  " />
+ </g>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <g fill="#ffb3b3">
+ <path d=" M -5.0 1.05228 h 10.0 v 28.39854 h -10.0 Z M 7.95776 8.12076 h 10.0 v 25.30933 h -10.0 Z M 20.91553 9.42943 h 10.0 v 34.01039 h -10.0 Z M 33.87329 6.09563 h 10.0 v 24.09113 h -10.0 Z M 46.83105 1.05405 h 10.0 v 28.24304 h -10.0 Z M 59.78882 8.12076 h 10.0 v 25.30933 h -10.0 Z M 72.74658 9.38829 h 10.0 v 34.07825 h -10.0 Z M 85.70435 6.06358 h 10.0 v 23.834 h -10.0 Z M 98.66211 4.56136 h 10.0 v 20.84053 h -10.0 Z M 111.61987 0.0 h 10.0 v 23.97624 h -10.0 Z  " />
+ </g>
+ </g>
+ <g stroke="#00f" fill="#00f">
+ <g fill="#b3b3ff">
+ <path d=" M -5.0 -5.09494 h 10.0 v 6.14722 h -10.0 Z M 7.95776 -5.09494 h 10.0 v 13.2157 h -10.0 Z M 20.91553 -5.09494 h 10.0 v 14.52437 h -10.0 Z M 33.87329 -5.09494 h 10.0 v 11.19057 h -10.0 Z M 46.83105 -5.09494 h 10.0 v 6.14899 h -10.0 Z M 59.78882 -5.09494 h 10.0 v 13.2157 h -10.0 Z M 72.74658 -5.09494 h 10.0 v 14.48323 h -10.0 Z M 85.70435 -5.09494 h 10.0 v 11.15852 h -10.0 Z M 98.66211 -5.09494 h 10.0 v 9.6563 h -10.0 Z M 111.61987 -5.09494 h 10.0 v 5.09494 h -10.0 Z  " />
+ </g>
+ </g>
+ </g>
+ <g transform="translate(46.50436,-33.33144)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.80557,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Week</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="matrix(0.0,1.0,-1.0,0.0,-34.00609,3.25694)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(44.45844,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Homework Quantity</g> </g>
+ </text> 
+</g>
+ </g>
+ <g fill="#fff">
+ <g stroke="#000">
+ <g fill="#fff">
+ <g stroke="#000">
+ <path d=" M -16.40129 -72.98816 h 149.42245 v 28.88873 h -149.42245 Z  " />
+ </g>
+ </g>
+ <g transform="translate(-13.40129,-64.76598)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(71.71123,0)" text-anchor="middle"  font-size="10"> 
+ <g fill="#000">
+ <g stroke="#00f" fill="#00f">
+ <g fill="#b3b3ff">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+  <g transform="translate(-16.97224,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.97224,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Chinese </g> </g>
+ </text> 
+</g>
+ </g>
+  <g fill="#000">
+ <g stroke="#f00" fill="#f00">
+ <g fill="#ffb3b3">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+  <g transform="translate(-11.80559,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(11.80559,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Math</g> </g>
+ </text> 
+</g>
+ </g>
+  <g fill="#000">
+ <g stroke="#734c26" fill="#734c26">
+ <g fill="#ecd9c6">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+       <g transform="translate(-16.20837,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.20837,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> English</g> </g>
+ </text> 
+</g>
+ </g>
+ 
+ <g fill="#000">
+ <g stroke="#000" fill="#000">
+ <g fill="#808080">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+        <g transform="translate(-16.23613,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.23613,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Physics</g> </g>
+ </text> 
+</g>
+ </g>
+  <g fill="#000">
+ <g stroke="#606" fill="#606">
+ <g fill="#800080">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+      <g transform="translate(-22.6806,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(22.6806,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Chemistry</g> </g>
+ </text> 
+</g>
+ </g>
+  <g fill="#000">
+ <g stroke="#0f0" fill="#0f0">
+ <g fill="#0c0">
+ <path d=" M -3.0 -1.99997 h 6.0 v 8.00003 h -6.0 Z  " />
+ </g>
+ </g>
+ </g>
+  <g transform="translate(-16.45839,-2.72224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.45839,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Biology</g> </g>
+ </text> 
+</g>
+ </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ 
+                                  </g> 
+</svg> 
