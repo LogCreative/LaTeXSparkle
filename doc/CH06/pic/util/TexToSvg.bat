@@ -10,10 +10,10 @@ setlocal enabledelayedexpansion
 ::切换到上级目录
 cd ../
 
-for /F %%i in ('DIR /B *.tex') do (
-    ::复制文件要加 "" 防止参数歧义
-    COPY %%i "util/%%i" /Y
-)
+@REM for /F %%i in ('DIR /B *.tex') do (
+@REM     ::复制文件要加 "" 防止参数歧义
+@REM     COPY %%i "util/%%i" /Y
+@REM )
 
 cd util
 

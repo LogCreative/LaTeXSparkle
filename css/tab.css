@@ -25,12 +25,15 @@
     background-color: blanchedalmond;
 }
 
+.tabNav_active{
+    background-color: blanchedalmond !important;
+}
+
 .tab_box{
     position: relative;
     min-height: 200px;
     padding: 2em;
     background-color: bisque;
-    border-bottom-right-radius: 10px;
     margin: 0;
 }
 
@@ -56,6 +59,12 @@
 .tab_info {
     background-color: cornsilk;
     display: block;
+    border-bottom-right-radius: 10px;
+    min-height: 300px;
+}
+
+.tab_info ul{
+    margin: 0;
 }
 
 #tab_code {

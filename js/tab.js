@@ -3,6 +3,11 @@ var tabBoxItem = document.querySelectorAll(".tab_box>li");
 var tabNavActive = document.querySelector(".tabNav_active");
 var tabBoxActive = document.querySelector(".tabBox_active");
 
+var tabCode = document.getElementById('tab_code');
+var tabGraph = document.getElementById('tab_graph');
+
+var fileNameList = ['line','mark','scatter','bar','area','surf','coutour','hist','boxplot'];
+
 tabNavItem.forEach(function (item,index){
     item.onmouseenter = function(){
         tabNavActive.className = "";
@@ -12,5 +17,9 @@ tabNavItem.forEach(function (item,index){
         tabBoxActive.className = "";
         tabBoxItem[index].className = "tabBox_active";      // index 相等对应
         tabBoxActive = tabBoxItem[index];
+
+        tabCode.src = "../../doc/CH06/pic/txt/" + fileNameList[index] + ".txt";
+        // 使用 CDN 加快加载进度
+        tabGraph.src = "https://cdn.jsdelivr.net/gh/LogCreative/LaTeXSparkle/doc/CH06/pic/svg/" + fileNameList[index] + ".svg";
     }
 });
