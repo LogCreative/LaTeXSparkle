@@ -6,7 +6,7 @@ var tabBoxActive = document.querySelector(".tabBox_active");
 var tabCode = document.getElementById('tab_code');
 var tabGraph = document.getElementById('tab_graph');
 
-var fileNameList = ['line','mark','scatter','bar','area','surf','coutour','hist','boxplot'];
+var fileNameList = ['line','mark','scatter','bar','area2','surf','coutour2','hist','boxplot'];
 
 tabNavItem.forEach(function (item,index){
     item.onmouseenter = function(){
@@ -21,5 +21,6 @@ tabNavItem.forEach(function (item,index){
         tabCode.src = "../../doc/CH06/pic/txt/" + fileNameList[index] + ".txt";
         // 使用 CDN 加快加载进度
         tabGraph.src = "https://cdn.jsdelivr.net/gh/LogCreative/LaTeXSparkle/doc/CH06/pic/svg/" + fileNameList[index] + ".svg";
+        // tabGraph.src = "../../doc/CH06/pic/svg/" + fileNameList[index] + ".svg";
     }
 });
