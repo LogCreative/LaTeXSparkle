@@ -2,6 +2,7 @@
     "svg.preview.background": "black",
     "[latex]": {
 
+
         "editor.formatOnPaste": false,
         "editor.suggestSelection": "recentlyUsedByPrefix"
     },
@@ -45,7 +46,7 @@
                 "-file-line-error",
                 "%DOCFILE%"
             ]
-        }
+        },
     ],
     "latex-workshop.latex.recipes": [
         {

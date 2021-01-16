@@ -17,21 +17,22 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{tcolorbox}
-\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,]{hyperref}
-\usepackage{bookmark}
 \usepackage[ruled,vlined,commentsnumbered]{algorithm2e}
 \usepackage{multicol}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
 \usepackage{indentfirst}
 \usepackage{enumitem}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{unicode} % to display the unicode char in the bookmark correctly
+\usepackage{bookmark} % should be introduced after package hyperref
+\setlength{\parskip}{1ex}
 \setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \geometry{left=1.0cm,right=1.0cm,top=2.0cm,bottom=2.0cm}
 \renewcommand{\figurename}{图}
 \renewcommand{\tablename}{表}
-\setlength{\parskip}{1ex}
 
 \begin{document}
 \begin{CJK}{UTF8}{song}
@@ -42,6 +43,9 @@
 \normalsize
 
 \tableofcontents
+
+\section{第一节}
+\section{第二节}
 
 % If this document has no reference,
 % please use pdfLaTeX compilation once.
