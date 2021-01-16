@@ -1,0 +1,51 @@
+% Standard Header LaTeX Library for Chinese Documentation
+% Still under Construction.
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{CJKutf8}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{subfigure}
+\usepackage{gbt7714}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{tcolorbox}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue,]{hyperref}
+\usepackage{bookmark}
+\usepackage[ruled,vlined,commentsnumbered]{algorithm2e}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\geometry{left=1.0cm,right=1.0cm,top=2.0cm,bottom=2.0cm}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\setlength{\parskip}{1ex}
+
+\begin{document}
+\begin{CJK}{UTF8}{song}
+\title{标题}
+\author{作者}
+\date{日期}
+\maketitle
+\normalsize
+
+\tableofcontents
+
+% If this document has no reference,
+% please use pdfLaTeX compilation once.
+%\bibliography{ref}
+
+\end{CJK}
+\end{document}
