@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pgfplots,pgfplotstable}
+\pgfplotsset{compat=1.17,width=6.5cm}
+\usepackage{CJKutf8}
+\usepackage{tcolorbox}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}
+\usepackage{listings}
+\hypersetup{unicode} % to display the unicode char in the bookmark correctly
+\usepackage{bookmark} % should be introduced after package hyperref
+
+\usetikzlibrary{plotmarks}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+\tcbuselibrary{skins,listings,fitting,raster}
+
+\geometry{left=3.0cm,right=2.0cm,top=3.0cm,bottom=3.0cm}
+\title{Principles behind \texttt{PGFPlots} Data Processing}
+\author{\href{https://logcreative.github.io/LaTeXSparkle/index.html}{\LaTeX\ Sparkle} $\cdot$ \href{https://space.bilibili.com/31271993}{LogCreative}}
+\date{}
+
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    emph=[1]{addplot,addplot3,legend},
+    emphstyle=\color{red},
+    numbers=left,
+    numberstyle={\ttfamily\scriptsize\color{red!60!black!60!white}},
+    numbersep=5pt,
+}
+
+
+\begin{document}
+\begin{CJK}{UTF8}{song} %需要安装cjk-fonts宏包
+
+\maketitle
+
+\section{Interpolation}
+\subsection{Linear Splines}
+\subsection{Cubic Bézier Curve}
+
+\section{Regression}
+\subsection{Linear Regression}
+
+
+
+\end{CJK}
+\end{document}
