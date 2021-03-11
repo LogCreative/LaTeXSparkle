@@ -10,10 +10,10 @@ setlocal enabledelayedexpansion
 ::切换到上级目录
 cd ../
 
-@REM for /F %%i in ('DIR /B *.tex') do (
-@REM     ::复制文件要加 "" 防止参数歧义
-@REM     COPY %%i "util/%%i" /Y
-@REM )
+for /F %%i in ('DIR /B *.tex') do (
+    ::复制文件要加 "" 防止参数歧义
+    COPY %%i "util/%%i" /Y
+)
 
 cd util
 
@@ -51,6 +51,7 @@ for /F %%i in ('DIR /B *.tex') do (
         echo \usepgfplotslibrary{colorbrewer}>>SVGOut.tex
         echo \usepgfplotslibrary{statistics}>>SVGOut.tex
         echo \usepgfplotslibrary{fillbetween}>>SVGOut.tex
+        echo \usepgfplotslibrary{polar}>>SVGOut.tex
         echo \begin{document}>>SVGOut.tex
         echo \input{./%%i}>>SVGOut.tex
         echo \end{document}>>SVGOut.tex

@@ -72,12 +72,40 @@
                 <h1 class="title">第六节 简约统计图</h1>
                 <div class="status" id="CH06">状态：文稿准备中</div>
                 <div class="content">
+                    
+
                     <!-- PGFPlots 代码生成器 -->
                     <div class="deskOnly">
-                        <iframe src="https://logcreative.github.io/PGFPlotsEdt/" frameborder="0" width="100%" scrolling="Yes" height="600" leftmargin="0" topmargin="0"> 
+                        <iframe src="https://logcreative.github.io/PGFPlotsEdt/" frameborder="0" width="100%" scrolling="Yes" height="650" leftmargin="0" topmargin="0"> 
                         </iframe>
                     </div>
-                    
+                    <div class="tipframe">
+                        <div class="tipbox">
+                            <a href="chapter04.html">
+                                <div class="toutu">
+                                    <embed src="https://cdn.jsdelivr.net/gh/LogCreative/LaTeXSparkle/doc/CH06/pic/svg/NN.svg" type="text/svg+xml" width="100%"/>
+                                    节点箭头示意图适合使用 Ti<i>k</i>Z 绘制，推荐使用第四节提到的 TikZEdt 网格式实时编辑矢量图形，并且可以尝试使用循环语句或宏包指令简化手动绘制量。
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tipbox">
+                            <a href="https://logcreative.github.io/PGFPlotsEdt/" target="_blank">
+                                <div class="toutu" id="pgfCorrect">
+                                    <embed src="https://cdn.jsdelivr.net/gh/LogCreative/LaTeXSparkle/doc/CH06/pic/svg/flower.svg" type="text/svg+xml" width="100%"/>
+                                    PGFPlots 适合简明的统计图绘制，清晰的矢量图像与精简美观的样式库会让统计图与文章浑然一体，高度个性化的参数设定可以通过图像巧妙地示意弦外之音。
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tipbox">
+                            <a href="https://github.com/LogCreative/GraphGenDecomp" target="_blank">
+                                <div class="toutu">
+                                    <img src="https://cdn.jsdelivr.net/gh/LogCreative/LaTeXSparkle/doc/CH06/pic/svg/GDD.gif" width="100%">
+                                    大型数据点的统计图不适合使用 PGFPlots 绘制，这种图形使用位图的存储效率更高，并且过多矢量点会导致更长的编译时间和 PDF 文档的加载时间。
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
 
                     <h3>6.1 PGFPlots 统计图框架</h3>
                     老样子，需要在导言区引入宏包，并且指定使用的宏包版本。
@@ -107,7 +135,7 @@
     \end{axis}
 \end{tikzpicture}</pre>
 
-                    <p>编译时，可以单独编译出一个 PDF 文件，使用<span>\includegraphics{graph.pdf}</span>引入静态文件。使用 \(\rm Lua\LaTeX\) 可以加速编译进度。</p>
+                    <p>编译时，可以单独编译出一个 PDF 文件，使用<span>\includegraphics{graph.pdf}</span>引入静态文件。使用 \(\rm Lua\LaTeX\) 可以加速编译进度，并使用动态内存以免除内存上限问题。</p>
 
                     <h3>6.2 不同类型的统计图</h3>
 
