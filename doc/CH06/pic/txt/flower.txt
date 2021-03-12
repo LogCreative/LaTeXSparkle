@@ -1,0 +1,8 @@
+%\usepgfplotslibrary{polar}
+\begin{tikzpicture}
+ \begin{polaraxis}
+  \addplot [domain=0:720,samples=200,pink!30,fill=pink!10,line width=1.5pt] {cos(2*x)*sin(2*x)};
+  \addplot [domain=0:360,yellow!80,fill=yellow!70,] {0.2};
+ \end{polaraxis}
+\end{tikzpicture}
+    

@@ -79,9 +79,32 @@
     display: inline-block;
     width: calc(31% - 5px);
     margin: 0px 5px;
+    align-items: center;
+}
+
+.tipframe .tipcode {
+    height: 0px;
+    transition: 0.5s;
+}
+
+.tipframe .tipbox:hover > a .toutu .tipcode {
+    height: 260px;
 }
 
 #pgfCorrect {
     background-color: gray;
     color: white;
+}
+
+#pgfCorrect .tipcode{
+    filter: invert(100%);
+}
+
+#bigImg {
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+#tipimg:hover > a .toutu #bigImg {
+    opacity: 100%;
 }
