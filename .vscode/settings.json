@@ -52,6 +52,7 @@
         {
             "name": "pdflatex",
             "tools": [
+                "pdflatex",
                 "pdflatex"
             ]
         },
