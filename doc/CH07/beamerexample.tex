@@ -1,7 +1,7 @@
 % To generate the table of contents
 % pdflatex * 2 is required.
 
-\documentclass[unicode]{beamer}
+\documentclass{beamer}
 \mode<presentation>
 \usetheme{CambridgeUS}
 \usefonttheme{serif}
@@ -9,13 +9,24 @@
 \hypersetup{unicode}
 \usepackage{bookmark}
 
-%\author{English author}    % To avoid the warning
+% To ignore the warning of "pdfauthor"
+\makeatletter
+\def\Hy@WarnOptionDisabled#1{
+    \def\next{#1}%
+    \def\ignore{pdfauthor}%
+    \ifx\next\ignore%
+    \else\Hy@Warning{%
+        Option `#1' has already been used,\MessageBreak
+        setting the option has no effect%
+    }\fi
+}
+\makeatother
 
 \begin{document}
-\begin{CJK}{UTF8}{gbsn}
+\begin{CJK}{UTF8}{hei}
     
     \title{费曼的奇妙观点}
-    \author{LogCreative}    % FIXME: a warning Issue 401
+    \author{LogCreative}
 
     \begin{frame}
     \titlepage
@@ -62,10 +73,12 @@
     \begin{frame}
     \frametitle{通常推导}
     所以在通常的课本上，我们推导时就不会发现这种奇妙的事情。
+    \begin{block}{结论}
     \begin{align}
     |\Delta \mathbf{r}|&=r\Delta\varphi \\
     |\Delta \mathbf{v}|&=\lim_{\Delta t \rightarrow 0} \frac{|\Delta \mathbf{r}|}{\Delta t}= r \lim_{\Delta t \rightarrow 0}\frac{|\Delta \varphi|}{\Delta t}= \omega r
     \end{align}
+    \end{block}
     \end{frame}
 
 \end{CJK}
