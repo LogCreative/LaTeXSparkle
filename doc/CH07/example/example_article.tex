@@ -1,0 +1,28 @@
+% Generate lecture notes
+%
+% To generate the table of contents
+% pdflatex * 2 is required.
+
+\documentclass[a4paper]{article}
+\usepackage{beamerarticle}%
+\mode<article>%
+\usetheme{CambridgeUS}
+\usefonttheme{serif}
+\usepackage{CJKutf8}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=blue]{hyperref}%
+\hypersetup{unicode}
+\usepackage{bookmark}
+\usepackage{graphicx}%
+% \usepackage{geometry}
+% \geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
+\renewcommand{\contentsname}{目录}
+% ignores the frame header.
+\setbeamertemplate{frametitle}{}
+\setbeamertemplate{framesubtitle}{}
+\setjobnamebeamerversion{example_beamer}
+
+\begin{document}
+\begin{CJK}{UTF8}{song}
+    \input{example.tex}
+\end{CJK}
+\end{document}

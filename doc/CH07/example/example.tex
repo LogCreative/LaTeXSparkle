@@ -1,36 +1,12 @@
-% To generate the table of contents
-% pdflatex * 2 is required.
+% The content
+%
+% VS Code locate the main tex file
+% by searching \begin{document}
 
-\documentclass{beamer}
-\mode<presentation>
-\usetheme{CambridgeUS}
-\usefonttheme{serif}
-\usepackage{CJKutf8}
-\hypersetup{unicode}
-\usepackage{bookmark}
-
-% To ignore the warning of "pdfauthor"
-\makeatletter
-\def\Hy@WarnOptionDisabled#1{
-    \def\next{#1}%
-    \def\ignore{pdfauthor}%
-    \ifx\next\ignore%
-    \else\Hy@Warning{%
-        Option `#1' has already been used,\MessageBreak
-        setting the option has no effect%
-    }\fi
-}
-\makeatother
-
-\begin{document}
-\begin{CJK}{UTF8}{hei}
-    
     \title{费曼的奇妙观点}
     \author{LogCreative}
 
-    \begin{frame}
-    \titlepage
-    \end{frame}
+    \maketitle
 
     \begin{frame}
     \frametitle{提纲}
@@ -80,6 +56,3 @@
     \end{align}
     \end{block}
     \end{frame}
-
-\end{CJK}
-\end{document}

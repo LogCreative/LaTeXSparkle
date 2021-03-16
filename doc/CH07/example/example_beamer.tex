@@ -1,0 +1,31 @@
+% Generate beamer
+%
+% To generate the table of contents
+% pdflatex * 2 is required.
+
+\documentclass{beamer}
+\mode<presentation>
+\usetheme{CambridgeUS}
+\usefonttheme{serif}
+\usepackage{CJKutf8}
+\hypersetup{unicode}
+\usepackage{bookmark}
+
+% To ignore the warning of "pdfauthor"
+\makeatletter
+\def\Hy@WarnOptionDisabled#1{
+    \def\next{#1}%
+    \def\ignore{pdfauthor}%
+    \ifx\next\ignore%
+    \else\Hy@Warning{%
+        Option `#1' has already been used,\MessageBreak
+        setting the option has no effect%
+    }\fi
+}
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{hei}
+    \input{example.tex}
+\end{CJK}
+\end{document}
