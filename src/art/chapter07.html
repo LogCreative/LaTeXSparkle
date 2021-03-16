@@ -68,9 +68,62 @@
         <div class="main">
             <div class="article" id="content" style="color: black;">
                 <h1 class="title">第七节 学术幻灯片</h1>
-                <div class="status" id="CH07">状态：正在准备</div>
+                <div class="status" id="CH07">状态：文稿准备中</div>
                 <div class="content">
-                    
+                    <p>本节之前，还没有谈及 \(\rm \LaTeX\) 文档目次结构的相关内容，主要有两个原因：
+                        <ol>
+                            <li>\(\rm \LaTeX\) 默认的分节符号字体和间距较大，不符合环保使用纸张的要求，日常非正式出版物以紧凑排版为主，使用制表间隔进行层级划分效果更好。</li>
+                            <li>如果是正式演讲使用，希望产生幻灯片的同时，产生讲义文件。读完本章后，你就会意识到优先幻灯片制作将有利于同时产生两份文件。养成这个习惯将会提高工作效率。</li>
+                        </ol>
+                    </p>
+                    <p>相较于<a href="chapter02.html">第 2 节</a>，PowerPoint 更加适合制作对动画要求较高的幻灯片。而对于正式严肃的学术场合，还是使用相对静态的 Beamer 宏包所产生的幻灯片更为合适，这有助于自动产生良好的排版。</p>
+
+                    <h3>7.1 目次结构</h3>
+                    <p>在本小节中，将会把普通的文稿结构和幻灯片结构并排来看，以便更好地理解 \(\rm \LaTeX{} \) 中幻灯片的排版逻辑。</p>
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">普通的文稿排版，分为部分、章、节、小节、小小节、段、小段这些级别。注意部分需要使用书籍类<span>book</span>，章需要使用报告类<span>report</span>，一般我们使用文档类<span>article</span>。
+                            <pre>% \part{第一部分}   % [book]
+% \chapter{第一章}  % [report]
+\section{第一节}
+\subsection{第一小节}
+\subsubsection{第一小小节}
+\paragraph{一段内容} 一段内容
+\subparagraph{一小段内容} 这一节将会讲述一些内容。
+
+正文内容正文内容正文内容正文内容正文内容正文内容</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;"> 幻灯片排版一般使用节、小节分割目次，并使用帧<span>frame</span>标识不同的幻灯片，每个幻灯片可以有一个标题<span>frametitle</span>（以及子标题<span>framesubtitle</span>），一节里面可以有很多的幻灯片，并推荐使用盒子突出重点内容。
+<pre>\section{速度 坐标交换}
+\subsection[位移关系]{位移关系}
+    \begin{frame}
+        \frametitle{坐标交换}
+        然后，我们来看一种更为自然的引入方法。
+        \begin{block}{结论}
+            我的结论
+        \end{block}
+    \end{frame}
+</pre>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            <details>
+                                <summary>
+                                  普通文档 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.pdf" target="_blank">stdh.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/stdh.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            <details>
+                                <summary>
+                                  幻灯片 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_beamer.pdf" target="_blank">example_beamer.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/beamer/example_beamer.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                    </div>
 
                 </div>
             </div>
