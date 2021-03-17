@@ -73,7 +73,7 @@
                     <p>本节之前，还没有谈及 \(\rm \LaTeX\) 文档目次结构的相关内容，主要有两个原因：
                         <ol>
                             <li>\(\rm \LaTeX\) 默认的分节符号字体和间距较大，不符合环保使用纸张的要求，日常非正式出版物以紧凑排版为主，使用制表间隔进行层级划分效果更好。</li>
-                            <li>如果是正式演讲使用，希望产生幻灯片的同时，产生讲义文件。读完本章后，你就会意识到优先幻灯片制作将有利于同时产生两份文件。养成这个习惯将会提高工作效率。</li>
+                            <li>如果已经预先知道同时需要一份报告和一份对应的幻灯片文件。读完本节后，你就会意识到优先幻灯片制作将有利于同时产生两份文件。养成这个习惯将会提高工作效率。</li>
                         </ol>
                     </p>
                     <p>相较于<a href="chapter02.html">第 2 节</a>，PowerPoint 更加适合制作对动画要求较高的幻灯片。而对于正式严肃的学术场合，还是使用相对静态的 Beamer 宏包所产生的幻灯片更为合适，这有助于自动产生良好的排版。</p>
@@ -110,7 +110,7 @@
                         <div class="left" style="margin: 4px;">
                             <details>
                                 <summary>
-                                  普文 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.pdf" target="_blank">stdh.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.tex" target="_blank">[源代码]</a>
+                                  普通文稿 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.pdf" target="_blank">stdh.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/stdh.tex" target="_blank">[源代码]</a>
                                 </summary>
                             <embed id="ExpPdf" src="../../doc/CH07/stdh.pdf" type="application/pdf" width="100%" height="500px">
                             </details>
@@ -125,7 +125,85 @@
                         </div>
                     </div>
 
+                    <h3>7.2 文件复用</h3>
                     
+                    \(\rm \LaTeX\) 的一大核心思想即样式与内容分离，而实现这一思想的核心方法即文件分离：编译器可以拼接任何 <span>\input{}</span> 所关联的文件内容。相较于 PowerPoint 可以将文本通过文本框放置在任何位置而不需要遵循大纲占位符填入内容，Beamer 严格规定了幻灯片必须按照标题——内容规格输入，这为排版完成一个幻灯片的同时产生排版良好的讲义文件提供了可能。如果将<span>\begin{document}</span> 与 <span>\end{document}</span> 之间的内容存放在 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example.tex" target="_blank">example.tex</a> 中，通过下面两种文件的包装，将会分别产生幻灯片文件和讲义文件。使用 VS Code 编译将会通过 <span>document</span> 环境定位主文档位置。
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+讲义文件采用 <span>article</span> 文档类，采用 <span>article</span> 模式，需要补充一些宏包以使用原有的 beamer 文档类所具有的功能。通过忽略 <span>frame</span> 环境的相关指令以及幻灯片标题来产生论文式的文档排版。设置为 <span>song</span> 宋体衬线字体用于印刷。
+                            <pre>\documentclass[a4paper]{article}
+\usepackage{beamerarticle}
+\mode&lt;article&gt;
+\usepackage{CJKutf8}
+\usepackage[colorlinks, 
+linkcolor=blue, 
+anchorcolor=blue, 
+citecolor=blue]{hyperref}
+\hypersetup{unicode}
+\usepackage{bookmark}
+\usepackage{graphicx}
+% \usepackage{geometry}
+% \geometry{left=2.0cm, right=2.0cm, top=2.0cm, bottom=2.0cm}
+\renewcommand{\contentsname}{目录}
+% ignores the frame header.
+\setbeamertemplate{frametitle}{}
+\setbeamertemplate{framesubtitle}{}
+\setjobnamebeamerversion{example_beamer}
+
+\begin{document}
+\begin{CJK}{UTF8}{song}
+    \input{example.tex}
+\end{CJK}
+\end{document}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            幻灯片文件采用 <span>beamer</span> 文档类，采用 <span>presentation</span> 模式，需要设置幻灯片模板为 <span>CambridgeUS</span>，并设置数学字体仍为衬线字体。设置为 <span>hei</span> 黑体非衬线字体用于屏幕演示。中段手动添加了 \(\rm \TeX{}\) 代码用于忽略一个警告，因为汉字必须在正文添加，不能提前至导言区。
+                            <pre>\documentclass{beamer}
+\mode&lt;presentation&gt;
+\usetheme{CambridgeUS}
+\usefonttheme{serif}
+\usepackage{CJKutf8}
+\hypersetup{unicode}
+\usepackage{bookmark}
+% To ignore the warning of "pdfauthor"
+\makeatletter
+\def\Hy@WarnOptionDisabled#1{
+    \def\next{#1}%
+    \def\ignore{pdfauthor}%
+    \ifx\next\ignore%
+    \else\Hy@Warning{%
+Option `#1' has already been used,\MessageBreak setting the option has no effect%
+    }\fi
+}
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{hei}
+    \input{example.tex}
+\end{CJK}
+\end{document}</pre>
+                        </div>
+                    </div>
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            <details>
+                                <summary>
+                                  讲义 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_article.pdf" target="_blank">example_article.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_article.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/beamer/example_article.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            <details>
+                                <summary>
+                                  幻灯片 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_beamer.pdf" target="_blank">example_beamer.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_beamer.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/beamer/example_beamer.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                    </div>
 
                 </div>
             </div>

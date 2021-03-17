@@ -80,6 +80,7 @@
     width: calc(31% - 5px);
     margin: 0px 2.5px;
     align-items: center;
+    text-align: left;
 }
 
 .tipframe .tipcode {
