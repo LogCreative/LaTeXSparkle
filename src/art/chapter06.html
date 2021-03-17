@@ -113,7 +113,7 @@
                     <h3>6.1 PGFPlots 统计图框架</h3>
                     老样子，需要在导言区引入宏包，并且指定使用的宏包版本。
                     <pre>\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}</pre>
+\pgfplotsset{compat=1.17}</pre>
                     <p>该宏包是基于 Ti<i>k</i>Z 的，所以最外部需要添加<span>tikzpicture</span>环境，而构成一个 PGFPlots 统计图环境的最基本单位就是一个<span>axis</span>环境；后面紧跟该统计图的整体参数；坐标系内添加数据序列。</p>
                     
                     <ol>
@@ -124,9 +124,9 @@
                     <p>每个数据后面可以使用<span>[参数]</span>接上该数据系列的参数，再接
                         
                         <ul>
-                            <li><span>table {数据文件}</span>引入数据，数据文件的每一行为一个坐标；</li>
-                            <li><span>coordinates {(\(x_1\),\(y_1\),\(z_1\)) (\(x_2\),\(y_2\),\(z_2\))}</span>直接表明坐标点；</li>
-                            <li><span>{函数表达式}</span>直接绘制二维函数图像。如果是三维函数，需要写出三个维度上的参数化方程，用<span>({\(x(t)\)},{\(y(t)\)},{\(z(t)\)})</span>表示。</li>
+                            <li><span>table {数据文件}</span>引入数据，数据文件的每一行为一个坐标，多维度的坐标之间需要使用空格分隔。如果需要封装数据源，需要使用 <span>\pgfplotstableread</span> 命令赋予数据一个变量，注意变量名不能含有数字；</li>
+                            <li><span>coordinates {(\(x_1\),\(y_1\),\(z_1\)) (\(x_2\),\(y_2\),\(z_2\))}</span>直接标明坐标点；</li>
+                            <li><span>{函数表达式}</span>直接绘制二维函数图像。如果是三维函数，需要写出三个维度上的参数化方程，用<span>({\(x(t)\)},{\(y(t)\)},{\(z(t)\)})</span>表示。如果是直接的 \(z\)轴 表达式，可以直接写出关于 \(x\) 和 \(y\) 的函数表达式 <span>{\(z(x,y)\)}</span>。</li>
                         </ul>
                     </p>
                     <p>最后，可以使用<span>\legend</span>添加图例系列名称。</p>
@@ -148,7 +148,7 @@
                         </summary>
                         <embed id="ExpPdf" src="../../doc/CH06/graphExamples.pdf" type="application/pdf" width="100%" height="1000px">
                     </details>
-                    在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。推荐全局使用的参数用🌐标记。
+                    <p>在<span>axis</span>后面添加的参数为坐标系全局参数；在每个数据系列上添加的参数为局部参数。推荐全局使用的参数用🌐标记。更多类型的统计图绘制方法可以参看 <a href="https://mirrors.rit.edu/CTAN/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf" target="_blank">PGFPlots 宏包手册</a>。</p>
                 <div class="graphTab">
                     <!-- 导航条 -->
                     <ul class="tab_nav">
@@ -196,7 +196,7 @@
                     <br>
                     <h3>6.3 从外部软件生成代码</h3>
                     
-                    <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a>生成，右键编译好的图像可以保存 PDF 文件至本地。</p>
+                    <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a> 生成，右键编译好的图像可以保存 PDF 文件至本地。在编辑过程中善用参数命令的自动填充功能。</p>
 
                     <p>6.3.2 Matlab 可以使用 <a href="https://github.com/matlab2tikz/matlab2tikz" target="_blank">Matlab2TikZ</a> 生成 PGFPlots 的代码。</p>
 

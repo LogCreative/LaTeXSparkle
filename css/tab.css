@@ -72,13 +72,13 @@
 }
 
 .tipframe{
-    align-items: center;
+    text-align: center;
 }
 
 .tipframe .tipbox {
     display: inline-block;
     width: calc(31% - 5px);
-    margin: 0px 5px;
+    margin: 0px 2.5px;
     align-items: center;
 }
 
