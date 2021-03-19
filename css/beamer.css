@@ -1,0 +1,23 @@
+.frames{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.frames .toutu{
+    margin: 5px;
+    width: 30%;
+    padding: 20px;
+}
+
+.frames .toutu ul{
+    padding-left: 30px;
+    margin: 30px 0px;
+    list-style-type: square;
+}
+
+.frames .toutu ul li {
+    text-align: left;
+}

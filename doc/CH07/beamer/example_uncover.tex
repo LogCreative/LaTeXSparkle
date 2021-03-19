@@ -1,0 +1,59 @@
+\documentclass{beamer}
+\mode<presentation>
+\usetheme{CambridgeUS}
+\usecolortheme{crane}
+\usefonttheme{serif}
+\usepackage{CJKutf8}
+\hypersetup{unicode}
+\usepackage{bookmark}
+
+% To ignore the warning of "pdfauthor"
+\makeatletter
+\def\Hy@WarnOptionDisabled#1{
+    \def\next{#1}%
+    \def\ignore{pdfauthor}%
+    \ifx\next\ignore%
+    \else\Hy@Warning{%
+        Option `#1' has already been used,\MessageBreak setting the option has no effect%
+    }\fi
+}
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{hei}
+    \begin{frame}
+        \frametitle{列表环境}
+        \begin{itemize}[<+->]
+            \item 第 1 点
+            \item 第 2 点
+            \item 第 3 点
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{悬念式展开}
+        第一行推导
+
+        \begin{actionenv}<2->
+            第二行推导
+        \end{actionenv}
+
+        \begin{block}<3->{结论}
+            我的结论
+        \end{block}
+    \end{frame}
+
+    \begin{frame}<presentation>
+        \frametitle{幻灯片与讲义分离}
+        只出现在幻灯片中。
+    \end{frame}
+
+    \begin{frame}<all>
+        \frametitle{幻灯片与讲义分离}
+        幻灯片和文稿都会出现。
+
+        \only<article>{只会出现在文稿中。}
+    \end{frame}
+
+\end{CJK}
+\end{document}

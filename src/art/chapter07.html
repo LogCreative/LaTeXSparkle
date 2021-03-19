@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/master.css"/>
         <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../../css/mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/beamer.css"/>
         <script src="../../js/jquery-3.5.1.min.js"></script>
         <script src="../../js/jquery.ba-resize.min.js"></script>
     </head>
@@ -127,7 +128,7 @@
 
                     <h3>7.2 文件复用</h3>
                     
-                    \(\rm \LaTeX\) 的一大核心思想即样式与内容分离（衍生到现在的前端与后端分离），而实现这一思想的核心方法即文件分离：编译器可以拼接任何 <span>\input{}</span> 所关联的文件内容。相较于 PowerPoint 可以将文本通过文本框放置在任何位置而不需要遵循大纲占位符填入内容，Beamer 规定了幻灯片必须严格按照标题——内容规格输入，这为排版完成一个幻灯片同时产生排版良好的讲义文件提供了可能。如果将<span>\begin{document}</span> 与 <span>\end{document}</span> 之间的内容存放在 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example.tex" target="_blank">example.tex</a> 中，通过下面两种文件的包装，将会分别产生幻灯片文件和讲义文件。使用 VS Code 编译将会通过 <span>document</span> 环境定位主文档位置。
+                    \(\rm \LaTeX\) 的一大核心思想即样式与内容分离（衍生到现在的前端与后端分离），而实现这一思想的核心方法即文件分离：编译器可以拼接任何 <span>\input{}</span> 所关联的文件内容。相较于 PowerPoint 可以将文本通过文本框放置在任何位置而不需要遵循大纲占位符填入内容，Beamer 规定了幻灯片必须严格按照标题——内容规格输入，这为排版完成一个幻灯片同时产生排版良好的讲义文件提供了可能。如果将<span>\begin{document}</span> 与 <span>\end{document}</span> 之间的内容存放在 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example.tex" target="_blank">example.tex</a> 中，通过下面两种文件的包装，将会分别产生幻灯片文件和讲义文件。使用 VS Code 编译将会通过 <span>document</span> 环境定位主文档位置，注意由于需要产生目录，所以需要使用 pdfLaTeX 编译两次，以利用中间文件 .toc。
 
                     <div class="con">
                         <div class="left" style="margin: 4px;">
@@ -204,20 +205,114 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                         </div>
                     </div>
 
-                    <p>有时候，你会希望讲义与幻灯片的内容是不同版本的，只要在环境上添加 <span>&lt;article&gt;</span>（仅文档） 或 <span>&lt;presentation&gt;</span>（仅幻灯片）标记即可，比如：
-                    <pre>\begin&lt;article&gt;{frame}
-    Something that only exists in the article.
-\end{frame}</pre>或者采用<span>\only</span>指令：
-<pre>\only&lt;article&gt;{This will only exist in the article.}
-</pre>
-                    </p>
-
                     <p>文件分离所带来的好处不仅是可以复用，在长期稳定版本 \(\rm \LaTeX2\varepsilon{}\) 发布的 1998 年，就已经可以使用这种文件分离模式实现多人合作编写一份文档，或者实现分文件的内容管理
                         <span style="display: none;">（一个例子就是<a href="https://github.com/sjtug/SJTUThesis/tree/master/contents" target="_blank">上海交通大学学术论文模板</a>将各部分分割成不同的<span>.tex</span>文件分别编辑，最后合并）</span><!--7.4 解锁-->
                     ，最后通过一个主要的样式头统一样式。</p>
 
-                    <h3>7.3 渐进式切换</h3>
+                    <h3>7.3 渐进切换</h3>
                     <p>Beamer 宏包产生的幻灯片仍然是 PDF 格式，播放幻灯片推荐使用 Adobe Acrobat / WPS PDF 打开，启用视图——全屏模式播放。如果是浏览器打开的，可以按下 F11 将界面全屏，并启用适用页面大小的模式，使用 PageDown 或 Beamer 内置的工具栏翻页。</p>
+
+                    <p>静态的幻灯片与较少的软件界面支持将给演讲者带来更大的挑战。在 Beamer 中，可以设置渐进切换这种轻量级的动画方法，来达到提示的效果。而为了达成这一效果，就需要使用以尖角括号开头结尾<span>&lt;&gt;</span>的修饰符。</p>
+
+                    <details>
+                        <summary>
+                          渐进切换 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_uncover.pdf" target="_blank">example_uncover.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_uncover.tex" target="_blank">[源代码]</a>
+                        </summary>
+                    <embed id="ExpPdf" src="../../doc/CH07/beamer/example_uncover.pdf" type="application/pdf" width="100%" height="500px">
+                    </details>
+
+                    <p>7.3.1 渐进切换效果可以用于列表环境，通过对列表环境添加修饰符<span>[&lt;+-&gt;]</span>，Beamer 就会针对每一项的展开自动新建一帧，这样演讲者点点鼠标就可以让幻灯片上的点与正在演讲内容对应。</p>
+
+                    <div class="frames">
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li>第 3 点</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>关于列表渐进，以下两种设置方式是等价的：
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            <b>自动添加修饰符</b> <span>+</span>为自增通配符，使用中括号扩起将会对每一个条目添加对应的修饰符。
+                            <pre>\begin{itemize}[&lt;+-&gt;]
+    \item 第 1 点
+    \item 第 2 点
+    \item 第 3 点
+\end{itemize}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            <b>手动添加修饰符</b> <span>&lt;1-&gt;</span>表示从第一帧开始会显示。如果将<span>-</span>去除，该条目将不会在下一帧显示。
+<pre>\begin{itemize}
+    \item&lt;1-&gt; 第 1 点
+    \item&lt;2-&gt; 第 2 点
+    \item&lt;3-&gt; 第 3 点
+\end{itemize}</pre>
+                        </div>
+                    </div></p>
+
+                    <p>7.3.2 渐进式切换效果可以用于悬念式展开。根据上面学到的修饰符语法，可以使用<span>actionenv</span>环境添加修饰符，让内容在之后的帧中展开。</p>
+
+                    <div class="frames">
+                        <div class="toutu">
+                            第一行推导
+                        </div>
+                        <div class="toutu">
+                            第一行推导<br>第二行推导
+                        </div>
+                        <div class="toutu">
+                            第一行推导<br>第二行推导
+                            <pre>结论</pre>
+                        </div>
+                    </div>
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            普通的内容需要使用<span>actionenv</span>环境括起来再应用修饰符。如果是<span>&lt;1-&gt;</span>则可以省略，毕竟就是从第一个开始的。
+                            <pre>第一行推导\par
+\begin{actionenv}&lt;2-&gt;
+    第二行推导
+\end{itemize}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            列表环境、区块环境、定理环境可以直接在环境上添加修饰符。
+<pre>\begin{block}&lt;3-&gt;{结论}
+    我的结论
+\end{block}</pre>
+                        </div>
+                    </div>
+
+                    <p>7.3.3 有时候，你会希望讲义与幻灯片的内容是不同版本的，修饰符也可以派上用场。只要在环境上添加 <span>&lt;article&gt;</span>（仅文档） 或 <span>&lt;presentation&gt;</span>（仅幻灯片）修饰符即可。
+                        <div class="con">
+                            <div class="left" style="margin: 4px;">
+                                可以针对帧直接赋予修饰符，使其只出现在幻灯片中，<s>这样不来听课的人就看不到了。</s>。
+                                <pre>\begin{frame}&lt;presentation&gt;
+        只会出现在幻灯片中。
+\end{frame}</pre>
+                            </div>
+                            <div class="right" style="text-align: left; margin: 4px;">
+                                也可以采用<span>\only</span>命令行内赋予修饰符。<s>这样大家就要去买讲义了。</s>
+<pre>\only&lt;article&gt;{
+    只会出现在文稿中。
+}</pre>
+                            </div>
+                        </div>
+                       
+    
+                        </p>
 
                 </div>
             </div>
