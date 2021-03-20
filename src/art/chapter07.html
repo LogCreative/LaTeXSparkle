@@ -223,6 +223,26 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 
                     <p>7.3.1 渐进切换效果可以用于列表环境，通过对列表环境添加修饰符<span>[&lt;+-&gt;]</span>，Beamer 就会针对每一项的展开自动新建一帧，这样演讲者点点鼠标就可以让幻灯片上的点与正在演讲内容对应。</p>
 
+                    <div class="cframes">
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li>第 3 点</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="frames">
                         <div class="toutu">
                             <ul>
@@ -266,6 +286,19 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 
                     <p>7.3.2 渐进式切换效果可以用于悬念式展开。根据上面学到的修饰符语法，可以使用<span>actionenv</span>环境添加修饰符，让内容在之后的帧中展开。</p>
 
+                    <div class="cframes">
+                        <div class="toutu">
+                            第一行推导
+                        </div>
+                        <div class="toutu">
+                            第一行推导<br>第二行推导
+                        </div>
+                        <div class="toutu">
+                            第一行推导<br>第二行推导
+                            <pre>结论</pre>
+                        </div>
+                    </div>
+                    
                     <div class="frames">
                         <div class="toutu">
                             第一行推导
@@ -298,7 +331,7 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                     <p>7.3.3 有时候，你会希望讲义与幻灯片的内容是不同版本的，修饰符也可以派上用场。只要在环境上添加 <span>&lt;article&gt;</span>（仅文档） 或 <span>&lt;presentation&gt;</span>（仅幻灯片）修饰符即可。
                         <div class="con">
                             <div class="left" style="margin: 4px;">
-                                可以针对帧直接赋予修饰符，使其只出现在幻灯片中，<s>这样不来听课的人就看不到了。</s>。
+                                可以针对帧直接赋予修饰符，使其只出现在幻灯片中，<s>这样不来听课的人就看不到了。</s>
                                 <pre>\begin{frame}&lt;presentation&gt;
     只会出现在幻灯片中。
 \end{frame}</pre>
@@ -316,6 +349,26 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 
                     <p>第一种，可以突出显示正在关注的条目。</p>
 
+                    <div class="cframes">
+                        <div class="toutu">
+                            <ul>
+                                <li style="color: red;">第 1 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li style="color: red;">第 2 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li style="color: red;">第 3 点</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="frames">
                         <div class="toutu">
                             <ul>
@@ -353,6 +406,8 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
     \item&lt;alert@1&gt; 第 2 点
     \item 第 3 点
 \end{itemize}</pre>
+
+                    </div>
 
                     <p></p>
                 </div>
