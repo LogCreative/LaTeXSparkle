@@ -14,7 +14,8 @@
     \def\ignore{pdfauthor}%
     \ifx\next\ignore%
     \else\Hy@Warning{%
-        Option `#1' has already been used,\MessageBreak setting the option has no effect%
+        Option `#1' has already been used,\MessageBreak 
+        setting the option has no effect%
     }\fi
 }
 \makeatother
@@ -63,6 +64,19 @@
             \item 第 3 点
         \end{itemize}
     \end{frame}
+
+    \setbeamercovered{transparent}
+
+    \begin{frame}
+        \frametitle{半透明}
+        \begin{itemize}[<+-| alert@+>]
+            \item 第 1 点
+            \item 第 2 点
+            \item 第 3 点
+        \end{itemize}
+    \end{frame}
+
+    \setbeamercovered{invisible}
 
 \end{CJK}
 \end{document}

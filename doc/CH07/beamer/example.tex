@@ -10,10 +10,13 @@
 
     \maketitle
 
-    \begin{frame}
-    \frametitle{提纲}
-    \tableofcontents
-    \end{frame}
+    \AtBeginSubsection[]{
+        \begin{frame}<presentation>
+        \frametitle{提纲}
+        \tableofcontents[currentsection,currentsubsection]
+        \end{frame}
+    }
+    
 
 \section{速度 坐标交换}
 \subsection[位移关系]{位移关系}

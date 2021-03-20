@@ -77,7 +77,7 @@
                             <li>如果已经预先知道同时需要一份报告和一份对应的幻灯片文件。读完本节后，你就会意识到优先幻灯片制作将有利于同时产生两份文件。养成这个习惯将会提高工作效率。</li>
                         </ol>
                     </p>
-                    <p>相较于<a href="chapter02.html">第 2 节</a>，PowerPoint 更加适合制作对动画要求较高的幻灯片。而对于正式严肃的学术场合，还是使用相对静态的 Beamer 宏包所产生的幻灯片更为合适，这有助于自动产生良好的排版。</p>
+                    <p>相较于<a href="chapter02.html">第 2 节</a>，PowerPoint 更加适合制作对动画要求较高的幻灯片。而对于正式严肃的学术场合，使用相对静态的 Beamer 宏包所产生的幻灯片更为合适，这还有助于自动产生良好的排版。</p>
 
                     <h3>7.1 目次结构</h3>
                     <p>在本小节中，将会把普通的文稿结构和幻灯片结构并排来看，以便更好地理解 \(\rm \LaTeX{} \) 中幻灯片的排版逻辑。</p>
@@ -327,25 +327,8 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 \end{block}</pre>
                         </div>
                     </div>
-
-                    <p>7.3.3 有时候，你会希望讲义与幻灯片的内容是不同版本的，修饰符也可以派上用场。只要在环境上添加 <span>&lt;article&gt;</span>（仅文档） 或 <span>&lt;presentation&gt;</span>（仅幻灯片）修饰符即可。
-                        <div class="con">
-                            <div class="left" style="margin: 4px;">
-                                可以针对帧直接赋予修饰符，使其只出现在幻灯片中，<s>这样不来听课的人就看不到了。</s>
-                                <pre>\begin{frame}&lt;presentation&gt;
-    只会出现在幻灯片中。
-\end{frame}</pre>
-                            </div>
-                            <div class="right" style="text-align: left; margin: 4px;">
-                                也可以采用<span>\only</span>命令行内赋予修饰符。<s>这样大家就要去买讲义了。</s>
-<pre>\only&lt;article&gt;{
-    只会出现在文稿中。
-}</pre>
-                            </div>
-                        </div>
-                    </p>
                        
-                    <p>7.3.4 渐进切换还有几种选项。</p>  
+                    <p>7.3.3 渐进切换还有几种选项。</p>  
 
                     <p>第一种，可以突出显示正在关注的条目。</p>
 
@@ -406,10 +389,101 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
     \item&lt;alert@1&gt; 第 2 点
     \item 第 3 点
 \end{itemize}</pre>
-
+                        </div>
                     </div>
 
-                    <p></p>
+                    <p>第二种，可以使用半透明的方式展示将要显示的内容。由于幻灯片一般都是投影到幕布上使用的，那么离幕布近的演讲者就能透过这些半透明的文字获得下面将要演讲什么的提示，而离幕布远的观众就看不清这些提示，这样就可以达到辅助演示的效果。</p>
+
+                    <div class="cframes">
+                        <div class="toutu">
+                            <ul>
+                                <li style="color: red;">第 1 点</li>
+                                <li style="opacity: 20%;">第 2 点</li>
+                                <li style="opacity: 20%;">第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li style="color: red;">第 2 点</li>
+                                <li style="opacity: 20%;">第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li style="color: red;">第 3 点</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="frames">
+                        <div class="toutu">
+                            <ul>
+                                <li style="color: red;">第 1 点</li>
+                                <li style="opacity: 20%;">第 2 点</li>
+                                <li style="opacity: 20%;">第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li style="color: red;">第 2 点</li>
+                                <li style="opacity: 20%;">第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li style="color: red;">第 3 点</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            打开一个开关就可以实现半透明提示。
+                            <pre>\setbeamercovered{transparent}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            默认情况下不展示的内容是完全看不到的。
+                            <pre>\setbeamercovered{invisible}</pre>
+                        </div>
+                    </div>
+
+                    <p>第三种，当尝试去分发幻灯片的影印版时（最好是使用<span>article</span>模式分发），不希望将这些渐进切换的部分分发出去，太罗嗦了。<span>beamer</span>文档类提供了一个选项<span>[trans]</span>，可以直接将每一组渐进切换合并成一帧编译。</p>
+
+                    <pre>\documentclass[trans]{beamer}</pre>
+
+                    <p>7.3.4 和 PowerPoint 的缩放定位功能类似，Beamer 也有每次结束一节就插入提纲页的功能。为了实现这一点，需要通过下面的命令为每一个子小节添加一个预设帧。</p>
+                    <pre>\AtBeginSubsection[]{
+    \begin{frame}&lt;presentation&gt;
+    \frametitle{提纲}
+    \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}</pre>
+
+<p>这里的目录被设置成高亮当前节与当前小节，并采用<span>&lt;presentation&gt;</span>修饰符使得这些插入的页面只会出现在幻灯片中。</p>
+
+                    <p>7.3.5 有时候，你会希望讲义与幻灯片的内容是不同版本的，修饰符也可以派上用场。只要在环境上添加 <span>&lt;article&gt;</span>（仅文档） 或 <span>&lt;presentation&gt;</span>（仅幻灯片）修饰符即可。
+                        <div class="con">
+                            <div class="left" style="margin: 4px;">
+                                可以针对帧直接赋予修饰符，使其只出现在幻灯片中，<s>这样不来听课的人就看不到了。</s>
+                                <pre>\begin{frame}&lt;presentation&gt;
+    只会出现在幻灯片中。
+\end{frame}</pre>
+                            </div>
+                            <div class="right" style="text-align: left; margin: 4px;">
+                                也可以采用<span>\only</span>命令行内赋予修饰符。<s>这样大家就要去买讲义了。</s>
+<pre>\only&lt;article&gt;{
+    只会出现在文稿中。
+}</pre>
+                            </div>
+                        </div>
+                    </p>
+
+                    
                 </div>
             </div>
         </div>
