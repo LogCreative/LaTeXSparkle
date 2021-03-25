@@ -81,26 +81,3 @@
         display: block;
     }
 }
-
-.gh-container{
-    display: flex;
-    flex-direction: row-reverse;
-    align-content: flex-start;
-}
-
-.gh-badge{
-    width: auto;
-    border: whitesmoke;
-    box-shadow: 0 0 3px 2px rgba(129, 129, 129, 0.4);
-    background: rgb(247, 243, 243);
-    padding: 5px 15px;
-    border-radius: 20px;
-}
-
-.gh-badge::before{
-    content: url('../img/github.svg');
-}
-
-.gh-badge::after{
-    content: '〉';
-}
