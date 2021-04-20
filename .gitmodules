@@ -1,0 +1,3 @@
+[submodule "doc/CH06/PGFPlotsEdt"]
+	path = doc/CH06/PGFPlotsEdt
+	url = https://github.com/LogCreative/PGFPlotsEdt.git
