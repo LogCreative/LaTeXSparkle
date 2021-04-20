@@ -197,7 +197,7 @@
                     <br>
                     <h3>6.3 从外部软件生成代码</h3>
                     
-                    <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a> 生成，右键编译好的图像可以保存 PDF 文件至本地。在编辑过程中善用参数命令的自动填充功能。</p>
+                    <p>6.3.1 制作简单一些的统计图可以在电脑端打开本页，使用上面的 <a href="https://github.com/LogCreative/PGFPlotsEdt">PGFPlots 代码生成器</a> 生成，右键编译好的图像可以保存 PDF 文件至本地。在编辑过程中善用参数命令的自动填充功能（按 Enter 键触发）。</p>
 
                     <div class="badge-container">
                         <a href="https://github.com/LogCreative/PGFPlotsEdt/" target="_blank">
@@ -226,6 +226,29 @@
                             </div>
                         </a>
                     </div>
+
+                    <h3>6.4 使用样式库个性化统计图</h3>
+
+                    <p>PGFPlots 宏包拥有很多样式库，在导言区引用后可以扩展原有 PGFPlots 的功能。</p>
+
+                    <script src="../../doc/CH06/PGFPlotsEdt/lang/dict_cn.js"></script>
+
+                    <p>6.4.1 <span>\usetikzlibrary{plotmarks}</span> 标记样式集。</p>
+
+                    <script>
+                        for (const mark in plotmarksDic){
+                            console.log(mark);
+                        }
+                    </script>
+
+                    <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集。</p>
+
+                    <script>
+                        for (const colors in colorbrewerDic){
+                            console.log(colors);
+                        }
+                    </script>
+
                 </div>
             </div>
         </div>
