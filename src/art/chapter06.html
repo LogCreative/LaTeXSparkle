@@ -235,10 +235,32 @@
 
                     <p>6.4.1 <span>\usetikzlibrary{plotmarks}</span> 标记样式集。</p>
 
+                    <div class="stycon">
+                        <div class="header">mark=</div>
+                        <div id="plotmarks"/>
+                    </div>
+
                     <script>
-                        for (const mark in plotmarksDic){
-                            console.log(mark);
-                        }
+                        var p = $('#plotmarks');
+                        var appendMarks = function(dict){
+                            for (const mark in dict){
+                                var d = $('<div/>',{
+                                    class: 'markblock'
+                                });
+                                var t = $('<div/>',{
+                                    text: mark,
+                                    class: 'markheader'
+                                });
+                                t.appendTo(d);
+                                var m = $('<img>',{
+                                    src: '../../doc/CH06/PGFPlotsEdt/res/' + dict[mark][2]
+                                });
+                                m.appendTo(d);
+                                d.appendTo(p);
+                            }
+                        };
+                        appendMarks(sparamDic['mark'][1]);
+                        appendMarks(plotmarksDic);
                     </script>
 
                     <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集。</p>

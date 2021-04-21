@@ -109,3 +109,33 @@
 #tipimg:hover > a .toutu #bigImg {
     opacity: 100%;
 }
+
+.stycon div {
+    font-family: Consolas,'Courier New', Courier, monospace; 
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 10px;
+}
+
+.markheader {
+    border-bottom: 1px solid gray;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+#plotmarks {
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    text-align: center;
+}
+
+.markblock {
+    width: calc(33% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+}
