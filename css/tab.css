@@ -118,12 +118,6 @@
     font-family: Consolas,'Courier New', Courier, monospace; 
 }
 
-.header {
-    text-align: center;
-    border-bottom: 1px solid gray;
-    margin: 10px;
-}
-
 .markheader {
     border-bottom: 1px solid gray;
     color: gray;
@@ -159,13 +153,124 @@
     text-align: center;
 }
 
-.colorsblock:hover{
-    border: 1px solid black;
-}
-
 .colorsblock {
     width: 12px;
     height: 22px;
     display: inline-flex;
     color: gray;
+}
+.colorsblock:hover{
+    border: 1px solid black;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.cmblock{
+    color: transparent;
+}
+.cmblock:hover{
+    color: black;
+}
+
+.radiotip {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+.colormapname,
+.cyclename {
+    font-weight: bold;
+    height: 22px;
+    text-align: left;
+}
+.colorlinecycle{
+    margin-bottom: 5px;
+}
+
+.radiotip{
+    display: inline-flex;
+    width: 30%;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: gray;
+    background-color: transparent;
+    border-top: 0px;
+}
+.radiotip:hover{
+    cursor: pointer;
+}
+.stycon input
+{
+    display: none;
+}
+.stycon #rcolor:checked ~ 
+#rcolortip {
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+    color: black;
+    background-color: whitesmoke;
+}
+.stycon #rcolor:checked ~ 
+#colorbrewer .colorblock div.colorline,
+#colorbrewer .colorblock div.cmn
+{
+    display: none;
+}
+.stycon #rcolor:checked ~ 
+#colorbrewer .colorblock div.colorlinecycle,
+#colorbrewer .colorblock div.cyclename
+{
+    display: flex;
+}
+
+.stycon #rcomap:checked ~ 
+#rcomaptip {
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+    color: black;
+    background-color: whitesmoke;
+}
+
+
+.stycon #rcycle:checked ~
+#rcycletip {
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+    color: black;
+    background-color: whitesmoke;
+}
+.stycon #rcycle:checked ~
+#colorbrewer .colorblock div.cyclename{
+    display: none;
+}
+.stycon #rcycle:checked ~
+#colorbrewer .colorblock div.cmn{
+    display: flex;
+}
+.colorline:hover {
+    border: 1.5px solid black;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.colorline:hover div{
+    color: black;
+    font-weight: bold;
+}
+
+.colormapline{
+    display: none;
+    margin-bottom: 5px;
+}
+.stycon #rcomap:checked ~
+#colorbrewer .colorblock .colormapline{
+    display: flex;
+}
+.stycon #rcomap:checked ~
+#colorbrewer .colorblock .colorline{
+    display: none;
+}
+.colormapdisplay {
+    width: 70%;
+    height: 22px;
+    display: inline-flex;
+    margin-right: 10px;
 }

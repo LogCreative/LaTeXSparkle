@@ -264,9 +264,14 @@
                     </script>
                 </div>
 
-                <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集。</p>
+                <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集，Cynthia Brewer 的 Color Brewer 配色集（2002）符合 <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>，以下摘录自<a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html">配色数据</a>：</p>
                 <div class="stycon">
-                    <div class="header">colormap/</div>
+                    <input type="radio" name="colorbrewer" id="rcolor" checked>
+                    <label class="radiotip" for="rcolor" id="rcolortip">color=</label>
+                    <input type="radio" name="colorbrewer" id="rcomap">
+                    <label class="radiotip" for="rcomap" id="rcomaptip">colormap/</label>
+                    <input type="radio" name="colorbrewer" id="rcycle">
+                    <label class="radiotip" for="rcycle" id="rcycletip">cycle list/</label>
                     <div id="colorbrewer"></div>
                 </div>
 
@@ -281,6 +286,7 @@
                         var colorlist = colorbrewerDic[colors][2].split(',');
                         var len = colorbrewerDic[colors][3]=='qual' ? colorlist.length : typedict[2].length;
                         var lines = typedict.length;
+
                         var al = $('<div/>',{
                             class: 'colorline'
                         });
@@ -291,6 +297,7 @@
                         n.css('font-weight','bold');
                         n.css('text-align','left');
                         n.appendTo(al);
+
                         for(var order = 0; order < len; ++order){
                             var alc = $('<div/>',{
                                 text: String.fromCharCode(65+order),
@@ -300,6 +307,7 @@
                             alc.appendTo(al);
                         }
                         $(d).append(al);
+
                         for(var i = 3; i < lines; ++i){
                             var l = $('<div/>',{
                                 class: 'colorline'
@@ -310,16 +318,64 @@
                                 width: '5em'
                             });
                             lcn.appendTo(l);
+
                             for(var order = 0; order < len; ++order){
                                 var lc = $('<div/>',{
                                     class: 'colorsblock',
-                                })
+                                });
                                 if($.inArray(order,typedict[i])!=-1)
                                     lc.css('background-color', colorlist[order]);
                                 lc.appendTo(l);
                             }
+
                             $(d).append(l);
                         }
+                        
+                        var cyclel = $('<div/>',{
+                            class: 'colorline'
+                        });
+                        cyclel.addClass('colorlinecycle');
+                        var cyclen = $('<div/>',{
+                            class: 'colorsblock',
+                            text: 'CM',
+                            width: '5em'
+                        });
+                        cyclen.addClass('cmn');
+                        cyclen.appendTo(cyclel);
+                        var cyclename = $('<div/>',{
+                            class: 'cyclename',
+                            text: colors,
+                            width: '5em',
+                        });
+                        cyclename.appendTo(cyclel);
+
+                        for(var order = 0; order < len; ++order){
+                            var lc = $('<div/>',{
+                                class: 'colorsblock',
+                                text: String.fromCharCode(65+order)
+                            });
+                            lc.addClass('cmblock');
+                            lc.css('background-color', colorlist[order]);
+                            lc.appendTo(cyclel);
+                        }
+                        $(d).append(cyclel);
+
+                        var cml = $('<div/>',{
+                            class: 'colormapline'
+                        });
+                        var cmname = $('<div/>',{
+                            class: 'colormapname',
+                            text: colors.substring(0,colors.length-1),
+                            width: '5em'
+                        });
+                        cmname.appendTo(cml);
+                        var cmd = $('<div/>',{
+                            class: 'colormapdisplay'
+                        });
+                        cmd.css('background-image', 'linear-gradient(to right,' + colorbrewerDic[colors][2] + ')');
+                        cmd.appendTo(cml);
+                        $(d).append(cml);
+
                         d.appendTo(c);
                         c.appendTo('#colorbrewer');
                     }

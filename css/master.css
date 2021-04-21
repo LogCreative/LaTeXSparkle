@@ -78,6 +78,12 @@ footer a,
     font-family: "微软雅黑";
 }
 
+.header {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 10px;
+}
+
 .item_s,
 #bottom-link a button{
     font-size: smaller;
