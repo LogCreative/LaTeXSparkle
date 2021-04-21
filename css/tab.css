@@ -134,7 +134,7 @@
 }
 
 .markblock {
-    width: calc(33% - 20px);
+    width: calc(20% - 20px);
     padding: 10px;
     margin: 10px;
     border: 1px solid gray;
@@ -151,6 +151,15 @@
 .colorblock {
     width: 33%;
     text-align: center;
+}
+
+@media(max-width: 1000px){
+    .markblock{
+        width: calc(33% - 20px);
+    }
+    .colorblock{
+        width: 50%;
+    }
 }
 
 .colorsblock {
