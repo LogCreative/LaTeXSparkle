@@ -262,16 +262,68 @@
                         appendMarks(sparamDic['mark'][1]);
                         appendMarks(plotmarksDic);
                     </script>
-
-                    <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集。</p>
-
-                    <script>
-                        for (const colors in colorbrewerDic){
-                            console.log(colors);
-                        }
-                    </script>
-
                 </div>
+
+                <p>6.4.2 <span>\usepgfplotslibrary{colorbrewer}</span> 配色方案集。</p>
+                <div class="stycon">
+                    <div class="header">colormap/</div>
+                    <div id="colorbrewer"></div>
+                </div>
+
+                <script>
+                    for (const colors in colorbrewerDic){
+                        var c = $('<div/>',{
+                            class: 'colorblock'
+                        });
+                        
+                        var d = $('<div/>');
+                        var typedict = colorbrewerArrayDic[colorbrewerDic[colors][3]];
+                        var colorlist = colorbrewerDic[colors][2].split(',');
+                        var len = colorbrewerDic[colors][3]=='qual' ? colorlist.length : typedict[2].length;
+                        var lines = typedict.length;
+                        var al = $('<div/>',{
+                            class: 'colorline'
+                        });
+                        var n = $('<div/>',{
+                            text: colors,
+                            width: '5em',
+                        });
+                        n.css('font-weight','bold');
+                        n.css('text-align','left');
+                        n.appendTo(al);
+                        for(var order = 0; order < len; ++order){
+                            var alc = $('<div/>',{
+                                text: String.fromCharCode(65+order),
+                                class: 'colorsblock'
+                            });
+                            alc.css('height','22px');
+                            alc.appendTo(al);
+                        }
+                        $(d).append(al);
+                        for(var i = 3; i < lines; ++i){
+                            var l = $('<div/>',{
+                                class: 'colorline'
+                            });
+                            var lcn = $('<div/>',{
+                                class: 'colorsblock',
+                                text: i,
+                                width: '5em'
+                            });
+                            lcn.appendTo(l);
+                            for(var order = 0; order < len; ++order){
+                                var lc = $('<div/>',{
+                                    class: 'colorsblock',
+                                })
+                                if($.inArray(order,typedict[i])!=-1)
+                                    lc.css('background-color', colorlist[order]);
+                                lc.appendTo(l);
+                            }
+                            $(d).append(l);
+                        }
+                        d.appendTo(c);
+                        c.appendTo('#colorbrewer');
+                    }
+                </script>
             </div>
         </div>
         <footer>

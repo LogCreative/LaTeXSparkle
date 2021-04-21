@@ -110,6 +110,10 @@
     opacity: 100%;
 }
 
+.stycon {
+    background-color: white;
+}
+
 .stycon div {
     font-family: Consolas,'Courier New', Courier, monospace; 
 }
@@ -126,11 +130,13 @@
     margin-bottom: 10px;
 }
 
-#plotmarks {
+#plotmarks,
+#colorbrewer {
     display: flex; 
     width: 100%; 
     flex-wrap: wrap; 
     text-align: center;
+    justify-content: flex-start;
 }
 
 .markblock {
@@ -138,4 +144,28 @@
     padding: 10px;
     margin: 10px;
     border: 1px solid gray;
+}
+
+.colorline {
+    display: flex;
+}
+
+.colorline:hover {
+    color: black;
+}
+
+.colorblock {
+    width: 33%;
+    text-align: center;
+}
+
+.colorsblock:hover{
+    border: 1px solid black;
+}
+
+.colorsblock {
+    width: 12px;
+    height: 22px;
+    display: inline-flex;
+    color: gray;
 }
