@@ -322,3 +322,14 @@
     border: 1px solid black;
     flex-grow: 5;
 }
+
+@media(max-width: 500px) {
+    .colormapseries{
+        display: inline-flex;
+        width: calc(100% - 20px);
+        margin: 0px 10px;
+    }
+    .colormapsname{
+        width: 15em;
+    }
+}
