@@ -252,8 +252,10 @@
                                     class: 'markheader'
                                 });
                                 t.appendTo(d);
-                                var m = $('<img>',{
-                                    src: '../../doc/CH06/PGFPlotsEdt/res/' + dict[mark][2]
+                                var m = $('<embed>',{
+                                    src: '../../doc/CH06/PGFPlotsEdt/res/' + dict[mark][2].replace('svg','icon'),
+                                    width: '32px',
+                                    height: '32px',
                                 });
                                 m.appendTo(d);
                                 d.appendTo(p);
@@ -261,6 +263,7 @@
                         };
                         appendMarks(sparamDic['mark'][1]);
                         appendMarks(plotmarksDic);
+
                     </script>
                 </div>
 

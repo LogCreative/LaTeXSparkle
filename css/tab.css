@@ -162,6 +162,12 @@
     }
 }
 
+@media(max-width: 500px){
+    .colorblock{
+        width: 100%;
+    }
+}
+
 .colorsblock {
     width: 12px;
     height: 22px;
