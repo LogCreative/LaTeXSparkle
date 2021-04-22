@@ -289,3 +289,36 @@
     display: inline-flex;
     margin-right: 10px;
 }
+#colorbrewer{
+    padding: 10px;
+}
+
+.colormaps {
+    display: flex;
+}
+.colormapseries{
+    display: inline-flex;
+    width: calc(50% - 20px);
+    margin: 0px 10px;
+}
+.colormapcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+}
+.colormapsname{
+    font-weight: bold;
+    width: 8em;
+}
+.colormapblock{
+    display: inline-flex;
+    width: auto;
+    height: 22px;
+    flex-grow: 1;
+    transition: flex-grow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.colormapblock:hover{
+    border: 1px solid black;
+    flex-grow: 5;
+}

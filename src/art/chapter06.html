@@ -252,7 +252,7 @@
                                     class: 'markheader'
                                 });
                                 t.appendTo(d);
-                                var m = $('<embed>',{
+                                var m = $('<img>',{
                                     src: '../../doc/CH06/PGFPlotsEdt/res/' + dict[mark][2].replace('svg','icon'),
                                     width: '32px',
                                     height: '32px',
@@ -383,6 +383,45 @@
                         c.appendTo('#colorbrewer');
                     }
                 </script>
+
+                <p>6.4.3 <span>\usepgfplotslibrary{colormaps}</span> 提供类似于 Matlab 的渐变库，其中 viridis high res 样式取自 matplotlib，遵守 <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 License</a>。</p>
+
+                <div class="stycon">
+                    <div class="header">colormap=</div>
+                    <div id="colormaps"></div>
+                </div>
+
+                <script>
+                    for(var colormapname in colormapsDic){
+                        var cmss = $('<div/>',{
+                            class: 'colormapseries'
+                        });
+
+                        var cmsn = $('<div/>',{
+                            class: 'colormapsname',
+                            text: colormapname
+                        });
+                        cmsn.appendTo(cmss);
+
+                        var colorlist = colormapsDic[colormapname][2].split(',');
+                        var cmsc = $('<div/>',{
+                            class: 'colormapcontainer'
+                        });
+                        // 只有三个渐变是不等宽的，忽略了。
+                        for(var i = 0; i < colorlist.length - 1; ++i){
+                            var cmsb = $('<div/>',{
+                                class: 'colormapblock',
+                            });
+                            cmsb.css('background-image','linear-gradient(to right,' + colorlist[i] + ',' + colorlist[i+1]);
+                            cmsb.appendTo(cmsc);
+                        }
+
+                        cmsc.appendTo(cmss);
+
+                        $('#colormaps').append(cmss);
+                    }
+                </script>
+
             </div>
         </div>
         <footer>
