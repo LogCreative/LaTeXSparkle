@@ -78,5 +78,34 @@
 
     \setbeamercovered{invisible}
 
+    \begin{frame}[allowframebreaks]
+        \frametitle{断帧接续}
+        Beamer 宏包产生的幻灯片仍然是 PDF 格式，播放幻灯片推荐使用 Adobe Acrobat / WPS PDF 打开，启用视图——全屏模式播放。如果是浏览器打开的，可以按下 F11 将界面全屏，并启用适用页面大小的模式，使用 PageDown 或 Beamer 内置的工具栏翻页。
+
+        静态的幻灯片与较少的软件界面支持将给演讲者带来更大的挑战。在 Beamer 中，可以设置渐进切换这种轻量级的动画方法，来达到提示的效果。而为了达成这一效果，就需要使用以尖角括号开头结尾 $<>$ 的修饰符。
+
+        \begin{description}
+            \item[7.3.1] 渐进切换效果可以用于列表环境，通过对列表环境添加修饰符 $[<+->]$，Beamer 就会针对每一项的展开自动新建一帧，这样演讲者点点鼠标就可以让幻灯片上的点与正在演讲内容对应。
+            \item[7.3.2] 渐进式切换效果可以用于悬念式展开。根据上面学到的修饰符语法，可以使用 \texttt{actionenv} 环境添加修饰符，让内容在之后的帧中展开。
+            \item[7.3.3]  渐进切换还有几种选项。
+            
+            第一种，可以突出显示正在关注的条目。
+
+            第二种，可以使用半透明的方式展示将要显示的内容。由于幻灯片一般都是投影到幕布上使用的，那么离幕布近的演讲者就能透过这些半透明的文字获得下面将要演讲什么的提示，而离幕布远的观众就看不清这些提示，这样就可以达到辅助演示的效果。
+
+            第三种，当尝试去分发幻灯片的影印版时（最好是使用 \texttt{article} 模式分发），不希望将这些渐进切换的部分分发出去，太罗嗦了。\texttt{beamer} 文档类提供了一个选项 \texttt{[trans]}，可以直接将每一组渐进切换合并成一帧编译。
+        \end{description}
+        
+    \end{frame}
+
+    \begin{frame}[allowdisplaybreaks]
+        \begin{align*}
+            M_{xy}&=xm\frac{\textrm{d}^2 y}{\textrm{d}t^2}-ym\frac{\textrm{d}^2 x}{\textrm{d}t^2}\\
+            \frac{\textrm{d}}{\textrm{d}t}\left(xm\frac{\textrm{d}y}{\textrm{d}t}-ym\frac{\textrm{d}x}{\textrm{d}t}\right)&=xm\frac{\textrm{d}^2 y}{\textrm{d}t^2}+\frac{\textrm{d}x}{\textrm{d}t}m\frac{\textrm{d}y}{\textrm{d}t}-ym\frac{\textrm{d}^2x}{\textrm{d}t^2}-\frac{\textrm{d}y}{\textrm{d}t}m \frac{\textrm{d}x}{\textrm{d}t}\\
+            &=xm\frac{\textrm{d}^2 y}{\textrm{d}t^2}-ym\frac{\textrm{d}^2 x}{\textrm{d}t^2}
+        \end{align*}
+    \end{frame}
+
+
 \end{CJK}
 \end{document}
