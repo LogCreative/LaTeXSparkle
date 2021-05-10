@@ -76,6 +76,7 @@
                         <ol>
                             <li>\(\rm \LaTeX\) 默认的分节符号字体和间距较大，不符合环保使用纸张的要求，日常非正式出版物以紧凑排版为主，使用制表间隔进行层级划分效果更好。</li>
                             <li>如果已经预先知道同时需要一份报告和一份对应的幻灯片文件。读完本节后，你就会意识到优先幻灯片制作将有利于同时产生两份文件。养成这个习惯将会提高工作效率。</li>
+                            <li>当然，如果先完成了讲稿，也可以使用断帧接续的功能自动生成幻灯片，只是有些功能会有删减。</li>
                         </ol>
                     </p>
                     <p>相较于<a href="chapter02.html">第 2 节</a>，PowerPoint 更加适合制作对动画要求较高的幻灯片。而对于正式严肃的学术场合，使用相对静态的 Beamer 宏包所产生的幻灯片更为合适，这还有助于自动产生良好的排版。</p>
@@ -128,14 +129,6 @@
                     </div>
 
                     <p></p>
-
-                    <div class="badge-container">
-                        <a href="https://www.bilibili.com/video/BV1Ft41147wa" target="_blank">
-                            <div class="bili-badge">
-                                费曼的奇妙观点
-                            </div>
-                        </a>
-                    </div>
 
                     <h3>7.2 文件复用</h3>
                     
@@ -216,9 +209,15 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                         </div>
                     </div>
 
-                    <p>文件分离所带来的好处不仅是可以复用，在长期稳定版本 \(\rm \LaTeX2\varepsilon{}\) 发布的 1998 年，就已经可以使用这种文件分离模式实现多人合作编写一份文档，或者实现分文件的内容管理
-                        <span style="display: none;">（一个例子就是<a href="https://github.com/sjtug/SJTUThesis/tree/master/contents" target="_blank">上海交通大学学术论文模板</a>将各部分分割成不同的<span>.tex</span>文件分别编辑，最后合并）</span><!--7.4 解锁-->
-                    ，最后通过一个主要的样式头统一样式。</p>
+                    <p>文件分离所带来的好处不仅是可以复用，在长期稳定版本 \(\rm \LaTeX2\varepsilon{}\) 发布的 1998 年，就已经可以使用这种文件分离模式实现多人合作编写一份文档，或者实现分文件的内容管理（一个例子就是<a href="https://github.com/sjtug/SJTUThesis/tree/master/contents" target="_blank">上海交通大学学术论文模板</a>将各部分分割成不同的<span>.tex</span>文件分别编辑，最后合并），最后通过一个主要的样式头统一样式。</p>
+
+                    <div class="badge-container">
+                        <a href="https://github.com/sjtug/SJTUThesis" target="_blank">
+                            <div class="gh-badge">
+                                SJTUThesis
+                            </div>
+                        </a>
+                    </div>
 
                     <h3>7.3 渐进切换</h3>
                     <p>Beamer 宏包产生的幻灯片仍然是 PDF 格式，播放幻灯片推荐使用 Adobe Acrobat / WPS PDF 打开，启用视图——全屏模式播放。如果是浏览器打开的，可以按下 F11 将界面全屏，并启用适用页面大小的模式，使用 PageDown 或 Beamer 内置的工具栏翻页。</p>
@@ -499,13 +498,41 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 
                     <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了 <span>allowframebreaks</span> 参数时，一帧内多余的内容就会流入另一帧中。</p>
 
-                    <div class="badge-container">
+                    <p>可以尝试一种激进的做法，将所有的内容放入一个帧中，并设置这个帧可以断帧接续。当需要手动断帧时，使用<span>\framebreak</span>命令。这样就可以根据讲义<b>自动生成幻灯片了</b>！</p>
+
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            <details>
+                                <summary>
+                                  讲义 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.article.pdf" target="_blank">example_framebreak.article.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.article.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/beamer/example_framebreak.article.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            <details>
+                                <summary>
+                                  幻灯片 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.beamer.pdf" target="_blank">example_framebreak.beamer.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.beamer.tex" target="_blank">[源代码]</a>
+                                </summary>
+                            <embed id="ExpPdf" src="../../doc/CH07/beamer/example_framebreak.beamer.pdf" type="application/pdf" width="100%" height="500px">
+                            </details>
+                        </div>
+                    </div>
+
+                    <p><div class="badge-container">
+                        <a href="https://www.bilibili.com/video/BV1Ft41147wa" target="_blank">
+                            <div class="bili-badge">
+                                费曼的奇妙观点
+                            </div>
+                        </a>
+                    </div></p>
+                    <p><div class="badge-container">
                         <a href="https://github.com/LogCreative/SJTUBeamer" target="_blank">
                             <div class="gh-badge">
                                 SJTUBeamer
                             </div>
                         </a>
-                    </div>
+                    </div></p>
 
                 </div>
             </div>

@@ -1,0 +1,64 @@
+\documentclass{beamer}
+\mode<presentation>
+\usetheme{CambridgeUS}
+% \usecolortheme{crane}
+\usefonttheme{serif}
+\usepackage{CJKutf8}
+\hypersetup{unicode}
+\usepackage{bookmark}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{setspace}
+\usepackage{tipa}
+\usepackage{relsize}
+\usepackage{mathrsfs}
+\usepackage{calligra}
+
+\definecolor{myred}{HTML}{A30000}
+
+% To ignore the warning of "pdfauthor"
+\makeatletter
+\def\Hy@WarnOptionDisabled#1{
+    \def\next{#1}%
+    \def\ignore{pdfauthor}%
+    \ifx\next\ignore%
+    \else\Hy@Warning{%
+        Option `#1' has already been used,\MessageBreak 
+        setting the option has no effect%
+    }\fi
+}
+
+%%%%%% mini AutoBeamer %%%%%%
+
+\def\section#1{
+    \framebreak
+    \par {            % The style of section title
+        \bfseries \color{myred} #1
+    }
+}
+\def\chapter#1{
+    \framebreak
+    \begin{center}    % The style of chapter page
+        \bfseries \Large\color{myred} #1
+    \end{center}
+    \framebreak
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{hei}
+    \title{费曼的奇妙观点}
+    \author{LC}
+
+    \maketitle
+
+    \begin{frame}[allowframebreaks]
+        \input{example_framebreak.tex}
+    \end{frame}
+\end{CJK}
+\end{document}
