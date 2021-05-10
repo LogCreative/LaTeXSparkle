@@ -6,6 +6,7 @@
 \usepackage{CJKutf8}
 \hypersetup{unicode}
 \usepackage{bookmark}
+\usepackage{multicol}
 
 % To ignore the warning of "pdfauthor"
 \makeatletter
@@ -77,6 +78,20 @@
     \end{frame}
 
     \setbeamercovered{invisible}
+
+    \begin{frame}
+        \frametitle{双栏}
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item 第 1 点
+                \item 第 2 点
+                \item 第 3 点
+                \item 第 4 点
+                \item 第 5 点
+                \item 第 6 点
+            \end{itemize}
+        \end{multicols}
+    \end{frame}
 
 \end{CJK}
 \end{document}

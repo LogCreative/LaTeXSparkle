@@ -496,12 +496,124 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                     <h3>7.4 断帧接续</h3>
                     <p>使用过 Adobe Indesign 的人都会了解一个功能：将多个文本框连接起来，当一个文本框的内容溢出的时候，将会流入另一个文本框中。</p>
 
-                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了 <span>allowframebreaks</span> 参数时，一帧内多余的内容就会流入另一帧中。</p>
+                    <div class="cframes">
+                        <div class="toutu">
+                            多页 Ⅰ
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li>第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            多页 Ⅱ
+                            <ul>
+                                <li>第 4 点</li>
+                                <li>第 5 点</li>
+                                <li>第 6 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            多页 Ⅲ
+                            <ul>
+                                <li>第 7 点</li>
+                                <li>第 8 点</li>
+                                <li>第 9 点</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="frames">
+                        <div class="toutu">
+                            多帧 Ⅰ
+                            <ul>
+                                <li>第 1 点</li>
+                                <li>第 2 点</li>
+                                <li>第 3 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            多帧 Ⅱ
+                            <ul>
+                                <li>第 4 点</li>
+                                <li>第 5 点</li>
+                                <li>第 6 点</li>
+                            </ul>
+                        </div>
+                        <div class="toutu">
+                            多帧 Ⅲ
+                            <ul>
+                                <li>第 7 点</li>
+                                <li>第 8 点</li>
+                                <li>第 9 点</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <p>可以尝试一种激进的做法，将所有的内容放入一个帧中，并设置这个帧可以断帧接续。当需要手动断帧时，使用<span>\framebreak</span>命令。这样就可以根据讲义<b>自动生成幻灯片了</b>！</p>
+                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了<span>allowframebreaks</span>参数时，一帧内多余的内容就会流入另一帧中。如果是数学公式，还可以使用<span>allowdisplaybreaks</span>对公式按行截断。标题也会因此变成由罗马数字顺序标号的帧组（当然如果帧组没有标题，当然也就没有标号了）。
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+<pre>
+\begin{frame}[allowdisplaybreaks]
+    多行长公式
+\end{frame}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+<pre>
+\begin{frame}[allowframebreaks]
+    长内容
+\end{frame}</pre>
+                        </div>
+                    </div>
+                    </p>
+
+                    <p>当然对于列表环境，由于右部的空隙过大，或许使用双栏排版也是一个不错的选择。
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            <pre>
+% \usepackage{multicol}
+\begin{frame}
+\frametitle{双栏}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item 第 1 点
+        \item 第 2 点
+        \item 第 3 点
+        \item 第 4 点
+        \item 第 5 点
+        \item 第 6 点
+    \end{itemize}
+\end{multicols}
+\end{frame}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            <div class="singleframecon">
+                                <div class="toutu singleframe">
+                                双栏
+                                    <div style="margin-top: 10%;">
+                                        <div style="display: flex; margin: 5pt;">
+                                            <div style="width: 45%">
+                                                <li>第 1 点</li>
+                                                <li>第 2 点</li>
+                                                <li>第 3 点</li>
+                                            </div>
+                                            <div style="width: 45%">
+                                                <li>第 4 点</li>
+                                                <li>第 5 点</li>
+                                                <li>第 6 点</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+
+                    <p>可以尝试一种激进的做法，将所有的内容放入一个帧中，并设置这个帧可以断帧接续。当需要手动断帧时，使用<span>\framebreak</span>命令。这样就可以根据讲义<b>自动生成幻灯片</b>了！<s>让 \( \rm \LaTeX \) 成为你的 PPT 工具人。</s></p>
 
                     <div class="con">
                         <div class="left" style="margin: 4px;">
+                            <embed src="../../doc/CH07/beamer/example_framebreak.article.txt" type="text/plain" width="100%" height="300px"/>
                             <details>
                                 <summary>
                                   讲义 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.article.pdf" target="_blank">example_framebreak.article.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.article.tex" target="_blank">[源代码]</a>
@@ -510,6 +622,7 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                             </details>
                         </div>
                         <div class="right" style="text-align: left; margin: 4px;">
+                            <embed src="../../doc/CH07/beamer/example_framebreak.beamer.txt" type="text/plain" width="100%" height="300px"/>
                             <details>
                                 <summary>
                                   幻灯片 <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.beamer.pdf" target="_blank">example_framebreak.beamer.pdf</a> <a href="https://github.com/LogCreative/LaTeXSparkle/blob/master/doc/CH07/beamer/example_framebreak.beamer.tex" target="_blank">[源代码]</a>
@@ -526,6 +639,48 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                             </div>
                         </a>
                     </div></p>
+
+                    <p>关于自动生成幻灯片<span>mini AutoBeamer</span>的部分，通过重定义目次分割符号能够得到两种版本：
+                    <div class="con">
+                        <div class="left" style="margin: 4px;">
+                            转换 report 类的讲义，该类型的以<span>chapter</span>分割每块，以<span>section</span>作为小标题。
+                            <pre>
+% report MINI AutoBeamer
+\def\section#1{
+    \framebreak
+    \par {            % The style of section title
+        \bfseries \color{myred} #1
+    }
+}
+\def\chapter#1{
+    \framebreak
+    \begin{center}    % The style of chapter page
+        \Large\color{myred} #1 
+    \end{center}
+    \framebreak
+}</pre>
+                        </div>
+                        <div class="right" style="text-align: left; margin: 4px;">
+                            转换普通的 article 讲义，该类型的以<span>section</span>分割每块，以<span>subsection</span>作为小标题。
+                            <pre>
+% Article MINI AutoBeamer
+\def\subsection#1{
+    \framebreak
+    \par {            % The style of section title
+        \bfseries \color{myred} #1
+    }
+}
+\def\section#1{
+    \framebreak
+    \begin{center}    % The style of chapter page
+        \Large\color{myred} #1 
+    \end{center}
+    \framebreak
+}</pre>
+                        </div>
+                    </div>
+                    </p>
+
                     <p><div class="badge-container">
                         <a href="https://github.com/LogCreative/SJTUBeamer" target="_blank">
                             <div class="gh-badge">
