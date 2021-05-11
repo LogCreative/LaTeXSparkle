@@ -549,7 +549,7 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                         </div>
                     </div>
 
-                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了<span>allowframebreaks</span>参数时，一帧内多余的内容就会流入另一帧中。如果是数学公式，还可以使用<span>allowdisplaybreaks</span>对公式按行截断。标题也会因此变成由罗马数字顺序标号的帧组（当然如果帧组没有标题，当然也就没有标号了）。
+                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了<span>allowframebreaks</span>参数时，一帧内多余的内容就会流入另一帧中。如果是数学公式，还可以使用<span>allowdisplaybreaks</span>对公式按行截断。标题也会因此变成由罗马数字顺序标号的帧组（如果帧组没有标题，当然也就没有标号了）。
                     <div class="con">
                         <div class="left" style="margin: 4px;">
 <pre>
@@ -566,7 +566,7 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                     </div>
                     </p>
 
-                    <p>当然对于列表环境，由于右部的空隙过大，或许使用双栏排版也是一个不错的选择。
+                    <p>事实上，对于列表环境，由于右部的空隙过大，或许使用双栏排版是一个不错的选择。
                     <div class="con">
                         <div class="left" style="margin: 4px;">
                             <pre>
@@ -609,7 +609,7 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                     </div>
                     </p>
 
-                    <p>可以尝试一种激进的做法，将所有的内容放入一个帧中，并设置这个帧可以断帧接续。当需要手动断帧时，使用<span>\framebreak</span>命令。这样就可以根据讲义<b>自动生成幻灯片</b>了！<s>让 \( \rm \LaTeX \) 成为你的 PPT 工具人。</s></p>
+                    <p>甚至可以尝试一种激进的做法，将所有的内容放入一个帧中，并设置这个帧可以断帧接续。当需要手动断帧时，使用<span>\framebreak</span>命令。这样就可以根据讲义<b>自动生成幻灯片</b>了！<s>让 \( \rm \LaTeX \) 成为你的 PPT 工具人。</s></p>
 
                     <div class="con">
                         <div class="left" style="margin: 4px;">
@@ -648,32 +648,32 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
 % report MINI AutoBeamer
 \def\section#1{
     \framebreak
-    \par {            % The style of section title
-        \bfseries \color{myred} #1
+    \par {
+        \bfseries \color{red} #1
     }
 }
 \def\chapter#1{
     \framebreak
-    \begin{center}    % The style of chapter page
-        \Large\color{myred} #1 
+    \begin{center} 
+        \Large\color{red} #1 
     \end{center}
     \framebreak
 }</pre>
                         </div>
                         <div class="right" style="text-align: left; margin: 4px;">
-                            转换普通的 article 讲义，该类型的以<span>section</span>分割每块，以<span>subsection</span>作为小标题。
+                            转换普通的 article 类讲义，该类型的以<span>section</span>分割每块，以<span>subsection</span>作为小标题。
                             <pre>
 % Article MINI AutoBeamer
 \def\subsection#1{
     \framebreak
-    \par {            % The style of section title
-        \bfseries \color{myred} #1
+    \par {
+        \bfseries \color{red} #1
     }
 }
 \def\section#1{
     \framebreak
-    \begin{center}    % The style of chapter page
-        \Large\color{myred} #1 
+    \begin{center}
+        \Large\color{red} #1 
     \end{center}
     \framebreak
 }</pre>
