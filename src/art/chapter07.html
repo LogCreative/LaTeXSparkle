@@ -645,37 +645,39 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                         <div class="left" style="margin: 4px;">
                             转换 report 类的讲义，该类型的以<span>chapter</span>分割每块，以<span>section</span>作为小标题。
                             <pre>
-% report MINI AutoBeamer
 \def\section#1{
-    \framebreak
-    \par {
+    \par\framebreak
+    {
         \bfseries \color{red} #1
     }
 }
 \def\chapter#1{
     \framebreak
-    \begin{center} 
+    \vspace*{0.3\paperheight}
+    \begin{center}
         \Large\color{red} #1 
     \end{center}
-    \framebreak
+    \vspace*{0.3\paperheight}
+    \newpage
 }</pre>
                         </div>
                         <div class="right" style="text-align: left; margin: 4px;">
                             转换普通的 article 类讲义，该类型的以<span>section</span>分割每块，以<span>subsection</span>作为小标题。
                             <pre>
-% Article MINI AutoBeamer
 \def\subsection#1{
-    \framebreak
-    \par {
+    \par\framebreak
+    {
         \bfseries \color{red} #1
     }
 }
 \def\section#1{
     \framebreak
+    \vspace*{0.3\paperheight}
     \begin{center}
         \Large\color{red} #1 
     \end{center}
-    \framebreak
+    \vspace*{0.3\paperheight}
+    \newpage
 }</pre>
                         </div>
                     </div>

@@ -33,17 +33,19 @@
 %%%%%% mini AutoBeamer %%%%%%
 
 \def\section#1{
-    \framebreak
-    \par {            % The style of section title
+    \par\framebreak
+    {   % The style of section title
         \bfseries \color{myred} #1
     }
 }
 \def\chapter#1{
     \framebreak
+    \vspace*{0.3\paperheight}
     \begin{center}    % The style of chapter page
         \Large\color{myred} #1 
     \end{center}
-    \framebreak
+    \vspace*{0.3\paperheight}
+    \newpage
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,9 +56,6 @@
 \begin{CJK}{UTF8}{hei}
     \title{费曼的奇妙观点}
     \author{LC}
-
-    \maketitle
-
     \begin{frame}[allowframebreaks]
         \input{example_framebreak.tex}
     \end{frame}

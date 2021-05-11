@@ -19,8 +19,6 @@
 \begin{CJK}{UTF8}{song}
     \title{费曼的奇妙观点}
     \author{LC}
-    \maketitle
-    
     \input{example_framebreak.tex}
 \end{CJK}
 \end{document}
