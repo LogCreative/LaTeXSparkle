@@ -297,6 +297,58 @@ progress {
     display: block;
 }
 
+#cards {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+#cards .card{
+    font-family: 'Century','Century Schoolbook';
+    font-weight: bold;
+    border: 1px solid rgb(226, 210, 210);
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 175px;
+}
+#cards .card:hover{
+    box-shadow: 
+        inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 1px gray,
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+#cards .card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+#cards .card .func {
+    text-align: center;
+    font-weight: normal;
+    color: black;
+}
+#cards .symbol {
+    transform: rotate(0deg);
+    transition: 1s;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.strip{
+    font-size: xx-small;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.2);
+}
+
 #pgshidden {
     margin: 0 0;
 }

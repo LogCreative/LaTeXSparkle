@@ -136,3 +136,14 @@ progress::-moz-progress-bar {
 #ExpPdf{
     display: none;
 }
+
+#cards {
+    flex-direction: column;
+}
+#cards .card {
+    width: 100%;
+}
+#cards .symbol {
+    transform: rotate(90deg);
+    margin: 10px;
+}
