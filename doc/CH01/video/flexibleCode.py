@@ -29,7 +29,7 @@ class stdTexCode(drawCode):
 
 class manimPythonCode(drawCode):
     def construct(self):
-        drawCode.construct(self,"manimPythonCode.py","python")
+        drawCode.construct(self,"manimPythonCode.py","python",0.75)
 
 class displayHTMLCode(drawCode):
     def construct(self):
