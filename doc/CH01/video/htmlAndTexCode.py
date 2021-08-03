@@ -2,6 +2,8 @@
 
 from manim import *
 
+config["tex_dir"]="C:\\tmp\\"
+
 class HTMLAndTexCode(Scene):
     def construct(self):
         HTMLCode_str = '''<html>
@@ -21,7 +23,7 @@ class HTMLAndTexCode(Scene):
             background_stroke_width=0
         )
 
-        HTMLCode.shift(LEFT*4)
+        HTMLCode.shift(LEFT*3)
         self.play(FadeIn(HTMLCode))
 
         TexCode_str = '''\\documentclass{article}
@@ -39,7 +41,7 @@ class HTMLAndTexCode(Scene):
             background_stroke_width=0
         )
 
-        TexCode.shift(RIGHT*4)
+        TexCode.shift(RIGHT*3)
 
         tarray = [
             [2,1],
@@ -56,3 +58,12 @@ class HTMLAndTexCode(Scene):
         )
         for move in tarray:
             self.play(TransformFromCopy(HTMLCode.code[move[0]],TexCode.code[move[1]]))
+
+        self.wait(2)
+        TexCode.generate_target()
+        TexCode.target.shift(LEFT*3).scale(1.5)
+        self.play(FadeOut(HTMLCode), Transform(TexCode, TexCode.target))
+
+        TexRendered = Tex("Hello, world!").scale(2)
+        self.play(ReplacementTransform(TexCode,TexRendered))
+        self.play(FadeOut(TexRendered, run_time=1.5))
