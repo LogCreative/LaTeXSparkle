@@ -1,6 +1,6 @@
 [submodule "doc/CH06/PGFPlotsEdt"]
 	path = doc/CH06/PGFPlotsEdt
-	url = https://github.com/LogCreative/PGFPlotsEdt.git
+	url = git@github.com:LogCreative/PGFPlotsEdt.git
 [submodule "doc/CH01/manim-subtitler"]
 	path = doc/CH01/manim-subtitler
-	url = https://github.com/LogCreative/manim-subtitler.git
+	url = git@github.com:LogCreative/manim-subtitler.git
