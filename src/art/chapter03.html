@@ -187,12 +187,12 @@ Hello,\LaTeX!
 
                     <p>3.2.3 然后点击右上角的 <span>View LaTeX PDF File</span>查看生成的 PDF 文件。上面会提示使用什么方式打开，可以使用<span>VS Code Tab</span>标签页方式打开，就可以看到你的第一个 \(\rm \LaTeX\) 生成的 PDF 文件了！</p>
 
-                    <p>3.2.4 你会发现编译器会弹出错误，提示<pre>The font size command /normalsize is not defined.</pre></p>
+                    <p>3.2.4 你会发现编译器会弹出错误，提示<pre>The font size command \normalsize is not defined.</pre></p>
                     </p>
 
                     <p>这是因为我们还没有定义文档类型，在导言区添加</p>
 
-                    <pre>/documentclass[a4paper]{article}</pre>
+                    <pre>\documentclass[a4paper]{article}</pre>
 
                     <div class="toutu"><span>\documentclass</span>写在<span>document</span>环境之前，用以定义文档类型，参数<span>[a4paper]</span>用于定义纸张类型，<span>article</span>用于指定预选风格，这里采用了普遍使用的文章风格。</div>
 
