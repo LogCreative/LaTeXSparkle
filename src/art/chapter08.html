@@ -579,12 +579,65 @@ L3 programming layer <2022-02-24>
                 <p>\(\rm \LaTeX\) 可以通过专用数据库文件 <span>.bib</span> 自动生成参考文献，很多的文献管理文件比如 <a href="https://lic.sjtu.edu.cn/Default/softshow/tag/MDAwMDAwMDAwMLGImKE" target="_blank">EndNote</a>, <a href="https://www.zotero.org/" target="_blank">Zotero</a>, <a href="https://www.jabref.org/" target="_blank">JabRef</a> 都可以直接导出这种格式的文件用于 \(\rm \LaTeX\) 论文中的引用。一般不需要手写数据库文件，你只需要注意每一个文献会在数据库中有一个主键，这个类似于上文的 <span>\label</span> 标记，只是要引用数据库中的文献需要使用 <span>\cite</span> 命令。
                 </p>
 
+                <p>Word 实现这种功能需要借助其他功能，感兴趣的可以接着听该专题讲座的后续内容。</p>
+
                 <p>而让 \(\rm \LaTeX\) 处理 <span>.bib</span> 数据库文件与引用有两种工作流。你可能需要查清楚如何在编辑器中设置对应的工作流，或者采用后面所提到的高级编译方式 <span>latexmk</span>。</p>
 
                 <ul>
                     <li>bibtex 是标准的工作流程，一般期刊提交这种方法。中文引用可以使用 <span>gbt7714</span>宏包，但是角模式与正文模式不可混用。</li>
                     <li>biblatex 是更容易定制化的一种方案。中文引用可以使用<span>gb7714-2015</span>biblatex样式，但需要使用\(\rm Xe\LaTeX\)编译。</li>
                 </ul>
+
+                <h3>8.2 SJTUThesis</h3>
+
+                <p>SJTUThesis 最早是由一位物理系同学制作，采用了当时流行的 CJK 方案。韦建文学长于 2009 年 11 月发布 0.1a 版，移植到 \(\rm Xe\LaTeX\) 版本。2018 年起由 SJTUG 接手维护，2019 年 6 月吴伟健重构了整个宏包的代码，升级版本号为 1.0，现在主要由吴伟健与迟先生使用 \(\rm\LaTeX3\) 准备其 2.0 版本（我主要是打杂的）。支持本科、硕士、博士学位论文以及课程论文的排版。</p>
+
+                <p>让我们来讨论 the elephant in the room：为什么用 \(\rm \LaTeX\) 排版论文？</p>
+
+                <p>Markdown 很好啊，方便的语法，一般技术文档也常用。但就是因为它太简单了，没有内置样式控制，一般需要借助 HTML,CSS 那一套东西。也会有一些人尝试通过 R Markdown（Bookdown）<a href="https://github.com/bubifengyun/SJTUThesis-Rmd" target="_blank">改</a>·<a href="https://github.com/bubifengyun/SJTUThesis-Rmd" target="_blank">进</a>，以及可以通过 MathJax 渲染 \(\rm \TeX\) 公式。</p>
+
+                <p>Word 很好啊，官方钦定的论文写作方法，可见即可得，但是进阶排版仍然可以困难。就拿排版公式来说，大家以前初高中学的、或者是计算机二级考的 Word 2003 要排版公式，一种是装 MathType 插件，版本间不兼容、一种是搞个域代码+替换字体。Word 2007 之后添加了插入正经的 Unicode 公式功能，但默认的 Calibri Math 字体以及符号布局仍然赶不上 \(\rm \TeX\) 的美感。</p>
+
+                <p>\(\rm \LaTeX\) 根据之前学到的一些技巧，看起来不难对吧（虽然有我诱导的成分），然后它内容与样式分离的设计理念已经渗入了很多领域。以及很多学术论文都需要 \(\rm \LaTeX\) 的提交。当然现在也推出了可见即可得的编辑器 LyX，Overelaf 的可视模式（虽然这两个并不是一个东西）；以及迟先生很喜欢的 TeXmacs，一种不使用 \(\rm \TeX\) 底层的、但是效果相像的排版程序。</p>
+
+                <p>设计相关专业的同学可能更喜欢 Adobe Indesign，对图文混排更为擅长。但是它也足够复杂，虽然提供了几乎所有的排版用具，但是我还没见过用它排版几十页充满公式的论文的（或许有人会开先河？）。以及传说它用了 \(\rm \TeX\) 的一些算法，所以 \(\rm \TeX\) 还是老大哥，兼具美感和批量化处理的折中方法。</p>
+
+                <p>学习 SJTUThesis 的相关接口，请参见<a href="https://github.com/sjtug/SJTUTeX/releases/download/v1.1.0/sjtuthesis.pdf" target="_blank">开发文档</a>。</p>
+
+                <p>问：与 Word 的参考实现略有不同</p>
+                <p>答：毕设论文的格式只要不违背<a href="https://github.com/sjtug/SJTUThesis/files/6505296/default.pdf" target="_blank">《上海交通大学关于本科生毕业设计（论文）工作的指导意见》</a>、<a href="https://www.gs.sjtu.edu.cn/info/1143/5801.htm" target="_blank">《上海交通大学博士、硕士学位论文撰写指南》</a> 即可，其他细节上的修改可以先搜索解决方案，再反馈给我们。</p>
+
+                <p>问：我需要转为 Word 文档</p>
+                <p>答：你需要在写论文前仔细查看每个学院的要求，如果需要 Word 提交，你应该果断转向使用 Word 写，否则：当你考虑直接将 PDF 转为 Word 时，这是个<a href="https://www.bilibili.com/video/BV1Vi4y1C71M" target="_blank">逆向工程</a>，失去了 Word 的相关辅助编码，转换失败概率大幅上升。如果是为了查重目的，不支持 PDF 的话，也可以考虑 TXT 纯文本格式。从 \(\rm \LaTeX\) 源代码出发的转换可以使用<a href="https://github.com/sjtug/SJTUThesis/issues/480" target="_blank"></a>其他工具实现，不能保证其实现质量。</p>
+
+                <h3>8.3 更进一步</h3>
+
+                <ol>
+                    <li><div class="author">Reckdahl K.
+                        盛文博 译.</div>
+                        <div class="book">\(\rm \LaTeX\) 插图指南</div> <div class="tag">EB/OL</div>. 第三版. 2017.
+                        <a target="_blank" href="https://github.com/WenboSheng/epslatex-cn">链接</a>.这本书主要讲了一些插图的排版技巧，但是有些资料优点陈旧，但仍不妨碍其成为一本很好的图文混排教材。</li>
+                    <li><div class="author">包太雷.</div>
+                    <div class="book">\(\rm \LaTeX\) Notes</div> <div class="tag">EB/OL</div>. 第二版. 2021. 
+                    <a target="_blank" href="https://github.com/huangxg/lnotes">链接</a>.这本书很像后面的 \(\rm \LaTeX\) and Friends 很像。</li>
+                    <li><div class="author">刘海洋.</div>
+                    <div class="book">\(\rm \LaTeX\) 入门</div> <div class="tag">M</div>. 
+                    北京：电子工业出版社, 2013.这本书老经典了，就是还会讲 \(\rm \TeX\) 套装，但仍然是中国很好的百科全书。该书作者谈到 \(\rm \TeX\) 套装退役的时候，说到它已经完成了它的使命。</li>
+                    <li><div class="author">Overleaf.</div>
+                    <div class="book">Learn \(\rm \LaTeX\) in 30 minutes</div> <div class="tag">EB/OL</div>. 
+                    <a target="_blank" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">链接</a>.官方教程，经典。</li>
+
+                    <li><div class="author">M.R.C. van Dongen</div>.
+                    <div class="book">\(\rm \LaTeX\) and Friends</div> <div class="tag">M/OL</div>. New York: Springer, 2012. 
+                    <a target="_blank" href="https://link.springer.com/book/10.1007/978-3-642-23816-1">链接</a></li>
+
+                    <li><div class="author">Mittelbach F., Goossens M., Braams J., et al.</div> 
+                    <div class="book">The \(\rm \LaTeX\) Companion</div> <div class="tag">M</div>. 2nd ed. [S. I.]: Addison-Wesley Professional. 2004. 该书 1k 多页，8 月会有第三版。（\(\rm\LaTeX\) 报错的时候会提到这本书。）</li>
+                </ol>
+
+                <p>以上内容一般可以通过链接（借助图书馆的文献库）获得全文，或者在图书馆可以借到，实际上，当你真正拿到一本使用 \(\rm \LaTeX\) 排版的书的时候，你才会知道这些人为什么会痴迷于它，它在打印层面上都做了比 Word 更好的优化。（我当年在李图借到的《费曼物理学讲义》，确实感觉非常舒适。）</p>
+
+                <p>我相信你都看到这儿了，或许会对如何使用 \(\rm \LaTeX\) 制作幻灯片感兴趣，5 月 18 日会讲解一些关于其的可视呈现相关知识，<a href="https://github.com/sjtug/SJTUBeamer" target="_blank">SJTUBeamer</a> 提供了基础的模板，以及<a href="https://logcreative.tech/LaTeXSparkle" target="_blank">我的博客</a>由于没有涉及太多的中文排版内容，所以其还是在使用 CJK 排版，现在当然不怎么推荐这种做法，但是其中的可视相关的内容时不变的，感兴趣的敬请关注图书馆公众号的后续通知！</p>
 
                 </div>
             </div>
