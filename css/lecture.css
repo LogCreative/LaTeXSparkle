@@ -1,0 +1,15 @@
+.author, .book, .tag {
+    display: inline-block;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.tag::before {
+    content: '[';
+}
+
+.tag::after {
+    content: ']';
+}

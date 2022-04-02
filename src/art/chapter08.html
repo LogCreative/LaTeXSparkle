@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/master.css"/>
+        <link media="(max-width: 1000px)" rel="stylesheet" type="text/css" href="../../css/mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/badge.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/lecture.css"/>
+        <script src="../../js/jquery-3.5.1.min.js"></script>
+        <script src="../../js/jquery.ba-resize.min.js"></script>
+    </head>
+    <title>
+        像模像样 LaTeX
+    </title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../js/ReadProgressBar.js"></script>
+    <body>
+        <div class="rightcol">
+            <div id="loadbar">
+                <strong id="bar"></strong>
+            </div>
+            <div id="side-menu"></div>
+        </div>
+        <div class="side-bar">
+            <label id="menu-toggle" for="menu-checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30">
+                    <g fill="none">
+                      <path stroke="whitesmoke" stroke-linecap="round" stroke-width="3" d="M5 10 l20 0" />
+                      <path stroke="whitesmoke" stroke-linecap="round" stroke-width="3" d="M5 18 l20 0" />
+                      <path stroke="whitesmoke" stroke-linecap="round" stroke-width="3" d="M5 26 l20 0" />
+                    </g>
+                  </svg>
+            </label>
+            <input id="menu-checkbox" type="checkbox"/>
+            <div class="header">
+                <a href="../../index.html" class="logo"><svg style="fill: white; font-family: Times,'宋体'" width="144" height="35">
+                    <text x="0" y="28" style="font-size: x-large">像</text>
+                    <text x="21" y="23" style="font-size:large">模</text>
+                    <text x="36" y="33" style="font-size: x-large">像</text>
+                    <text x="56" y="28" style="font-size:x-large">样</text>
+                    <text x="85" y="28" style="font-size:x-large">L</text>
+                    <text x="92" y="23" style="font-size:large">A</text>
+                    <text x="102" y="28" style="font-size:x-large">T</text>
+                    <text x="114" y="33" style="font-size:x-large">E</text>
+                    <text x="126" y="28" style="font-size:x-large">X</text>
+                    </svg></a>
+            </div>
+            <div class="nav">
+                <a href="../../index.html" class="item">首页</a>
+                <a href="../roadmap.html" class="item">路线图</a>
+                <a href="../article-list.html" class="item">讲稿</a>
+                <a href="../about.html" class="item">关于</a>
+            </div>
+            <div class="footer">
+                <div class="item_s">\(\rm \LaTeX\) <b>Sparkle Project</b></div>
+            <div class="item_s">LogCreative 2020-2021 0201-0210</div>
+            <a href="https://github.com/LogCreative/LaTeXSparkle" class="item" target="_blank">
+                <svg class="octicon octicon-mark-github v-align-middle" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                GitHub</a>
+            <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../../img/bilibili.ico" height="16px"> Bilibili</a>
+            <br>
+            <a href="https://www.mathjax.org/#gettingstarted" class="item" style="font-size: smaller;" target="_blank">POWERED BY MathJax</a>
+            <embed src="../../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
+            </div>
+        </div>
+        <progress value="0"></progress>
+        <div id="bottom-link"></div>
+        <div class="main">
+            <div class="article" id="content" style="color: black;">
+                <h1 class="title">第八节 从零开始使用 \(\rm \LaTeX\) 排版论文</h1>
+                <div class="status" id="CH08">状态：文稿准备中</div>
+                <div class="content">
+
+                <!-- 使用 Windows 系统演示。 -->
+                <!-- 全程使用微软拼音输入法 -->
+                
+                以下是本讲稿的主要参考。
+
+                <ol>
+                    <li><div class="author">陈晟祺 等.</div>
+                    <div class="book">如何使用 \(\rm \LaTeX\) 排版论文</div>
+                    <div class="tag">EB/OL</div>. 2021.
+                    <a href="https://github.com/tuna/thulib-latex-talk" target="_blank">链接</a></li>
+
+                    <li><div class="author">曾祥东.</div>
+                    <div class="book">现代 \(\rm \LaTeX\) 入门讲座</div> <div class="tag">EB/OL</div>. 2022.
+                    <a href="https://github.com/stone-zeng/latex-talk" target="_blank">链接</a>.</li>
+
+                    <li><div class="author">SJTUG.</div>
+                    <div class="book">SJTUThesis 用户文档</div>
+                    <div class="tag">EB/OL</div>. 2022.
+                    <a href="https://github.com/sjtug/SJTUThesis" target="_blank">链接</a>.</li>
+
+                    <li> <div class="author">\(\rm \LaTeX\) Project.
+                    C\(\rm \TeX\) 开发小组 译．</div>
+                    <div class="book">learnlatex.org</div> <div class="tag">EB/OL</div>. 2022.
+                    <a href="https://github.com/CTeX-org/learnlatex.github.io" target="_blank">链接</a>.
+
+                    <li> <div class="author">Oetiker T, Partl H, Hyna I, Schlegl E.
+                    C\(\rm \TeX\) 开发小组 译．</div>
+                    <div class="book">一份（不太）简短的 \(\rm \LaTeX2\varepsilon\)介绍：或 111 分钟了解 \(\rm \LaTeX2\varepsilon\) </div> <div class="tag">EB/OL</div>, 2021.
+                    <a href="https://ctan.org/pkg/lshort-zh-cn" target="_blank">链接</a>.
+                </ol>
+
+                <h3>8.1 学习 \(\rm \LaTeX\)</h3>
+
+                <p>这一部分主要参考了 Learn\(\rm \LaTeX \).org 的系列教程，内容简洁，适合入门，并参考由 C\(\rm \TeX\)-org 提供的<a href="https://github.com/CTeX-org/learnlatex.github.io/tree/zh-Hans/zh-Hans/" target="_blank">中文翻译版本</a>（本人也有参与）。如果你认为下面一个小时的入门教程没有讲得非常细致的话，欢迎直接阅读这个网站的全文。以及该版本尚未合并上游，<s>主要可能是本人一些部分的翻译还是欠点火候的</s>，如果大家在阅读这个翻译版本的过程中看到任何的笔误，或者想对翻译做出任何改进，欢迎向该存储库提 PR，合并完成后，<a href="https://learnlatex.org" target="_blank">这个网站</a>拥有中文翻译的同时，示例也将能在线运行以查看结果。</p>
+
+                <h4>8.1.0 是什么</h4>
+
+                <div class="toutu">
+                    由于标题是从零开始，所以这个节次编号也就从零开始了。以及我们现在先介绍 8.1.1 节的发行版安装（如果不想安装本地版本，也可以直接打开在线网站进行实验，比如网络信息中心推出的交大 \(\rm \LaTeX\) 助手），在安装的过程中来了解一些历史。
+                </div>
+
+                <p>\(\rm \LaTeX\) 这个词由两个部分组成，La 和 \(\rm \TeX\)。那我们首先了解一下 \(\rm \TeX\) 是什么。\(\rm \TeX\) 是由斯坦福大学的教授高德纳于 1977 年开始开发的排版引擎，它已经有三十多年的历史了，目前仍在更新，版本号（3.141592653）将会趋近于 \(\pi\) 的取值，高德纳最近还在给 TUGBoat 写<a href="https://tug.org/TUGboat/tb42-1/tb130knuth-tuneup21.pdf" target="_blank">稿子</a>，关于 \(\rm \TeX\) 今年又做了哪些改进。</p>
+
+                <div class="toutu">
+                    <p>当然 \(\rm \TeX\) 既是引擎，也可以叫程序（你认为只是引擎也可以），如果安装好了发行版（当然这一部分你看个热闹也行），我们可以在命令行（对于 Windows 用户，没有安装 Windows Terminal 的话，可以使用 Windows+R 调出运行窗口，输入 cmd 后按回车）敲出
+                    <pre>tex --version</pre>
+                    就可以看到这个程序的版本信息。可以看到这个软件是 D.E.K.（也就是高德纳）于 1982 年发布的。</p>
+                    <details>
+                        <summary>
+                            tex 版本输出
+                        </summary>
+<pre>MiKTeX-TeX 4.4 (MiKTeX 22.3)
+© 1982 D. E. Knuth; all rights are reserved.
+TeX is a trademark of the American Mathematical Society
+using bzip2 version 1.0.8, 13-Jul-2019
+compiled with curl version 7.72.0; using libcurl/7.72.0 Schannel
+compiled with expat version 2.2.10; using expat_2.2.10
+compiled with liblzma version 50020052; using 50020052
+compiled with libressl version LibreSSL 3.1.4; using LibreSSL 3.1.4
+compiled with MiKTeX Application Framework version 4.4; using 4.4
+compiled with MiKTeX Core version 4.12; using 4.12
+compiled with MiKTeX Archive Extractor version 4.0; using 4.0
+compiled with MiKTeX Package Manager version 4.7; using 4.7
+compiled with uriparser version 0.9.4
+compiled with zlib version 1.2.11; using 1.2.11</pre>
+                    </details>
+
+                    <p>关于这个程序，高德纳写了一本著名的 <a href="https://github.com/seuliang/the-texbook-cn" target="_blank">《\(\rm\TeX{}Book\)》</a>，我们可以在命令行敲出这个程序的 Hello, world。（第一行提示你希望排印的文件名称，这里输入 \relax 以告诉它什么也不做，准备通过命令行输入文档。）
+                    
+                    <pre>
+**\relax
+
+*Hello, world!
+
+*\end</pre>
+                    它会提示你输出了一个 texput.dvi 文件（DVI，DeVice Independent file，设备依赖无关文件），打开它，你就会发现一个简单的文档，上面写着 Hello, world!
+                    </p>
+
+                    <p>当然本次讲座并不是关于 \(\rm \TeX\) 本身的，以及它更靠近于琐碎的底层，连高德纳本人在排版其著作《计算机编程艺术》一书时（\(\rm \TeX\) 的发明一开始就是为此书而作）都要设计许多宏来简化输入。当然如果真的感兴趣，我认为《\(\rm\TeX{}Book\)》一书本身就遵循教育学方法，适合入门者阅读，更广泛的知识可参见<a href="https://github.com/CTeX-org/tex-impatient-cn" target="_blank">《\(\rm \TeX\) 急就贴》</a>、<a href="https://github.com/CTeX-org/tex-by-topic-cn" target="_blank">《\(\rm \TeX~by~Topic\)》</a>等书。我们还是来接着了解 \(\rm \LaTeX\) 吧！</p>
+                </div>
+
+                <p>\(\rm \LaTeX\) 是最早由现就职于微软的 Leslie Lamport 开发的一种 \(\rm \TeX\) 开发的一种 \(\rm \TeX\) 格式（与其对标的是 <a href="https://www.contextgarden.net/" target="_blank">\(\rm Con\TeX{}t\)</a>），主要也是为了简化 \(\rm \TeX\) 的使用。现在主要由 \(\rm \LaTeX\) 开发组维护，现在广泛使用的版本是 \(\rm \LaTeX2\varepsilon\)，最新的版本为 \(\rm \LaTeX3\)，在 2020 年 10 月后默认内置，所以要尽可能使用较新的发行版，以充分发挥其功能。</p>
+
+                <p>\(\rm pdf\LaTeX\) 是为了编译一个 \(\rm \LaTeX\) 文档而运行的程序。</p>
+
+                <p>实际上底层在运行一个叫 \(\rm pdf\TeX\) 的引擎，并预装了对应的 \(\rm \LaTeX\) 格式。</p>
+
+                <div class="toutu">
+                    <p>为了区别这两者的概念，我们可以在终端运行
+                    <pre>pdftex</pre>
+                    终端输出为
+                    <pre>
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdftex.fmt)
+ restricted \write18 enabled.
+**
+                    </pre>
+                    </p>
+
+                    <p>而输入
+                    <pre>pdflatex</pre>
+                    得到
+                    <pre>
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+**
+                    </pre>
+                    你可以看到其仍然在调用 \(\rm pdf\TeX\) 引擎。按照同样的方法输入 \relax，将输出
+                    <pre>
+**\relax
+entering extended mode
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+*
+</pre>
+                    你会看到 \(\rm \LaTeX\) 的版本号。
+                    </p>
+
+                    <p>如果上面这些东西你听得云里雾里的话，也没有关系，毕竟这些都是老古董了，现在的话很常见的方法还是直接从编辑器集成地编译。下一节会提到。</p>
+                </div>
+
+                <p>当然为了排版中文，已经不再推荐使用 \(\rm pdf\LaTeX\) 了，应该使用 \(\rm Xe\LaTeX\) 或者 \(\rm Lua\LaTeX\)，当然后者的速度还是相对<a href="https://stone-zeng.github.io/2019-07-24-tex-benchmark/">较慢</a>（理想情况下不慢，但是使用一些宏包后会破坏理想状态，也会因配置产生不同的结果，不同的操作系统在 I/O 速度上的不同也会导致不同的时间），它们支持 Unicode 编码，并可以使用 OpenType 字体的全部功能（pdfLaTeX 也支持，只不过需要先生成 tfm \(\rm \TeX\) 字体度量文件，后续使用 \(\rm \TeX\) 自身的配置方法），而不像 \(\rm pdf\LaTeX\) 会只能使用 7 比特或 8 比特字体。当然 Windows 平台下在某些追求速度的情况下，还是可以试着使用 \(\rm pdf\LaTeX\) 的。</p>
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <caption>主流 \(\rm \TeX\) 程序</caption>
+                        <tr><td>引擎</td><td>\(\rm pdf\TeX\)</td><td>\(\rm Xe\TeX\)</td><td>\(\rm Lua\TeX\)</td></tr>
+                        <tr><td>程序</td><td>\(\rm pdf\LaTeX\)</td><td>\(\rm Xe\LaTeX\)</td><td>\(\rm Lua\LaTeX\)</td></tr>
+                        <tr><td>特点</td><td>直接生成 PDF，支持 micro-typography</td>
+                        <td>支持 Unicode、OpenType 与复杂文字编排 (CTL)</td>
+                        <td>支持 Unicode，内联 Lua，支持 OpenType</td></tr>
+                    </table>
+                    <p>以及 \(\rm (u)p\TeX\) 是日语最常用的引擎，生成 .dvi，支持 Unicode。<a href="https://github.com/clerkma/ptex-ng" target="_blank">\(\rm Ap\TeX\)</a>（Asiatic pTeX）具有底层 CJK 支持，内联 Ruby，Color Emoji。</p>
+                </div>
+
+                <h4>8.1.1 是什么</h4>
+
+                <p>要让 \(\rm \LaTeX\) 跑起来，核心就是要有一套 \(\rm \TeX\) 发行版，来获取让 \(\rm \LaTeX\) 工作所需的一组程序和文件。参考<a href="https://mirrors.sjtug.sjtu.edu.cn/ctan/info/install-latex-guide-zh-cn/install-latex-guide-zh-cn.pdf" target="_blank">《一份简短的关于 \(\rm \LaTeX\) 安装的介绍》</a>安装想使用的发行版，这里面甚至介绍了如何卸载 \(\rm \TeX\) 发行版以及一些常见问题解答。推荐使用发行版的最新版本，并使用国内镜像（还是希望不要再有人使用高速下载器下载 \(\rm\TeX~Live\) 了）。</p>
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <caption>\(\rm \TeX\) 发行版</caption>
+                        <tr><td>发行版</td><td><a href="https://mirrors.sjtug.sjtu.edu.cn/ctan/systems/win32/miktex/setup/windows-x64/basic-miktex-21.12-x64.exe" target="_blank">\(\rm MiK\TeX\)</a></td><td><a href="https://mirrors.sjtug.sjtu.edu.cn/ctan/systems/texlive/tlnet/install-tl.zip" target="_blank">\(\rm\TeX{}~Live\)</a></td><td><a href="https://mirrors.sjtug.sjtu.edu.cn/ctan/systems/mac/mactex/mactex-20210328.pkg" target="_blank">\(\rm Mac\TeX\)</a></td></tr>
+                        <tr><td>特点</td><td>只安装必要文件，依赖用时更新</td><td>所有平台均可使用，每年发布一次</td><td>Mac 系统专用，对 \(\rm\TeX{}~
+                        Live\) 的进一步打包</td></tr>
+                    </table>
+                    <p>事实上，我认为这几个发行版各有操作系统偏好。\(\rm MiK\TeX\) 对 Windows 用户较为友好，占用空间不大，安装时间短，而且有完整的安装与卸载程序。因为一些原因，这里将播放安装 \(\rm MiK\TeX\) 的录像。</p>
+                    <p>\(\rm\TeX{}~Live\) 更符合 Linux 的更新传统。老版本 Linux 系统的包管理器自带 \(\rm\TeX{}~Live\) 发行版可能不是<a href="https://repology.org/project/texlive/versions" target="_blank">最新的</a>（到时间也会锁定依赖库的版本），尽量使用镜像安装（当然也推荐使用最新的 Linux 发行版，这样它的版本也就一直是最新的），并手动将相关环境变量添加到<a href="https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf" target="_blank">路径</a>。</p>
+                    <p>\(\rm Mac\TeX\) 发行版有 pkg 安装包封装，并且附带了 TeXShop 基本编辑软件，更加适合 Mac OS。</p>
+                    <p>说到镜像，像后两者的安装包都很大（4GB 左右），由于一些原因，不采用镜像的话不知道要下到什么时候，对下载速度的要求高；而 \(\rm MiK\TeX\) 需要随时更新，宏包大小粒度大，对延迟的要求高。那么采用 SJTUG 镜像源将同时解决这两个问题，位于图信大楼的机房，凭借校内的高速网络，稳定快速下载，由 SJTUG 另一个组维护的镜像站欢迎大家的使用。</p>
+
+                    <p>\(\rm\TeX{}~Live\) 的设置方法为命令行输入
+                        <pre>tlmgr option repository https://mirrors.sjtug.sjtu.edu.cn/CTAN/systems/texlive/tlnet</pre>
+                        \(\rm MiK\TeX\) 的设置方法为在  \(\rm MiK\TeX\) Console 中设置镜像源为<pre>https://mirrors.sjtug.sjtu.edu.cn</pre>
+                        可以在 <a href="https://t.me/sjtug_mirrors_news" target="_blank">SJTUG 镜像站通知频道</a>获得镜像状态的更多信息，加入关联群组参与讨论。
+                    </p>
+
+                </div>
+
+                <p>相信很多人的发行版都已经装完了，那我们来谈谈编辑器吧。编辑器的种类很多，我无法一一列举，但是对编写 \(\rm \TeX\) 常用的开源编辑器我推荐这三个。</p>
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <caption>开源编辑器推荐</caption>
+                        <tr><td>编辑器</td><td>Visual Studio Code + \(\rm \LaTeX\) Workshop</td><td>\(\rm \TeX{}studio\)</td><td>\(\rm\TeX{}works\)</td></tr>
+                        <tr><td>特点</td><td>搭配 VS Code 使用非常方便，易扩展</td><td>可以使用大量的菜单选项输入代码块，用户友好</td><td>只提供基础的高亮与运行方法，发行版自带</td></tr>
+                    </table>
+                </div>
+
+                <p>使用专为 \(\rm\LaTeX\) 设计的编辑器将带来更多便利，因为它们往往会提供一键编译、内置 PDF 阅读器以及语法高亮等功能。几乎所有现代的 \(\rm \LaTeX\) 编辑器都提供 \(\rm Sync\TeX\) 这一强大的功能，以在 PDF 和代码间对应跳转。当然如果你不喜欢使用这种 GUI 编辑器，\(\rm \TeX\) 文档本身就是纯文本，对 Vim, Emacs 等终端用户也很友好。</p>
+                
+                <div class="toutu">
+                    但是辟个谣，Windows 记事本并不是最好的文本编辑软件。因为一旦死机，所有的数据都会丢失。VS Code 等、以及 Linux 平台的 Vim 等可以随时保存的编辑器则不同于此。
+                </div>
+
+                <p>当然使用在线平台省去了安装发行版的麻烦，这里列出两种在线写作平台。当然国内还有 <a href="https://www.texpage.com/" target="_blank">TeX Page</a>，<a href="https://www.slager.cn/#/home" target="_blank">Slagger</a> 等。一般来讲，这种平台使用的都是 Linux 操作系统，所以在排版中文的时候考虑将编译引擎更改为 \(\rm Xe\LaTeX\)，学习如何使用在线平台参见 Overleaf 的<a href="https://www.overleaf.com/learn" target="_blank">官方文档</a>。</p> 
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <caption>在线协作平台推荐</caption>
+                        <tr><td>在线平台</td><td><a href="https://www.overleaf.com/" target="_blank">Overleaf</a></td><td><a href="https://latex.sjtu.edu.cn/" target="_blank">交大 \(\rm \LaTeX\) 助手</a></td></tr>
+                        <tr><td>特点</td><td>最流行的在线平台，提供大量的模板，但国内访问慢</td><td>校内平台，隐私保护有保障，共享项目限制少</td></tr>
+                    </table>
+                </div>
+
+                <h4>8.1.2 基本结构</h4>
+
+                <p>我们可以开始正题了。</p>
+
+                <p><span>\documentclass</span> 命令加载了文档类，基本上每一个 \(\rm \LaTeX\) 文档都以这一行开头。<span>article</span> 是由 \(\rm \LaTeX\) 提供的用于排版短文档的基本文档类。</p>
+
+                <div class="toutu">
+                    <table cellspacing="0" cellpadding="4px">
+                        <tr><td><span>article</span></td><td>不包含章的短文档</td></tr>
+                        <tr><td><span>report</span></td><td>含有章的单面印刷文档</td></tr>
+                        <tr><td><span>book</span></td><td>含有章的双面印刷文档</td></tr>
+                        <tr><td><span>beamer</span></td><td>幻灯片</td></tr>
+                    </table>
+                </div>
+
+                <pre>
+\documentclass{article}         % <-- 文档类
+\begin{document}                % <-- 主体环境
+    Together for a Shared Future  % <-- 正文
+\end{document}                  % <-- 环境
+</pre>
+
+                <p>而 <span>document</span> 环境用于指示文档主体的范围。\(\rm \LaTeX\) 还有其他的使用 <span>\begin</span> 和 <span>\end</span> 的搭配，我们称这些为环境。他们将用来设定局部格式命令。环境实际上是一个组，只不过通过语义化的形式预装了对应的格式命令，普通的组可以直接使用一堆大括号之间的内容或者 <span>\begingroup</span> 和 <span>\endgroup</span> 表示。</p>
+
+                <h4>8.1.3 扩展</h4>
+
+                <p><span>\usepackage</span> 用于使用宏包以向 \(\rm \LaTeX\) 添加或修改功能，需要在导言区（文档类后，文档主题前）使用。</p>
+
+                    <pre>
+\documentclass{article}
+\usepackage{ctex}               % <-- 导言区调用宏包
+\begin{document}
+  一起向未来
+                                % <-- 空行产生段落分隔
+  Together for a Shared Future
+\end{document}</pre>
+
+                <p>这里使用了<span>ctex</span>宏集以获得中文支持。其调用底层因不同的引擎而不同。</p>
+
+                <div class="toutu">
+                    <table cellspacing="0" cellpadding="4px">
+                        <tr><td>引擎</td><td>\(\rm pdf\TeX\)</td><td>\(\rm Xe\TeX\)</td><td>\(\rm Lua\TeX\)</td></tr>
+                        <tr><td>程序</td><td>\(\rm pdf\LaTeX\)</td><td>\(\rm Xe\LaTeX\)</td><td>\(\rm Lua\LaTeX\)</td></tr>
+                        <tr><td>宏包</td><td>CJK</td><td>xeCJK</td><td>luatexja</td></tr>
+                        <tr><td>封装</td><td>ctex</td></tr>
+                    </table>
+                    ctex 在 Mac OS 和 Linux 上已经不可以使用 \(\rm pdf\LaTeX\)，以及在 Windows 上使用 \(\rm pdf\LaTeX\) 会导致其自动间距调整等功能的默认行为受到变更。
+                </div>
+
+                <p>\(\rm C\TeX\) 建议对于之前提到的常规文档类，最佳实践是使用该宏集提供的四种中文文档类（<span>ctexart</span>, <span>ctexrep</span>, <span>ctexbook</span>, <span>ctexbeamer</span>），以对特定类型提供额外的中文排版适配。</p>
+
+                <p>大部分情况下，你都不应当在 \(\rm \LaTeX\) 中强制断行：你几乎只是想另起一段，或者是想在段落之间添加空行（使用 <span>parskip</span> 宏包就可实现，当然有些文档类这种方式并不一定奏效）。只有很少的情况下你需要使用双斜线来另起一行而不另起一段。</p>
+
+                <h4>8.1.4 设定格式</h4>
+
+                <p>可以使用显式样式设定命令对小段做加粗、斜体、等宽等等的处理。</p>
+
+                <pre>
+\documentclass{ctexart}
+\begin{document}
+\textbf{一起向未来}                     % <-- 加粗
+
+\emph{Together for a Shared Future}   % <-- 强调
+\end{document}</pre>
+
+                <p>与 Word 不同的是，\(\rm \LaTeX\) 一般情况下并不需要使用上面的显式命令，而是采用逻辑标记的方法，比如 <span>\emph</span> 可以强调文字，以及下面将要提到的目次命令。这样可以统一管理格式。</p>
+
+                <p>同样地，你也可以显式地设定字体大小，但是这种命令会更改行文设置，所以需要使用一个组来限定作用范围。</p>
+
+                <pre>
+\documentclass{ctexart}
+\begin{document}
+  {\bfseries\Large 一起向未来\par}           % <-- 加粗
+  {\itshape Together for a Shared Future}   % <-- 斜体
+\end{document}</pre>
+
+                <h4>8.1.5 逻辑结构</h4>
+
+                <p>接下来我们概览一下三种列表：无序列表、有序列表、描述列表。这些列表可以相互嵌套，但最多嵌套四层。</p>
+
+<pre>
+\documentclass{ctexart}
+\begin{document}
+  \begin{itemize}
+    \item 第一项
+    \item 第二项
+    \item 第三项
+  \end{itemize}
+\end{document}  </pre>
+
+<pre>
+\documentclass{ctexart}
+\begin{document}
+  \begin{enumerate}
+    \item 第一项
+    \item 第二项
+    \item 第三项
+  \end{enumerate}
+\end{document} 
+</pre>
+
+<pre>
+\documentclass{ctexart}
+\begin{document}
+  \begin{description}
+    \item[第一] 文本
+    \item[第二] 文本
+    \item[第三] 文本  
+  \end{description}
+\end{document}
+</pre>
+
+                <p>\(\rm \LaTeX\) 可以使用目次命令将文档划分层级，并自动设定对应字体样式和大小。</p>
+
+                <pre>
+\documentclass{ctexart}
+\begin{document}
+  \section{概念}            % <-- 节
+  \subsection{\LaTeX{}}     % <-- 小节
+  \LaTeX{} 是一个用以排版高质量作品的文档准备系统。
+\end{document}</pre>
+
+                <div class="toutu">
+                    <table cellspacing="0" cellpadding="4px">
+                        <tr><td>命令</td><td>含义</td><td>层次</td></tr>
+                        <tr><td><span>\chapter</span></td><td>章</td><td><s>0</s></td></tr>
+                        <tr><td><span>\section</span></td><td>节</td><td>1</td></tr>
+                        <tr><td><span>\subsection</span></td><td>小节</td><td>2</td></tr>
+                        <tr><td><span>\subsubsection</span></td><td>小小节</td><td>3</td></tr>
+                    </table>
+                    <p>章这一级只在 <span>report</span> 和 <span>book</span> 文档类（包括对应的中文文档类）有定义。还有不常用的 <span>\part</span> (0@<span>article</span>/-1@<span>report</span>&<span>book</span>&<span>beamer</span>) 以及更低层次的 <span>\paragraph</span> (4) 与 <span>\subparagraph</span> (5)。</p> 
+                    <p>而知道层次，对我们下面生成目录有帮助。</p>
+                </div>
+                
+                <p><span>\tableofcontents</span> 用来生成对于目次命令的目录。如果你想设定显示到哪个层级，在这个命令前使用 <span>\setcounter{tocdepth}{层次}</span>
+
+                    如果你想在目录中使用更短的标题，使用方括号标识这一点：
+            
+                        <span>\section[短标题]{长标题}</span>。
+            
+                    如果你想让本目次的标题不显示在目录中，在命令后加上星号：
+            
+                        <span>\section*{目录没这个标题}</span>。
+
+                        </p>
+<pre>
+\documentclass{ctexrep}
+\includeonly{learnlatex,sjtuthesis} % <-- 此处指定要排印哪些内容
+\begin{document}
+  \tableofcontents                  % <-- 目录
+  \include{learnlatex}              % <-- 插入文档
+  \include{sjtuthesis}              % <-- 插入文档
+\end{document}
+</pre>
+
+                <p>对于大型文档而言，使用多个文件管理源文件通常是更方便的。而 <span>\include</span> 和 <span>\input</span> 都以相对路径的方式插入其他 \(\rm \TeX\) 文档。区别在于，<span>\include</span> 命令会从新页开始并做一些内部调整，这基本上只对 <span>chapter</span> 这一级有用。而 <span>\input</span> 会原样插入源代码。</p>
+
+                <p>但是 <span>\include</span> 插入的文档可以使用 <span>\includeonly</span> 管理当前要排印哪一部分的内容，利用所有章节辅助文件的同时，减少编译时间并专注于该部分的内容。</p>
+
+                <p>请注意子文件中就不需要添加 <span>document</span> 环境了。之前提到的编辑器大部分具有识别魔术命令的能力，可以在文档开头使用 <span>% ! TeX root = main.tex</span>。</p>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <div class="item_s">\(\rm \LaTeX\) <b>Sparkle Project</b></div>
+                <div class="item_s">LogCreative 2020-2021 0201-0210</div>
+                <a href="https://github.com/LogCreative/LaTeXSparkle" class="item" target="_blank">
+                    <svg class="octicon octicon-mark-github v-align-middle" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    GitHub</a>
+                <a href="https://space.bilibili.com/31271993" class="item" target="_blank"> <img src="../../img/bilibili.ico" height="16px"> Bilibili</a>
+                <br>
+                <a href="https://www.mathjax.org/#gettingstarted" class="item" style="font-size: smaller;" target="_blank">POWERED BY MathJax</a>
+                <embed src="../../by-sa.svg" style="padding:5px 0px;" type="image/svg+xml"/>
+            </div>
+            
+        </footer>
+        
+    </body>
+</html>
