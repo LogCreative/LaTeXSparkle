@@ -107,7 +107,7 @@
 
                 <h3>8.1 学习 \(\rm \LaTeX\)</h3>
 
-                <p>这一部分主要参考了 Learn\(\rm \LaTeX \).org 的系列教程，内容简洁，适合入门，并参考由 C\(\rm \TeX\)-org 提供的<a href="https://github.com/CTeX-org/learnlatex.github.io/tree/zh-Hans/zh-Hans/" target="_blank">中文翻译版本</a>（本人也有参与）。如果你认为下面一个小时的入门教程没有讲得非常细致的话，欢迎直接阅读这个网站的全文。以及该版本尚未合并上游，<s>主要可能是本人一些部分的翻译还是欠点火候的</s>，如果大家在阅读这个翻译版本的过程中看到任何的笔误，或者想对翻译做出任何改进，欢迎向该存储库提 PR，合并完成后，<a href="https://learnlatex.org" target="_blank">这个网站</a>拥有中文翻译的同时，示例也将能在线运行以查看结果。</p>
+                <p>这一部分主要参考了 Learn\(\rm \LaTeX \).org 的系列教程，内容简洁，适合入门，符合<a href="https://www.tug.org/TUGboat/tb41-2/tb128reviews-learnlatex.pdf" target="_blank">教育学观念</a>，并参考由 C\(\rm \TeX\)-org 提供的<a href="https://github.com/CTeX-org/learnlatex.github.io/tree/zh-Hans/zh-Hans/" target="_blank">中文翻译版本</a>（本人也有参与）。如果你认为下面一个小时的入门教程没有讲得非常细致的话，欢迎直接阅读这个网站的全文。以及该版本尚未合并上游，<s>主要可能是本人一些部分的翻译还是欠点火候的</s>，如果大家在阅读这个翻译版本的过程中看到任何的笔误，或者想对翻译做出任何改进，欢迎向该存储库提 PR，合并完成后，<a href="https://learnlatex.org" target="_blank">这个网站</a>拥有中文翻译的同时，示例也将能在线运行以查看结果。</p>
 
                 <h4>8.1.0 是什么</h4>
 
@@ -152,7 +152,7 @@ compiled with zlib version 1.2.11; using 1.2.11</pre>
                     它会提示你输出了一个 texput.dvi 文件（DVI，DeVice Independent file，设备依赖无关文件），打开它，你就会发现一个简单的文档，上面写着 Hello, world!
                     </p>
 
-                    <p>当然本次讲座并不是关于 \(\rm \TeX\) 本身的，以及它更靠近于琐碎的底层，连高德纳本人在排版其著作《计算机编程艺术》一书时（\(\rm \TeX\) 的发明一开始就是为此书而作）都要设计许多宏来简化输入。当然如果真的感兴趣，我认为《\(\rm\TeX{}Book\)》一书本身就遵循教育学方法，适合入门者阅读，更广泛的知识可参见<a href="https://github.com/CTeX-org/tex-impatient-cn" target="_blank">《\(\rm \TeX\) 急就贴》</a>、<a href="https://github.com/CTeX-org/tex-by-topic-cn" target="_blank">《\(\rm \TeX~by~Topic\)》</a>等书。我们还是来接着了解 \(\rm \LaTeX\) 吧！</p>
+                    <p>当然本次讲座并不是关于 \(\rm \TeX\) 本身的，以及它更靠近于琐碎的底层，连高德纳本人在排版其著作《计算机编程艺术》一书时（\(\rm \TeX\) 的发明一开始就是为此书而作）都要设计许多宏来简化输入。当然如果真的感兴趣，我认为《\(\rm\TeX{}Book\)》一书本身遵循教育学方法，适合入门者阅读，更广泛的知识可参见<a href="https://github.com/CTeX-org/tex-impatient-cn" target="_blank">《\(\rm \TeX\) 急就贴》</a>、<a href="https://github.com/CTeX-org/tex-by-topic-cn" target="_blank">《\(\rm \TeX~by~Topic\)》</a>等书。我们还是来接着了解 \(\rm \LaTeX\) 吧！</p>
                 </div>
 
                 <p>\(\rm \LaTeX\) 是最早由现就职于微软的 Leslie Lamport 开发的一种 \(\rm \TeX\) 开发的一种 \(\rm \TeX\) 格式（与其对标的是 <a href="https://www.contextgarden.net/" target="_blank">\(\rm Con\TeX{}t\)</a>），主要也是为了简化 \(\rm \TeX\) 的使用。现在主要由 \(\rm \LaTeX\) 开发组维护，现在广泛使用的版本是 \(\rm \LaTeX2\varepsilon\)，最新的版本为 \(\rm \LaTeX3\)，在 2020 年 10 月后默认内置，所以要尽可能使用较新的发行版，以充分发挥其功能。</p>
@@ -191,6 +191,8 @@ L3 programming layer <2022-02-24>
                     你会看到 \(\rm \LaTeX\) 的版本号。
                     </p>
 
+                    <p>你可能会好奇使用 <span>latex</span> 会发生什么，它也将触发 <span>pdftex</span>，只是输出格式为 DVI 而不是 PDF。</p>
+
                     <p>如果上面这些东西你听得云里雾里的话，也没有关系，毕竟这些都是老古董了，现在的话很常见的方法还是直接从编辑器集成地编译。下一节会提到。</p>
                 </div>
 
@@ -219,10 +221,10 @@ L3 programming layer <2022-02-24>
                         <tr><td>特点</td><td>只安装必要文件，依赖用时更新</td><td>所有平台均可使用，每年发布一次</td><td>Mac 系统专用，对 \(\rm\TeX{}~
                         Live\) 的进一步打包</td></tr>
                     </table>
-                    <p>事实上，我认为这几个发行版各有操作系统偏好。\(\rm MiK\TeX\) 对 Windows 用户较为友好，占用空间不大，安装时间短，而且有完整的安装与卸载程序。因为一些原因，这里将播放安装 \(\rm MiK\TeX\) 的录像。</p>
+                    <p>事实上，我认为这几个发行版各有操作系统偏好，虽然前两者是跨平台的。\(\rm MiK\TeX\) 对 Windows 用户较为友好，占用空间不大，安装时间短，而且有完整的安装与卸载程序。因为一些原因，这里将播放安装 \(\rm MiK\TeX\) 的录像。</p>
                     <p>\(\rm\TeX{}~Live\) 更符合 Linux 的更新传统。老版本 Linux 系统的包管理器自带 \(\rm\TeX{}~Live\) 发行版可能不是<a href="https://repology.org/project/texlive/versions" target="_blank">最新的</a>（到时间也会锁定依赖库的版本），尽量使用镜像安装（当然也推荐使用最新的 Linux 发行版，这样它的版本也就一直是最新的），并手动将相关环境变量添加到<a href="https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf" target="_blank">路径</a>。</p>
                     <p>\(\rm Mac\TeX\) 发行版有 pkg 安装包封装，并且附带了 TeXShop 基本编辑软件，更加适合 Mac OS。</p>
-                    <p>说到镜像，像后两者的安装包都很大（4GB 左右），由于一些原因，不采用镜像的话不知道要下到什么时候，对下载速度的要求高；而 \(\rm MiK\TeX\) 需要随时更新，宏包大小粒度大，对延迟的要求高。那么采用 SJTUG 镜像源将同时解决这两个问题，位于图信大楼的机房，凭借校内的高速网络，稳定快速下载，由 SJTUG 另一个组维护的镜像站欢迎大家的使用。</p>
+                    <p>说到镜像，像后两者的安装包都很大（4GB 左右），由于一些原因，不采用镜像的话不知道要下到什么时候，对下载速度的要求高；而 \(\rm MiK\TeX\) 需要随时更新，宏包大小颗粒度大，对延迟的要求高。那么采用 SJTUG 镜像源将同时解决这两个问题，位于图信大楼的机房，凭借校内的高速网络，稳定快速下载，由 SJTUG 另一个组维护的<a href="https://mirror.sjtu.edu.cn/" target="_blank">镜像站</a>欢迎大家的使用，主页上还有更多的其他镜像可供使用。</p>
 
                     <p>\(\rm\TeX{}~Live\) 的设置方法为命令行输入
                         <pre>tlmgr option repository https://mirrors.sjtug.sjtu.edu.cn/CTAN/systems/texlive/tlnet</pre>
@@ -242,7 +244,7 @@ L3 programming layer <2022-02-24>
                     </table>
                 </div>
 
-                <p>使用专为 \(\rm\LaTeX\) 设计的编辑器将带来更多便利，因为它们往往会提供一键编译、内置 PDF 阅读器以及语法高亮等功能。几乎所有现代的 \(\rm \LaTeX\) 编辑器都提供 \(\rm Sync\TeX\) 这一强大的功能，以在 PDF 和代码间对应跳转。当然如果你不喜欢使用这种 GUI 编辑器，\(\rm \TeX\) 文档本身就是纯文本，对 Vim, Emacs 等终端用户也很友好。</p>
+                <p>使用专为 \(\rm\LaTeX\) 设计的编辑器将带来更多便利，因为它们往往会提供一键编译、内置 PDF 阅读器以及语法高亮等功能。几乎所有现代的 \(\rm \LaTeX\) 编辑器都提供 \(\rm Sync\TeX\) 这一强大的功能（VS Code 的方法是 Ctrl + 某处，Overleaf 的方法是直接双击），以在 PDF 和代码间对应跳转。当然如果你不喜欢使用这种 GUI 编辑器，\(\rm \TeX\) 文档本身就是纯文本，对 Vim, Emacs 等终端用户也很友好。</p>
                 
                 <div class="toutu">
                     但是辟个谣，Windows 记事本并不是最好的文本编辑软件。因为一旦死机，所有的数据都会丢失。VS Code 等、以及 Linux 平台的 Vim 等可以随时保存的编辑器则不同于此。
@@ -325,7 +327,7 @@ L3 programming layer <2022-02-24>
 
                 <p>与 Word 不同的是，\(\rm \LaTeX\) 一般情况下并不需要使用上面的显式命令，而是采用逻辑标记的方法，比如 <span>\emph</span> 可以强调文字，以及下面将要提到的目次命令。这样可以统一管理格式。</p>
 
-                <p>同样地，你也可以显式地设定字体大小，但是这种命令会更改行文设置，所以需要使用一个组来限定作用范围。</p>
+                <p>同样地，你也可以显式地设定字体大小，但是这种命令会更改行文设置，所以需要使用一个组来限定作用范围。请注意最后显式地使用 <span>\par</span> 在改回大小前结束该段，否则会导致下一行的行间距异常！当然，应当避免手动设定大小，以影响格式统一。</p>
 
                 <pre>
 \documentclass{ctexart}
@@ -417,7 +419,172 @@ L3 programming layer <2022-02-24>
 
                 <p>但是 <span>\include</span> 插入的文档可以使用 <span>\includeonly</span> 管理当前要排印哪一部分的内容，利用所有章节辅助文件的同时，减少编译时间并专注于该部分的内容。</p>
 
+                <div class="toutu">
+                    当然，如果需要不换页插入源代码就不用<span>\include</span>了，因为这最主要的好处在于能够在组建大型文档的时候，得到当前页码、编号的进度信息。在插入小部件时，还是推荐使用<span>\input</span>，这个命令不会额外地产生<span>.aux</span>文件，对于 I/O 反应慢的（说的就是 Windows）比较友好。
+                </div>
+
                 <p>请注意子文件中就不需要添加 <span>document</span> 环境了。之前提到的编辑器大部分具有识别魔术命令的能力，可以在文档开头使用 <span>% ! TeX root = main.tex</span>。</p>
+
+                <h4>8.1.6 图</h4>
+
+                <pre>
+\documentclass{ctexart}
+\usepackage{graphicx}
+\graphicspath{{figs/}{pics/}}
+\begin{document}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{sjtug}
+  \caption{SJTUG 徽标}\label{fig:sjtug}
+\end{figure}
+\end{document} </pre>
+
+                <p>为了插入外部图片，需要使用 <span>graphicx</span> 宏包。之后在文档主体便可以使用 <span>\includegraphics</span> 插入图片。导言区也可以加入 <span>\graphicspath</span> 指定图片文件夹。</p>
+
+                <p><span>\includegraphics</span> 命令便以相对路径的方式插入图片，如果无同名图片，那么后缀名可以省略。可以使用可选参数指定插入的图片尺寸，最佳实践是使用 <span>\textwidth</span> 或 <span>\linewidth</span> 的相对值指定尺寸大小，以在未来可能的布局更改中保留一定的灵活性，比如我未来想变更为幻灯片的时候。</p>
+
+                <p>关于<span>\includegraphics</span>，你也可以通过键值对的方法设置图片的其他属性。更多的信息参见宏包对应的文档。事实上，\(\rm \LaTeX\) 很多命令都是使用方括号添加可选参数的。</p>
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <tr><td>width</td><td>宽度</td></tr>
+                        <tr><td>height</td><td>高度</td></tr>
+                        <tr><td>scale</td><td>缩放</td></tr>
+                        <tr><td>angle</td><td>角度</td></tr>
+                    </table>
+                </div>
+
+                <p>我们可以看到，<span>figure</span> 为一个浮动体环境（<span>table</span> 也是），可以将其移动到其他位置上以减少行文中的空白。可以添加可选参数以指定如何放置浮动体，最多可以使用四种位置描述符：</p>
+
+                <div class="toutu">
+                    <table border="1px" cellspacing="0" cellpadding="4px">
+                        <tr><td><span>h</span></td><td>Here</td><td>尽可能在这里</td></tr>
+                        <tr><td><span>t</span></td><td>Top</td><td>页面顶部</td></tr>
+                        <tr><td><span>b</span></td><td>Bottom</td><td>页面底部</td></tr>
+                        <tr><td><span>p</span></td><td>Page</td><td>浮动体专页</td></tr>
+                        <tr><td><span>H</span></td><td>Here</td><td>强制在此处*</td></tr>
+                    </table>
+                    * 最后一个需要使用<span>float</span>宏包，使用这个可能会导致页面产生大量的空白。
+                </div>
+                
+                <p>采用 <span>\centering</span> 命令而不是 <span>center</span> 环境来水平居中图片。这将避免多余的纵向间距。使用 <span>\caption</span> 命令输入题注，如果这个命令写在插入图片前面，题注将会在上方（中文中一般对 <span>table</span> 环境这么做）。后面将会看到如何对留有标记（<span>\label</span>）的图片进行引用。</p>
+
+                <pre>
+\documentclass{ctexart}
+\usepackage{graphicx}
+\graphicspath{{figs/}{pics/}}
+\begin{document}
+  \begin{figure}[ht]
+    \begin{minipage}{0.48\textwidth}
+      \centering
+      \includegraphics[height=2cm]{sjtug}
+      \caption{SJTUG 徽标}\label{fig:sjtug}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+      \centering
+      \includegraphics[height=2cm]{sjtugt}
+      \caption{SJTUG 文字}\label{fig:sjtugt}
+    \end{minipage}
+  \end{figure}
+\end{document} </pre>
+
+                <p>并排排版两张图片的最简单方法就是在<span>figure</span>环境里添加两个<span>minipage</span>，这样两张图片的编号就会在同一个层级。</p>
+
+                <p><span>subcaption</span> 宏包提供了 <span>subfigure</span> 环境（以及 <span>subtable</span>），可以用于以子图的形式插入，编号会向下增加一级。也可以为子图添加子级引用编号。</p>
+
+                <pre>
+\documentclass{ctexart}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{figs/}{pics/}}
+\begin{document}
+  \begin{figure}[ht]
+    \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=2cm]{sjtug}
+      \caption{徽标}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=2cm]{sjtugt}
+      \caption{文字}
+    \end{subfigure}
+    \caption{SJTUG}\label{fig:sjtug}
+  \end{figure}
+\end{document} </pre>                
+
+                <h4>8.1.7 表</h4>
+
+                <p>使用 <span>tabular</span> 环境绘制表格。需要添加参数（称为表格导言）以确定每一列的对齐方式。一般都需要引入 <span>array</span> 宏包来使用更多的引导符。</p>
+
+<pre>
+\documentclass{ctexart}
+\usepackage{array}
+\usepackage{booktabs}
+\begin{document}
+\begin{table}[ht]
+    \centering
+    \caption{北京冬奥会吉祥物}\label{tab:mascot}
+    \begin{tabular}{lp{3cm}}
+        \toprule
+        \multicolumn{1}{c}{吉祥物} & \multicolumn{1}{c}{描述}    \\
+        \midrule
+        冰墩墩                     & 2022 年北京冬季奥运会吉祥物 \\
+        雪容融                     & 2022 年北京冬季残奥会吉祥物 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\end{document}</pre>
+
+        <div class="toutu">
+            <table border="1px" cellspacing="0" cellpadding="4px">
+                <caption>常见引导符</caption>
+                <tr><td><span>l</span></td><td>向左对齐</td></tr>
+                <tr><td><span>c</span></td><td>居中对齐</td></tr>
+                <tr><td><span>r</span></td><td>向右对齐</td></tr>
+                <tr><td><span>p{3cm}</span></td><td>固定列宽，两端对齐</td></tr>
+                <tr><td><span>m{3cm}</span></td><td>p + 垂直居中对齐</td></tr>
+                <tr><td><span>>{\bfseries}</span></td><td>后一列单元格前加命令</td></tr>
+                <tr><td><span>*{3}{l}</span></td><td>三个左对齐列</td></tr>
+            </table>
+        </div>
+
+                <p><span>booktabs</span> 宏包提供了标准三线表格所需要的行分割线：<span>\toprule</span>，<span>\midrule</span>，<span>\bottomrule</span>。也可以使用<span>\cmidrule{1-2}</span>来部分地绘制行分割线。一般不推荐在专业表格中使用纵向分割线。这里每行内容就要使用双斜线分隔开，每行中的单元格使用<span>&</span>分隔开。</p>
+
+                <p><span>\multicolumn</span>命令不仅可以用于合并同行的单元格，还可以用于临时地屏蔽表格导言对该列的对齐方式定义。这里用于居中表头。
+                <pre>\multicolumn{格数}{对齐方式}{内容}</pre>
+                跨页表格考虑使用<span>longtable</span>宏包。带标注的表格可以考虑使用<span>threeparttable</span>宏包。考虑使用<a href="https://www.tablesgenerator.com/latex_tables" target="_blank">在线工具</a>生成表格代码。复杂的使用方法在 SJTUThesis 使用文档中都有提及。</p>
+
+                <h4>8.1.8 数学公式</h4>
+
+                <p>输入数学公式是 \(\rm \LaTeX\) 的绝对强项，很多常见的公式服务依赖于一些轻量级渲染引擎比如 MathJax, KaTeX。但是它们实际上使用的是 \(\rm \LaTeX\) 语法变种，也就是说并没有使用 \(\rm \LaTeX\) 后端。所以不要期望有完全一致的输出。</p>
+  
+                <p>为了更好的获得数学公式输入支持，请使用 <span>amsmath</span> 宏包。数学模式分为两种：
+
+                <ul>
+                    <li>行内模式，一般通过一对美元符号（<span>$...$</span>）标记，可以使用编辑器内建的符号表输入数学符号，也可以使用<a href="https://detexify.kirelabs.org/classify.html" target="_blank">在线工具手写识别</a>。</li>
+                    <li>行间模式，一般通过 <span>equation</span> 环境输入，加星号用于无编号的公式环境。如果需要使用多行公式，请使用 <span>align</span> 环境，并按照类似表格输入的方式，使用 <span>&</span> 对齐符号，双斜线换行。如果不想手动居中，可以考虑多行自动居中的<span>gather</span>和单个大型公式首尾两端对齐<span>multline</span>。</li>
+                </ul></p>
+
+                <p>关于表格和数学公式，如果不太熟悉如何输入，或者符号表记不住，推荐从比较容易上手的编辑器起步，比如 \(\rm\TeX{}studio\) 提供了用户友好的界面。我相信输入半年后，就可以对这些符号的输入很熟练了。</p>
+
+                <div class="toutu">你会发现我的这套教程没有讲很多的数学公式输入技巧，因为这些东西只有你自己熟练了才能体会。而且\(\rm\LaTeX\)本来就不是完全关于数学公式的。</div>
+
+                <p>关于如果 \(\rm \LaTeX\) 报出了错误，比如说数学模式下不能有空行，想要学习如何修复这些错误，可以详见 Learn\(\rm \LaTeX\).org 的<a href="https://github.com/CTeX-org/learnlatex.github.io/blob/zh-Hans/zh-Hans/lesson-15.md" target="_blank">相关章节</a>。</p>
+                
+                <h4>8.1.9 引用</h4>
+
+                <p>正如之前所提到的，\(\rm \LaTeX\) 中使用 <span>\label</span> 标记，然后可以使用 <span>\ref</span> 来引用这个标记。 <span>\label</span> 可以放在使用计数器的对象之后。为了使得对公式编号的引用带有括号，推荐使用 <span>amsmath</span> 宏包中的 <span>\eqref</span> 命令。对于多行公式环境，每一个换行符前都可以添加一个 <span>\label</span> 用于引用该行公式。</p>
+
+                <p>\(\rm \LaTeX\) 可以通过专用数据库文件 <span>.bib</span> 自动生成参考文献，很多的文献管理文件比如 <a href="https://lic.sjtu.edu.cn/Default/softshow/tag/MDAwMDAwMDAwMLGImKE" target="_blank">EndNote</a>, <a href="https://www.zotero.org/" target="_blank">Zotero</a>, <a href="https://www.jabref.org/" target="_blank">JabRef</a> 都可以直接导出这种格式的文件用于 \(\rm \LaTeX\) 论文中的引用。一般不需要手写数据库文件，你只需要注意每一个文献会在数据库中有一个主键，这个类似于上文的 <span>\label</span> 标记，只是要引用数据库中的文献需要使用 <span>\cite</span> 命令。
+                </p>
+
+                <p>而让 \(\rm \LaTeX\) 处理 <span>.bib</span> 数据库文件与引用有两种工作流。你可能需要查清楚如何在编辑器中设置对应的工作流，或者采用后面所提到的高级编译方式 <span>latexmk</span>。</p>
+
+                <ul>
+                    <li>bibtex 是标准的工作流程，一般期刊提交这种方法。中文引用可以使用 <span>gbt7714</span>宏包，但是角模式与正文模式不可混用。</li>
+                    <li>biblatex 是更容易定制化的一种方案。中文引用可以使用<span>gb7714-2015</span>biblatex样式，但需要使用\(\rm Xe\LaTeX\)编译。</li>
+                </ul>
 
                 </div>
             </div>
