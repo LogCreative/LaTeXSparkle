@@ -558,11 +558,11 @@ Option `#1' has already been used,\MessageBreak setting the option has no effect
                         </div>
                     </div>
 
-                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了<span>allowframebreaks</span>参数时，一帧内多余的内容就会流入另一帧中。如果是数学公式，还可以使用<span>allowdisplaybreaks</span>对公式按行截断。标题也会因此变成由罗马数字顺序标号的帧组（如果帧组没有标题，当然也就没有标号了）。
+                    <p>在 Beamer 中，这个功能也是存在的。当一个帧被赋予了<span>allowframebreaks</span>参数时，一帧内多余的内容就会流入另一帧中。如果是数学公式，还可以再使用<span>allowdisplaybreaks</span>对公式按行截断（此时需要有<span>allowframebreaks</span>参数，否则该选项没有意义）。标题也会因此变成由罗马数字顺序标号的帧组（如果帧组没有标题，当然也就没有标号了）。
                     <div class="con">
                         <div class="left" style="margin: 4px;">
 <pre>
-\begin{frame}[allowdisplaybreaks]
+\begin{frame}[allowframebreaks,allowdisplaybreaks]
     多行长公式
 \end{frame}</pre>
                         </div>
